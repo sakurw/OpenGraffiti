@@ -1,0 +1,12 @@
+{
+  "classification": "AI-generated original artwork; not photographic reconstruction",
+  "tool": "built-in image_gen",
+  "sourceFile": "exec-7723ed83-a080-4f31-98a2-8325d1d12cb0.png",
+  "workspaceFile": "public/artworks/rising-koi-panorama.png",
+  "sha256": "0a2d0af3468b002a906a30ca89d6f605ef3d2a3fc24874d08a6749aaf7a63b10",
+  "prompt": "docs/rising-koi-prompt.md",
+  "buildingId": "bldg_81cf4164-d885-4134-81f8-5356472517ee",
+  "revision": "sompo-rising-koi-v2",
+  "application": "Continuous azimuth/elevation sampling with small height-dependent shear, seam blending and crown clearance; baked to native UV paint layers. Not separate per-facade images. No source geometry change.",
+  "manualToolClaim": "Pigment shapes and shading can be approximated using existing brush, spray, fills and colors. This is not a replay of manual tool strokes or proof of exact manual reproduction."
+}

@@ -268,3 +268,5 @@ Open Canvasは、その変化を可視化する「都市美術館」のシミュ
 美しさを軸にしたコクーンタワー作品「LUMINOUS BLOOM · 光の繭」：[起動bat](scripts/launchers/OpenGraffiti-Bloom.bat)。都庁のファンシー作品も保持。
 
 桜・富士山・流水の和風アート「桜富士」は [OpenGraffiti-Sakura.bat](scripts/launchers/OpenGraffiti-Sakura.bat) で起動できます。
+
+鯉と水流のストリートアート「RISING TIDE · 昇流」（損保ジャパン本社ビル）は [OpenGraffiti-RisingKoi.bat](scripts/launchers/OpenGraffiti-RisingKoi.bat) で起動できます。
