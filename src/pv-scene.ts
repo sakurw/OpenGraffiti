@@ -1,3 +1,4 @@
+import {siteUrl} from './site-url';
 import {groundDetailGLSL,detailedSoilMaterial} from './pv-ground-detail';
 import {brushMarks,type BrushMark} from './pv-brush-marks';
 import {flatSurface} from './pv-layout';
@@ -20,8 +21,8 @@ let cached:Promise<T.Group>|undefined;
 const atlasCache=new Map<string,Promise<T.Texture>>(),imageCache=new Map<string,Promise<HTMLImageElement>>();
 const blank=new T.DataTexture(new Uint8Array([0,0,0,0]),1,1);blank.needsUpdate=true;
 function image(url:string){if(!imageCache.has(url))imageCache.set(url,new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('作品画像を読み込めません。'));img.src=url;}));return imageCache.get(url)!;}
-function atlas(url:string){if(!atlasCache.has(url))atlasCache.set(url,new T.TextureLoader().loadAsync(url).then(t=>{t.flipY=false;t.colorSpace=T.SRGBColorSpace;t.anisotropy=8;return t;}));return atlasCache.get(url)!;}
-function baseScene(url:string){return cached??=new GLTFLoader().loadAsync(url).then(g=>{g.scene.traverse(o=>{if(o instanceof T.Mesh){if(!o.geometry.boundsTree)computeBoundsTree.call(o.geometry);for(const [a,b]of [['_own_uv','ownUv'],['_own_color','ownColor'],['_own_role','ownRole'],['_own_shade','ownShade']]){if(o.geometry.hasAttribute(a))o.geometry.setAttribute(b,o.geometry.getAttribute(a));}}});return g.scene;});}
+function atlas(url:string){if(!atlasCache.has(url))atlasCache.set(url,new T.TextureLoader().loadAsync(siteUrl(url)).then(t=>{t.flipY=false;t.colorSpace=T.SRGBColorSpace;t.anisotropy=8;return t;}));return atlasCache.get(url)!;}
+function baseScene(url:string){return cached??=new GLTFLoader().loadAsync(siteUrl(url)).then(g=>{g.scene.traverse(o=>{if(o instanceof T.Mesh){if(!o.geometry.boundsTree)computeBoundsTree.call(o.geometry);for(const [a,b]of [['_own_uv','ownUv'],['_own_color','ownColor'],['_own_role','ownRole'],['_own_shade','ownShade']]){if(o.geometry.hasAttribute(a))o.geometry.setAttribute(b,o.geometry.getAttribute(a));}}});return g.scene;});}
 interface Part {mesh:T.Mesh;buildingId:string;key:string;paint:{value:T.Texture};alpha:{value:number};texture?:T.CanvasTexture|T.DataTexture;uploadSource?:T.DataTexture;canvas?:HTMLCanvasElement;loaded?:string}
 interface Snapshot {maps:Record<string,string>;count:number}
 const faceVector:Record<Face,T.Vector3>={north:new T.Vector3(0,0,-1),east:new T.Vector3(1,0,0),south:new T.Vector3(0,0,1),west:new T.Vector3(-1,0,0),roof:new T.Vector3(0,1,.001)};

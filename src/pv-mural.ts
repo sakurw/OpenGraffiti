@@ -1,3 +1,4 @@
+import {siteUrl} from './site-url';
 import {manifest,revisions,saveRevision,now,isPlaying,clockCommand,type Revision} from './pv-data';
 import {PVScene,type Brush,type Face} from './pv-scene';
 interface Stroke {face:Face;layer:string;color:string;width:number;points:number[][];variant?:string;stencil?:Brush['stencil'];angle?:number}
@@ -6,7 +7,7 @@ let pending:Promise<string>|undefined;
 // MessageChannel yields without depending on animation frames in a background tab.
 const yieldToUI=()=>new Promise<void>(resolve=>{const channel=new MessageChannel();channel.port1.onmessage=()=>{channel.port1.close();channel.port2.close();resolve();};channel.port2.postMessage(null);});
 export function seedMural(){return pending??=create().finally(()=>pending=undefined);}
-async function create(){const recipe:Recipe=await fetch('/artworks/tocho-neon-tide.recipe.json').then(r=>{if(!r.ok)throw Error('アートの描画手順を読み込めません。');return r.json();}),m=await manifest(),existing=await revisions(),saved=existing.find(r=>r.id==='tocho-neon-tide-v5');
+async function create(){const recipe:Recipe=await fetch(siteUrl('/artworks/tocho-neon-tide.recipe.json')).then(r=>{if(!r.ok)throw Error('アートの描画手順を読み込めません。');return r.json();}),m=await manifest(),existing=await revisions(),saved=existing.find(r=>r.id==='tocho-neon-tide-v5');
  if(saved){localStorage.setItem('og-pv-latest-at',String(saved.at));clockCommand('reset');return recipe.buildingId;}
  const host=document.createElement('div');host.style.cssText='position:fixed;left:-2000px;top:0;width:960px;height:1280px';document.body.append(host);const brush:Brush={tool:'brush',color:'#122e46ff',size:28,density:100,grain:0,variant:'solid',reveal:false,tolerance:24};
  const scene=new PVScene(host,{manifest:m,view:'edit',selected:recipe.buildingId,side:'left',face:'north',revisions:existing,brush,onSelect:()=>{},onRoad:()=>{},onReady:()=>{},onError:()=>{},onDraft:()=>{},onCompass:()=>{}});

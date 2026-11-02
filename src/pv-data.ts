@@ -1,3 +1,4 @@
+import {siteUrl} from './site-url';
 import {streetBuildings} from './pv-street';
 import {flatManifest,type FlatLayout} from './pv-layout';
 export interface Building {id:string;name:string;blockId:string;parts:string[];bounds:number[]}
@@ -6,7 +7,7 @@ export interface Revision {order?:number;id:string;buildingId:string;at:number;t
 export interface Road {id:string;name:string;start:[number,number];end:[number,number];left:string[];right:string[];heightSamples?:number[][];width?:number;sourceRoadId?:string;rings?:number[][][];path?:number[][]}
 const requestedScope=new URLSearchParams(location.search).get('scope');
 if(requestedScope==='original'||requestedScope==='expanded')localStorage.setItem('og-model-scope',requestedScope);
-export const assetBase=localStorage.getItem('og-model-scope')==='original'?'/assets/pv-adopted-20261029':'/assets/pv-expanded-20261102';
+export const assetBase=siteUrl(localStorage.getItem('og-model-scope')==='original'?'/assets/pv-adopted-20261029':'/assets/pv-expanded-20261102');
 let manifestPromise:Promise<Manifest>|undefined;
 const requestedTerrain=new URLSearchParams(location.search).get('terrain');
 export const terrainMode=requestedTerrain==='constrained'?'constrained':requestedTerrain==='flat'?'flat':localStorage.getItem('og-terrain-mode')==='constrained'?'constrained':'flat';

@@ -31,5 +31,5 @@ function App(){const {state,error,refresh,doc,notify,authenticated,setAuthentica
  {blocker.state==='blocked'&&<Modal title="未公開の編集があります" onClose={()=>blocker.reset()}><p>公開していない編集がこのタブに残っています。移動しても同じタブでは再開できますが、再読込やタブ終了では失われます。</p><div className="modal-footer"><Button onClick={()=>blocker.reset()}>編集を続ける</Button><Button kind="primary" onClick={()=>blocker.proceed()}>移動する</Button></div></Modal>}
  </div>;
 }
-const router=createBrowserRouter([{path:'*',element:<PVApp/>}]);
+const router=createBrowserRouter([{path:'*',element:<PVApp/>}],{basename:import.meta.env.BASE_URL});
 createRoot(document.getElementById('root')!).render(<React.StrictMode><RouterProvider router={router}/></React.StrictMode>);
