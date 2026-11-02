@@ -23,3 +23,14 @@ PVの冒頭用に、都庁の双塔を巨大な角・耳に見立てるキャラ
 起動: scripts/launchers/OpenGraffiti-Bloom.bat または /demo-mural?art=bloom&scope=expanded&terrain=flat 。従来Mural.batは都庁版のまま。保存IDをcocoon-luminous-bloom-v1と分離し、別建物の既存作品を上書きしない。
 
 検証: TypeScript/Vite成功。都庁の生成・退色・再実行、拡大街区、両作品の全周撮影の4テスト成功（1.2分）。新作13方向を実際に読み、docs/bloom-art-review.jsonへ記録。照合: node scripts/verify-spatial-art-review.mjs docs/bloom-art-review.json 。画像では羽根・花弁として読め、頂部へ収束する。細い縦線や基壇の区切りはモデルの分割が見える。美的評価はCodexによるもので独立被験者評価ではない。
+
+
+## 桜富士 · SAKURA FUJI (2026-11-03)
+
+「万人受けする分かりやすい美しさ、日本風」の依頼に対し、コクーンタワーを桜・富士山・流水の和柄で包む別作品を追加。生成り、桜色、朱色、藍色を中心に五弁の桜を大きく配置。枝が上昇し、波が基部と球状付属棟を巡る。東西方向をPV導入に推奨。南北では山が両端へ回り込むが桜と波は見える。
+
+`/demo-mural?art=sakura&terrain=flat&scope=expanded` / `scripts/launchers/OpenGraffiti-Sakura.bat`。ID `cocoon-sakura-fuji-v2`。v1は構図調整前のローカル履歴として保持。都庁の採用済みguardian、前作bloomも保持。
+
+`src/pv-sakura-field.ts` の連続したワールド座標・角度・高さによる手続き描画をnative UVへ焼き、通常の描画レイヤーへ保存する。PLATEAU形状・UV・配置の変更なし。写真由来素材ではなくオリジナル手続きアート。ブラシ・塗り・グラデーションで近似可能な図形だが手動操作の記録ではない。
+
+TypeScript/Vite成功。sakura-artとexpansionの3テスト成功（50.3秒）。初回はビルド中にテストを開始したためdist未配置の404で失敗し、ビルド完了後に再実行して成功。12方向＋屋根の実画像を確認、`docs/sakura-art-review.json` に個別観察とSHA256を記録。美的評価はCodexによる確認であり、万人受けの実証ではない。細い元モデルの継ぎ目と屋根付近の図形の伸びは残る。

@@ -266,3 +266,5 @@ PLATEAUが都市の「形」をデジタル化したのなら、Open Canvasは�
 Open Canvasは、その変化を可視化する「都市美術館」のシミュレーションである。
 
 美しさを軸にしたコクーンタワー作品「LUMINOUS BLOOM · 光の繭」：[起動bat](scripts/launchers/OpenGraffiti-Bloom.bat)。都庁のファンシー作品も保持。
+
+桜・富士山・流水の和風アート「桜富士」は [OpenGraffiti-Sakura.bat](scripts/launchers/OpenGraffiti-Sakura.bat) で起動できます。

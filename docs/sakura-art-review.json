@@ -1,0 +1,110 @@
+{
+  "status": "VISUALLY_REVIEWED_BY_CODEX",
+  "note": "実画像13方向の目視確認。万人受けの独立被験者評価ではない。",
+  "views": [
+    {
+      "image": "test-results/sakura-orbit-0.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "正面に五弁の桜。山は左右に分かれ、中央は生成りの余白。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "08406ab47f23d068e1db91d08716482aeb79cfa1bf8259d1397a49dc9ffb48a2"
+    },
+    {
+      "image": "test-results/sakura-orbit-1.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜と枝が継続。左の山の斜面が現れる。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "88160706feca569e6318a1329e97b60c67db1f57328cb0edcccfd8d05345166f"
+    },
+    {
+      "image": "test-results/sakura-orbit-2.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜の大花と青い山。球状付属棟に波が続く。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "df9e20a83eaeaeac32a7c6c34f13627934abd5fd82a39c4a66fb93561c60b2ff"
+    },
+    {
+      "image": "test-results/sakura-orbit-3.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜と朱色の背景、中央に雪冠の山。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "6c93cb326ff3b9ae3dd33c419a1f22ba6f5efa621e7b4e6bc89b7e885bb8d282"
+    },
+    {
+      "image": "test-results/sakura-orbit-4.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "大きな桜と山の右斜面、藍色の波。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "b6522767b04988856eb9331e5ecf56e3834582811087bbb3b1589c317f578cbd"
+    },
+    {
+      "image": "test-results/sakura-orbit-5.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "花は明瞭。山が右端へ回り込み余白が増す。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "c9bd1b7067dc7c7564185e03a1478b3c2570e0318d68b646cc885d498f46ca86"
+    },
+    {
+      "image": "test-results/sakura-orbit-6.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "裏側にも桜と枝、基部に波。山頂は見えない角度。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "869c908c83fe8a387beee1483ee9c300452aec77c5d498d6f05a5311632ef0c0"
+    },
+    {
+      "image": "test-results/sakura-orbit-7.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜の花形と枝が正面へ戻る。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "315eb57f5a065cf25d458f638bea893c8ca03943553ca077f5e4a55843392866"
+    },
+    {
+      "image": "test-results/sakura-orbit-8.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "花、生成りの雪冠、青い山が一緒に見える。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "c9688f86ef8f31561a384dff9ad098ab648f1de07190233238403fc76a0ac374"
+    },
+    {
+      "image": "test-results/sakura-orbit-9.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "大きな桜と中央の山、雪冠の平らな頂部が見える。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "1213dbf16c03090644eb2b54c0db10122620886c003575f65f893c445649653e"
+    },
+    {
+      "image": "test-results/sakura-orbit-10.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜・山・波を読める。付属棟の波も継続。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "4a71392ccb8a2ee07a6632961e60c26449a7a0d3051b86edf8c165ff75f1d31a"
+    },
+    {
+      "image": "test-results/sakura-orbit-11.png",
+      "question": "画像だけを見て何に見えるか。桜の花、富士山、流水が読み取れるか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "桜の花と枝。山は右側へ回る。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "c105e4876bc98f746652cfb7fb77fd0dd2075fa2c673628e699c899a6841c2f3"
+    },
+    {
+      "image": "test-results/sakura-roof.png",
+      "question": "頂部にも桜が続き、裸の面がないか。",
+      "verdict": "PASS",
+      "observation": "頂部まで生成りと桜色が続く。上面では花の一部が放射状に伸びる。",
+      "limitations": "元モデルの細い継ぎ目が残る。富士山の全形は東西方向が読みやすく、南北方向では端に回り込む。屋根では花形が伸びる。",
+      "sha256": "8375c545e99a3da3d76d501fa894a11a9d90a8f1dd1a1b77b41c506ad1e01be8"
+    }
+  ]
+}
