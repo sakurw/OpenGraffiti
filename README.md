@@ -1,6 +1,6 @@
 # Open Graffiti
 
-2026-11-03全周アート：都庁の北・東・南・西・屋上へ「NEON TIDE — 360°」を描画。[アート起動bat](scripts/launchers/OpenGraffiti-Mural.bat)。
+2026-11-03立体アート：建物を巡る二重螺旋「DOUBLE CURRENT」へ再設計。[制作と視覚検査](docs/SPATIAL_ART.md)。[アート起動bat](scripts/launchers/OpenGraffiti-Mural.bat)。
 
 2026-11-02拡張：[都庁の巨大アート・3,492棟への範囲拡大・復旧手順](開発関連/モック実装/都庁アート・範囲拡大_20261102.md)。通常起動は拡大範囲、元127棟は専用batで復旧できます。
 

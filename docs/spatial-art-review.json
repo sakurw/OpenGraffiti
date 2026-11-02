@@ -1,0 +1,110 @@
+{
+  "status": "VISUALLY_REVIEWED_BY_CODEX",
+  "note": "13枚を実際に読み取り、抽象的な帯と円弧の判別を評価。独立被験者の認識試験ではない。",
+  "views": [
+    {
+      "image": "test-results/spatial-orbit-0.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "細い立面に赤と青緑の斜め帯。左端へ帯が折り返す。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "1cf90bf83e60d968776ee2e0fc2f2db27e7ff6ec05882da09f0ce95fdf79205b"
+    },
+    {
+      "image": "test-results/spatial-orbit-1.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "二棟の間の凹みを横切る波形と、手前へ回る帯が読める。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "42f41b1ace890730f1053c520ce8844b651f124d4f10edbcd78bca69eb72eb4b"
+    },
+    {
+      "image": "test-results/spatial-orbit-2.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "幅のある立面で二色の流れが中央の折れを通り抜ける。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "a76272cc0483c296fb77d23d824801edfe7533ae8a0bcef529117c03c6372ee8"
+    },
+    {
+      "image": "test-results/spatial-orbit-3.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "二塔の空隙を含むシルエットと、下部を横断する斜めの流れ。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "b3223164ed96fd4195fc535c8bd0c7648774caa8b94fa04eb19ba9a78e876f82"
+    },
+    {
+      "image": "test-results/spatial-orbit-4.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "右側の稜線で帯が折れ、正面の幅が縮む。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "4f8f294e5474be1fc958151e6473dcccacfa23b44076c1221aaebe0e57eed2c8"
+    },
+    {
+      "image": "test-results/spatial-orbit-5.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "側面へ回る二色の帯。上部の二塔は重なって見える。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "4923f2248b4525d4c3b86f48498daee920d02a3aefc3b6aa367c7b9f77f5843f"
+    },
+    {
+      "image": "test-results/spatial-orbit-6.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "反対の細い立面。赤と青緑が交互に巻き付く。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "f515852b885ccceecdc59f3567fd0a03eb369cd30da47c86850cccef59a63fd0"
+    },
+    {
+      "image": "test-results/spatial-orbit-7.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "背面の凹みをまたぐ斜め帯。塔頂には縦の金色の線。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "2f2b73684bdfe9f6c25ccbad52c166b4ed98063ef80ce6c52866b673c8ee3d88"
+    },
+    {
+      "image": "test-results/spatial-orbit-8.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "広い背面に赤と青緑の流れが連続して見える。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "2ba49d0248aad90a11ae40510e791c4d6b9465901e26ca733e6c44b96f5857f3"
+    },
+    {
+      "image": "test-results/spatial-orbit-9.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "二塔と中央の空隙、下部の連続帯を同時に識別できる。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "2b3ff6ce2cc7d3862c9568c5cbc0809b255b7c0d2b9e64d958c4413cdcd10d58"
+    },
+    {
+      "image": "test-results/spatial-orbit-10.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "左の稜線へ流れが回り込み、右塔の帯も読める。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "95b04f54dde7dfe6ded869728027af7d4decfc6823fb8fe3904e6ed61b4f2e97"
+    },
+    {
+      "image": "test-results/spatial-orbit-11.png",
+      "question": "画像だけを見て何に見えるか。二本の帯が角を越えて続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "細い側面へ戻る帯の折り返し。二塔の重なりが増える。",
+      "limitations": "魚や具体的な生物には見えない。単独静止画では螺旋の全周経路は追えず、隣接方向と合わせて読む抽象作品。細い縦目地が残る。",
+      "sha256": "e73059dc9934dc96783e490c7be0ba93bf6899ceebccbd60b1a7ac5cfb0b82d6"
+    },
+    {
+      "image": "test-results/spatial-roof.png",
+      "question": "屋上の環と側面の帯が一つの立体作品として読めるか。",
+      "verdict": "PASS",
+      "observation": "二つの屋根に同心円の円弧が現れ、中央の空隙を囲む。",
+      "limitations": "屋上設備の細い線と中央の低い部分には細片が見える。主たる円弧は判別できる。",
+      "sha256": "94cf05b8668b2285bd163e72556b8d9273d9f99d7878c3bb5846b15cf6213688"
+    }
+  ]
+}
