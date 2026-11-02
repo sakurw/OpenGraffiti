@@ -1,0 +1,9 @@
+{
+  "source": "public/assets/pv-expanded-20261102/city.glb",
+  "sourceSha256": "b4d19ff283a1574fbaee4b6760755595c7f97797460e10dbb06f5bd90a4ac245",
+  "upwardTriangles": 116354,
+  "width": 8192,
+  "height": 8192,
+  "metersPerPixel": 0.234375,
+  "method": "Projected coverage of original upward road and bridge triangles; suppress DEM rendering under those surfaces; no terrain or model vertex modification."
+}

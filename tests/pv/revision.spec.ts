@@ -2,7 +2,7 @@ import {facadeInFront} from './ground-visibility';
 import {paintFixture,fixtureId,atWorld} from './paint-fixture';
 import {test,expect,type Page} from '@playwright/test';
 import sharp from 'sharp';
-test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(!localStorage.getItem('og-terrain-mode'))localStorage.setItem('og-terrain-mode','constrained');});});
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{localStorage.setItem('og-model-scope','original');if(!localStorage.getItem('og-terrain-mode'))localStorage.setItem('og-terrain-mode','constrained');});});
 const id='bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7',city='/areas/tocho/city';
 async function ready(p:Page){await expect(p.locator('canvas[data-buildings="127"]')).toBeVisible();await expect(p.locator('.pv-stage>.pv-loading')).toHaveCount(0);}
 async function pixel(p:Page,x:number,y:number,hideOverlays=false){const c=p.locator('canvas'),buffer=await c.screenshot({style:'.pv-brush-cursor{visibility:hidden!important}'+(hideOverlays?'.pv-building-panel,.pv-help{visibility:hidden!important}':'')}),{data,info}=await sharp(buffer).raw().toBuffer({resolveWithObject:true});const i=(Math.round(y)*info.width+Math.round(x))*info.channels;return [...data.subarray(i,i+3)];}

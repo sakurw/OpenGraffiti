@@ -5,7 +5,7 @@ import sharp from 'sharp';
 import {surfaceHeight} from '../src/pv-ground.ts';
 import {buildingGround} from './pv-building-ground.mjs';
 
-const dir='public/assets/pv-adopted-20261029',sourceBytes=await fs.readFile(dir+'/surface.json'),source=JSON.parse(sourceBytes),{minX,minZ,nx,nz,step}=source,width=nx+1,height=nz+1,count=width*height;
+const dir=process.env.PV_MODEL_DIR||'public/assets/pv-adopted-20261029',sourceBytes=await fs.readFile(dir+'/surface.json'),source=JSON.parse(sourceBytes),{minX,minZ,nx,nz,step}=source,width=nx+1,height=nz+1,count=width*height;
 const original=new Float64Array(count),median=new Float64Array(count),temporary=new Float64Array(count),smooth=new Float64Array(count),at=(x,z)=>Math.max(0,Math.min(nz,z))*width+Math.max(0,Math.min(nx,x));
 for(let z=0;z<height;z++)for(let x=0;x<width;x++)original[z*width+x]=surfaceHeight(source,minX+x*step,minZ+z*step);
 // Remove isolated spikes first, then use a symmetric 12 m Gaussian kernel.
@@ -27,5 +27,5 @@ report.method='Official DEM median/Gaussian background with original building bo
 report.vertices=positions.length/3;report.triangles=triangles.length/3;report.contactTriangles=ground.contacts.length;report.groundedBuildings=new Set(ground.contacts.map(c=>c.id)).size;report.nativeJointLimitMetres=.12;report.nativeJointExplanation='Adjacent original building bottom vertices differ by 12 cm at one shared boundary; the lower original contact is retained and both buildings remain unchanged.';
 report.preservedElevatedStructures=['bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1'];
 await new NodeIO().write(dir+'/walk-terrain.glb',doc);await fs.writeFile(dir+'/walk-surface.json',JSON.stringify({version:5,minX,minZ,step,nx,nz,heights:[...smooth],vertices:positions,triangles,buildingContacts:ground.contacts,source:{derivedFrom:'surface.json',sha256:report.sourceSha256,smoothing:report.method}}));await fs.writeFile(dir+'/walk-smoothing-report.json',JSON.stringify(report,null,2)+'\n');
-for(const name of ['walk-terrain.glb','walk-surface.json','walk-smoothing-report.json'])await fs.copyFile(dir+'/'+name,'dist/assets/pv-adopted-20261029/'+name);
+for(const name of ['walk-terrain.glb','walk-surface.json','walk-smoothing-report.json'])await fs.copyFile(dir+'/'+name,'dist/'+dir.replace(/^public\//,'')+'/'+name);
 console.log(report);

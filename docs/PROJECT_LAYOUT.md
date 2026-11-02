@@ -21,3 +21,7 @@ Historical reconstruction scripts retain their names and relative input paths fo
 2026-11-02 organization moved 135 untracked temporary/candidate files (9,215,629,227 bytes) into `_local-backups/project-organization-20261102-220404/`. Every moved file was SHA-256 checked; `manifest.json` lists original paths. Copy `files/<original path>` back to recover one file. Tracked files and inputs protected by the adopted provenance manifest were excluded. Earlier removal of obsolete texture experiments is recoverable through `_local-backups/tocho-adoption-20261029/` and Git history.
 
 Do not use blanket `git add .` for new datasets. Check staged files for personal data, credentials, generated caches and files over GitHub's size limits. The source license and existing third-party notices remain applicable.
+
+A second recovery archive, `_local-backups/project-organization-20261102-220622/`, holds 85 temporary scripts (261,824 bytes) with the same hash-checked original-path manifest.
+
+The expanded native district is in `public/assets/pv-expanded-20261102/`; its selection and download/hash provenance are in `public/assets/pv-expanded-source-20261102/`. Runtime artwork operation recipes are in `public/artworks/`.

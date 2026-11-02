@@ -1,15 +1,17 @@
 import {streetBuildings} from './pv-street';
 import {flatManifest,type FlatLayout} from './pv-layout';
 export interface Building {id:string;name:string;blockId:string;parts:string[];bounds:number[]}
-export interface Manifest {version:number;model:string;modelSha256:string;sourceScopeSha256:string;buildingCount:number;sourcePhotoMaterials:number;bounds:number[][];envelope:number[][];buildings:Building[];layout?:FlatLayout}
+export interface Manifest {roadCount?:number;version:number;model:string;modelSha256:string;sourceScopeSha256:string;buildingCount:number;sourcePhotoMaterials:number;bounds:number[][];envelope:number[][];buildings:Building[];layout?:FlatLayout}
 export interface Revision {order?:number;id:string;buildingId:string;at:number;title:string;maps:Record<string,string>;thumbnail:string;author?:string;createdAt?:string;layers?:unknown[];faces?:Partial<Record<string,string>>}
 export interface Road {id:string;name:string;start:[number,number];end:[number,number];left:string[];right:string[];heightSamples?:number[][];width?:number;sourceRoadId?:string;rings?:number[][][];path?:number[][]}
-export const assetBase='/assets/pv-adopted-20261029';
+const requestedScope=new URLSearchParams(location.search).get('scope');
+if(requestedScope==='original'||requestedScope==='expanded')localStorage.setItem('og-model-scope',requestedScope);
+export const assetBase=localStorage.getItem('og-model-scope')==='original'?'/assets/pv-adopted-20261029':'/assets/pv-expanded-20261102';
 let manifestPromise:Promise<Manifest>|undefined;
 const requestedTerrain=new URLSearchParams(location.search).get('terrain');
 export const terrainMode=requestedTerrain==='constrained'?'constrained':requestedTerrain==='flat'?'flat':localStorage.getItem('og-terrain-mode')==='constrained'?'constrained':'flat';
 if(requestedTerrain==='flat'||requestedTerrain==='constrained')localStorage.setItem('og-terrain-mode',terrainMode);
-export function manifest():Promise<Manifest>{return manifestPromise??=fetch(assetBase+'/manifest.json').then(async r=>{if(!r.ok)throw Error('採用モデルの情報を読み込めません。');const m:Manifest=await r.json();if(terrainMode!=='flat'||m.buildingCount!==127)return m;const layout=await fetch(assetBase+'/flat-layout.json?v=1').then(r=>{if(!r.ok)throw Error('平坦化設定を読み込めません。');return r.json();});return flatManifest(m,layout);});}
+export function manifest():Promise<Manifest>{return manifestPromise??=fetch(assetBase+'/manifest.json').then(async r=>{if(!r.ok)throw Error('採用モデルの情報を読み込めません。');const m:Manifest=await r.json();if(terrainMode!=='flat'||m.buildingCount===1)return m;const layout=await fetch(assetBase+'/flat-layout.json?v=1').then(r=>{if(!r.ok)throw Error('平坦化設定を読み込めません。');return r.json();});return flatManifest(m,layout);});}
 const channel=new BroadcastChannel('opengraffiti-pv-20261029');
 const listeners=new Set<()=>void>();
 function announce(){listeners.forEach(fn=>fn());}
@@ -35,4 +37,4 @@ export function fade(rev:Revision|undefined,time=now()){return rev?Math.max(0,Ma
 export function name(b:Building,m:Manifest){return b.name||`建物 ${String(m.buildings.indexOf(b)+1).padStart(3,'0')}`;}
 export function center(b:Building):[number,number,number]{return [(b.bounds[0]+b.bounds[3])/2,(b.bounds[1]+b.bounds[4])/2,(b.bounds[2]+b.bounds[5])/2];}
 
-export async function roads(_m:Manifest):Promise<Road[]>{const r=await fetch(assetBase+'/roads.json?v=5');if(!r.ok)throw Error('道路を読み込めません。');return ((await r.json()).roads as Road[]).map(road=>({...road,...streetBuildings(_m.buildings,road)}));}
+export async function roads(_m:Manifest):Promise<Road[]>{const r=await fetch(assetBase+'/roads.json?v=5');if(!r.ok)throw Error('道路を読み込めません。');return ((await r.json()).roads as Road[]).map(road=>{let sides:ReturnType<typeof streetBuildings>|undefined;return {...road,get left(){return (sides??=streetBuildings(_m.buildings,road)).left;},get right(){return (sides??=streetBuildings(_m.buildings,road)).right;}};});}

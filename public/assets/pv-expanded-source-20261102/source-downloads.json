@@ -1,0 +1,44 @@
+{
+  "catalog": "https://www.geospatial.jp/ckan/dataset/plateau-13104-shinjuku-ku-2025",
+  "downloadUrl": "https://assets.cms.plateau.reearth.io/assets/2f/422bdf-d9a5-439a-8c2c-acc9c5f23f3d/13104_shinjuku-ku_pref_2025_3dtiles_mvt_1_op.zip",
+  "bytes": 562982622,
+  "nativeModelDirectory": "model",
+  "notice": "Download official archive and extract its model folders under public/assets/plateau-official-shinjuku-2025/model. Exact consumed tile paths and SHA-256 values are in ../pv-expanded-20261102/manifest.json sources. Source image textures are not used by the runtime exporter. New building materials remain procedural or source-limited, not photographically certified.",
+  "cityGmlInputs": [
+    {
+      "id": "plateau-13104-shinjuku-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/db/2866b9-e3c2-4bc4-83d3-b7b42e9b85a1/13104_shinjuku-ku_pref_2025_citygml_1_op.zip",
+      "filter": "@data/texture-city/pv-official-dem-selection-20261101.json",
+      "downloadedAt": "2026-11-01T00:24:41.284Z",
+      "files": [
+        {
+          "path": "udx/dem/533945_dem_6697_op.gml",
+          "bytes": 983488557,
+          "sha256": "32b328d61fe1e9727774e30ab39ea09079b074607b47fbcc360995b4c8b64f0b"
+        }
+      ]
+    }
+  ],
+  "additionalRoadInputs": [
+    {
+      "path": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/tran/53394524_tran_6697_op.gml",
+      "sha256": "225257690efeead4c84b8d17c9198361bb2b32340efa58b3e51b6858d43950f0",
+      "bytes": 6029458
+    },
+    {
+      "path": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/tran/53394525_tran_6697_op.gml",
+      "sha256": "5b6e432a857c3241766abcda3c3c596b5ff8f298e1ae95051619fbb191c4c195",
+      "bytes": 34370375
+    },
+    {
+      "path": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/tran/53394534_tran_6697_op.gml",
+      "sha256": "b8700403c98b90fa87c5d007ab9bb7e444b5208040171afb57b95e3a5377ee5e",
+      "bytes": 6663079
+    },
+    {
+      "path": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/tran/53394535_tran_6697_op.gml",
+      "sha256": "1141159b90ee2a901eae0b4afa76ebd11141296caa97fa5ac9cd87a5ee07db6c",
+      "bytes": 31785752
+    }
+  ]
+}

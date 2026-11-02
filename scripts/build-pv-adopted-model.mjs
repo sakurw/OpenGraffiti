@@ -8,7 +8,8 @@ import assert from 'node:assert/strict';
 import {NodeIO,Document} from '@gltf-transform/core';
 import {Vector3,Triangle,Box3,Color,SRGBColorSpace} from 'three';
 
-const source='public/assets/tocho-twelve-blocks-20261019',out=process.env.PV_MODEL_OUT||'public/assets/pv-adopted-20261029';
+const source=process.env.PV_SCOPE_DIR||'public/assets/tocho-twelve-blocks-20261019',out=process.env.PV_MODEL_OUT||'public/assets/pv-adopted-20261029';
+const stable=process.env.PV_STABLE_MANIFEST?JSON.parse(await fs.readFile(process.env.PV_STABLE_MANIFEST)):null,oldKeys=new Map(stable?.buildings.map(b=>[b.id,[...b.parts]])||[]);
 const scope=JSON.parse(await fs.readFile(source+'/scope.json','utf8'));
 const atlas=JSON.parse(await fs.readFile('public/assets/plateau-official-shinjuku-2025/own-only/texture-overrides.json','utf8'));
 const profiles=new Map(JSON.parse(await fs.readFile('public/assets/tocho-district-photo-v3-20261018/photo-profiles.json','utf8')).buildings.map(p=>[p.buildingId,p]));
@@ -49,7 +50,7 @@ for(const kind of ['buildings','roads','bridges']){
     for(const t of triangles){const f=t.group,width=f.maxU-f.minU,height=f.maxY-f.minY,bh=b?Math.max(3,b.maxHeight-b.minHeight):1,roof=Math.abs(f.n.y)>.65,wall=b&&Math.abs(f.n.y)<.2&&height>=4.8&&width>=2.4&&f.area>=18&&f.minY<b.maxHeight+datum-6&&profile?.windowAllowed!==false,bays=Math.max(1,Math.round(width/(profile?.bayWidth??3))),floors=Math.max(1,Math.round(bh/(profile?.floorHeight??3.5)));
      for(let k=0;k<3;k++){const v=t.q[k];data.position.push(v.x,v.y,v.z);data.normal.push(f.n.x,f.n.y,f.n.z);data.uv.push(uv?uv[t.ix[k]*2]:0,uv?uv[t.ix[k]*2+1]:0);data.ownUv.push(roof?v.x/2:(v.dot(f.u)-f.minU)/Math.max(width,.01)*bays,roof?v.z/2:(v.y-(b?.minHeight??0)-datum)/bh*floors);const color=new Color().setRGB(rgb[0]/255,rgb[1]/255,rgb[2]/255,SRGBColorSpace);if(roof&&b)color.lerp(new Color('#8b9691'),.48);data.color.push(color.r,color.g,color.b);data.role.push(wall?1:roof&&b?2:0);data.shade.push(b?.81+.19*Math.max(0,f.n.dot(light)):1);if(b)bounds.expandByPoint(v);}
     }
-    const key=`part-${partNo++}`,mat=doc.createMaterial(key).setDoubleSided(true).setExtras({ownOnly:true,atlasUrl:kind==='buildings'?atlas.tiles[file]?.images?.[0]?.url??null:null,partKey:key,kind});
+    const key=stable?(oldKeys.get(id)?.shift()||`expanded-part-${partNo++}`):`part-${partNo++}`,mat=doc.createMaterial(key).setDoubleSided(true).setExtras({ownOnly:true,atlasUrl:kind==='buildings'?atlas.tiles[file]?.images?.[0]?.url??null:null,partKey:key,kind});
     const primitive=doc.createPrimitive().setAttribute('POSITION',attribute(key,'VEC3',data.position)).setAttribute('NORMAL',attribute(key,'VEC3',data.normal)).setAttribute('TEXCOORD_0',attribute(key,'VEC2',data.uv)).setAttribute('_OWN_UV',attribute(key,'VEC2',data.ownUv)).setAttribute('_OWN_COLOR',attribute(key,'VEC3',data.color)).setAttribute('_OWN_ROLE',attribute(key,'SCALAR',data.role)).setAttribute('_OWN_SHADE',attribute(key,'SCALAR',data.shade)).setMaterial(mat);
     if(!nodes.has(id)){const node=doc.createNode(id).setMesh(doc.createMesh(id)).setExtras({buildingId:b?id:null,kind});scene.addChild(node);nodes.set(id,node);}
     nodes.get(id).getMesh().addPrimitive(primitive);triangleCount+=triangles.length;

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "originalBuildings": 127,
+  "expandedBuildings": 3492,
+  "originalPartsByteIdentical": 254,
+  "allOriginalAttributesAndUVsPreserved": true,
+  "flatGroundContacts": 3492,
+  "maxFlatContactError": 0,
+  "roads": 1867,
+  "originalRoadsPreserved": 184,
+  "road4Sides": [
+    2644,
+    848
+  ],
+  "nativeSourceTiles": 130,
+  "ancestorBatchOverlaps": 0,
+  "modelSha256": "b4d19ff283a1574fbaee4b6760755595c7f97797460e10dbb06f5bd90a4ac245",
+  "newBuildingMaterials": "Existing own-only atlas where applicable; procedural inference otherwise; no new photographic certification"
+}

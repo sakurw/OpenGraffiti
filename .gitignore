@@ -31,3 +31,6 @@ mapillary/_dataset/
 /public/assets/universal-reconstruction/
 /public/assets/universal-ten-building/
 /public/assets/universal-pipeline-demo/
+
+# Generated browser source maps
+/public/assets/**/*.js.map

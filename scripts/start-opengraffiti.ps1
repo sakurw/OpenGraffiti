@@ -1,13 +1,13 @@
-﻿param([switch]$NoOpen, [switch]$NoBrowser, [switch]$FadeSample, [ValidateSet('flat','constrained')][string]$Terrain = 'flat')
+﻿param([switch]$NoOpen, [switch]$NoBrowser, [switch]$FadeSample, [switch]$Mural, [ValidateSet('original','expanded')][string]$Scope = 'expanded', [ValidateSet('flat','constrained')][string]$Terrain = 'flat')
 
 # Accept the batch file's conventional --no-open argument as well.
 $skipBrowser = $NoOpen -or $NoBrowser -or ($args -contains '--no-open')
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $baseUrl = 'http://127.0.0.1:3100'
-$pageUrl = if ($FadeSample) { "$baseUrl/demo-fade" } else { "$baseUrl/areas/tocho/city" }
+$pageUrl = if ($Mural) { "$baseUrl/demo-mural" } elseif ($FadeSample) { "$baseUrl/demo-fade" } else { "$baseUrl/areas/tocho/city" }
 
-$pageUrl += "?terrain=$Terrain"
+$pageUrl += "?terrain=$Terrain&scope=$Scope"
 
 function Test-OpenGraffiti {
     try {
@@ -66,7 +66,7 @@ try {
     }
 
     Write-Host "Ready: $pageUrl"
-    if ($FadeSample) { Write-Host "Control: $baseUrl/demo-control"; Write-Host 'On the city screen: Space plays/pauses; Left rewinds and pauses. Duration: 15 seconds.' }
+    if ($FadeSample -or $Mural) { Write-Host "Control: $baseUrl/demo-control"; Write-Host 'On the city screen: Space plays/pauses; Left rewinds and pauses. Duration: 15 seconds.' }
     if (!$skipBrowser) { Start-Process $pageUrl }
     exit 0
 } catch {
