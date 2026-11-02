@@ -1,0 +1,11 @@
+import Fastify from 'fastify';
+import staticPlugin from '@fastify/static';
+import { resolve } from 'node:path';
+const app = Fastify({ logger: false });
+await app.register(staticPlugin, { root: resolve('node_modules/three'), prefix: '/node_modules/three/' });
+await app.register(staticPlugin, { root: resolve('public'), prefix: '/', decorateReply: false });
+app.get('/healthz', async () => ({ service: 'tocho-review', ok: true }));
+const port = Number.parseInt(process.argv[2] ?? process.env.TOCHO_REVIEW_PORT ?? '3100', 10);
+if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid Tocho review port');
+await app.listen({ host: '127.0.0.1', port });
+console.log(`Tocho review: http://127.0.0.1:${port}/tocho-landmark-comparison.html`);

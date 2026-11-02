@@ -1,0 +1,3 @@
+interface:
+  display_name: "PLATEAU 道路・地面生成"
+  short_description: "道路と地形を生成し接地・歩行と復旧可能な平坦化を検証する"

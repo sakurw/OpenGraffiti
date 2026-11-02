@@ -1,0 +1,20 @@
+<!doctype html>
+<html><body style="margin:0;background:#202020;color:white;font-family:sans-serif">
+<div id="status" style="position:fixed;z-index:2;padding:8px;background:#000c">都庁品質比較: 読み込み中</div>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '/vendor/GLTFLoader.js';
+import {OrbitControls} from '/vendor/OrbitControls.js';
+import {MeshoptDecoder} from '/vendor/meshopt_decoder.module.js';
+const files=['/assets/tocho-landmark/tocho-plateau-original.glb','/assets/tocho-landmark/tocho-landmark-native-hybrid.glb','/assets/tocho-landmark/tocho-landmark-photo-mechanical-hybrid-v41-candidate-20261012.glb','/assets/tocho-landmark/tocho-landmark-photo-support-hybrid-v45-candidate-20261012.glb'];
+const names=['PLATEAU元テクスチャ','写真観測+建築推定 native','写真+機械推定 v41','写真+支持平面推定 v45'];
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x202020);
+const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100000);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x444444,3));
+const c=new OrbitControls(camera,renderer.domElement);const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);
+const group=new THREE.Group();scene.add(group);
+Promise.all(files.map((f,i)=>new Promise(r=>loader.load(f,g=>{g.scene.position.x=(i-1.5)*350;g.scene.name=names[i];group.add(g.scene);r(true)},undefined,()=>r(false))))).then(x=>{status.textContent='都庁品質比較: '+x.filter(Boolean).length+'/'+files.length+' GLB loaded';const b=new THREE.Box3().setFromObject(group),s=b.getSize(new THREE.Vector3()),m=Math.max(s.x,s.y,s.z),center=b.getCenter(new THREE.Vector3());camera.position.copy(center).add(new THREE.Vector3(m*.8,m*.4,m*.8));c.target.copy(center);c.update()});
+function loop(){requestAnimationFrame(loop);renderer.render(scene,camera)}loop();
+</script></body></html>

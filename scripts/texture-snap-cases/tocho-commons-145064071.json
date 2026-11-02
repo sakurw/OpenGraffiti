@@ -1,0 +1,31 @@
+{
+  "provider": "commons",
+  "sourceId": "145064071",
+  "areaId": "tocho",
+  "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId": "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize": [900,1195],
+  "cameraPrior": [-146.746,40,147.674],
+  "groundPhotoVerified": true,
+  "groundPhotoVerification": "Image inspected: park footpath viewpoint, street at bottom, upward view of target. EXIF altitude not used as surveyed ground elevation.",
+  "lineControls": [
+    {"name":"bridge-south-edge","world":[[-13.161,34.63,29.254],[-13.161,186.37,29.254]],"pixels":[[418,440],[414,690]],"role":"train"},
+    {"name":"south-outer-stone-edge","world":[[-5.498,34.63,61.085],[-5.498,225.579,61.085]],"pixels":[[546,450],[558,700]],"role":"train"},
+    {"name":"bridge-north-edge","world":[[-19.061,34.63,-1.526],[-19.061,186.37,-1.526]],"pixels":[[320,470],[304,720],[297,800]],"role":"held-out"},
+    {"name":"south-front-stone-edge","world":[[-14.328,34.63,57.835],[-14.328,186.37,57.835]],"pixels":[[505,370],[515,675],[520,790]],"role":"held-out"}
+  ],
+  "controls": [
+    {"name":"north-roof-outer-west","world":[-27.446,277.68,-19.147],"pixel":[280,169],"role":"train"},
+    {"name":"north-roof-front-west","world":[-26.325,277.68,-12.918],"pixel":[297,159],"role":"train"},
+    {"name":"north-roof-front-east","world":[-3.94,277.68,1.629],"pixel":[378,179],"role":"train"},
+    {"name":"south-roof-outer-west","world":[-15.975,277.68,43.082],"pixel":[453,72],"role":"train"},
+    {"name":"south-roof-front-west","world":[-13.82,277.68,49.76],"pixel":[472,61],"role":"train"},
+    {"name":"south-roof-front-east","world":[8.306,277.68,64.166],"pixel":[561,85],"role":"train"},
+    {"name":"bridge-north-front","world":[-19.061,186.37,-1.526],"pixel":[324,397],"role":"train"},
+    {"name":"bridge-south-front","world":[-13.161,186.37,29.254],"pixel":[421,361],"role":"train"},
+    {"name":"north-setback-outer","world":[-24.088,249.36,-33.775],"pixel":[255,261],"role":"held-out"},
+    {"name":"north-setback-apex","world":[-17.833,249.36,-1.068],"pixel":[337,225],"role":"held-out"},
+    {"name":"south-setback-outer","world":[-12.008,249.27,29.095],"pixel":[425,179],"role":"held-out"},
+    {"name":"south-setback-inner","world":[-10.827,249.27,35.072],"pixel":[444,169],"role":"held-out"}
+  ]
+}

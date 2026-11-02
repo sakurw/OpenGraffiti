@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>PLATEAU Universal Building Color Reconstruction</title>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#eef1ed;color:#24362d}header{padding:20px 20px 8px}h1{margin:.2rem 0 .6rem}main{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px}.panel{background:white;border-radius:12px;padding:14px;height:650px;box-sizing:border-box}.panel-head{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-head h2{margin:0;font-size:23px}.viewer{height:550px}canvas{width:100%;height:100%}.switcher{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}.switcher button{border:1px solid #9ba9a0;background:#fff;color:#24362d;border-radius:999px;padding:7px 11px;cursor:pointer}.switcher button.active{background:#24362d;color:#fff}.meta{margin:0 16px 20px;padding:16px;background:#fff;border-radius:12px;font-size:13px;line-height:1.7;display:grid;grid-template-columns:390px minmax(360px,1fr) 350px;gap:16px}.source-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-content:start}.source-photos figure{margin:0}.source-photos img{width:100%;height:92px;object-fit:cover;border-radius:8px;display:block}.source-photos figcaption{font-size:10px;line-height:1.25;margin-top:3px;color:#52635a}.badge,.legend span{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px}.badge{background:#efe2a8;color:#594b08}.legend{display:flex;flex-wrap:wrap;gap:7px;margin:7px 0}.observed{background:#d7ebf7;color:#194862}.inferred{background:#e5ead8;color:#435222}.unknown{background:#e9e9e9;color:#555}.quality-high{background:#cdebd6}.quality-mid{background:#f4e6a4}.quality-low{background:#f4c1b8}.wall-key{background:#4d91c9;color:white}.roof-key{background:#e8932f;color:white}.installation-key{background:#985eb4;color:white}.ground-key{background:#626866;color:white}.surface-info{border-left:4px solid #759a85;background:#f5f7f4;padding:10px 12px;min-height:126px}.surface-info strong{display:block;font-size:15px;margin-bottom:5px}.surface-info dl{display:grid;grid-template-columns:105px 1fr;margin:0;gap:2px 7px}.surface-info dt{color:#64736a}.surface-info dd{margin:0;overflow-wrap:anywhere}code{background:#eee;padding:2px 4px}@media(max-width:1200px){.meta{grid-template-columns:390px 1fr}.surface-info{grid-column:1/-1}}@media(max-width:900px){main{grid-template-columns:1fr}.panel{height:610px}.viewer{height:500px}.meta{grid-template-columns:1fr}.source-photos img{height:170px}.panel-head{height:auto;align-items:flex-start;flex-direction:column}}
+</style>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+<header>
+<h1>PLATEAU 普遍建物着色パイプライン — 1棟比較</h1>
+<p>左右は同一のPLATEAU形状です。右は地上写真、PLATEAUの面属性、航空測量由来のappearance画像を統合し、陰影や継ぎ目を除いた安定色へ変換しています。ドラッグで回転、ホイールで拡大縮小、右モデルの面をクリックすると根拠と属性を確認できます。</p>
+</header>
+<main>
+<section class="panel"><div class="panel-head"><h2>PLATEAU geometry only</h2></div><div class="viewer" id="plain"></div></section>
+<section class="panel"><div class="panel-head"><h2>普遍着色結果</h2><div class="switcher"><button class="active" id="show-universal">普遍着色</button><button id="show-quality">根拠品質</button><button id="show-semantic">属性分類</button><button id="show-corrected">観測合成</button><button id="show-raw">生投影</button></div></div><div class="viewer" id="textured"></div></section>
+</main>
+<div class="meta">
+<div class="source-photos" id="source-photos"></div>
+<div>
+<span class="badge" id="registration-badge">検証結果を読み込み中</span>
+<div class="legend"><span class="quality-high">直接画像色 0.45–0.86</span><span class="quality-mid">同設備群転写 0.50</span><span class="quality-low">属性priorのみ 0.22</span></div>
+<div class="legend"><span class="wall-key">Wall</span><span class="roof-key">Roof</span><span class="installation-key">BuildingInstallation</span><span class="ground-key">Ground</span></div>
+Pipeline: <code>CityGML semantic → ground photos + PLATEAU appearance → shadow/seam reduction → facade elements → confidence付き着色</code><br>
+<span id="stats">メタデータを読み込み中...</span><br>
+個々の窓・ドア形状と設備機能は元CityGMLに存在しないため断定しません。窓帯は外周側の十分な幅を持つ壁だけに適用し、凹部・塔屋・パラペットでは抑止します。設備色はappearance実測輝度を保ちつつ低彩度化します。
+</div>
+<div class="surface-info" id="surface-info"><strong>面属性</strong>右モデルの面をクリックしてください。属性分類・色根拠・confidenceを表示します。</div>
+</div>
+<script>
+(async()=>{
+if(location.protocol==='file:'){location.replace('http://127.0.0.1:3100/universal-texture-demo.html');return;}
+const [THREE,{GLTFLoader},{MeshoptDecoder},{OrbitControls}]=await Promise.all([
+ import('/vendor/three.module.js'),import('/vendor/GLTFLoader.js'),import('/vendor/meshopt_decoder.module.js'),import('/vendor/OrbitControls.js')
+]);
+window.__universalComparison={views:{},errors:[],activeVariant:'loading'};
+let synchronizing=false;
+const caseId='shinjuku-mitsui-no2-southeast';
+const report=await fetch(`/assets/texture-poc/experimental/snap/cases/${caseId}.json`).then(response=>{if(!response.ok)throw new Error(`report HTTP ${response.status}`);return response.json()});
+window.__universalComparison.report=report;
+for(const preview of report.sourcePreviews){const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');image.src=preview.url;image.alt=`${preview.role}: ${preview.sourceId}`;image.title=`${preview.sourceId} / ${preview.role} / ${preview.license}`;caption.textContent=preview.sourceKind==='ground-photo'?`地上写真: ${preview.role}`:`PLATEAU: ${preview.role}`;figure.append(image,caption);document.querySelector('#source-photos').appendChild(figure);}
+const validation=report.independentValidation,coverage=report.colorCoverage,albedo=report.albedoNormalization,semantics=report.semanticEvidence;
+document.querySelector('#registration-badge').textContent=validation?.passed&&report.qualityGates?.passed?'camera / color quality gates PASS':'quality gate unavailable';
+const paletteSource=report.sources.find(source=>source.paletteValidation),commons=report.sourceCollection.commons,karta=report.sourceCollection.kartaview;
+const expanded=semantics.evidenceExpandedCoverage,wallRules=(semantics.effectiveWallPatternEligibility||semantics.wallPatternEligibility).counts;
+document.querySelector('#stats').textContent=`Building ID: ${report.buildings[0].buildingId} / Commons広域検索 ${commons.discovered}候補→ライセンス適合 ${commons.licenseAccepted}→対象2枚 / KartaView広域検索 ${karta.discovered}候補→取得 ${karta.acquired}→色採用 ${karta.usableForColor}枚 / 地上写真の直接壁面 ${coverage.observedWallRatio*100|0}% + 同一面内補完 ${coverage.sameSurfaceExtendedArea.toFixed(0)}m² (${coverage.sameSurfaceExtensionPolygons}面) / PLATEAU appearance直接 ${expanded.directAppearancePolygons}面 + 同設備群転写 ${expanded.sameSemanticObjectTransferredPolygons}面 = 画像根拠色 ${expanded.supportedPolygons}/${semantics.appearanceEvidence.totalPolygons}面 (${Math.round(expanded.supportedRatio*100)}%) / 窓帯適用 ${wallRules.eligible||0}面・凹部/設備壁抑止 ${wallRules['suppressed-on-recessed-or-service-wall']||0}面・パラペット抑止 ${wallRules['suppressed-on-parapet-or-short-wall']||0}面 / Wall ${semantics.polygonClassCounts.WallSurface}・Roof ${semantics.polygonClassCounts.RoofSurface}・Installation ${semantics.polygonClassCounts.OuterBuildingInstallation}・Ground ${semantics.polygonClassCounts.GroundSurface}面 / 色差 ΔE ${albedo.rawDirectionalMedianDeltaE.toFixed(1)}→${albedo.correctedDirectionalMedianDeltaE.toFixed(1)} / 全体面積加重confidence ${coverage.weightedFullBuildingColorConfidence.toFixed(2)}`;
+
+function make(target,url,side){
+ const scene=new THREE.Scene();scene.background=new THREE.Color(0xdfe7df);
+ const camera=new THREE.PerspectiveCamera(45,target.clientWidth/target.clientHeight,.01,100000),renderer=new THREE.WebGLRenderer({antialias:true});
+ renderer.setPixelRatio(window.devicePixelRatio);renderer.setSize(target.clientWidth,target.clientHeight);target.appendChild(renderer.domElement);
+ scene.add(new THREE.HemisphereLight(0xffffff,0x555555,2));
+ const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);
+ const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;
+ const view={loaded:false,meshCount:0,texturedMaterialCount:0,camera,controls,renderer,root:null,variant:side};
+ window.__universalComparison.views[side]=view;
+ function syncOther(){
+  if(synchronizing)return;const other=window.__universalComparison.views[side==='geometry'?'reconstructed':'geometry'];if(!other?.loaded)return;
+  synchronizing=true;other.camera.position.copy(camera.position);other.camera.quaternion.copy(camera.quaternion);other.camera.zoom=camera.zoom;other.camera.updateProjectionMatrix();other.controls.target.copy(controls.target);other.controls.update();synchronizing=false;
+ }
+ controls.addEventListener('change',syncOther);
+ function frame(root){
+  const box=new THREE.Box3().setFromObject(root),center=box.getCenter(new THREE.Vector3()),sphere=box.getBoundingSphere(new THREE.Sphere());
+  const distance=sphere.radius/Math.sin(THREE.MathUtils.degToRad(camera.fov/2))*.78,capture=report.camera.position,direction=new THREE.Vector3(capture[0]-center.x,0,capture[2]-center.z).normalize();
+  if(direction.lengthSq()<1e-8)direction.set(1,0,1).normalize();camera.position.set(center.x+direction.x*distance,center.y+distance*.28,center.z+direction.z*distance);camera.near=Math.max(.01,distance/1000);camera.far=distance*12;camera.lookAt(center);camera.updateProjectionMatrix();controls.target.copy(center);controls.update();
+ }
+ view.loadModel=(modelUrl,variant,{preserveCamera=false}={})=>new Promise((resolve,reject)=>loader.load(modelUrl,gltf=>{
+  if(view.root)scene.remove(view.root);const root=gltf.scene;let meshCount=0,texturedMaterialCount=0;
+  root.traverse(object=>{if(object.isMesh){meshCount++;const materials=Array.isArray(object.material)?object.material:[object.material];texturedMaterialCount+=materials.filter(material=>material?.map).length;if(side==='geometry')object.material=new THREE.MeshStandardMaterial({color:0xaaaaaa,roughness:1});}});
+  scene.add(root);view.root=root;view.meshCount=meshCount;view.texturedMaterialCount=side==='geometry'?0:texturedMaterialCount;view.loaded=true;view.variant=variant;if(!preserveCamera)frame(root);
+  if(side==='reconstructed')window.__universalComparison.activeVariant=variant;
+  console.log('MODEL_LOADED',JSON.stringify({side,variant,meshCount,texturedMaterialCount:view.texturedMaterialCount}));resolve(view);
+ },undefined,error=>{window.__universalComparison.errors.push(String(error));console.error('MODEL_LOAD_ERROR',modelUrl,error);reject(error);}));
+ if(side==='reconstructed'){
+  const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2(),info=document.querySelector('#surface-info');
+  view.pickAt=(clientX,clientY)=>{if(!view.root)return null;const rect=renderer.domElement.getBoundingClientRect();pointer.x=(clientX-rect.left)/rect.width*2-1;pointer.y=-((clientY-rect.top)/rect.height)*2+1;raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObject(view.root,true).find(item=>item.object?.userData?.polygonId);if(!hit)return null;const data=hit.object.userData,plan=data.planExposureMetrics||{},extension=data.sameSurfaceExtension;info.innerHTML=`<strong>${data.semanticClass||'未分類'} / ${data.semanticSubtype||'未分類'}</strong><dl><dt>Polygon</dt><dd>${data.polygonId}</dd><dt>色根拠</dt><dd>${data.provenance||data.colorEvidence||'なし'}</dd><dt>色confidence</dt><dd>${Number(data.confidence??0).toFixed(2)}</dd><dt>属性根拠</dt><dd>${data.semanticSource||'なし'}</dd><dt>属性confidence</dt><dd>${Number(data.semanticConfidence??0).toFixed(2)} / subtype ${Number(data.subtypeConfidence??0).toFixed(2)}</dd><dt>窓・設備</dt><dd>${data.semanticClass==='WallSurface'?(data.individualWindowGeometryAvailable?'窓形状あり':`${data.facadePatternEligible?'窓帯候補':'窓帯抑止'}／${data.windowPatternPolicy||'推定なし'}`):(data.semanticClass==='OuterBuildingInstallation'?(data.exactEquipmentTypeAvailable?'設備種別あり':'BuildingInstallation確定・機能不明／低彩度色'):'—')}</dd>${extension?`<dt>面内補完</dt><dd>直接観測 ${(extension.directObservedRatio*100).toFixed(0)}% / 未観測 ${extension.extendedArea.toFixed(1)}m²を同一面内だけ延長</dd>`:''}${data.semanticClass==='WallSurface'?`<dt>外周判定</dt><dd>幅 ${Number(plan.horizontalWidthMetres||0).toFixed(1)}m / 高さ ${Number(plan.heightMetres||0).toFixed(1)}m / 外周からの内側量 ${Number(plan.levelConvexHullInsetMetres||0).toFixed(1)}m</dd>`:''}</dl>`;window.__universalComparison.lastPicked=data;return data;};
+  renderer.domElement.addEventListener('click',event=>view.pickAt(event.clientX,event.clientY));
+ }
+ (function loop(){controls.update();if(side==='geometry')syncOther();renderer.render(scene,camera);requestAnimationFrame(loop)})();
+ view.loadModel(url,side==='reconstructed'?'clean':side);
+ return view;
+}
+make(document.querySelector('#plain'),report.geometryModel,'geometry');
+const reconstructed=make(document.querySelector('#textured'),report.model,'reconstructed');
+const universal=document.querySelector('#show-universal'),quality=document.querySelector('#show-quality'),semantic=document.querySelector('#show-semantic'),corrected=document.querySelector('#show-corrected'),raw=document.querySelector('#show-raw');
+function select(button){for(const item of [universal,quality,semantic,corrected,raw])item.classList.toggle('active',item===button);}
+universal.addEventListener('click',async()=>{select(universal);await reconstructed.loadModel(report.model,'clean',{preserveCamera:true});});
+quality.addEventListener('click',async()=>{select(quality);await reconstructed.loadModel(report.qualityModel,'quality',{preserveCamera:true});});
+semantic.addEventListener('click',async()=>{select(semantic);await reconstructed.loadModel(report.semanticModel,'semantic',{preserveCamera:true});});
+corrected.addEventListener('click',async()=>{select(corrected);await reconstructed.loadModel(report.evidenceModel,'corrected',{preserveCamera:true});});
+raw.addEventListener('click',async()=>{select(raw);await reconstructed.loadModel(report.rawModel,'raw',{preserveCamera:true});});
+})().catch(error=>{console.error('DEMO_INIT_ERROR',error);document.body.insertAdjacentHTML('beforeend','<p style="color:#a00;padding:16px">比較ビューアーを初期化できませんでした。</p>');});
+</script>
+</body>
+</html>

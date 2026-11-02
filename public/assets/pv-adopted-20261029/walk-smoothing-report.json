@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "method": "Official DEM median/Gaussian background with original building bottom triangles as exact constrained triangulation; one shared render/walk/road surface",
+  "sourceSha256": "c394886e2f86354d6d580965ee2151c4a26bb1c76479515720598fbcdd0a3f10",
+  "stepMetres": 4,
+  "gaussianSigmaMetres": 12,
+  "maxHeightChangeMetres": 10.426616644070478,
+  "p95HeightChangeMetres": 2.9765978665277544,
+  "before": {
+    "meanCurvature": 0.411856414232466,
+    "maxCurvature": 39.84274155235863
+  },
+  "after": {
+    "meanCurvature": 0.11835214997188054,
+    "maxCurvature": 14.316651308793908
+  },
+  "backgroundFilter": {
+    "before": {
+      "meanCurvature": 0.411856414232466,
+      "maxCurvature": 39.84274155235863
+    },
+    "after": {
+      "meanCurvature": 0.04283185410837776,
+      "maxCurvature": 0.6493759155273438
+    }
+  },
+  "vertices": 26037,
+  "triangles": 51752,
+  "sourceFilesUnchanged": [
+    "city.glb",
+    "terrain.glb",
+    "surface.json"
+  ],
+  "contactTriangles": 846,
+  "groundedBuildings": 126,
+  "nativeJointLimitMetres": 0.12,
+  "nativeJointExplanation": "Adjacent original building bottom vertices differ by 12 cm at one shared boundary; the lower original contact is retained and both buildings remain unchanged.",
+  "preservedElevatedStructures": [
+    "bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1"
+  ]
+}

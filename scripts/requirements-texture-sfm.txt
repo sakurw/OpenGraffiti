@@ -1,0 +1,2 @@
+# Isolated workspace Python environment; CPU Windows wheel verified locally.
+pycolmap==4.2.0

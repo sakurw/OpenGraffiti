@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "field": "walk-surface.json",
+  "roads": 184,
+  "sampleSpacingMaxMetres": 0.4,
+  "samples": 23923,
+  "maxStepMetres": 0.8746259116120143,
+  "missingSurface": 0,
+  "stepLimitMetres": 1.1,
+  "failures": [],
+  "sourceHashes": {
+    "city.glb": "f3bd19f84518800965cb7f333b050914ab312217f638ade3b372651ef9176f2b",
+    "terrain.glb": "24c13f59ef74af2b6d06fd8f4d31ca11556f26441466d1831ad1d84884a89abd",
+    "surface.json": "c394886e2f86354d6d580965ee2151c4a26bb1c76479515720598fbcdd0a3f10",
+    "roads.json": "65d324a23048fc4f5dd78a9c591825c4490b18ee8cbea80eb0f1f29ef9bcae4c",
+    "walk-terrain.glb": "0ec0d66b98f46b98cb8e3af7bfe1ae35e55c427c0ea9c46baf7eff8bf910d74e",
+    "walk-surface.json": "cb3e6a738478952185d3228b37927b16f4f419de8a29c60b3cd0cb7314397f3c"
+  }
+}

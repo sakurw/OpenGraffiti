@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><title>東京都庁 写真建築推定ハイブリッドモデル</title></head>
+<body style="margin:0;background:#202020;color:white;font-family:sans-serif">
+<div id="status" style="position:fixed;z-index:2;padding:8px;background:#000b">読み込み中</div>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '/vendor/GLTFLoader.js';
+import {OrbitControls} from '/vendor/OrbitControls.js';
+import {MeshoptDecoder} from '/vendor/meshopt_decoder.module.js';
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x202020);
+const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,10000);
+const renderer=new THREE.WebGLRenderer({antialias:true}); renderer.setSize(innerWidth,innerHeight); document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x444444,3));
+const controls=new OrbitControls(camera,renderer.domElement);
+const loader=new GLTFLoader(); loader.setMeshoptDecoder(MeshoptDecoder);
+loader.load('/assets/tocho-landmark/tocho-landmark-architectural-inference-candidate.glb',g=>{
+ const model=g.scene; scene.add(model);
+ const box=new THREE.Box3().setFromObject(model); const size=box.getSize(new THREE.Vector3()); const center=box.getCenter(new THREE.Vector3());
+ model.position.sub(center);
+ camera.position.set(size.x*0.8,size.y*0.5,size.z*1.0); controls.target.set(0,0,0); controls.update();
+ document.getElementById('status').textContent='東京都庁モデル: native hybrid GLB loaded';
+},undefined,e=>document.getElementById('status').textContent='GLB load error '+e.message);
+function loop(){requestAnimationFrame(loop);renderer.render(scene,camera)} loop();
+</script>
+</body></html>

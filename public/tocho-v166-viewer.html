@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tokyo Metropolitan Government Building v166</title></head><body style="margin:0;background:#222"><div style="position:fixed;color:white;z-index:2">Tokyo Metropolitan Government Building Photoreal v166</div><script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.180.0/examples/jsm/"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x222222);
+const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,0.1,100000);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x777777,3));const light=new THREE.DirectionalLight(0xffffff,4);light.position.set(200,300,200);scene.add(light);
+const controls=new OrbitControls(camera,renderer.domElement);const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);
+loader.load('/tocho-photoreal-v166-v163-map-preserve.glb',g=>{scene.add(g.scene);const box=new THREE.Box3().setFromObject(g.scene);const center=box.getCenter(new THREE.Vector3());const size=box.getSize(new THREE.Vector3());const max=Math.max(size.x,size.y,size.z);controls.target.copy(center);camera.position.copy(center).add(new THREE.Vector3(max*0.9,max*0.65,max*0.9));camera.near=max/100;camera.far=max*10;camera.updateProjectionMatrix();controls.update();console.log(JSON.stringify({size,center,max}));},undefined,console.error);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+(function loop(){requestAnimationFrame(loop);renderer.render(scene,camera)})();
+</script></body></html>
+
+

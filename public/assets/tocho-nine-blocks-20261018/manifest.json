@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-10-18T23:41:56.3061302+09:00",
+  "viewer": "http://127.0.0.1:3110/tocho-nine-blocks-own-only-review-20261018.html",
+  "scope": "scope.json",
+  "blockCount": 9,
+  "buildingCount": 89,
+  "preservedOwnArtworkBuildings": 83,
+  "additionalInferredBuildings": 6,
+  "geometrySource": "../plateau-official-shinjuku-2025/model",
+  "originalPhotoFallback": false,
+  "scopeRule": "Nine distinct road-bounded blocks, Tocho C; central park kept whole as W, NW is next real block north of park",
+  "selection": "Complete native building batches by source geographic representative point inside road-derived envelope",
+  "roads": "Native road geometry, clipped in fragment shader at road-derived outer envelope",
+  "materials": "Only alpha-masked own artwork and own procedural textures; no original material or photo map is rendered",
+  "inference": "New six buildings use form-derived stylized patterns, not newly verified street photographs"
+}

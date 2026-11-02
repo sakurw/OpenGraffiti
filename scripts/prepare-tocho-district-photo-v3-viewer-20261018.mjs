@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+const from='tocho-district-photo-v2-20261018',to='tocho-district-photo-v3-20261018';
+let html=await fs.readFile('public/tocho-district-photo-v2-review-20261018.html','utf8');
+html=html.replaceAll(from,to).replaceAll('tocho-district-photo-sources-20261018.html','tocho-district-photo-v3-sources-20261018.html');
+html=html.replace('都庁と周辺街区｜実写真に基づく建物別テクスチャ','都庁と周辺街区｜建物別素材と推測補完');
+html=html.replace('建物ごとの写真から。','写真を手掛かりに、街区へ。');
+html=html.replace("'approved-central':'確認済みの都庁第一本庁舎'","'native-photo-inference':'この建物の写真で読める材質・色から推測補完','source-limited-inference':'写真情報が乏しいため、同じ建物の見える部分から控えめに推測','photo-inferred':'対応付けた建物写真から未観測面を推測補完','approved-central':'既存の都庁第一本庁舎・表示精度修正版'");
+html=html.replace('写真根拠不足 ${[...photoProfiles.values()].filter(p=>p.evidenceStatus===\'insufficient\').length}棟',"推測補完 ${[...photoProfiles.values()].filter(p=>['native-photo-inference','source-limited-inference','photo-inferred'].includes(p.evidenceStatus)).length}棟");
+html=html.replace(' · 都庁第一は既存版',' · 都庁第一も表示');
+html=html.replace('83棟の根拠写真・生成画像','83棟の写真・観察・推測');
+if(!html.includes('logarithmicDepthBuffer: depthMode'))throw Error('Stable-depth v2 source is required');
+await fs.writeFile('public/tocho-district-photo-v3-review-20261018.html',html);
+console.log('Created photo/inference v3 viewer with stable depth');

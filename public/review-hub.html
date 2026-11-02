@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,"><title>OpenGraffiti 現状確認メニュー</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#0f171c;color:#eef3f5;font:15px/1.6 system-ui,"Yu Gothic UI",sans-serif}header{padding:32px max(24px,calc((100vw - 1120px)/2));border-bottom:1px solid #304048;background:#142027}h1{margin:0 0 6px;font-size:28px}header p{margin:0;color:#bac8cf}.wrap{max-width:1120px;margin:0 auto;padding:26px 24px 42px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:#19252c;border:1px solid #35454e;border-radius:10px;padding:20px;display:flex;flex-direction:column;min-height:230px}.tag{font-size:12px;color:#8fc8e7;text-transform:uppercase;letter-spacing:.08em}.card h2{font-size:19px;margin:5px 0 8px}.card p{margin:0 0 10px;color:#c1ccd2}.facts{margin:4px 0 18px;padding-left:20px;color:#d7e0e4}.facts li{margin:4px 0}.actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}.button{display:inline-block;text-decoration:none;color:#f3f8fa;background:#245d78;border:1px solid #4c8aa7;border-radius:6px;padding:8px 13px}.button.secondary{background:#273941;border-color:#50636c}.note{margin-top:18px;padding:14px 16px;border-left:3px solid #d2a244;background:#1d272c;color:#d4dde1}.note strong{color:#fff}code{color:#d9edf8}@media(max-width:760px){.grid{grid-template-columns:1fr}header{padding:24px}.wrap{padding:18px 14px}}
+  </style>
+</head>
+<body>
+  <header><h1>OpenGraffiti — 現状確認メニュー</h1><p>都庁の現在成果、既存PLATEAUとの比較、他建物への適用可否、OpenGraffiti本体をここから開けます。</p></header>
+  <div class="wrap">
+    <div class="grid">
+      <section class="card"><div class="tag">Current evidence model</div><h2>1. 現状までの改善結果</h2><p>位置・独立検証点・画像マスク・都市全体遮蔽を通過した地上写真だけを反映した現在の厳密モデルです。</p><ul class="facts"><li>画像根拠率: <strong>28.31%</strong></li><li>検証済み面積: <strong>24,676.31 m²</strong></li><li>採用地上写真: Wikimedia Commons 2枚</li><li>灰色部分は未確認として残しています。</li></ul><div class="actions"><a class="button" href="/ground-evidence-review.html">改善モデルを開く</a></div></section>
+      <section class="card"><div class="tag">Applicability</div><h2>2. 都庁以外へ適用できるか</h2><p><strong>処理系は他建物へ再利用できます。</strong> 写真探索・出典監査・位置合わせ・独立点検証・マスク・遮蔽・非重複面積集計・GLB生成は対象建物から分離済みです。</p><ul class="facts"><li>建物ごとに必要: 建物ID、PLATEAU geometry、写真、対応点注釈</li><li>Commonsだけで90%以上を確保できる保証はありません。</li><li>別建物での実データ一式検証はまだ未完了です。</li></ul><div class="actions"><a class="button secondary" href="/ground-evidence-review.html">現在の検証方式を見る</a></div></section>
+      <section class="card"><div class="tag">Direct comparison</div><h2>3. PLATEAUテクスチャ付き vs 全体着色</h2><p>既存PLATEAUテクスチャ付き都庁モデルと、都庁全体を着色したモデルを左右に並べて確認できます。</p><ul class="facts"><li>左: <code>plateau-2025-v4/models/tocho.glb</code></li><li>右: <code>tocho-one-building-level3-color.glb</code></li><li>南西 / 北西 / 東 / 上層の視点切替付き</li></ul><div class="actions"><a class="button" href="/tocho-model-comparison.html">2モデルを比較する</a><a class="button secondary" href="/level3-comparison.html">4段階の外観処理も見る</a></div></section>
+      <section class="card"><div class="tag">OpenGraffiti</div><h2>4. OpenGraffiti ホームページ</h2><p>現在のOpenGraffiti本体です。都庁・東京タワーを含むPLATEAUデータセットを使うアプリ画面へ戻れます。</p><div class="actions"><a class="button" href="/">OpenGraffitiを開く</a></div></section>
+    </div>
+    <div class="note"><strong>進捗の扱い:</strong> 画像根拠率90%以上が最終目標で、現在の28.31%は途中結果です。全体着色モデルの色が付いていること自体は、地上写真による厳密な画像根拠率には加算していません。</div>
+  </div>
+</body>
+</html>

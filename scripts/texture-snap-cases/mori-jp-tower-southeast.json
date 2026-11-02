@@ -1,0 +1,13 @@
+{
+  "caseId": "mori-jp-tower-southeast",
+  "areaId": "tokyo-tower",
+  "geometryPath": "data/plateau/plateau-13103-minato-ku-2025/53393599-geometry.json",
+  "minimumHeight": 200,
+  "buildingId": "bldg_433bc5b3-db73-4644-ac24-a28d51b7ecd5",
+  "sourceId": "153194777",
+  "registration": "experimental-manual-camera",
+  "cameraPosition": [-67.60344379032631, 25, 65.72772078289563],
+  "target": [-447.203, 25, -257.025],
+  "cameraMatrix": [[2900,0,1010],[0,2900,2800],[0,0,1]],
+  "note": "Geotag prior with manually aligned focal length and off-center principal point. Crown and silhouette were visually compared, not surveyed. No independent reprojection accuracy metric. Only upper walls above 200m are eligible; lower foreground buildings and temple roof excluded. Experimental, not verified."
+}

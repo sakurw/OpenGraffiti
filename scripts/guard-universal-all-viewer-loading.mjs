@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const path='public/universal-all-areas.html';
+let html=await readFile(path,'utf8');
+const before='async function load(area=selectedArea,mode=selectedMode){selectedArea=area;';
+const after="async function load(area=selectedArea,mode=selectedMode){if(area===selectedArea&&mode===selectedMode&&(window.__allAreas?.loaded||window.__loadingKey===area+'|'+mode))return;window.__loadingKey=area+'|'+mode;selectedArea=area;";
+if(!html.includes(before))throw Error('Could not find load entry');
+html=html.replace(before,after);
+html=html.replace('status.textContent=`${inferred.buildingCount.toLocaleString()}棟',"window.__loadingKey=null;status.textContent=`${inferred.buildingCount.toLocaleString()}棟");
+html=html.replace('window.__allAreas={loaded:false,error:String(error)}', 'window.__allAreas={loaded:false,error:String(error)};window.__loadingKey=null');
+await writeFile(path,html);

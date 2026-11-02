@@ -1,0 +1,5 @@
+{
+  "method": "Visual closure only where an original road boundary is below the source DEM. Does not change either original surface; not a surveyed retaining-wall model.",
+  "boundaryEdges": 2091,
+  "closureTriangles": 12342
+}

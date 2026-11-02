@@ -1,0 +1,11 @@
+<!doctype html><html><body style="margin:0;background:#222"><script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'https://unpkg.com/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'https://unpkg.com/three@0.180.0/examples/jsm/libs/meshopt_decoder.module.js';
+const r=new THREE.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);document.body.appendChild(r.domElement);
+const s=new THREE.Scene();s.background=new THREE.Color(0x222222);s.add(new THREE.HemisphereLight(0xffffff,0xffffff,3));s.add(new THREE.DirectionalLight(0xffffff,4));
+const c=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100000);const l=new GLTFLoader();l.setMeshoptDecoder(MeshoptDecoder);
+l.load('/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-zoned-v45.glb',g=>{s.add(g.scene);const b=new THREE.Box3().setFromObject(g.scene),center=b.getCenter(new THREE.Vector3()),size=b.getSize(new THREE.Vector3());g.scene.position.sub(center);const d=Math.max(size.x,size.y,size.z)*0.8;c.position.set(d,d*0.6,d);c.lookAt(0,0,0);window.__TOCHO_LOADED=true;},undefined,e=>window.__TOCHO_ERROR=String(e));
+addEventListener('resize',()=>{c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});(function a(){requestAnimationFrame(a);r.render(s,c)})();
+</script></body></html>
+

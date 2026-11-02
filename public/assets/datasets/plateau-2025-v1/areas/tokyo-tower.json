@@ -1,0 +1,36 @@
+{
+  "id": "tokyo-tower",
+  "name": "東京タワー・神谷町",
+  "model": "/assets/datasets/plateau-2025-v1/models/tokyo-tower.glb",
+  "dataset": "plateau-13103-minato-ku-2025",
+  "sourceUrl": "https://www.geospatial.jp/ckan/dataset/plateau-13103-minato-ku-2025",
+  "origin": [
+    -7958.643508300146,
+    -37875.084949197226,
+    0
+  ],
+  "roadPolygons": 25031,
+  "buildingCount": 116,
+  "lod3Buildings": 11,
+  "backgroundLOD": 2,
+  "drawable": true,
+  "camera": {
+    "position": [
+      105,
+      115,
+      -1060
+    ],
+    "target": [
+      268,
+      25,
+      -870
+    ]
+  },
+  "bounds": [
+    -250,
+    550,
+    -1100,
+    250
+  ],
+  "note": "描画対象は東京タワーの約0.9km北側にあるLOD3壁面。東京タワー本体と周囲の背景はLOD2。"
+}

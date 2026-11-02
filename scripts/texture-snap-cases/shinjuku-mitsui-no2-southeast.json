@@ -1,0 +1,43 @@
+{
+  "caseId": "shinjuku-mitsui-no2-southeast",
+  "areaId": "tocho",
+  "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "cityGmlPath": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/bldg/53394525_bldg_6697_op.gml",
+  "plateauCatalogPath": "data/plateau/plateau-13104-shinjuku-ku-2025/catalog.json",
+  "minimumHeight": 65,
+  "buildingId": "bldg_04af6636-576b-435c-bcad-a9fc951ad59e",
+  "sourceId": "126574094",
+  "sourceDiscoveryPath": "data/texture-city/commons/discovery-shinjuku-mitsui-no2-wide.json",
+  "secondarySources": [
+    {
+      "sourceId": "6006153",
+      "role": "unregistered-palette-validation",
+      "roiNormalized": [0.20, 0.08, 0.83, 0.82],
+      "identityEvidence": "Commons title and description name Shinjuku Mitsui Building No.2; acquired image was visually checked against the target massing.",
+      "confidence": 0.55
+    }
+  ],
+  "kartaviewAudit": {
+    "discoveryPath": "data/texture-city/kartaview/discovery-wide.json",
+    "shortlistedIds": ["56035505", "56035506", "56035507", "56035508", "56035509", "63898227", "63898381", "63898379", "63898367", "63898363", "63898361", "63898359", "10944662", "14231233", "38848506"],
+    "outcome": "rejected-for-color",
+    "reason": "The search was expanded to a 0.005-degree padded area with 1102 candidates. The nearest heading-compatible added frames were audited: two are night/expressway views and one is a daytime local streetscape where the target facade is absent or too small. Existing nearest frames remain dark or occluded, so none supports stable target albedo."
+  },
+  "referenceSize": [1280,1936],
+  "imagePoints": [[258,366],[661,99],[1119,654]],
+  "worldPoints": [[133.57,112,385.87],[155.866,112,369.193],[128.93,112,332.984]],
+  "verticalLines": [
+    {"worldPoint":[133.57,112,385.87],"imagePoints":[[235,510],[138,1142]]},
+    {"worldPoint":[155.866,112,369.193],"imagePoints":[[650,600],[630,1400]]}
+  ],
+  "cameraPrior": [213.13749028253005,40.97417072285318,387.3830543627555],
+  "cameraHeightSigma": 1,
+  "heightEvidence": "Actual displayed LOD3 road at preliminary fitted camera XY is 39.32417072285318m; camera prior adds 1.65m. Not the building's minimum elevation (36.15m). Recheck road clearance after fitting.",
+  "imageRegions": {
+    "referenceSize": [1280,1936],
+    "polygons": [[[263,378],[660,110],[1066,603],[1110,1270],[141,1270]]],
+    "note": "Manually inspected inset upper facade only. Excludes the right foreground pole, lower trees/cars and adjacent buildings. Source photograph is unchanged."
+  },
+  "registration": "experimental-manual-roof-and-line-controls",
+  "note": "Manual roof corners and vertical facade lines from the real Commons photograph. Right roof corner is partly obscured and uncertain. Free focal length and principal point are fitted with a ground-height prior, not a calibrated lens or surveyed camera. Input residual is not independent accuracy. Upper facade silhouette inspected; source polygon additionally excludes foreground objects."
+}

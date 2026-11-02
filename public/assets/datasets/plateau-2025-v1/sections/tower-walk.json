@@ -1,0 +1,118 @@
+{
+  "id": "tower-walk",
+  "name": "神谷町 LOD3街区",
+  "subtitle": "東京タワー北側・抽出壁面",
+  "areaId": "tokyo-tower",
+  "wallIds": [
+    "15d83008-61af-5274-9887-bd5ca11e0d25",
+    "b6ca67b5-ebdd-58b4-9522-edd831316d7e",
+    "44623e44-341d-52cd-936c-6b88311df972",
+    "41704c93-4a6b-54ff-a296-b643e2344873",
+    "82d038c8-3200-5c95-897c-b134d19a7b3f",
+    "498fc17c-5a74-54a6-ad84-6bb62de8ace0",
+    "db3f6637-17b4-5200-b30b-d81473477f5a",
+    "9d715f5e-9798-5e1e-b04b-20ceb6ae0e70",
+    "790adf13-2c7d-53f8-8fd0-725bc88d0cc6",
+    "a521bb14-f50a-5201-a059-d0fab76c85f6",
+    "02efe234-0c09-56d1-9063-a99d03bba179",
+    "54a5277f-00b3-5de3-a391-a1f4ff07dabf"
+  ],
+  "layout": [
+    {
+      "wallId": "15d83008-61af-5274-9887-bd5ca11e0d25",
+      "order": 0,
+      "flipX": false,
+      "widthWeight": 11.272083827190025,
+      "heightWeight": 11.822000000614503,
+      "row": 0
+    },
+    {
+      "wallId": "b6ca67b5-ebdd-58b4-9522-edd831316d7e",
+      "order": 1,
+      "flipX": false,
+      "widthWeight": 4.574107234981573,
+      "heightWeight": 5.557999999163493,
+      "row": 0
+    },
+    {
+      "wallId": "44623e44-341d-52cd-936c-6b88311df972",
+      "order": 2,
+      "flipX": false,
+      "widthWeight": 11.921391865046628,
+      "heightWeight": 6.962000000000001,
+      "row": 0
+    },
+    {
+      "wallId": "41704c93-4a6b-54ff-a296-b643e2344873",
+      "order": 3,
+      "flipX": false,
+      "widthWeight": 15.02794626687227,
+      "heightWeight": 6.962000000000001,
+      "row": 0
+    },
+    {
+      "wallId": "82d038c8-3200-5c95-897c-b134d19a7b3f",
+      "order": 4,
+      "flipX": false,
+      "widthWeight": 15.056173444035187,
+      "heightWeight": 6.962000000000001,
+      "row": 0
+    },
+    {
+      "wallId": "498fc17c-5a74-54a6-ad84-6bb62de8ace0",
+      "order": 5,
+      "flipX": false,
+      "widthWeight": 15.913532763029142,
+      "heightWeight": 6.962000000000001,
+      "row": 0
+    },
+    {
+      "wallId": "db3f6637-17b4-5200-b30b-d81473477f5a",
+      "order": 6,
+      "flipX": false,
+      "widthWeight": 11.73334939392834,
+      "heightWeight": 6.962000000000001,
+      "row": 1
+    },
+    {
+      "wallId": "9d715f5e-9798-5e1e-b04b-20ceb6ae0e70",
+      "order": 7,
+      "flipX": false,
+      "widthWeight": 27.67236645102834,
+      "heightWeight": 6.962000000000001,
+      "row": 1
+    },
+    {
+      "wallId": "790adf13-2c7d-53f8-8fd0-725bc88d0cc6",
+      "order": 8,
+      "flipX": false,
+      "widthWeight": 9.427294893022077,
+      "heightWeight": 12.527999999999999,
+      "row": 1
+    },
+    {
+      "wallId": "a521bb14-f50a-5201-a059-d0fab76c85f6",
+      "order": 9,
+      "flipX": false,
+      "widthWeight": 6.5765520601603775,
+      "heightWeight": 7.213000000000001,
+      "row": 1
+    },
+    {
+      "wallId": "02efe234-0c09-56d1-9063-a99d03bba179",
+      "order": 10,
+      "flipX": false,
+      "widthWeight": 6.575938336085651,
+      "heightWeight": 7.213000000000001,
+      "row": 1
+    },
+    {
+      "wallId": "54a5277f-00b3-5de3-a391-a1f4ff07dabf",
+      "order": 11,
+      "flipX": false,
+      "widthWeight": 7.398732391430307,
+      "heightWeight": 18.961,
+      "row": 1
+    }
+  ]
+}

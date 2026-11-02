@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"></head><body style="margin:0;background:#202020;color:white;font-family:sans-serif"><div id="status" style="position:fixed;z-index:2;padding:8px;background:#0008">東京都庁モデル比較: 読み込み中</div><script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '/vendor/GLTFLoader.js';
+import {OrbitControls} from '/vendor/OrbitControls.js';
+import {MeshoptDecoder} from '/vendor/meshopt_decoder.module.js';
+const files=['tocho-plateau-untextured.glb','tocho-plateau-original.glb','tocho-landmark-native-hybrid.glb','tocho-landmark-photo-mechanical-hybrid-v41-candidate-20261012.glb','tocho-landmark-cross-face-projection-v70b-experimental-20261012.glb'].map(f=>'/assets/tocho-landmark/'+f);
+const names=['PLATEAU形状','PLATEAU元テクスチャ','写真+建築推定ハイブリッド native','写真+機械推定ハイブリッド v41','写真+機械推定+面連続補完 v70b'];
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x202020);const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100000);const renderer=new THREE.WebGLRenderer({antialias:true});renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);scene.add(new THREE.HemisphereLight(0xffffff,0x444444,3));const c=new OrbitControls(camera,renderer.domElement);const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);let group=new THREE.Group();scene.add(group);
+let loaded=[];
+Promise.all(files.map((f,i)=>new Promise(r=>loader.load(f,g=>{g.scene.traverse(o=>{if(o.isMesh){const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>{if(m.map){m.map.colorSpace=THREE.SRGBColorSpace;m.map.needsUpdate=true}})}});const box=new THREE.Box3().setFromObject(g.scene);const size=box.getSize(new THREE.Vector3());const scale=120/Math.max(size.x,size.y,size.z);g.scene.scale.setScalar(scale);const scaled=new THREE.Box3().setFromObject(g.scene);const center=scaled.getCenter(new THREE.Vector3());g.scene.position.sub(center);const col=i%3,row=Math.floor(i/3);g.scene.position.x+=(col-1)*260;g.scene.position.z+=(row-1)*260;g.scene.name=names[i];group.add(g.scene);loaded[i]=true;r(true)},undefined,(e)=>{console.error('GLB failed',f,e);loaded[i]=false;r(false)})))).then((results)=>{document.getElementById("status").textContent="東京都庁モデル比較: "+results.filter(Boolean).length+"/"+files.length+" GLB loaded ("+results.map((v,i)=>names[i]+":"+(v?'OK':'FAIL')).join(' / ')+")";let b=new THREE.Box3().setFromObject(group),s=b.getSize(new THREE.Vector3()),x=b.getCenter(new THREE.Vector3());camera.near=0.1;camera.far=Math.max(10000,s.length()*10);camera.updateProjectionMatrix();camera.position.copy(x).add(new THREE.Vector3(s.x*.45,s.y*.25,s.z*.65));c.target.copy(x);c.update()});function a(){requestAnimationFrame(a);renderer.render(scene,camera)}a();
+</script></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+

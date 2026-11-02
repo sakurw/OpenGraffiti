@@ -1,0 +1,24 @@
+{
+  "provider":"commons","sourceId":"79695663","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1200],"cameraPrior":[35.578,42.459,-89.935],
+  "cameraModel":"simple-radial",
+  "groundPhotoVerified":true,
+  "groundPhotoVerification":"Street-level upward view with the connecting arcade in foreground. EXIF GPS location and height are a consistency check, not surveyed control.",
+  "controls":[
+    {"name":"north-front-left","world":[16.509,277.68,-27.912],"pixel":[455,41],"role":"train"},
+    {"name":"north-front-right","world":[-6.062,277.68,-43.75],"pixel":[585,19],"role":"train"},
+    {"name":"north-left-wing","world":[17.768,277.68,-21.057],"pixel":[436,70],"role":"train"},
+    {"name":"north-right-wing","world":[-12.947,277.68,-42.504],"pixel":[609,38],"role":"train"},
+    {"name":"south-front-left","world":[28.834,277.68,34.738],"pixel":[302,279],"role":"train"},
+    {"name":"south-front-right","world":[6.228,277.68,19.655],"pixel":[408,263],"role":"train"},
+    {"name":"south-left-wing","world":[29.993,277.68,41.528],"pixel":[286,299],"role":"train"},
+    {"name":"bridge-north-front","world":[14.247,186.37,-7.753],"pixel":[414,383],"role":"train"},
+    {"name":"bridge-south-front","world":[19.992,186.37,23.335],"pixel":[281,502],"role":"train"},
+    {"name":"north-setback-apex","world":[7.902,249.36,-39.965],"pixel":[522,45],"role":"held-out"},
+    {"name":"north-setback-east","world":[13.912,249.36,-7.695],"pixel":[451,201],"role":"held-out"},
+    {"name":"south-setback-apex","world":[19.992,249.27,23.335],"pixel":[345,310],"role":"held-out"},
+    {"name":"south-setback-outer-east","world":[26.242,249.27,54.865],"pixel":[254,387],"role":"held-out"}
+  ]
+}

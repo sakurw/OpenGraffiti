@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "buildings": 127,
+  "vertices": 76416,
+  "roadChecks": 24864,
+  "maxContactError": 0,
+  "planeHeight": 0,
+  "sourceModelUnchanged": true,
+  "recoveryTerrainUnchanged": true,
+  "translationOnly": true
+}

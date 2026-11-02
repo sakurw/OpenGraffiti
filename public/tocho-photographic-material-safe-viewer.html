@@ -1,0 +1,11 @@
+<!doctype html><html><body style="margin:0;background:#222"><script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'https://unpkg.com/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'https://unpkg.com/three@0.180.0/examples/jsm/libs/meshopt_decoder.module.js';
+const r=new THREE.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);document.body.appendChild(r.domElement);
+const s=new THREE.Scene();s.background=new THREE.Color(0x222222);s.add(new THREE.HemisphereLight(0xffffff,0xffffff,5));const dl=new THREE.DirectionalLight(0xffffff,5);dl.position.set(300,400,300);s.add(dl);
+const c=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100000);const l=new GLTFLoader();l.setMeshoptDecoder(MeshoptDecoder);
+l.load('/data/texture-city/tocho-photoreal-v94-final-uv.glb',g=>{g.scene.updateMatrixWorld(true);s.add(g.scene);const b=new THREE.Box3().setFromObject(g.scene);const center=b.getCenter(new THREE.Vector3()),size=b.getSize(new THREE.Vector3()),q=Math.max(size.y,size.x,size.z);g.scene.position.sub(center);const c2=new THREE.Vector3(0,0,0);const dist=q*0.55;c.position.copy(c2.clone().add(new THREE.Vector3(dist,dist*0.55,dist)));c.lookAt(c2);c.near=1;c.far=q*10;c.updateProjectionMatrix();console.log('loaded v94',size);}, undefined, e=>console.error('load failed',e));
+addEventListener('resize',()=>{c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});(function a(){requestAnimationFrame(a);r.render(s,c)})();
+</script></body></html>
+

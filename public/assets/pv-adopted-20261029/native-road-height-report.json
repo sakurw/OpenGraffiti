@@ -1,0 +1,10 @@
+{
+  "sourceSha256": "f3bd19f84518800965cb7f333b050914ab312217f638ade3b372651ef9176f2b",
+  "projectedTriangles": 38102,
+  "coveredPixels": 4242329,
+  "width": 6439,
+  "height": 8192,
+  "precisionMeters": 0.01,
+  "encoding": "R*256+G = (local Y+100)*100; B=coverage; nearest sampling; minimum road height at each covered pixel",
+  "purpose": "Discard DEM fragments only above original road surfaces; the original DEM/road vertex coordinates remain unchanged."
+}

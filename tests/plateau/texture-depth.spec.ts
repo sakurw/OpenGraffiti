@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+import {readFile} from 'node:fs/promises';
+import {textureReportUrl} from '../../shared/texture-selection.mjs';
+
+for(const area of ['tocho','tokyo-tower'])test(`depth rejection diagnostics match the regenerated ${area} model`,async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/texture-city?capture=1');
+ await expect(page.getByRole('status')).toContainText('都市モデル読込完了');
+  const report=JSON.parse(await readFile('public'+textureReportUrl(area),'utf8'));
+  expect(report.spatialDepthPolicy).toContain('Try next photo');
+  expect(report.spatialDepthPolicy).toContain('bidirectional');
+  const known=area==='tocho'?'bldg_9f293263-46b9-454d-ab46-c84982f22398':'bldg_46795e7e-5293-4f1a-9df0-a8130e9dafde';
+  const building=report.buildings.find(b=>b.buildingId===known);expect(building).toBeTruthy();
+  await page.getByLabel('比較地域').selectOption(area);
+  await page.getByLabel('比較建物').selectOption(known);
+  await page.getByRole('checkbox',{name:'Mapillaryの暫定実写投影を表示（位置合わせ未確認）'}).check();
+  await expect(page.locator('.city-compare-stage canvas')).toHaveAttribute('data-experimental','loaded',{timeout:60000});
+  const count=building.diagnostic.rejections['photo-depth-foreground']||0;
+  await expect(page.locator('.city-depth-diagnostic')).toContainText(`${count.toLocaleString()} 回`);
+  const background=building.diagnostic.rejections['photo-depth-background']||0;
+  await expect(page.locator('.city-depth-diagnostic')).toContainText(`奥の被写体との矛盾で除外した候補：${background.toLocaleString()} 回`);
+  await expect(page.locator('.city-depth-diagnostic')).toContainText('対応確認済みではありません');
+  await page.screenshot({path:`test-results/texture-depth-${area}.png`,fullPage:true});
+  console.log({area,building:known,rejectedAttempts:count,backgroundRejectedAttempts:background,projectedArea:building.projectedArea});
+  const changed=report.buildings.reduce((best,b)=>(b.diagnostic.rejections['photo-depth-background']||0)>(best.diagnostic.rejections['photo-depth-background']||0)?b:best);
+  const positive=changed.diagnostic.rejections['photo-depth-background'];expect(positive).toBeGreaterThan(0);
+  await page.getByLabel('比較建物').selectOption(changed.buildingId);
+  await expect(page.locator('.city-depth-diagnostic')).toContainText(`奥の被写体との矛盾で除外した候補：${positive.toLocaleString()} 回`);
+  await page.screenshot({path:`test-results/texture-depth-background-${area}.png`,fullPage:true});
+  console.log({area,backgroundExample:changed.buildingId,backgroundRejections:positive,projectedArea:changed.projectedArea});
+ expect(errors).toEqual([]);
+});

@@ -1,0 +1,36 @@
+{
+  "id": "tocho",
+  "name": "都庁周辺",
+  "model": "/assets/datasets/plateau-2025-v1/models/tocho.glb",
+  "dataset": "plateau-13104-shinjuku-ku-2025",
+  "sourceUrl": "https://www.geospatial.jp/ckan/dataset/plateau-13104-shinjuku-ku-2025",
+  "origin": [
+    -12818.761027066646,
+    -34428.094605272105,
+    0
+  ],
+  "roadPolygons": 24468,
+  "buildingCount": 56,
+  "lod3Buildings": 0,
+  "backgroundLOD": 2,
+  "drawable": false,
+  "camera": {
+    "position": [
+      420,
+      330,
+      430
+    ],
+    "target": [
+      0,
+      90,
+      0
+    ]
+  },
+  "bounds": [
+    -400,
+    400,
+    -400,
+    400
+  ],
+  "note": "2023・2025年度の対象メッシュに建築物LOD3なし。LOD2参照表示のみ・描画不可。"
+}

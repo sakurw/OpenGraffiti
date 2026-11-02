@@ -1,0 +1,54 @@
+{
+  "registration": "mixed-see-candidate-status",
+  "candidates": [
+    {
+      "caseId": "mori-jp-tower-southeast",
+      "areaId": "tokyo-tower",
+      "buildingId": "bldg_433bc5b3-db73-4644-ac24-a28d51b7ecd5",
+      "geometryPath": "data/plateau/plateau-13103-minato-ku-2025/53393599-geometry.json",
+      "sourceId": "153194777",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Buildings_near_Tokyo_Tower_in_Azabu,_Minato,_Tokyo,_Japan,_2024_May.jpg",
+      "sourceSha256": "92ba46eb65a499f7d008ed88aaf3f144622076736f986aacafa80822f98e4c9d",
+      "author": "Ximonic (Simo Räsänen)",
+      "license": "CC BY-SA 4.0",
+      "buildingCenterLonLat": [139.7404911289693, 35.66089404983798],
+      "photoLonLat": [139.744687, 35.657988],
+      "cameraHorizontalPrior": [-67.60344379032631, 65.72772078289563],
+      "applied": true,
+      "applicationStatus": "partial-experimental-upper-walls-only",
+      "evidence": "Downloaded photo visually inspected: Mori JP Tower above foreground buildings and roofs. Commons description names the tower. Candidate source-model entity selected by geographic position and 330.818m height, not by filename proximity alone. Geometry has 346 wall polygons. Exact image-to-model alignment is not established.",
+      "remaining": [
+        "Identify corresponding crown and facade features in photograph and 3D geometry",
+        "Estimate camera height, intrinsics and pose; check held-out features",
+        "Mask foreground buildings, temple roof and tree branches",
+        "Improve and independently verify the provisional upper-wall alignment; do not count it as verified coverage"
+      ]
+    },
+    {
+      "caseId": "shinjuku-mitsui-no2-southeast",
+      "areaId": "tocho",
+      "buildingId": "bldg_04af6636-576b-435c-bcad-a9fc951ad59e",
+      "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+      "sourceId": "126574094",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Shinjuku_Mitsui_Building_No.2.jpg",
+      "sourceSha256": "09564fdfb2a32fbe18e500fd2118552336f762272d75bc5bb8626fe92f95ce4b",
+      "author": "Beryllium Transistor",
+      "license": "CC BY-SA 4.0",
+      "identityReference": "https://office.mitsuifudosan.co.jp/detail.php?id=54270",
+      "officialMapLonLat": [139.6931254863739,35.686389543483834],
+      "officialMapLocalPoint": [128.50764212089962,356.36035685551906],
+      "photoLonLat": [139.694061,35.686111],
+      "cameraHorizontalPrior": [213.13749028253005,387.3830543627555],
+      "applied": true,
+      "registration": "estimated-unverified",
+      "applicationStatus": "partial-experimental-upper-walls-only",
+      "applicationEvidence": "Official SNAP rectifier output attached to four existing wall polygons, 1376 triangles, 2683.2940279996965 square metres. Original photograph SHA preserved. Convex reviewed image region excludes foreground pole and lower objects. Actual display-model road clearance and synchronized three-panel comparison checked. Fitted roof/line controls are not independent accuracy evidence.",
+      "evidence": "Original downloaded image visually inspected and SHA-256 checked. The official Mitsui property page identifies Nishi-Shinjuku 3-2-11; its map link center falls within this imported model entity's bounds. The image shows two window-strip facades. Photo geotag lies within a neighbouring model's bounding box and is only an uncertain camera prior, not the building position.",
+      "remaining": [
+        "Independently verify the manual roof/line correspondences, camera intrinsics and pose with held-out features",
+        "Acquire or register images of the excluded lower walls and unseen sides",
+        "Remove the remaining Mapillary misalignment and fragmented texture correspondence for a fair quality comparison"
+      ]
+    }
+  ]
+}

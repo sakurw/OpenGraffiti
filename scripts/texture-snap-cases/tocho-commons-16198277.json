@@ -1,0 +1,25 @@
+{
+  "provider":"commons","sourceId":"16198277","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1025],"cameraPrior":[266.14,40,-163.593],
+  "cameraPriorSource":"commons-page-coordinate-not-surveyed",
+  "cameraModel":"simple-radial",
+  "projectionProvenanceUnresolved":true,
+  "projectionProvenanceNote":"Commons metadata declares Microsoft ICE v1.4.4.0. A panorama stitcher can use non-pinhole projections; the actual export projection and source frames are not established.",
+  "groundPhotoVerified":true,
+  "groundPhotoVerification":"Upward view past foreground trees and adjacent office building. Page camera coordinates retained as an unverified accuracy prior, not a survey. Lower building hidden by vegetation.",
+  "annotationNote":"Preliminary roof and bridge observations read from source; no held-out controls assigned yet. This configuration must remain rejected until independent checks are supplied and passed.",
+  "controls":[
+    {"name":"north-front-left","world":[16.509,277.68,-27.912],"pixel":[632,94],"role":"train"},
+    {"name":"north-front-right","world":[-6.062,277.68,-43.75],"pixel":[707,110],"role":"train"},
+    {"name":"north-left-wing","world":[17.768,277.68,-21.057],"pixel":[615,101],"role":"train"},
+    {"name":"north-right-wing","world":[-12.947,277.68,-42.504],"pixel":[713,121],"role":"train"},
+    {"name":"south-front-left","world":[28.834,277.68,34.738],"pixel":[457,150],"role":"train"},
+    {"name":"south-front-right","world":[6.228,277.68,19.655],"pixel":[532,164],"role":"train"},
+    {"name":"south-left-wing","world":[29.993,277.68,41.528],"pixel":[443,155],"role":"train"},
+    {"name":"south-right-wing","world":[-1.336,277.68,20.273],"pixel":[540,174],"role":"train"},
+    {"name":"bridge-north-front","world":[14.247,186.37,-7.753],"pixel":[587,375],"role":"train"},
+    {"name":"bridge-south-front","world":[19.992,186.37,23.335],"pixel":[496,399],"role":"train"}
+  ]
+}

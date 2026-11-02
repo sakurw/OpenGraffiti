@@ -1,0 +1,77 @@
+{
+  "id": "54a5277f-00b3-5de3-a391-a1f4ff07dabf",
+  "number": 12,
+  "name": "神谷町の壁 12",
+  "street": "東京タワー北側・神谷町",
+  "areaId": "tokyo-tower",
+  "sectionId": "tower-walk",
+  "width": 7.398732391430307,
+  "height": 18.961,
+  "canvasWidth": 799,
+  "canvasHeight": 2048,
+  "position": [
+    376.285,
+    14.099499999999999,
+    -798.1995
+  ],
+  "normal": [
+    0.9143458152150005,
+    0,
+    0.4049342294729064
+  ],
+  "baseImage": "/assets/datasets/plateau-2025-v1/canvases/54a5277f-00b3-5de3-a391-a1f4ff07dabf.base.png",
+  "maskImage": "/assets/datasets/plateau-2025-v1/canvases/54a5277f-00b3-5de3-a391-a1f4ff07dabf.mask.png",
+  "baseHash": "d86476214cab86b5d56ca8f178ee64219157d5a87ce589f53bf89a0c70640c6d",
+  "maskHash": "d8e17f464de6ebe8a4b269e7e9c5b9db281b3628fa0ed7a2826d29031d3d0ec9",
+  "source": {
+    "dataset": "plateau-13103-minato-ku-2025",
+    "mesh": "53393599",
+    "buildingId": "bldg_650e333e-af27-4b33-9318-a7f94a96a260",
+    "surfaceId": "gml_6525daa1-0375-4bbb-8b82-1ee8e4c2bd9a",
+    "polygonIds": [
+      "Poly_29be32da-c06b-4ef6-bb0d-b9410651eab6",
+      "Poly_ceda3265-efc1-4bf1-8d29-a2af21075b12"
+    ],
+    "lod": 3,
+    "appearance": [
+      "53393599_bldg_6697_appearance/TMmnt0168_lod3.jpg"
+    ]
+  },
+  "validation": {
+    "rms": 2.1667275929836097e-14,
+    "maxDeviation": 3.064215547965432e-14,
+    "area": 140.28736487391006,
+    "clearance": 1000,
+    "openingCount": 0,
+    "holeCount": 0,
+    "maskPixels": 1636352,
+    "visual": "pending"
+  },
+  "mock": false,
+  "projection": {
+    "origin": [
+      374.787,
+      4.619,
+      -794.817
+    ],
+    "u": [
+      0.4049342294729063,
+      0,
+      -0.9143458152150002
+    ],
+    "v": [
+      0,
+      1,
+      0
+    ],
+    "lo": [
+      0,
+      0
+    ],
+    "hi": [
+      7.398732391430307,
+      18.961
+    ]
+  },
+  "overlayOffset": 0.002
+}

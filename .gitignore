@@ -1,0 +1,33 @@
+node_modules/
+dist/
+data/
+test-results/
+playwright-report/
+.tools/
+*.log
+.env
+*.tsbuildinfo
+__pycache__/
+mapillary_dataset/
+mapillary/_dataset/
+
+# Local archives of superseded experiments; never stage or publish.
+/_local-backups/
+
+# Downloaded datasets and historical generated previews; retain locally for audit/rebuild.
+/tmp/
+/public/*.glb
+/public/assets/plateau-official-shinjuku-2025/official-3dtiles.zip
+/public/assets/plateau-official-shinjuku-2025/model/
+/public/assets/plateau-official-shinjuku-2025/styled/
+/public/assets/plateau-official-shinjuku-2025/viewer.js.map
+/public/assets/tocho-landmark/
+/public/assets/tocho-district-photo-v2-20261018/
+/public/assets/tocho-district-photo-v3-20261018/
+/public/assets/tocho-district-plateau-v4-20261018/
+/public/assets/tocho-district-illustrated-20261018/
+/public/assets/level3-demo/
+/public/assets/universal-all-areas/
+/public/assets/universal-reconstruction/
+/public/assets/universal-ten-building/
+/public/assets/universal-pipeline-demo/

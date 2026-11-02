@@ -1,0 +1,1406 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-18T14:29:29.151Z",
+  "mode": "native-uv-image-only",
+  "tiles": {
+    "data639.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data639-image0.png",
+          "width": 4096,
+          "height": 4096,
+          "sha256": "95433eae7d6cdbfcdaf087281be966361b7ce892844d1fdffb46d34c1dc229fe",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data639-image0-padded.png",
+          "paddedSha256": "d959c3eda9a1fd283a4d5d45c2ad5b5389efdbb486eb555f75de82295e72e470",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 3211487,
+          "transparentTexels": 13565729,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data639-image0.png",
+          "maskSha256": "31d43e3952fbd1fe39cb502e3f4125a63dc57cd42b008becbb2bb0e0f507d2f9",
+          "sampledTexels": 3212215,
+          "donorTexels": 3211487,
+          "paddedTexels": 330046,
+          "neutralTexels": 13235683,
+          "unmatchedSamples": 20103,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "067bcd352794fb7a8a959570424304e4d272c34d55e7dd7a9b382adb3f309191",
+      "verticalDatumOffsetMeters": 37.014858953654766,
+      "buildingIds": [
+        "bldg_8437469e-8970-47bf-b95c-af448711008f",
+        "bldg_4d2433c1-c234-4761-8935-a710cc81e9e8",
+        "bldg_f2c90792-ea9e-41a6-954d-4504e64c697a",
+        "bldg_b35b4cf9-139e-4cb2-be3f-60ecebff0cf0",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    },
+    "data640.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data640-image0.png",
+          "width": 4096,
+          "height": 4096,
+          "sha256": "3e61dd70287b25f0f42b14fe71729f294603ef60044977feeb36e963906a67f3",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data640-image0-padded.png",
+          "paddedSha256": "e58e15a037859c1751d376a8baada5660af922c9c22c88123f1c7c57eca97242",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 777481,
+          "transparentTexels": 15999735,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data640-image0.png",
+          "maskSha256": "883701de79b79ce2ea6c3ed7f38db3d5b10562df3d5eb88b53aa5a99f7a85cb7",
+          "sampledTexels": 777551,
+          "donorTexels": 777481,
+          "paddedTexels": 159352,
+          "neutralTexels": 15840383,
+          "unmatchedSamples": 157,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "25d6b6b8f2a4055aa444f4ac8e99013d46798f0794f4be6ce7dee468bfa55fe7",
+      "verticalDatumOffsetMeters": 37.007500756531954,
+      "buildingIds": [
+        "bldg_b35b4cf9-139e-4cb2-be3f-60ecebff0cf0",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    },
+    "data647.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data647-image0.png",
+          "width": 4096,
+          "height": 4096,
+          "sha256": "d011a019b48097b0e95846a9cc47f3968a01423297cffb8615ddda960e84f2c3",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data647-image0-padded.png",
+          "paddedSha256": "0e88a6ecad4cc60ad69012cfc490cc5a9aa63ed277efc1a675858d8db7d75645",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 8924908,
+          "transparentTexels": 7852308,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data647-image0.png",
+          "maskSha256": "820a3090a910eda1b50ac76377d8d641de1f0c0db8b7fa3eab2bf39d34409d07",
+          "sampledTexels": 8925871,
+          "donorTexels": 8924908,
+          "paddedTexels": 1261991,
+          "neutralTexels": 6590317,
+          "unmatchedSamples": 78367,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "a07c0a708f401cfb2bbbc06dd7228f7ad67c2f18d875ea3433b492090d0ee055",
+      "verticalDatumOffsetMeters": 37.00488839671016,
+      "buildingIds": [
+        "bldg_fa3ef9ba-cd3c-4ddf-b8b9-87becc2b5792",
+        "bldg_f63c574d-0951-46de-9839-a326998a83ec",
+        "bldg_f507090f-502d-45eb-b8ac-0fad64b8c311",
+        "bldg_c0f762a4-cfc0-49fb-85d0-660765c6b6ca",
+        "bldg_b3c5d347-d7e8-422a-95c4-4538e4957c51",
+        "bldg_9eabfa88-e9b7-402d-b38a-08a5f2544e21",
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_7e673dbb-95f1-4a0c-bdab-b0d7bb352d3b",
+        "bldg_773000d3-5879-4899-b555-44b9037656c5",
+        "bldg_553aabc6-3f41-4a53-a315-756999a2d4d2",
+        "bldg_50668ce3-ca61-45cc-8fd4-890f9289e88c",
+        "bldg_38169632-d043-40d5-bf94-a70f3679705b",
+        "bldg_0fb03336-2d05-4c33-b2e9-22d1bd9baecb"
+      ]
+    },
+    "data648.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data648-image0.png",
+          "width": 4096,
+          "height": 4096,
+          "sha256": "7bbc215dfce990463e773771bffc607620ea8599025febcc697c15e10b422265",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data648-image0-padded.png",
+          "paddedSha256": "e8f062399681b7551fb042358186857d1940d42ce3fc468b0635f2637be3c817",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 3281089,
+          "transparentTexels": 13496127,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data648-image0.png",
+          "maskSha256": "3479edbb93f9be2ed599e4c25d1a682e272a220666af8a3cf1b9c9f1cc454636",
+          "sampledTexels": 3281131,
+          "donorTexels": 3281089,
+          "paddedTexels": 338446,
+          "neutralTexels": 13157681,
+          "unmatchedSamples": 17620,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "b4948d638528550156169ca3707bd6988f6057a75420ec709132831f66456228",
+      "verticalDatumOffsetMeters": 36.984598143957555,
+      "buildingIds": [
+        "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2",
+        "bldg_32486544-a964-40b8-b139-72d3ef84c489",
+        "bldg_230e3672-792b-41a4-9c19-0d08ca18c1f5"
+      ]
+    },
+    "data649.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data649-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "5f1275562798ebd726cd5cc7812eaf621773f768e9636adba29212a4dbec5832",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data649-image0-padded.png",
+          "paddedSha256": "60bd6d89dfb9469382b384133915bba18d0e9c4afd0b190ba1573b92a511f67e",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 2489099,
+          "transparentTexels": 1705205,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data649-image0.png",
+          "maskSha256": "e7633ae73aacc829596c55baa870fc719bf1d2e3087273b526bf2ff28451d800",
+          "sampledTexels": 2489100,
+          "donorTexels": 2489099,
+          "paddedTexels": 667317,
+          "neutralTexels": 1037888,
+          "unmatchedSamples": 1603,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "809fcb6840aaae093143f54e8c33073d9e709c7f3c02d2b12189fc73519c42f8",
+      "verticalDatumOffsetMeters": 36.9971643704921,
+      "buildingIds": [
+        "bldg_d0967cf5-1f32-48d1-9dda-11320828a076",
+        "bldg_c2d9973d-f4ab-47fe-ad19-89b5f6dd8d99",
+        "bldg_bba07c55-d940-490d-8d97-f07cd9e0f4b0",
+        "bldg_982eecd0-0943-4d84-b79b-5873b7e4b03b",
+        "bldg_9573d0d8-3765-4629-9ead-fa983c242eec",
+        "bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1",
+        "bldg_5bf2d6b2-e459-474a-ab97-18e8c5f77b62",
+        "bldg_48ac9ff7-9deb-47dd-b092-f95946ceefc2",
+        "bldg_45b5ce7d-13c7-4af9-bf5f-a0bb5d7ddbd0",
+        "bldg_3abb8e41-2db3-4b5b-b5e1-0f22ad79de02",
+        "bldg_310b7774-d2a0-49c1-a31a-e7f9803c8044",
+        "bldg_2fd2a55b-4f88-477e-8bd1-ecce337690ab",
+        "bldg_2b77eed7-3ed9-420a-b67c-f7d3ec1b8a43",
+        "bldg_178c97c9-6d9b-4418-84ec-b6eb23f41490",
+        "bldg_0e2e3f4f-33db-4b1f-96ff-dc25f23dc735",
+        "bldg_091fd517-e4ca-4f29-a9b1-e22a56f03032"
+      ]
+    },
+    "data650.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data650-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "ac8d40b93c1c751543b0956aeff3a8c65dd65a45e5f843c4fb4341bf7c3a5bbb",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data650-image0-padded.png",
+          "paddedSha256": "dfd7327d4f6cbd0dc747c750a6b107bfa3674fc28c2b65d1097c41d79071d0b0",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 1699851,
+          "transparentTexels": 2494453,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data650-image0.png",
+          "maskSha256": "8a980acd2cd3603ea149a3c158003b4613d863a1659b4ad4279bb1a1c25921d0",
+          "sampledTexels": 1699852,
+          "donorTexels": 1699851,
+          "paddedTexels": 538606,
+          "neutralTexels": 1955847,
+          "unmatchedSamples": 533,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "cabaa510c9d116bc412fe160b3db84d33302d15945eb7cc0ae74eaa346e00926",
+      "verticalDatumOffsetMeters": 36.99801140464842,
+      "buildingIds": [
+        "bldg_d0967cf5-1f32-48d1-9dda-11320828a076",
+        "bldg_178c97c9-6d9b-4418-84ec-b6eb23f41490",
+        "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2",
+        "bldg_c0f762a4-cfc0-49fb-85d0-660765c6b6ca",
+        "bldg_9eabfa88-e9b7-402d-b38a-08a5f2544e21",
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_7e673dbb-95f1-4a0c-bdab-b0d7bb352d3b"
+      ]
+    },
+    "data651.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data651-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "015660890ef0c440516f76d3742ef5ac478a846fb3054ff9a09263e9f9b6b741",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data651-image0-padded.png",
+          "paddedSha256": "1f1e5d54eb5be7d3444217eb42937bcafa75ca7631bbe0475d49911b34a67b8c",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 588867,
+          "transparentTexels": 3605437,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data651-image0.png",
+          "maskSha256": "0d83060683163be2fab40c4d260074372cd8e0b93633f302887f068960106b26",
+          "sampledTexels": 588867,
+          "donorTexels": 588867,
+          "paddedTexels": 261932,
+          "neutralTexels": 3343505,
+          "unmatchedSamples": 212,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "188720d6337c029b06c5823e6ff7d783d7ded253c03ea423f0b7a27e7766ec74",
+      "verticalDatumOffsetMeters": 36.98992173559964,
+      "buildingIds": [
+        "bldg_d0967cf5-1f32-48d1-9dda-11320828a076",
+        "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2",
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    },
+    "data652.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data652-image0.png",
+          "width": 1024,
+          "height": 1024,
+          "sha256": "ad3e38e63d5d7908f357251a35e50582f496a5033a27a9eafef07a14598138c7",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data652-image0-padded.png",
+          "paddedSha256": "a2cf7f90ab7556aabc4728d50fc189281215881b29705052be63999de70abf4a",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 47753,
+          "transparentTexels": 1000823,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data652-image0.png",
+          "maskSha256": "764adab6dc4d0b77a0084ae47b700bab8d64ec70b5696f84c9893d889f711d1a",
+          "sampledTexels": 47753,
+          "donorTexels": 47753,
+          "paddedTexels": 38195,
+          "neutralTexels": 962628,
+          "unmatchedSamples": 42,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "778bf20e149a610daf0ffa78631b9c5ebc7ccec77af2a76fb31f18b63150a56a",
+      "verticalDatumOffsetMeters": 36.991179041564465,
+      "buildingIds": [
+        "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2",
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    },
+    "data667.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data667-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "5c6f747a6b6b38c6957ed6d3b8d6f30bb91e788eabf006c39a7cc77a16658314",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data667-image0-padded.png",
+          "paddedSha256": "0935fa93a9783c18ff060b9c857f805763c6a651263fc9611b99d2f6290c73ed",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 1662041,
+          "transparentTexels": 2532263,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data667-image0.png",
+          "maskSha256": "f0d399d7df74ccb1ed42ea6e20d71a20d1d73ec794ed5778e8c674110cadf8d6",
+          "sampledTexels": 1662042,
+          "donorTexels": 1662041,
+          "paddedTexels": 145840,
+          "neutralTexels": 2386423,
+          "unmatchedSamples": 218,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "7592695a918f897a2c10b90b367be2c898ccec3482bcbf1c6add62183e8ded28",
+      "verticalDatumOffsetMeters": 37.021596789360046,
+      "buildingIds": [
+        "bldg_c758bb4c-c37c-40e9-8d85-4a1d94d772e4",
+        "bldg_b1de373e-e569-4559-8690-2c12bf6dc2f1",
+        "bldg_97587988-3e50-452d-a887-1e6411aca704",
+        "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e",
+        "bldg_89e39f75-56a5-41ce-9301-99ab6e857f81",
+        "bldg_7ca14a72-0d56-4ead-80e4-55c20cda9002",
+        "bldg_4765c311-f381-4278-89e4-b7beb596fd66"
+      ]
+    },
+    "data669.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data669-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "cf5c3235cda91685da6a745ea92a4eeeeac6868fd8a8a6f271d57387e1e52b28",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data669-image0-padded.png",
+          "paddedSha256": "f54593e5a3b2eeb7331112eb53a79b884da22232861edb7275edd15dcaee2240",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 291736,
+          "transparentTexels": 3902568,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data669-image0.png",
+          "maskSha256": "ef742d7fa5fa698c9a22e9dc2583b518b93da439d88cc81d6d8f45c9dd15adba",
+          "sampledTexels": 291736,
+          "donorTexels": 291736,
+          "paddedTexels": 40165,
+          "neutralTexels": 3862403,
+          "unmatchedSamples": 10,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "15304264e4c28fb60a1b9d5178feae0142f4679a37649da2048ee77ae3e8aa62",
+      "verticalDatumOffsetMeters": 37.01885950937867,
+      "buildingIds": [
+        "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e"
+      ]
+    },
+    "data674.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data674-image0.png",
+          "width": 512,
+          "height": 512,
+          "sha256": "62f33f4f085eaad2d3e95572cc222b693c5b3fdfed916d2b8843910ce9dc586c",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data674-image0-padded.png",
+          "paddedSha256": "51c8c97753df355f193e5648d196f6222d8437af9278e77f5b14bc174fd6aa94",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 57757,
+          "transparentTexels": 204387,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data674-image0.png",
+          "maskSha256": "fac4fd6aabf8b5a93a4fbc721fff64739da8061a25f53cc3992d9a20679b7442",
+          "sampledTexels": 57775,
+          "donorTexels": 57757,
+          "paddedTexels": 25387,
+          "neutralTexels": 179000,
+          "unmatchedSamples": 1971,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "830a08d098b7961cf9337638afd32e60b7ee29b46a0fa1967e57474664dd69ee",
+      "verticalDatumOffsetMeters": 37.01562036667019,
+      "buildingIds": [
+        "bldg_e1ee4ff0-4179-4f25-8987-b0dcd83b9287",
+        "bldg_841ee649-4d3e-4e24-80fe-c27d38a52086",
+        "bldg_7af90194-bd43-4d93-92ee-eacf6e744b1f",
+        "bldg_1d6e4127-304a-4e58-803c-7cac5550a40a"
+      ]
+    },
+    "data675.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data675-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "6b22eb1cd456d84538578891f3c89162caa1212f8784d2411ef08a574dae01dc",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data675-image0-padded.png",
+          "paddedSha256": "01bf42fba4b8afcbc542c5735a0c2017438719446b7fd913ed0ce287019bd1b2",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 603603,
+          "transparentTexels": 3590701,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data675-image0.png",
+          "maskSha256": "97eb1d200611747ccfa565de96dffcec3a58d293334db5ba488fb5f1b6ddaecc",
+          "sampledTexels": 603603,
+          "donorTexels": 603603,
+          "paddedTexels": 279151,
+          "neutralTexels": 3311550,
+          "unmatchedSamples": 341,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "2e23dfdec886edca7cb8acd447f262a5e6ed17b9b6f1a0e58630d53e3ca35714",
+      "verticalDatumOffsetMeters": 37.02385880611837,
+      "buildingIds": [
+        "bldg_f397c589-d685-414a-9db0-4a42914a8df2",
+        "bldg_e8f2f9e8-c821-4024-b1fb-0ee3915e4cfa",
+        "bldg_d1a10220-3c1d-42a6-a78f-4b36f5d76283",
+        "bldg_ce555993-3b4b-42c0-80b0-f32c12282c26",
+        "bldg_b6a1099b-6eb1-4778-ad6f-8873b98b90c8",
+        "bldg_a1157499-7f09-4800-b0b2-9771d77c71b9",
+        "bldg_9fd6c12d-da6d-4cfb-b310-d77e46a133f9",
+        "bldg_948ff8ce-a742-4aab-8756-1eb48bf2d871",
+        "bldg_8846ae8d-7977-4b80-b69c-89512f5e9c09",
+        "bldg_7fbacf87-0c32-4eab-ac45-de4989388969",
+        "bldg_7e9c0c6b-e707-43eb-8ead-ba50333f188b",
+        "bldg_7e69ed22-dd24-4f2d-9061-2271acca42b4",
+        "bldg_7993326a-5b3f-4e83-8ea0-8d665d29ae8c",
+        "bldg_62e81bae-022e-405a-a990-e88f6d7f947d",
+        "bldg_3e6c85e9-c7d5-41c1-9e8b-54dceda2ca72",
+        "bldg_2db57f3c-7924-433a-bd38-5a18466c3d6b",
+        "bldg_266c0e70-29b5-49b1-8ecd-48ec90bf32e1",
+        "bldg_1bb2082b-0abe-4fda-b011-4b46c9824515",
+        "bldg_0cc0cc78-85fe-4db4-af00-ba6d82c60529",
+        "bldg_08728c64-293d-4618-90fb-d01204171b0d"
+      ]
+    },
+    "data676.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data676-image0.png",
+          "width": 512,
+          "height": 512,
+          "sha256": "7979f7e5898475ba2f84813bec5eabb7135ab6ff72f2d555a97cce2c2e2fca87",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data676-image0-padded.png",
+          "paddedSha256": "5e46fd821a2c242099c1433262b45ffa5319a6712cb3052b116e76ed5998b0cd",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 122025,
+          "transparentTexels": 140119,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data676-image0.png",
+          "maskSha256": "75a73082601b43a9e4c81e467b5f6e2c7d78e1eac6fda6f9e386910c70924198",
+          "sampledTexels": 122025,
+          "donorTexels": 122025,
+          "paddedTexels": 40407,
+          "neutralTexels": 99712,
+          "unmatchedSamples": 74,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "5b044b9f978f6a3d7c8567ba6ad84cf860e61f6c3ca829cf8cc8abc389c154d9",
+      "verticalDatumOffsetMeters": 37.00635933317244,
+      "buildingIds": [
+        "bldg_a293c48c-61a7-440f-a829-d8c407aa8434",
+        "bldg_a14116b9-e6e7-4ed2-986c-c57445e7137a",
+        "bldg_8afd84ca-8c5b-44fc-8bb8-37f037a5ce6b",
+        "bldg_73275894-c4ad-4b6e-9527-147551731608",
+        "bldg_50ff9b57-7afa-48e5-b20d-7c2818e221c9",
+        "bldg_2ded06eb-e0c4-401f-ba8c-172d93cad4e9",
+        "bldg_12bc6451-d803-4cb6-b20a-0f1521c997df"
+      ]
+    },
+    "data678.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data678-image0.png",
+          "width": 1024,
+          "height": 1024,
+          "sha256": "160206949703be0cb532d4844a1b910bd35a8da785004fc4dbb9dfa6b804efee",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data678-image0-padded.png",
+          "paddedSha256": "c8d299bb6559aef5a88841c50d8f5ef2fc17c9d460e3f94c60504b4c67e39bfd",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 41464,
+          "transparentTexels": 1007112,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data678-image0.png",
+          "maskSha256": "4dec2f6f30843460255dfcd46c2af2102f819ff88c303d062f4e4a20886b9a3c",
+          "sampledTexels": 41464,
+          "donorTexels": 41464,
+          "paddedTexels": 27013,
+          "neutralTexels": 980099,
+          "unmatchedSamples": 130,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "e43eaf811ef18cf66e61e307abf1cf9ad129a2034c471c1f21c93e8ad22f1d47",
+      "verticalDatumOffsetMeters": 36.999148019589484,
+      "buildingIds": [
+        "bldg_8afd84ca-8c5b-44fc-8bb8-37f037a5ce6b",
+        "bldg_7e9c0c6b-e707-43eb-8ead-ba50333f188b"
+      ]
+    },
+    "data684.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data684-image0.png",
+          "width": 1024,
+          "height": 1024,
+          "sha256": "3ab9d4b4624d59c295dbc3c49848c24f47cc44af5b15163d3e84b2e7d67c8099",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data684-image0-padded.png",
+          "paddedSha256": "7b457e6693d40d001569e0cdcc8e30d81441b9f987e99b7396da87f6cf1d6bed",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 80861,
+          "transparentTexels": 967715,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data684-image0.png",
+          "maskSha256": "d7e76f9b737838047955bc383e4f4364aa1ab722688ee98f49ef095157a4c8bf",
+          "sampledTexels": 80861,
+          "donorTexels": 80861,
+          "paddedTexels": 12366,
+          "neutralTexels": 955349,
+          "unmatchedSamples": 3,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "0f8d35e259f6ebbe65d232f4b4b1821535a10479b83006773219023663b8d780",
+      "verticalDatumOffsetMeters": 37.01886371988803,
+      "buildingIds": [
+        "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e"
+      ]
+    },
+    "data685.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data685-image0.png",
+          "width": 512,
+          "height": 512,
+          "sha256": "1c4c08241cb0aa1c06320dfdbcbe5f9381dab824165d5d5e641a9b817518bdc1",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data685-image0-padded.png",
+          "paddedSha256": "ff6b0471459642bfbcbbbf7e3a432cfbecb21cba16a0dfee7bb52ecabf17358d",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 1996,
+          "transparentTexels": 260148,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data685-image0.png",
+          "maskSha256": "61a1f870a52cc56d4cb14c20700589bcdd2690445c589d64cfa4a4159303849e",
+          "sampledTexels": 1996,
+          "donorTexels": 1996,
+          "paddedTexels": 2112,
+          "neutralTexels": 258036,
+          "unmatchedSamples": 5,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "1d238ac1cc20c034a3e83c7d81536b953d0dfda430410a4e8f928cfed5e3248e",
+      "verticalDatumOffsetMeters": 37.00635933317244,
+      "buildingIds": [
+        "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e"
+      ]
+    },
+    "data687.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data687-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "6533c1d166bb05f085d781e7f936deb31cfafcc51e51f730ccb8c5fb6d8b3e1a",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data687-image0-padded.png",
+          "paddedSha256": "a34abb9e447d04dfeb0579034114f4007e5f12606f445b86b8369b0853e1d989",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 5062,
+          "transparentTexels": 4189242,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data687-image0.png",
+          "maskSha256": "fb23b91cb6347f96c404ed1819848878b347b9ce7784bbb8f8a23e9ee3450815",
+          "sampledTexels": 5062,
+          "donorTexels": 5062,
+          "paddedTexels": 5437,
+          "neutralTexels": 4183805,
+          "unmatchedSamples": 24,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "b04553f8153d68fea349de6f16a3780cf364d9ad5f35728b1a61df446adfeaf1",
+      "verticalDatumOffsetMeters": 36.98341912403703,
+      "buildingIds": [
+        "bldg_3a3f80e1-bb29-4787-b561-8795d258afee",
+        "bldg_0b015081-ad3a-4a15-8de4-8673d0716fc9"
+      ]
+    },
+    "data688.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data688-image0.png",
+          "width": 4096,
+          "height": 4096,
+          "sha256": "74c378272463ace1d7e304ddbea5dc90ed1c25c7f5fa0a054112df7877e2077e",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data688-image0-padded.png",
+          "paddedSha256": "a7a416ee9575fb107b786a440c559f45a61e9587231f8a408c24fb8c68088827",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 11879,
+          "transparentTexels": 16765337,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data688-image0.png",
+          "maskSha256": "ba66cc049e5c0d220f74dd465ca0979ff5a5487d328d4807bb47ca9306e3a4c5",
+          "sampledTexels": 11912,
+          "donorTexels": 11879,
+          "paddedTexels": 5026,
+          "neutralTexels": 16760311,
+          "unmatchedSamples": 519,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "f0851b0138ded414c6372732e3150fa0a812f597d7029a6f6080c22ed6492645",
+      "verticalDatumOffsetMeters": 36.98783221002668,
+      "buildingIds": [
+        "bldg_bef9d553-b423-441e-8ae7-51e13c463509",
+        "bldg_08beb69d-5fe8-49fd-921b-fb34d3720b2d"
+      ]
+    },
+    "data693.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data693-image0.png",
+          "width": 2048,
+          "height": 2048,
+          "sha256": "f47478f00b9807cdc2b18add6d1a0ba6d118b7ce8859c711369fbff4e58eb2f6",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data693-image0-padded.png",
+          "paddedSha256": "198c8b0b1d2acebeb83abf3b6d4134ec0a6facc240e84a94e452f37fd2323fa6",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 14259,
+          "transparentTexels": 4180045,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data693-image0.png",
+          "maskSha256": "b83a7c8c1dd09b2e7b7a0b5ee4d237f16fccaecbdc608d734476cd7cd505cd81",
+          "sampledTexels": 14259,
+          "donorTexels": 14259,
+          "paddedTexels": 16489,
+          "neutralTexels": 4163556,
+          "unmatchedSamples": 0,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "1c8e34d3781b410ef5cafeab70b40259e1f291af2afcb497b449be9d41bffd78",
+      "verticalDatumOffsetMeters": 36.992004906758666,
+      "buildingIds": [
+        "bldg_c78def05-0591-4db9-86d1-d6c5a7d624cd",
+        "bldg_83e810b4-ffed-4374-ad36-6fdd0a13e1b6",
+        "bldg_699dc005-5d67-4e13-9e9c-826921d5ef3c",
+        "bldg_44886b9c-40a2-4c5f-83d8-b8686308df0f"
+      ]
+    },
+    "data707.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data707-image0.png",
+          "width": 512,
+          "height": 512,
+          "sha256": "5bfb31b837b1d9fc35490a3ea89e38a9a3054f181074898a30c9d6627e88dac3",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data707-image0-padded.png",
+          "paddedSha256": "fdfa3fa7def256f447a9e70e53e0a339983f74f9e7bf9e7471278ca6bad3f724",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 2963,
+          "transparentTexels": 259181,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data707-image0.png",
+          "maskSha256": "90d2d8c1ac899447675c8a90bbdd8b34796b0697c48733e5beb82625a763661d",
+          "sampledTexels": 2963,
+          "donorTexels": 2963,
+          "paddedTexels": 6788,
+          "neutralTexels": 252393,
+          "unmatchedSamples": 0,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "46a590c3adb9816a9bf344bb15a7cf66fbe5c4292e4bf3816910b58d59e73bd9",
+      "verticalDatumOffsetMeters": 37.00488839671016,
+      "buildingIds": [
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    },
+    "data708.b3dm": {
+      "images": [
+        {
+          "imageIndex": 0,
+          "url": "/assets/plateau-official-shinjuku-2025/own-only/textures/data708-image0.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "e977ad14f821f4cb6ddbc64d137a16f77f7f6bdea2d5a4aa00bc76b13848a6d5",
+          "paddedUrl": "/assets/plateau-official-shinjuku-2025/own-only/textures/data708-image0-padded.png",
+          "paddedSha256": "2692c31ac0f2f5a830b5978117423eb695fe231d8e71f0f866cf2cf9a6657c39",
+          "ownAlphaCoverageVerified": true,
+          "opaqueTexels": 580,
+          "transparentTexels": 15804,
+          "maskUrl": "/assets/plateau-official-shinjuku-2025/own-only/masks/data708-image0.png",
+          "maskSha256": "45ce6a3b21c208dbacbfdeedcf41eb189539918985d38115623a824be6248904",
+          "sampledTexels": 580,
+          "donorTexels": 580,
+          "paddedTexels": 1860,
+          "neutralTexels": 13944,
+          "unmatchedSamples": 0,
+          "sourcePhotoPixelsCopied": 0,
+          "neutralOutsideDonorAndPaddingVerified": true,
+          "losslessRoundtripVerified": true
+        }
+      ],
+      "sourceSha256": "9159a7c71d4d161be388997e5eb028ecc545cfa983860c214f71fa3d2b0d9d35",
+      "verticalDatumOffsetMeters": 37.00488839671016,
+      "buildingIds": [
+        "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+        "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3"
+      ]
+    }
+  },
+  "buildingIds": [
+    "bldg_73275894-c4ad-4b6e-9527-147551731608",
+    "bldg_2db57f3c-7924-433a-bd38-5a18466c3d6b",
+    "bldg_310b7774-d2a0-49c1-a31a-e7f9803c8044",
+    "bldg_e1ee4ff0-4179-4f25-8987-b0dcd83b9287",
+    "bldg_c758bb4c-c37c-40e9-8d85-4a1d94d772e4",
+    "bldg_3e6c85e9-c7d5-41c1-9e8b-54dceda2ca72",
+    "bldg_091fd517-e4ca-4f29-a9b1-e22a56f03032",
+    "bldg_948ff8ce-a742-4aab-8756-1eb48bf2d871",
+    "bldg_7ca14a72-0d56-4ead-80e4-55c20cda9002",
+    "bldg_8afd84ca-8c5b-44fc-8bb8-37f037a5ce6b",
+    "bldg_f2c90792-ea9e-41a6-954d-4504e64c697a",
+    "bldg_b1de373e-e569-4559-8690-2c12bf6dc2f1",
+    "bldg_9573d0d8-3765-4629-9ead-fa983c242eec",
+    "bldg_266c0e70-29b5-49b1-8ecd-48ec90bf32e1",
+    "bldg_ce555993-3b4b-42c0-80b0-f32c12282c26",
+    "bldg_2fd2a55b-4f88-477e-8bd1-ecce337690ab",
+    "bldg_0fb03336-2d05-4c33-b2e9-22d1bd9baecb",
+    "bldg_bef9d553-b423-441e-8ae7-51e13c463509",
+    "bldg_3abb8e41-2db3-4b5b-b5e1-0f22ad79de02",
+    "bldg_83e810b4-ffed-4374-ad36-6fdd0a13e1b6",
+    "bldg_7e9c0c6b-e707-43eb-8ead-ba50333f188b",
+    "bldg_2ded06eb-e0c4-401f-ba8c-172d93cad4e9",
+    "bldg_f507090f-502d-45eb-b8ac-0fad64b8c311",
+    "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+    "bldg_48ac9ff7-9deb-47dd-b092-f95946ceefc2",
+    "bldg_a1157499-7f09-4800-b0b2-9771d77c71b9",
+    "bldg_50668ce3-ca61-45cc-8fd4-890f9289e88c",
+    "bldg_4765c311-f381-4278-89e4-b7beb596fd66",
+    "bldg_0cc0cc78-85fe-4db4-af00-ba6d82c60529",
+    "bldg_a293c48c-61a7-440f-a829-d8c407aa8434",
+    "bldg_5bf2d6b2-e459-474a-ab97-18e8c5f77b62",
+    "bldg_d0967cf5-1f32-48d1-9dda-11320828a076",
+    "bldg_b3c5d347-d7e8-422a-95c4-4538e4957c51",
+    "bldg_d1a10220-3c1d-42a6-a78f-4b36f5d76283",
+    "bldg_bba07c55-d940-490d-8d97-f07cd9e0f4b0",
+    "bldg_9eabfa88-e9b7-402d-b38a-08a5f2544e21",
+    "bldg_c78def05-0591-4db9-86d1-d6c5a7d624cd",
+    "bldg_08728c64-293d-4618-90fb-d01204171b0d",
+    "bldg_e8f2f9e8-c821-4024-b1fb-0ee3915e4cfa",
+    "bldg_38169632-d043-40d5-bf94-a70f3679705b",
+    "bldg_7e673dbb-95f1-4a0c-bdab-b0d7bb352d3b",
+    "bldg_982eecd0-0943-4d84-b79b-5873b7e4b03b",
+    "bldg_9fd6c12d-da6d-4cfb-b310-d77e46a133f9",
+    "bldg_3a3f80e1-bb29-4787-b561-8795d258afee",
+    "bldg_0b015081-ad3a-4a15-8de4-8673d0716fc9",
+    "bldg_b6a1099b-6eb1-4778-ad6f-8873b98b90c8",
+    "bldg_8846ae8d-7977-4b80-b69c-89512f5e9c09",
+    "bldg_7993326a-5b3f-4e83-8ea0-8d665d29ae8c",
+    "bldg_a14116b9-e6e7-4ed2-986c-c57445e7137a",
+    "bldg_62e81bae-022e-405a-a990-e88f6d7f947d",
+    "bldg_32486544-a964-40b8-b139-72d3ef84c489",
+    "bldg_c2d9973d-f4ab-47fe-ad19-89b5f6dd8d99",
+    "bldg_89e39f75-56a5-41ce-9301-99ab6e857f81",
+    "bldg_f397c589-d685-414a-9db0-4a42914a8df2",
+    "bldg_773000d3-5879-4899-b555-44b9037656c5",
+    "bldg_553aabc6-3f41-4a53-a315-756999a2d4d2",
+    "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2",
+    "bldg_2b77eed7-3ed9-420a-b67c-f7d3ec1b8a43",
+    "bldg_97587988-3e50-452d-a887-1e6411aca704",
+    "bldg_7fbacf87-0c32-4eab-ac45-de4989388969",
+    "bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1",
+    "bldg_08beb69d-5fe8-49fd-921b-fb34d3720b2d",
+    "bldg_12bc6451-d803-4cb6-b20a-0f1521c997df",
+    "bldg_0e2e3f4f-33db-4b1f-96ff-dc25f23dc735",
+    "bldg_fa3ef9ba-cd3c-4ddf-b8b9-87becc2b5792",
+    "bldg_699dc005-5d67-4e13-9e9c-826921d5ef3c",
+    "bldg_1bb2082b-0abe-4fda-b011-4b46c9824515",
+    "bldg_45b5ce7d-13c7-4af9-bf5f-a0bb5d7ddbd0",
+    "bldg_841ee649-4d3e-4e24-80fe-c27d38a52086",
+    "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e",
+    "bldg_178c97c9-6d9b-4418-84ec-b6eb23f41490",
+    "bldg_50ff9b57-7afa-48e5-b20d-7c2818e221c9",
+    "bldg_1d6e4127-304a-4e58-803c-7cac5550a40a",
+    "bldg_f63c574d-0951-46de-9839-a326998a83ec",
+    "bldg_230e3672-792b-41a4-9c19-0d08ca18c1f5",
+    "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3",
+    "bldg_b35b4cf9-139e-4cb2-be3f-60ecebff0cf0",
+    "bldg_7e69ed22-dd24-4f2d-9061-2271acca42b4",
+    "bldg_44886b9c-40a2-4c5f-83d8-b8686308df0f",
+    "bldg_7af90194-bd43-4d93-92ee-eacf6e744b1f",
+    "bldg_c0f762a4-cfc0-49fb-85d0-660765c6b6ca",
+    "bldg_4d2433c1-c234-4761-8935-a710cc81e9e8",
+    "bldg_8437469e-8970-47bf-b95c-af448711008f"
+  ],
+  "geometryModified": false,
+  "originalCompressedGeometryPreserved": true,
+  "neutralColor": "#b7b5ac",
+  "alphaMode": "own-donor-coverage",
+  "integration": {
+    "removeAllOriginalSourceMapsBeforeLoading": true,
+    "alphaZero": "building-specific own procedural fallback",
+    "alpha255": "own donor art",
+    "photoFlashPrevention": "Caller must clear every original map before asynchronous own-map loads."
+  },
+  "sourcePhotoFallback": false,
+  "sourcePhotoPixelsCopied": 0,
+  "paddingRadius": 4,
+  "maskLegend": {
+    "0": "neutral own color",
+    "1": "own donor sample",
+    "2": "padding copied from own donor sample"
+  },
+  "textureDonors": [
+    "/assets/tocho-district-photo-v3-20261018/district.glb",
+    "/assets/tocho-landmark/whole-illustrated-20261018/tocho-whole-illustrated-v1.glb"
+  ],
+  "notes": [
+    "Texture-only overrides; no B3DM or tileset is emitted. Scope is handled by the caller.",
+    "All images in each selected native tile are replaced, including images with no supported donor coverage.",
+    "Native image metadata supplies dimensions only; original PLATEAU photo pixels are never decoded or copied.",
+    "Unmatched, shared-owner and unsupported building texels are neutral own color, with no source photo fallback.",
+    "Roof and equipment samples retain their dedicated donor materials; equipment is window-free.",
+    "Primary RGBA image: alpha is 255 exactly on donor hits; every other pixel is neutral RGB and alpha 0.",
+    "Optional padded image preserves the same alpha coverage, but extends donor RGB four pixels into unused atlas space for filtering. It never crosses into roofs/equipment or another surface."
+  ],
+  "buildings": {
+    "bldg_8437469e-8970-47bf-b95c-af448711008f": {
+      "sampledTexels": 3546,
+      "tiles": [
+        "data639.b3dm"
+      ]
+    },
+    "bldg_4d2433c1-c234-4761-8935-a710cc81e9e8": {
+      "sampledTexels": 6560,
+      "tiles": [
+        "data639.b3dm"
+      ]
+    },
+    "bldg_f2c90792-ea9e-41a6-954d-4504e64c697a": {
+      "sampledTexels": 6616,
+      "tiles": [
+        "data639.b3dm"
+      ]
+    },
+    "bldg_b35b4cf9-139e-4cb2-be3f-60ecebff0cf0": {
+      "sampledTexels": 302457,
+      "tiles": [
+        "data639.b3dm",
+        "data640.b3dm"
+      ]
+    },
+    "bldg_684ae520-48d2-4754-b87e-ac4e9e6711f3": {
+      "sampledTexels": 3736077,
+      "tiles": [
+        "data639.b3dm",
+        "data640.b3dm",
+        "data651.b3dm",
+        "data652.b3dm",
+        "data707.b3dm",
+        "data708.b3dm"
+      ]
+    },
+    "bldg_fa3ef9ba-cd3c-4ddf-b8b9-87becc2b5792": {
+      "sampledTexels": 545794,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_f63c574d-0951-46de-9839-a326998a83ec": {
+      "sampledTexels": 8789,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_f507090f-502d-45eb-b8ac-0fad64b8c311": {
+      "sampledTexels": 29843,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_c0f762a4-cfc0-49fb-85d0-660765c6b6ca": {
+      "sampledTexels": 574298,
+      "tiles": [
+        "data647.b3dm",
+        "data650.b3dm"
+      ]
+    },
+    "bldg_b3c5d347-d7e8-422a-95c4-4538e4957c51": {
+      "sampledTexels": 20666,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_9eabfa88-e9b7-402d-b38a-08a5f2544e21": {
+      "sampledTexels": 2225598,
+      "tiles": [
+        "data647.b3dm",
+        "data650.b3dm"
+      ]
+    },
+    "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7": {
+      "sampledTexels": 5530313,
+      "tiles": [
+        "data647.b3dm",
+        "data650.b3dm",
+        "data651.b3dm",
+        "data652.b3dm",
+        "data707.b3dm",
+        "data708.b3dm"
+      ]
+    },
+    "bldg_7e673dbb-95f1-4a0c-bdab-b0d7bb352d3b": {
+      "sampledTexels": 707303,
+      "tiles": [
+        "data647.b3dm",
+        "data650.b3dm"
+      ]
+    },
+    "bldg_773000d3-5879-4899-b555-44b9037656c5": {
+      "sampledTexels": 470130,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_553aabc6-3f41-4a53-a315-756999a2d4d2": {
+      "sampledTexels": 7094,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_50668ce3-ca61-45cc-8fd4-890f9289e88c": {
+      "sampledTexels": 3408,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_38169632-d043-40d5-bf94-a70f3679705b": {
+      "sampledTexels": 6141,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_0fb03336-2d05-4c33-b2e9-22d1bd9baecb": {
+      "sampledTexels": 5731,
+      "tiles": [
+        "data647.b3dm"
+      ]
+    },
+    "bldg_6e9c9041-3a29-47ac-aaa3-28429eddcca2": {
+      "sampledTexels": 3791997,
+      "tiles": [
+        "data648.b3dm",
+        "data650.b3dm",
+        "data651.b3dm",
+        "data652.b3dm"
+      ]
+    },
+    "bldg_32486544-a964-40b8-b139-72d3ef84c489": {
+      "sampledTexels": 1749,
+      "tiles": [
+        "data648.b3dm"
+      ]
+    },
+    "bldg_230e3672-792b-41a4-9c19-0d08ca18c1f5": {
+      "sampledTexels": 28926,
+      "tiles": [
+        "data648.b3dm"
+      ]
+    },
+    "bldg_d0967cf5-1f32-48d1-9dda-11320828a076": {
+      "sampledTexels": 2511439,
+      "tiles": [
+        "data649.b3dm",
+        "data650.b3dm",
+        "data651.b3dm"
+      ]
+    },
+    "bldg_c2d9973d-f4ab-47fe-ad19-89b5f6dd8d99": {
+      "sampledTexels": 3038,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_bba07c55-d940-490d-8d97-f07cd9e0f4b0": {
+      "sampledTexels": 10092,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_982eecd0-0943-4d84-b79b-5873b7e4b03b": {
+      "sampledTexels": 9287,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_9573d0d8-3765-4629-9ead-fa983c242eec": {
+      "sampledTexels": 2178,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1": {
+      "sampledTexels": 26815,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_5bf2d6b2-e459-474a-ab97-18e8c5f77b62": {
+      "sampledTexels": 2113,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_48ac9ff7-9deb-47dd-b092-f95946ceefc2": {
+      "sampledTexels": 14800,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_45b5ce7d-13c7-4af9-bf5f-a0bb5d7ddbd0": {
+      "sampledTexels": 14860,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_3abb8e41-2db3-4b5b-b5e1-0f22ad79de02": {
+      "sampledTexels": 10545,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_310b7774-d2a0-49c1-a31a-e7f9803c8044": {
+      "sampledTexels": 4152,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_2fd2a55b-4f88-477e-8bd1-ecce337690ab": {
+      "sampledTexels": 5262,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_2b77eed7-3ed9-420a-b67c-f7d3ec1b8a43": {
+      "sampledTexels": 2957,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_178c97c9-6d9b-4418-84ec-b6eb23f41490": {
+      "sampledTexels": 380627,
+      "tiles": [
+        "data649.b3dm",
+        "data650.b3dm"
+      ]
+    },
+    "bldg_0e2e3f4f-33db-4b1f-96ff-dc25f23dc735": {
+      "sampledTexels": 13365,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_091fd517-e4ca-4f29-a9b1-e22a56f03032": {
+      "sampledTexels": 1317,
+      "tiles": [
+        "data649.b3dm"
+      ]
+    },
+    "bldg_c758bb4c-c37c-40e9-8d85-4a1d94d772e4": {
+      "sampledTexels": 3781,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_b1de373e-e569-4559-8690-2c12bf6dc2f1": {
+      "sampledTexels": 4204,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_97587988-3e50-452d-a887-1e6411aca704": {
+      "sampledTexels": 90893,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_89e585dc-50ee-485f-bed1-ce0101523b1e": {
+      "sampledTexels": 1889757,
+      "tiles": [
+        "data667.b3dm",
+        "data669.b3dm",
+        "data684.b3dm",
+        "data685.b3dm"
+      ]
+    },
+    "bldg_89e39f75-56a5-41ce-9301-99ab6e857f81": {
+      "sampledTexels": 21981,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_7ca14a72-0d56-4ead-80e4-55c20cda9002": {
+      "sampledTexels": 5690,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_4765c311-f381-4278-89e4-b7beb596fd66": {
+      "sampledTexels": 20329,
+      "tiles": [
+        "data667.b3dm"
+      ]
+    },
+    "bldg_e1ee4ff0-4179-4f25-8987-b0dcd83b9287": {
+      "sampledTexels": 9821,
+      "tiles": [
+        "data674.b3dm"
+      ]
+    },
+    "bldg_841ee649-4d3e-4e24-80fe-c27d38a52086": {
+      "sampledTexels": 5526,
+      "tiles": [
+        "data674.b3dm"
+      ]
+    },
+    "bldg_7af90194-bd43-4d93-92ee-eacf6e744b1f": {
+      "sampledTexels": 6924,
+      "tiles": [
+        "data674.b3dm"
+      ]
+    },
+    "bldg_1d6e4127-304a-4e58-803c-7cac5550a40a": {
+      "sampledTexels": 35504,
+      "tiles": [
+        "data674.b3dm"
+      ]
+    },
+    "bldg_f397c589-d685-414a-9db0-4a42914a8df2": {
+      "sampledTexels": 650,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_e8f2f9e8-c821-4024-b1fb-0ee3915e4cfa": {
+      "sampledTexels": 5919,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_d1a10220-3c1d-42a6-a78f-4b36f5d76283": {
+      "sampledTexels": 1014,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_ce555993-3b4b-42c0-80b0-f32c12282c26": {
+      "sampledTexels": 1880,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_b6a1099b-6eb1-4778-ad6f-8873b98b90c8": {
+      "sampledTexels": 42195,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_a1157499-7f09-4800-b0b2-9771d77c71b9": {
+      "sampledTexels": 11177,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_9fd6c12d-da6d-4cfb-b310-d77e46a133f9": {
+      "sampledTexels": 50900,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_948ff8ce-a742-4aab-8756-1eb48bf2d871": {
+      "sampledTexels": 6553,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_8846ae8d-7977-4b80-b69c-89512f5e9c09": {
+      "sampledTexels": 2258,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_7fbacf87-0c32-4eab-ac45-de4989388969": {
+      "sampledTexels": 119025,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_7e9c0c6b-e707-43eb-8ead-ba50333f188b": {
+      "sampledTexels": 233684,
+      "tiles": [
+        "data675.b3dm",
+        "data678.b3dm"
+      ]
+    },
+    "bldg_7e69ed22-dd24-4f2d-9061-2271acca42b4": {
+      "sampledTexels": 37254,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_7993326a-5b3f-4e83-8ea0-8d665d29ae8c": {
+      "sampledTexels": 63735,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_62e81bae-022e-405a-a990-e88f6d7f947d": {
+      "sampledTexels": 22367,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_3e6c85e9-c7d5-41c1-9e8b-54dceda2ca72": {
+      "sampledTexels": 4557,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_2db57f3c-7924-433a-bd38-5a18466c3d6b": {
+      "sampledTexels": 5215,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_266c0e70-29b5-49b1-8ecd-48ec90bf32e1": {
+      "sampledTexels": 643,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_1bb2082b-0abe-4fda-b011-4b46c9824515": {
+      "sampledTexels": 1072,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_0cc0cc78-85fe-4db4-af00-ba6d82c60529": {
+      "sampledTexels": 20280,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_08728c64-293d-4618-90fb-d01204171b0d": {
+      "sampledTexels": 3290,
+      "tiles": [
+        "data675.b3dm"
+      ]
+    },
+    "bldg_a293c48c-61a7-440f-a829-d8c407aa8434": {
+      "sampledTexels": 11647,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_a14116b9-e6e7-4ed2-986c-c57445e7137a": {
+      "sampledTexels": 2745,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_8afd84ca-8c5b-44fc-8bb8-37f037a5ce6b": {
+      "sampledTexels": 79548,
+      "tiles": [
+        "data676.b3dm",
+        "data678.b3dm"
+      ]
+    },
+    "bldg_73275894-c4ad-4b6e-9527-147551731608": {
+      "sampledTexels": 21808,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_50ff9b57-7afa-48e5-b20d-7c2818e221c9": {
+      "sampledTexels": 4750,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_2ded06eb-e0c4-401f-ba8c-172d93cad4e9": {
+      "sampledTexels": 5607,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_12bc6451-d803-4cb6-b20a-0f1521c997df": {
+      "sampledTexels": 7319,
+      "tiles": [
+        "data676.b3dm"
+      ]
+    },
+    "bldg_3a3f80e1-bb29-4787-b561-8795d258afee": {
+      "sampledTexels": 2806,
+      "tiles": [
+        "data687.b3dm"
+      ]
+    },
+    "bldg_0b015081-ad3a-4a15-8de4-8673d0716fc9": {
+      "sampledTexels": 2256,
+      "tiles": [
+        "data687.b3dm"
+      ]
+    },
+    "bldg_bef9d553-b423-441e-8ae7-51e13c463509": {
+      "sampledTexels": 3293,
+      "tiles": [
+        "data688.b3dm"
+      ]
+    },
+    "bldg_08beb69d-5fe8-49fd-921b-fb34d3720b2d": {
+      "sampledTexels": 8619,
+      "tiles": [
+        "data688.b3dm"
+      ]
+    },
+    "bldg_c78def05-0591-4db9-86d1-d6c5a7d624cd": {
+      "sampledTexels": 2657,
+      "tiles": [
+        "data693.b3dm"
+      ]
+    },
+    "bldg_83e810b4-ffed-4374-ad36-6fdd0a13e1b6": {
+      "sampledTexels": 1392,
+      "tiles": [
+        "data693.b3dm"
+      ]
+    },
+    "bldg_699dc005-5d67-4e13-9e9c-826921d5ef3c": {
+      "sampledTexels": 3392,
+      "tiles": [
+        "data693.b3dm"
+      ]
+    },
+    "bldg_44886b9c-40a2-4c5f-83d8-b8686308df0f": {
+      "sampledTexels": 6818,
+      "tiles": [
+        "data693.b3dm"
+      ]
+    }
+  },
+  "completedAt": "2026-10-18T14:31:17.207Z",
+  "summary": {
+    "tiles": 21,
+    "images": 21,
+    "buildingsWithSampledArtwork": 83,
+    "missingBuildingIds": [],
+    "donorTexels": 23916761,
+    "paddedTexels": 4203926,
+    "neutralTexels": 93530513,
+    "sourcePhotoPixelsCopied": 0,
+    "sourcePhotoFallback": false,
+    "ownAlphaCoverageVerified": true,
+    "opaqueTexels": 23916761,
+    "transparentTexels": 97734439,
+    "neutralOutsideDonorAndPaddingVerified": true,
+    "losslessRoundtripVerified": true,
+    "nativeSourceTilesUnchanged": true,
+    "geometryOutputsWritten": false,
+    "roofEquipmentDonorHandlingPreserved": true
+  }
+}

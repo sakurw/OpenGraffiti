@@ -1,0 +1,11 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Tokyo Metropolitan Government Photoreal v195-uv-acb</title><style>html,body{margin:0;height:100%;overflow:hidden;background:#111}#info{position:fixed;top:10px;left:10px;color:white;font-family:sans-serif}</style></head><body><div id="info">Tokyo Metropolitan Government Building Photoreal v195-uv-acb</div><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';import{GLTFLoader}from'https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/loaders/GLTFLoader.js';import{OrbitControls}from'https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/controls/OrbitControls.js';import{MeshoptDecoder}from'https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/libs/meshopt_decoder.module.js';
+const s=new THREE.Scene();s.background=new THREE.Color(0x222222);const c=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.1,10000);const r=new THREE.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);r.outputColorSpace=THREE.SRGBColorSpace;document.body.appendChild(r.domElement);s.add(new THREE.HemisphereLight(0xffffff,0x444444,2));const ctl=new OrbitControls(c,r.domElement);ctl.enableDamping=true;const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.load('/data/texture-city/tocho-photo-only-debug-v197.glb',g=>{s.add(g.scene);const b=new THREE.Box3().setFromObject(g.scene),p=b.getCenter(new THREE.Vector3()),z=b.getSize(new THREE.Vector3()),m=Math.max(z.x,z.y,z.z);ctl.target.copy(p);c.position.copy(p).add(new THREE.Vector3(m*.3,m*.2,m*.4));c.near=m/500;c.far=m*10;c.updateProjectionMatrix()});addEventListener('resize',()=>{c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});(function f(){requestAnimationFrame(f);ctl.update();r.render(s,c)})();
+</script></body></html>
+
+
+
+
+
+

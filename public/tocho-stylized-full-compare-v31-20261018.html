@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>東京都庁・建物全体のPLATEAU-2D風モデル比較</title><link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e8edef;color:#203645;font-family:system-ui,'Yu Gothic',sans-serif}
+header{padding:12px 19px;background:#fff;border-bottom:2px solid #8aa7b8}
+h1{font-size:20px;margin:0 0 6px}.sub{font-size:12px;line-height:1.6;color:#526c7b}
+.buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}button{padding:7px 13px;border:1px solid #9cb4bf;border-radius:5px;background:#f9fbfb;color:#21506a;cursor:pointer}
+button[aria-pressed="true"]{background:#28546d;color:white;border-color:#28546d}
+.versions{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:8px;font-size:12px}
+.versions a{display:inline-block;padding:5px 11px;border:1px solid #9cb4bf;border-radius:4px;background:white;color:#28546d;text-decoration:none}
+.versions a[aria-current="page"]{background:#28546d;color:#fff;font-weight:700}
+.panes{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px;height:calc(100dvh - 193px);min-height:360px}
+article{display:flex;flex-direction:column;min-width:0;min-height:0;border:1px solid #bdcdd2;background:white;overflow:hidden}
+h2{font-size:14px;margin:0;padding:8px 12px;border-bottom:1px solid #d8e4e9}.viewport{position:relative;min-height:0;flex:1;background:#e5edef}
+.viewport canvas{display:block;width:100%;height:100%;touch-action:none}
+.status{background:#e5eef2;border-top:1px solid #b9cdd6;padding:9px 15px;font-size:12px;color:#345364}
+.error{color:#b01f2b;background:#fff4f4;padding:6px 12px;display:none}
+@media(max-width:800px){.panes{grid-template-columns:1fr;height:auto}.viewport{height:42vh;flex:auto}}
+</style>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/","three/addons/loaders/GLTFLoader.js":"/vendor/GLTFLoader.js","three/addons/controls/OrbitControls.js":"/vendor/OrbitControls.js","three/addons/libs/meshopt_decoder.module.js":"/vendor/meshopt_decoder.module.js"}}</script>
+</head><body>
+<header><h1>東京都庁第一本庁舎｜PLATEAU-2D風テクスチャ・建物全体の比較</h1>
+<div class="sub">建物全体の外壁を分類し、幾何から推定した窓を端部では安全に終端処理。屋根・屋上設備には窓を追加しません。PLATEAU-2Dの輪郭・色面・簡潔な窓意匠を参考にした独自の3D表現です。実在の窓配置を保証するものではありません。<br>左右の視点は同期します。ドラッグで回転、ホイールで拡大縮小、ボタンで視点を切り替えられます。</div>
+<div class="buttons" role="group" aria-label="視点の切替">
+<button data-view="overall" aria-pressed="true">全体</button><button data-view="northDetail" aria-pressed="false">北塔の壁面</button>
+<button data-view="upper" aria-pressed="false">塔上部</button><button data-view="northeast" aria-pressed="false">北東</button>
+<button data-view="southwest" aria-pressed="false">南西</button><button data-view="roof" aria-pressed="false">屋上・設備</button>
+<button data-view="eastCorner" aria-pressed="false">壁面端部・東</button><button data-view="westCorner" aria-pressed="false">壁面端部・西</button>
+</div></header>
+<nav class="versions" style="padding:0 19px 8px;background:#fff" aria-label="右側のモデル候補を変更"><span>右側の比較モデル：</span><a href="?model=v20" data-model="v20">v20 意匠基準</a><a href="?model=v22" data-model="v22">v22 屋上平坦化</a><a href="?model=v25" data-model="v25">v25 検証済み基準</a><a href="?model=v26" data-model="v26">v26 塔上部・不採用</a><a href="?model=v27" data-model="v27">v27 構造外装修正</a><a href="?model=v28" data-model="v28">v28 全体簡略化</a><a href="?model=v29" data-model="v29">v29 窓端補正</a><a href="?model=v30" data-model="v30">v30 配色・輪郭・窓の終端</a><a href="?model=v31" data-model="v31">v31 全体・屋上ドット絵化</a></nav>
+<main class="panes"><article><h2>左：v106（元の写真・推定テクスチャ）</h2><div class="viewport" id="before"></div></article>
+<article><h2 id="after-title">右：PLATEAU-2D風 全体候補 v31</h2><div class="viewport" id="after"></div></article></main>
+<div class="error" id="error"></div><footer class="status" id="status">3Dモデルをロードしています…</footer>
+<script>
+const modelByKey={v3:'/assets/tocho-landmark/tocho-stylized-full-pixel-v3-20261015.glb',v4:'/assets/tocho-landmark/tocho-stylized-full-pixel-v4-20261015.glb',v5:'/assets/tocho-landmark/tocho-stylized-full-pixel-v5-20261015.glb',v6:'/assets/tocho-landmark/tocho-stylized-full-pixel-v6-20261015.glb',v7:'/assets/tocho-landmark/tocho-stylized-full-pixel-v7-20261015.glb',v8:'/assets/tocho-landmark/tocho-stylized-full-pixel-v8-20261015.glb',v9:'/assets/tocho-landmark/tocho-stylized-full-pixel-v9-20261015.glb',v10:'/assets/tocho-landmark/tocho-stylized-full-pixel-v10-20261015.glb',v11:'/assets/tocho-landmark/tocho-stylized-full-pixel-v11-20261015.glb',v12:'/assets/tocho-landmark/tocho-stylized-full-pixel-v12-20261015.glb',v13:'/assets/tocho-landmark/tocho-stylized-full-pixel-v13-20261015.glb',v14:'/assets/tocho-landmark/tocho-stylized-full-pixel-v14-20261015.glb',v15:'/assets/tocho-landmark/tocho-stylized-full-pixel-v15-20261015.glb',v16:'/assets/tocho-landmark/tocho-stylized-full-pixel-v16-20261015.glb',v17:'/assets/tocho-landmark/tocho-stylized-full-pixel-v17-20261015.glb',v18:'/assets/tocho-landmark/tocho-stylized-full-pixel-v18-20261015.glb',v19:'/assets/tocho-landmark/tocho-stylized-full-pixel-v19-20261015.glb',v20:'/assets/tocho-landmark/tocho-stylized-full-pixel-v20-20261015.glb',v22:'/assets/tocho-landmark/tocho-stylized-full-pixel-v22-20261015.glb',v24:'/assets/tocho-landmark/tocho-stylized-full-pixel-v24-20261015.glb',v25:'/assets/tocho-landmark/tocho-stylized-full-pixel-v25-20261015.glb'};
+modelByKey.v26='/assets/tocho-landmark/tocho-stylized-full-pixel-v26-20261016.glb';modelByKey.v27='/assets/tocho-landmark/tocho-stylized-full-pixel-v27-20261016.glb';modelByKey.v28='/assets/tocho-landmark/tocho-stylized-full-pixel-v28-20261016.glb';
+modelByKey.v29='/assets/tocho-landmark/tocho-stylized-full-pixel-v29-20261017.glb';modelByKey.v30='/assets/tocho-landmark/tocho-stylized-full-pixel-v30-20261017.glb';modelByKey.v31='/assets/tocho-landmark/tocho-stylized-full-pixel-v31-20261018.glb';
+const requested=new URLSearchParams(location.search).get('model');
+const key=Object.hasOwn(modelByKey,requested)?requested:'v31';
+document.querySelectorAll('[data-model]').forEach(a=>a.setAttribute('aria-current',a.dataset.model===key?'page':'false'));
+document.getElementById('after-title').textContent='右：PLATEAU-2D風・建物全体 '+key;
+window.__TOCHO_STYLIZED_FULL__={ready:false,errors:[],view:'overall',sync:true,models:{},modelUrls:{before:'/assets/tocho-landmark/tocho-landmark-balanced-edges-v106-candidate-20261014.glb',after:modelByKey[key]},version:key,renderCount:0};
+if(location.protocol==='file:')location.replace('http://127.0.0.1:3110/tocho-stylized-full-compare-v31-20261018.html'+location.search);
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+const state=window.__TOCHO_STYLIZED_FULL__;
+const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+const panes=[];let syncing=false;
+const directions={overall:[1,.41,1],northDetail:[1,-1,.25],upper:[-.4,.35,1],northeast:[1,.22,-1],southwest:[-1,.24,1],roof:[-1,1,1],eastCorner:[1,.2,1],westCorner:[-1,.2,-1]};
+function draw(){for(const p of panes)p.renderer.render(p.scene,p.camera);state.renderCount++}
+function applyView(name){
+ if(panes.length!==2||!directions[name])return;
+ for(const p of panes){
+   const size=p.bounds.getSize(new THREE.Vector3()),target=p.bounds.getCenter(new THREE.Vector3());
+   p.camera.fov=name==='northDetail'?30:38;p.camera.updateProjectionMatrix();
+   if(name==='upper')target.y=p.bounds.max.y-size.y*.17;
+   const dist=size.y/(2*Math.tan(THREE.MathUtils.degToRad(p.camera.fov/2)))*(name==='upper'?.7:1.23);
+   p.camera.position.copy(target).addScaledVector(new THREE.Vector3(...directions[name]).normalize(),dist);
+   if(name==='northDetail'){target.set(10.155,260,-9.947);p.camera.position.set(54.873,210,30.94)}
+   if(name==='roof'){target.set(0,273,12);p.camera.position.set(-105,391,128)}
+   if(name==='eastCorner'){target.set(25,217,43);p.camera.position.set(77,243,101)}
+   if(name==='westCorner'){target.set(-25,215,-35);p.camera.position.set(-85,253,-106)}
+   p.controls.target.copy(target);p.controls.update();
+ }
+ state.view=name;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));draw();
+}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>applyView(b.dataset.view)));
+try{
+ for(const key of ['before','after']){
+  const host=document.getElementById(key),renderer=new THREE.WebGLRenderer({antialias:false,preserveDrawingBuffer:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=key==='after'&&['v30','v31'].includes(state.version)?1.00:1.35;renderer.setClearColor(0xe5edef);
+  host.appendChild(renderer.domElement);
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,5000),controls=new OrbitControls(camera,renderer.domElement);
+  controls.enableDamping=false;scene.add(new THREE.HemisphereLight(0xffffff,0x849aaa,key==='after'&&['v30','v31'].includes(state.version)?1.15:1.7));
+  const light=new THREE.DirectionalLight(0xffffff,key==='after'&&['v30','v31'].includes(state.version)?.8:1.3);light.position.set(-200,400,200);scene.add(light);
+  const loaded=await loader.loadAsync(state.modelUrls[key]);scene.add(loaded.scene);
+  let triangles=0,meshes=0,windowMaterials=0;
+  loaded.scene.traverse(o=>{if(!o.isMesh)return;meshes++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;
+   if(o.material?.userData?.windowAllowed)windowMaterials++;
+   for(const mat of(Array.isArray(o.material)?o.material:[o.material]))if(mat?.map)mat.map.anisotropy=1;
+  });
+  const bounds=new THREE.Box3().setFromObject(loaded.scene),p={key,renderer,host,scene,camera,controls,bounds};panes.push(p);
+  state.models[key]={loaded:true,meshes,triangles,windowMaterials};
+  if(key==='after')document.getElementById('after-title').textContent=`右：PLATEAU-2D風・建物全体 ${state.version}（${meshes} Primitive）`;
+  const resize=()=>{const w=Math.max(host.clientWidth,1),h=Math.max(host.clientHeight,1);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false);draw()};
+  new ResizeObserver(resize).observe(host);resize();
+  controls.addEventListener('change',()=>{
+   if(syncing)return;syncing=true;
+   for(const q of panes.filter(other=>other!==p)){
+    q.camera.position.copy(p.camera.position);q.camera.quaternion.copy(p.camera.quaternion);
+    q.camera.fov=p.camera.fov;q.camera.updateProjectionMatrix();q.controls.target.copy(controls.target);q.controls.update();
+   }
+   syncing=false;draw();
+  });
+  document.getElementById('status').textContent=`3D読み込み中：${key} 完了 (${meshes}メッシュ、${Math.round(triangles).toLocaleString()}三角形)`;
+ }
+ applyView('overall');draw();state.ready=true;
+ document.getElementById('status').textContent=`左右の3D表示完了。元モデル${state.models.before.meshes} Primitive・候補${state.models.after.meshes} Primitive／各${state.models.after.triangles.toLocaleString()}三角形。クリックで視点変更、ドラッグで同期回転。`;
+}catch(error){state.errors.push(String(error));document.getElementById('error').style.display='block';document.getElementById('error').textContent=String(error);document.getElementById('status').textContent='3Dロード失敗：'+String(error);console.error(error)}
+</script></body></html>
+

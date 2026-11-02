@@ -1,0 +1,15 @@
+<!doctype html><html><body style="margin:0;background:#222"><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'https://cdn.jsdelivr.net/npm/three@0.160/examples/jsm/libs/meshopt_decoder.module.js';
+const s=new THREE.Scene();s.background=new THREE.Color(0x222222);
+const ambient=new THREE.AmbientLight(0xffffff,2.0);s.add(ambient);
+const key=new THREE.DirectionalLight(0xffffff,3.0);key.position.set(500,1000,800);s.add(key);
+const fill=new THREE.DirectionalLight(0xffffff,1.5);fill.position.set(-500,300,-600);s.add(fill);
+const c=new THREE.PerspectiveCamera(40,innerWidth/innerHeight,.1,30000);
+const r=new THREE.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);r.outputColorSpace=THREE.SRGBColorSpace;document.body.appendChild(r.domElement);
+const l=new GLTFLoader();l.setMeshoptDecoder(MeshoptDecoder);
+l.load('./data/texture-city/tocho-photographic-v65-surface-preserve.glb',g=>{g.scene.traverse(o=>{if(o.isMesh){o.material.side=THREE.DoubleSide;if(o.material.map)o.material.map.colorSpace=THREE.SRGBColorSpace;o.material.needsUpdate=true}});s.add(g.scene);let b=new THREE.Box3().setFromObject(g.scene),p=b.getCenter(new THREE.Vector3()),m=Math.max(...b.getSize(new THREE.Vector3()).toArray());c.position.copy(p).add(new THREE.Vector3(m*.6,m*.4,m*.7));c.lookAt(p);},undefined,e=>console.error(e));
+addEventListener('resize',()=>{c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});
+(function f(){requestAnimationFrame(f);r.render(s,c)})();
+</script></body></html>

@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>PLATEAU 都庁外観比較</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, "Noto Sans JP", "Yu Gothic UI", Meiryo, sans-serif;
+      background: #111315;
+      color: #f4f6f8;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body { background: #111315; }
+    header {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 16px;
+      border-bottom: 1px solid #34383d;
+      background: #101214;
+    }
+    .title { min-width: 0; flex: 1 1 auto; }
+    h1 { margin: 0 0 4px; font-size: 20px; line-height: 1.2; font-weight: 700; }
+    .subtitle { color: #aeb7c0; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    #overall {
+      flex: 0 0 auto;
+      border: 1px solid #424950;
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: #cbd3da;
+      background: #191d21;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .grid {
+      height: calc(100vh - 76px);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: #34383d;
+    }
+    .pane {
+      min-width: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: 60px minmax(0, 1fr) 28px;
+      background: #171a1d;
+      position: relative;
+    }
+    .pane-head {
+      min-width: 0;
+      padding: 9px 12px 7px;
+      border-bottom: 1px solid #34383d;
+      background: #15181b;
+    }
+    .pane-head h2 { margin: 0 0 3px; font-size: 14px; font-weight: 700; }
+    .pane-head p { margin: 0; color: #98a4ae; font-size: 10px; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .viewport { position: relative; min-height: 0; background: #e7ebef; overflow: hidden; }
+    canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+    canvas:active { cursor: grabbing; }
+    .status-line {
+      min-width: 0;
+      padding: 6px 10px;
+      border-top: 1px solid #34383d;
+      color: #aeb7c0;
+      background: #111416;
+      font: 10px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .reference {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      z-index: 4;
+      width: 112px;
+      padding: 4px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 6px;
+      background: rgba(17, 20, 23, .84);
+      box-shadow: 0 4px 18px rgba(0,0,0,.22);
+      pointer-events: none;
+    }
+    .reference img { display: block; width: 100%; height: 68px; object-fit: cover; border-radius: 3px; }
+    .reference span { display: block; margin-top: 3px; color: #cbd3da; font-size: 8px; line-height: 1.15; }
+    .error { color: #ffb4ab !important; }
+    @media (max-width: 960px) {
+      html, body { overflow: auto; }
+      header { height: auto; min-height: 70px; }
+      .grid { height: auto; grid-template-columns: 1fr; }
+      .pane { height: 70vh; min-height: 440px; }
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>東京都庁第一本庁舎 — PLATEAU LOD2 外観処理比較</h1>
+      <div class="subtitle">4画面とも同一PLATEAU形状・同一視点。LOD3ではなく、LOD2形状を面内細分化して外観処理のみ比較します。</div>
+    </div>
+    <div id="overall">4モデルを読み込み中…</div>
+  </header>
+
+  <main class="grid">
+    <section class="pane" id="pane-neutral" data-loaded="false" data-mesh-count="0" data-triangle-count="0">
+      <div class="pane-head">
+        <h2>1. Neutral</h2>
+        <p>テクスチャ / COLOR_0 なし。PLATEAU形状だけを単色PBRで確認。</p>
+      </div>
+      <div class="viewport" id="view-neutral"></div>
+      <div class="status-line" id="status-neutral">loading…</div>
+    </section>
+
+    <section class="pane" id="pane-phase123" data-loaded="false" data-mesh-count="0" data-triangle-count="0">
+      <div class="pane-head">
+        <h2>2. Phase — geometry semantic</h2>
+        <p>窓許可面を先に限定 + 20属性 + 部位別PBR。設備・小面・屋上部は窓分割しません。</p>
+      </div>
+      <div class="viewport" id="view-phase123"></div>
+      <div class="status-line" id="status-phase123">loading…</div>
+    </section>
+
+    <section class="pane" id="pane-recommended" data-loaded="false" data-mesh-count="0" data-triangle-count="0">
+      <div class="pane-head">
+        <h2>3. Recommended — evidence aware</h2>
+        <p>Phase + sourceUV対応面の画像根拠/信頼度で材質とalbedoを補正。未整合面は推測で上書きしません。</p>
+      </div>
+      <div class="viewport" id="view-recommended">
+        <div class="reference">
+          <img src="/assets/level3-demo/mapillary-reference.jpg" alt="Mapillary reference" />
+          <span>Mapillary repo-local reference<br />single image / color evidence</span>
+        </div>
+      </div>
+      <div class="status-line" id="status-recommended">loading…</div>
+    </section>
+
+    <section class="pane" id="pane-recommendedPlus" data-loaded="false" data-mesh-count="0" data-triangle-count="0" data-s-enhanced="false">
+      <div class="pane-head">
+        <h2>4. Recommended+ — S realism</h2>
+        <p>Recommended + 微細法線 / 非周期roughness / 物理glass / glass階・ベイ反射差 / façade depth relief / façade profile bevel / glass Fresnel色差 / 接合部影 / 意味制約付きmacro weathering / 構造化屋外IBL / ガラス内層の階・ベイ変動 / soft shadow。</p>
+      </div>
+      <div class="viewport" id="view-recommendedPlus"></div>
+      <div class="status-line" id="status-recommendedPlus">loading…</div>
+    </section>
+  </main>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+
+    const glassClasses = new Set(['clearGlass', 'darkGlass', 'opaqueGlass']);
+    const facadeReliefDepthMeters = {
+      clearGlass: -0.16,
+      darkGlass: -0.16,
+      opaqueGlass: -0.10,
+      mullion: 0.07,
+      metalPanel: 0.03,
+      door: -0.05,
+      railing: 0.08,
+    };
+    // Method 16: semantic-gated profile bevel. This is intentionally limited to
+    // frame/trim-like materials so the LOD2 wall plane gains a subtle edge
+    // response without inventing extra windows on equipment or unknown parts.
+    const facadeProfileBevel = {
+      mullion: { amp: 0.105, width: 0.105 },
+      spandrel: { amp: 0.060, width: 0.115 },
+      metalPanel: { amp: 0.038, width: 0.105 },
+      column: { amp: 0.030, width: 0.095 },
+      beam: { amp: 0.034, width: 0.100 },
+      parapet: { amp: 0.024, width: 0.090 },
+      door: { amp: 0.020, width: 0.090 },
+    };
+    const sProfiles = {
+      stone: { normalAmp: 0.016, normalFreq: 5.8, roughAmp: 0.055, jointStrength: 0.050, weatherAmp: 0.028 },
+      concrete: { normalAmp: 0.022, normalFreq: 4.3, roughAmp: 0.070, jointStrength: 0.045, weatherAmp: 0.024 },
+      tile: { normalAmp: 0.012, normalFreq: 7.0, roughAmp: 0.050, jointStrength: 0.075, weatherAmp: 0.018 },
+      clearGlass: { normalAmp: 0.0035, normalFreq: 2.4, roughAmp: 0.035, jointStrength: 0.155, weatherAmp: 0.0 },
+      darkGlass: { normalAmp: 0.0045, normalFreq: 2.2, roughAmp: 0.040, jointStrength: 0.165, weatherAmp: 0.0 },
+      opaqueGlass: { normalAmp: 0.006, normalFreq: 3.0, roughAmp: 0.045, jointStrength: 0.140, weatherAmp: 0.0 },
+      mullion: { normalAmp: 0.007, normalFreq: 8.5, roughAmp: 0.045, jointStrength: 0.090, weatherAmp: 0.0 },
+      spandrel: { normalAmp: 0.009, normalFreq: 5.4, roughAmp: 0.050, jointStrength: 0.085, weatherAmp: 0.014 },
+      metalPanel: { normalAmp: 0.008, normalFreq: 6.5, roughAmp: 0.055, jointStrength: 0.070, weatherAmp: 0.010 },
+      louver: { normalAmp: 0.009, normalFreq: 7.2, roughAmp: 0.050, jointStrength: 0.080, weatherAmp: 0.0 },
+      door: { normalAmp: 0.008, normalFreq: 5.5, roughAmp: 0.045, jointStrength: 0.070, weatherAmp: 0.012 },
+      column: { normalAmp: 0.013, normalFreq: 5.2, roughAmp: 0.050, jointStrength: 0.040, weatherAmp: 0.022 },
+      beam: { normalAmp: 0.012, normalFreq: 5.0, roughAmp: 0.050, jointStrength: 0.045, weatherAmp: 0.018 },
+      parapet: { normalAmp: 0.015, normalFreq: 4.8, roughAmp: 0.055, jointStrength: 0.050, weatherAmp: 0.032 },
+      recess: { normalAmp: 0.006, normalFreq: 3.2, roughAmp: 0.045, jointStrength: 0.180, weatherAmp: 0.026 },
+      roofEquipment: { normalAmp: 0.010, normalFreq: 5.2, roughAmp: 0.050, jointStrength: 0.0, weatherAmp: 0.0 },
+      pipeDuct: { normalAmp: 0.006, normalFreq: 7.8, roughAmp: 0.050, jointStrength: 0.0, weatherAmp: 0.0 },
+      railing: { normalAmp: 0.004, normalFreq: 8.5, roughAmp: 0.040, jointStrength: 0.0, weatherAmp: 0.0 },
+      signage: { normalAmp: 0.006, normalFreq: 5.5, roughAmp: 0.040, jointStrength: 0.0, weatherAmp: 0.0 },
+      unknown: { normalAmp: 0.010, normalFreq: 4.6, roughAmp: 0.050, jointStrength: 0.0, weatherAmp: 0.0 },
+    };
+
+    function createOutdoorEnvironment(renderer) {
+      const width = 1024;
+      const height = 512;
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+
+      const sky = ctx.createLinearGradient(0, 0, 0, height * 0.58);
+      sky.addColorStop(0.0, '#6f92ad');
+      sky.addColorStop(0.48, '#a8becd');
+      sky.addColorStop(1.0, '#e7e4dc');
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, width, height * 0.60);
+
+      const ground = ctx.createLinearGradient(0, height * 0.58, 0, height);
+      ground.addColorStop(0.0, '#b9b8b2');
+      ground.addColorStop(0.32, '#888d90');
+      ground.addColorStop(1.0, '#5e6468');
+      ctx.fillStyle = ground;
+      ctx.fillRect(0, height * 0.58, width, height * 0.42);
+
+      // A completely smooth gradient produces unnaturally flat glass. Add only
+      // broad, low-frequency outdoor structure so reflections have a horizon,
+      // skyline mass, and cloud breakup without pretending this is measured
+      // site imagery.
+      ctx.save();
+      ctx.globalAlpha = 0.28;
+      ctx.fillStyle = '#68747c';
+      const skyline = [
+        [0.02, 0.535, 0.045, 0.060], [0.075, 0.520, 0.036, 0.075],
+        [0.125, 0.548, 0.060, 0.047], [0.205, 0.515, 0.032, 0.080],
+        [0.252, 0.540, 0.054, 0.055], [0.338, 0.525, 0.044, 0.070],
+        [0.405, 0.550, 0.070, 0.045], [0.505, 0.518, 0.036, 0.077],
+        [0.562, 0.538, 0.052, 0.057], [0.642, 0.528, 0.042, 0.067],
+        [0.710, 0.547, 0.066, 0.048], [0.802, 0.522, 0.035, 0.073],
+        [0.858, 0.542, 0.050, 0.053], [0.932, 0.530, 0.046, 0.065],
+      ];
+      for (const [x, y, w, h] of skyline) {
+        ctx.fillRect(width * x, height * y, width * w, height * h);
+      }
+      ctx.restore();
+
+      ctx.save();
+      ctx.filter = 'blur(18px)';
+      ctx.fillStyle = 'rgba(244,248,250,0.26)';
+      for (const [x, y, rx, ry] of [
+        [0.14, 0.19, 0.10, 0.038],
+        [0.39, 0.27, 0.13, 0.045],
+        [0.61, 0.16, 0.09, 0.032],
+        [0.84, 0.24, 0.12, 0.040],
+      ]) {
+        ctx.beginPath();
+        ctx.ellipse(width * x, height * y, width * rx, height * ry, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+
+      const sunX = width * 0.71;
+      const sunY = height * 0.30;
+      const halo = ctx.createRadialGradient(sunX, sunY, 0, sunX, sunY, height * 0.16);
+      halo.addColorStop(0.0, 'rgba(255,247,224,0.96)');
+      halo.addColorStop(0.10, 'rgba(255,239,202,0.74)');
+      halo.addColorStop(0.42, 'rgba(255,231,191,0.17)');
+      halo.addColorStop(1.0, 'rgba(255,231,191,0.0)');
+      ctx.fillStyle = halo;
+      ctx.fillRect(0, 0, width, height);
+
+      const texture = new THREE.CanvasTexture(canvas);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.mapping = THREE.EquirectangularReflectionMapping;
+      texture.needsUpdate = true;
+
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      const target = pmrem.fromEquirectangular(texture);
+      texture.dispose();
+      pmrem.dispose();
+      return target;
+    }
+
+    const specs = [
+      { key: 'neutral', url: '/assets/level3-demo/tocho-one-building-neutral.glb' },
+      { key: 'phase123', url: '/assets/level3-demo/tocho-one-building-phase123.glb' },
+      { key: 'recommended', url: '/assets/level3-demo/tocho-one-building-recommended-1to6.glb' },
+      { key: 'recommendedPlus', url: '/assets/level3-demo/tocho-one-building-recommended-1to6.glb', enhanced: true },
+    ];
+
+    const entries = specs.map((spec) => {
+      const pane = document.querySelector(`#pane-${spec.key}`);
+      const viewport = document.querySelector(`#view-${spec.key}`);
+      const status = document.querySelector(`#status-${spec.key}`);
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xe7ebef);
+
+      const camera = new THREE.PerspectiveCamera(34, 1, 0.01, 100);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.05;
+      if (spec.enhanced) {
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      }
+      viewport.appendChild(renderer.domElement);
+
+      const hemi = new THREE.HemisphereLight(0xffffff, 0x6d747c, 2.0);
+      scene.add(hemi);
+      const key = new THREE.DirectionalLight(0xffffff, 2.25);
+      key.position.set(4.5, 8.0, 6.0);
+      if (spec.enhanced) {
+        key.castShadow = true;
+        key.shadow.mapSize.set(2048, 2048);
+        key.shadow.camera.left = -3.6;
+        key.shadow.camera.right = 3.6;
+        key.shadow.camera.top = 3.6;
+        key.shadow.camera.bottom = -3.6;
+        key.shadow.camera.near = 0.1;
+        key.shadow.camera.far = 20;
+        key.shadow.bias = -0.00035;
+        key.shadow.normalBias = 0.018;
+        key.shadow.radius = 2.4;
+      }
+      scene.add(key);
+      const fill = new THREE.DirectionalLight(0xbfd4e6, 1.0);
+      fill.position.set(-5.0, 2.0, -4.0);
+      scene.add(fill);
+
+      let environmentTarget = null;
+      if (spec.enhanced) {
+        environmentTarget = createOutdoorEnvironment(renderer);
+        scene.environment = environmentTarget.texture;
+        scene.environmentIntensity = 0.76;
+      }
+
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = false;
+      controls.enablePan = true;
+      controls.screenSpacePanning = true;
+      controls.rotateSpeed = 2.8;
+      controls.panSpeed = 2.7;
+      controls.zoomSpeed = 2.8;
+      controls.zoomToCursor = true;
+      controls.minDistance = 1.2;
+      controls.maxDistance = 14;
+      controls.target.set(0, 0.15, 0);
+
+      return {
+        ...spec,
+        pane,
+        viewport,
+        status,
+        scene,
+        camera,
+        renderer,
+        controls,
+        environmentTarget,
+        root: null,
+      };
+    });
+
+    function enhanceSpatialPbr(material, semantic) {
+      const profile = sProfiles[semantic] || sProfiles.unknown;
+      const profileBevel = facadeProfileBevel[semantic] || { amp: 0, width: 0 };
+      const glassCellRoughnessAmp = {
+        clearGlass: 0.020,
+        darkGlass: 0.016,
+        opaqueGlass: 0.011,
+      }[semantic] || 0;
+      const glassEnvironmentIntensity = {
+        clearGlass: 0.86,
+        darkGlass: 0.76,
+        opaqueGlass: 0.66,
+      };
+      const glassToneVariationAmp = {
+        clearGlass: 0.045,
+        darkGlass: 0.036,
+        opaqueGlass: 0.024,
+      }[semantic] || 0;
+      const glassOpticalWaveAmp = {
+        clearGlass: 0.016,
+        darkGlass: 0.013,
+        opaqueGlass: 0.008,
+      }[semantic] || 0;
+      const glassFresnelTintStrength = glassClasses.has(semantic) ? 0.16 : 0;
+      material.envMapIntensity = glassClasses.has(semantic)
+        ? glassEnvironmentIntensity[semantic]
+        : 0.22;
+      material.onBeforeCompile = (shader) => {
+        shader.vertexShader = shader.vertexShader
+          .replace('#include <common>', `#include <common>\nvarying vec3 vOgLocalPosition;\nvarying vec3 vOgLocalNormal;`)
+          .replace('#include <begin_vertex>', `#include <begin_vertex>\nvOgLocalPosition = position;\nvOgLocalNormal = normal;`);
+        shader.fragmentShader = shader.fragmentShader
+          .replace('#include <common>', `#include <common>
+            varying vec3 vOgLocalPosition;
+            varying vec3 vOgLocalNormal;
+            float ogHash31(vec3 p3) {
+              p3 = fract(p3 * 0.1031);
+              p3 += dot(p3, p3.yzx + 33.33);
+              return fract((p3.x + p3.y) * p3.z);
+            }
+            float ogValueNoise(vec3 p) {
+              vec3 i = floor(p);
+              vec3 f = fract(p);
+              f = f * f * (3.0 - 2.0 * f);
+              float n000 = ogHash31(i + vec3(0.0, 0.0, 0.0));
+              float n100 = ogHash31(i + vec3(1.0, 0.0, 0.0));
+              float n010 = ogHash31(i + vec3(0.0, 1.0, 0.0));
+              float n110 = ogHash31(i + vec3(1.0, 1.0, 0.0));
+              float n001 = ogHash31(i + vec3(0.0, 0.0, 1.0));
+              float n101 = ogHash31(i + vec3(1.0, 0.0, 1.0));
+              float n011 = ogHash31(i + vec3(0.0, 1.0, 1.0));
+              float n111 = ogHash31(i + vec3(1.0, 1.0, 1.0));
+              float nx00 = mix(n000, n100, f.x);
+              float nx10 = mix(n010, n110, f.x);
+              float nx01 = mix(n001, n101, f.x);
+              float nx11 = mix(n011, n111, f.x);
+              return mix(mix(nx00, nx10, f.y), mix(nx01, nx11, f.y), f.z);
+            }`)
+          .replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>
+            float ogRoughFine = 0.58 * sin(vOgLocalPosition.x * ${profile.normalFreq.toFixed(3)} + vOgLocalPosition.y * 0.37)
+              + 0.42 * cos(vOgLocalPosition.z * ${(profile.normalFreq * 0.83).toFixed(3)} - vOgLocalPosition.y * 0.29);
+            float ogRoughMacro = (ogValueNoise(vOgLocalPosition * vec3(0.17, 0.075, 0.17)) - 0.5) * 2.0;
+            float ogRoughVariation = ogRoughFine * 0.62 + ogRoughMacro * 0.38;
+            roughnessFactor = clamp(roughnessFactor + ogRoughVariation * ${profile.roughAmp.toFixed(4)}, 0.055, 1.0);
+            float ogGlassFacadeU = abs(vOgLocalNormal.x) > abs(vOgLocalNormal.z) ? vOgLocalPosition.z : vOgLocalPosition.x;
+            float ogGlassFloorCell = floor((vOgLocalPosition.y - 34.63) / 4.15);
+            float ogGlassBayCell = floor((ogGlassFacadeU + 0.8) / 3.15);
+            float ogGlassSideCell = abs(vOgLocalNormal.x) > abs(vOgLocalNormal.z)
+              ? (vOgLocalNormal.x >= 0.0 ? 1.0 : 2.0)
+              : (vOgLocalNormal.z >= 0.0 ? 3.0 : 4.0);
+            float ogGlassCellVariation = (ogHash31(vec3(ogGlassBayCell * 0.73, ogGlassFloorCell * 1.37, ogGlassSideCell * 5.11)) - 0.5) * 2.0;
+            roughnessFactor = clamp(roughnessFactor + ogGlassCellVariation * ${glassCellRoughnessAmp.toFixed(4)}, 0.055, 1.0);`)
+          .replace('#include <normal_fragment_maps>', `#include <normal_fragment_maps>
+            vec3 ogReference = abs(normal.y) < 0.88 ? vec3(0.0, 1.0, 0.0) : vec3(1.0, 0.0, 0.0);
+            vec3 ogTangent = normalize(cross(ogReference, normal));
+            vec3 ogBitangent = normalize(cross(normal, ogTangent));
+            float ogNormalFreq = ${profile.normalFreq.toFixed(3)};
+            float ogN1Fine = ogValueNoise((vOgLocalPosition + ogTangent * 0.055) * ogNormalFreq)
+              - ogValueNoise((vOgLocalPosition - ogTangent * 0.055) * ogNormalFreq);
+            float ogN2Fine = ogValueNoise((vOgLocalPosition + ogBitangent * 0.055) * ogNormalFreq + vec3(13.7, 5.3, 9.1))
+              - ogValueNoise((vOgLocalPosition - ogBitangent * 0.055) * ogNormalFreq + vec3(13.7, 5.3, 9.1));
+            float ogN1Macro = ogValueNoise((vOgLocalPosition + ogTangent * 0.18) * ogNormalFreq * 0.31 + vec3(2.3, 7.1, 11.9))
+              - ogValueNoise((vOgLocalPosition - ogTangent * 0.18) * ogNormalFreq * 0.31 + vec3(2.3, 7.1, 11.9));
+            float ogN2Macro = ogValueNoise((vOgLocalPosition + ogBitangent * 0.18) * ogNormalFreq * 0.31 + vec3(19.1, 3.7, 4.9))
+              - ogValueNoise((vOgLocalPosition - ogBitangent * 0.18) * ogNormalFreq * 0.31 + vec3(19.1, 3.7, 4.9));
+            float ogN1 = clamp(ogN1Fine * 1.35 + ogN1Macro * 0.55, -1.0, 1.0);
+            float ogN2 = clamp(ogN2Fine * 1.35 + ogN2Macro * 0.55, -1.0, 1.0);
+            float ogGlassWave1 = ogValueNoise((vOgLocalPosition + ogTangent * 0.72) * 0.185 + vec3(31.7, 7.3, 13.1))
+              - ogValueNoise((vOgLocalPosition - ogTangent * 0.72) * 0.185 + vec3(31.7, 7.3, 13.1));
+            float ogGlassWave2 = ogValueNoise((vOgLocalPosition + ogBitangent * 0.78) * 0.165 + vec3(5.9, 29.3, 17.7))
+              - ogValueNoise((vOgLocalPosition - ogBitangent * 0.78) * 0.165 + vec3(5.9, 29.3, 17.7));
+            vec3 ogMicroNormal = (ogTangent * ogN1 + ogBitangent * ogN2) * ${profile.normalAmp.toFixed(4)};
+            vec3 ogOpticalWave = (ogTangent * ogGlassWave1 + ogBitangent * ogGlassWave2) * ${glassOpticalWaveAmp.toFixed(4)};
+
+            // A narrow, symmetric normal rolloff around floor/bay module edges
+            // gives mullions/spandrels/panels a bevel-like highlight. The
+            // semantic allow-list above keeps this away from glass, equipment,
+            // ducts, rails, signage and unknown surfaces.
+            float ogProfileFacadeU = abs(vOgLocalNormal.x) > abs(vOgLocalNormal.z) ? vOgLocalPosition.z : vOgLocalPosition.x;
+            float ogProfileFloorPhase = fract((vOgLocalPosition.y - 34.63) / 4.15);
+            float ogProfileBayPhase = fract((ogProfileFacadeU + 0.8) / 3.15);
+            float ogProfileFloorDist = min(ogProfileFloorPhase, 1.0 - ogProfileFloorPhase);
+            float ogProfileBayDist = min(ogProfileBayPhase, 1.0 - ogProfileBayPhase);
+            float ogProfileFloorBand = 1.0 - smoothstep(0.0, ${profileBevel.width.toFixed(4)}, ogProfileFloorDist);
+            float ogProfileBayBand = 1.0 - smoothstep(0.0, ${profileBevel.width.toFixed(4)}, ogProfileBayDist);
+            float ogProfileFloorDir = ogProfileFloorPhase < 0.5 ? 1.0 : -1.0;
+            float ogProfileBayDir = ogProfileBayPhase < 0.5 ? 1.0 : -1.0;
+            vec3 ogProfileHorizontalRaw = vec3(-normal.z, 0.0, normal.x);
+            float ogProfileVerticality = length(ogProfileHorizontalRaw);
+            vec3 ogProfileHorizontal = ogProfileVerticality > 0.0001
+              ? ogProfileHorizontalRaw / ogProfileVerticality
+              : vec3(1.0, 0.0, 0.0);
+            vec3 ogProfileVertical = normalize(cross(normal, ogProfileHorizontal));
+            float ogProfileOrientationGate = smoothstep(0.25, 0.70, ogProfileVerticality);
+            vec3 ogProfileBevelNormal = (ogProfileHorizontal * ogProfileBayBand * ogProfileBayDir
+              + ogProfileVertical * ogProfileFloorBand * ogProfileFloorDir)
+              * ${profileBevel.amp.toFixed(4)} * ogProfileOrientationGate;
+            normal = normalize(normal + ogMicroNormal + ogOpticalWave + ogProfileBevelNormal);`)
+          .replace('vec3 outgoingLight = totalDiffuse + totalSpecular + totalEmissiveRadiance;', `
+            float ogFacadeU = abs(vOgLocalNormal.x) > abs(vOgLocalNormal.z) ? vOgLocalPosition.z : vOgLocalPosition.x;
+            float ogFloorPhase = fract((vOgLocalPosition.y - 34.63 - 0.55) / 4.15);
+            float ogBayPhase = fract((ogFacadeU + 0.8) / 3.15);
+            float ogFloorEdge = min(ogFloorPhase, 1.0 - ogFloorPhase);
+            float ogBayEdge = min(ogBayPhase, 1.0 - ogBayPhase);
+            float ogJointDistance = min(ogFloorEdge, ogBayEdge);
+            float ogJoint = 1.0 - smoothstep(0.0, 0.055, ogJointDistance);
+            float ogFineJoint = 0.35 + 0.65 * ogJoint;
+            float ogContact = clamp(1.0 - ${profile.jointStrength.toFixed(4)} * ogFineJoint, 0.72, 1.0);
+            float ogHeight01 = clamp((vOgLocalPosition.y - 34.63) / 260.649, 0.0, 1.0);
+            float ogFacadeSide = abs(vOgLocalNormal.x) > abs(vOgLocalNormal.z)
+              ? (vOgLocalNormal.x >= 0.0 ? 1.0 : 2.0)
+              : (vOgLocalNormal.z >= 0.0 ? 3.0 : 4.0);
+            float ogMacroWeather = ogValueNoise(vec3(ogFacadeU * 0.105, vOgLocalPosition.y * 0.028, ogFacadeSide * 2.7));
+            float ogRunoff = ogValueNoise(vec3(ogFacadeU * 0.28, vOgLocalPosition.y * 0.010, 17.0 + ogFacadeSide));
+            float ogLowerAccumulation = pow(1.0 - ogHeight01, 1.55);
+            float ogWeather = (0.34 * ogLowerAccumulation + 0.66 * ogRunoff) * (0.78 + 0.22 * ogMacroWeather);
+            float ogWeatherFactor = clamp(1.0 - ${profile.weatherAmp.toFixed(4)} * ogWeather, 0.94, 1.0);
+            vec3 outgoingLight = (totalDiffuse + totalSpecular + totalEmissiveRadiance) * ogContact * ogWeatherFactor;
+            float ogGlassToneCell = (ogHash31(vec3(ogFacadeU * 0.31, floor((vOgLocalPosition.y - 34.63) / 4.15) * 1.37, ogFacadeSide * 5.11)) - 0.5) * 2.0;
+            float ogViewFacing = clamp(abs(dot(normalize(normal), normalize(vViewPosition))), 0.0, 1.0);
+            float ogGlassFresnel = pow(1.0 - ogViewFacing, 3.0);
+            vec3 ogGlassFresnelTint = mix(vec3(0.995, 1.000, 1.005), vec3(0.935, 0.985, 1.065), ogGlassFresnel);
+            outgoingLight *= mix(vec3(1.0), ogGlassFresnelTint * (1.0 + ogGlassToneCell * ${glassToneVariationAmp.toFixed(4)}), ${glassFresnelTintStrength.toFixed(4)});`);
+      };
+      material.customProgramCacheKey = () => `og-s6-${semantic}-${profile.normalAmp}-${profile.roughAmp}-${profile.jointStrength}-${profile.weatherAmp}-${glassCellRoughnessAmp}-${glassToneVariationAmp}-${glassOpticalWaveAmp}-${glassFresnelTintStrength}-${profileBevel.amp}-${profileBevel.width}`;
+      material.needsUpdate = true;
+      return material;
+    }
+
+    function applySemanticFacadeRelief(mesh, semantic, buildingCenter) {
+      const depth = facadeReliefDepthMeters[semantic] || 0;
+      if (!depth || !mesh.geometry?.attributes?.position || !mesh.geometry?.attributes?.normal) {
+        return { movedVertices: 0, depth: 0 };
+      }
+
+      const geometry = mesh.geometry.clone();
+      const position = geometry.attributes.position;
+      const normal = geometry.attributes.normal;
+      let movedVertices = 0;
+      for (let i = 0; i < position.count; i += 1) {
+        const nx = normal.getX(i);
+        const ny = normal.getY(i);
+        const nz = normal.getZ(i);
+        const horizontalNormal = Math.hypot(nx, nz);
+        if (horizontalNormal < 0.72 || Math.abs(ny) > 0.55) continue;
+
+        const px = position.getX(i);
+        const py = position.getY(i);
+        const pz = position.getZ(i);
+        const radialDot = (px - buildingCenter.x) * nx + (pz - buildingCenter.z) * nz;
+        const outwardSign = radialDot >= 0 ? 1 : -1;
+        const offset = depth * outwardSign;
+        position.setXYZ(i, px + nx * offset, py + ny * offset, pz + nz * offset);
+        movedVertices += 1;
+      }
+
+      if (movedVertices === 0) {
+        geometry.dispose();
+        return { movedVertices: 0, depth: 0 };
+      }
+
+      position.needsUpdate = true;
+      geometry.computeBoundingBox();
+      geometry.computeBoundingSphere();
+      mesh.geometry = geometry;
+      return { movedVertices, depth };
+    }
+
+    function createInteriorLayer(mesh, semantic, buildingCenter) {
+      const geometry = mesh.geometry.clone();
+      const position = geometry.attributes.position;
+      const normal = geometry.attributes.normal;
+      const depth = semantic === 'clearGlass' ? 0.34 : semantic === 'darkGlass' ? 0.28 : 0.22;
+      for (let i = 0; i < position.count; i += 1) {
+        const px = position.getX(i);
+        const py = position.getY(i);
+        const pz = position.getZ(i);
+        const nx = normal.getX(i);
+        const ny = normal.getY(i);
+        const nz = normal.getZ(i);
+        const radialDot = (px - buildingCenter.x) * nx + (py - buildingCenter.y) * ny + (pz - buildingCenter.z) * nz;
+        const inward = radialDot >= 0 ? -depth : depth;
+        position.setXYZ(i, px + nx * inward, py + ny * inward, pz + nz * inward);
+      }
+      position.needsUpdate = true;
+      geometry.computeBoundingBox();
+      geometry.computeBoundingSphere();
+      const material = new THREE.MeshStandardMaterial({
+        name: `${semantic}-interior`,
+        color: semantic === 'darkGlass' ? 0x111a22 : 0x1b2832,
+        emissive: 0x080b0d,
+        emissiveIntensity: 0.14,
+        roughness: 0.78,
+        metalness: 0,
+        side: THREE.DoubleSide,
+      });
+      material.onBeforeCompile = (shader) => {
+        shader.vertexShader = shader.vertexShader
+          .replace('#include <common>', `#include <common>\nvarying vec3 vOgInteriorPosition;\nvarying vec3 vOgInteriorNormal;`)
+          .replace('#include <begin_vertex>', `#include <begin_vertex>\nvOgInteriorPosition = position;\nvOgInteriorNormal = normal;`);
+        shader.fragmentShader = shader.fragmentShader
+          .replace('#include <common>', `#include <common>
+            varying vec3 vOgInteriorPosition;
+            varying vec3 vOgInteriorNormal;
+            float ogInteriorHash(vec3 p3) {
+              p3 = fract(p3 * 0.1031);
+              p3 += dot(p3, p3.yzx + 33.33);
+              return fract((p3.x + p3.y) * p3.z);
+            }`)
+          .replace('vec3 outgoingLight = totalDiffuse + totalSpecular + totalEmissiveRadiance;', `
+            float ogInteriorU = abs(vOgInteriorNormal.x) > abs(vOgInteriorNormal.z) ? vOgInteriorPosition.z : vOgInteriorPosition.x;
+            float ogInteriorFloor = floor((vOgInteriorPosition.y - 34.63) / 4.15);
+            float ogInteriorBay = floor((ogInteriorU + 0.8) / 3.15);
+            float ogInteriorSide = abs(vOgInteriorNormal.x) > abs(vOgInteriorNormal.z)
+              ? (vOgInteriorNormal.x >= 0.0 ? 1.0 : 2.0)
+              : (vOgInteriorNormal.z >= 0.0 ? 3.0 : 4.0);
+            float ogRoom = ogInteriorHash(vec3(ogInteriorBay * 0.83, ogInteriorFloor * 1.19, ogInteriorSide * 4.73));
+            float ogRoom2 = ogInteriorHash(vec3(ogInteriorBay * 1.71 + 9.0, ogInteriorFloor * 0.67 + 3.0, ogInteriorSide * 2.11));
+            float ogFloorPhase = fract((vOgInteriorPosition.y - 34.63) / 4.15);
+            float ogSlabShade = smoothstep(0.025, 0.16, ogFloorPhase) * (1.0 - smoothstep(0.86, 0.98, ogFloorPhase));
+            float ogBlindPhase = abs(fract((ogInteriorU + ogInteriorFloor * 0.41) * 0.72) - 0.5) * 2.0;
+            float ogBlind = mix(1.0, 0.90 + 0.08 * ogBlindPhase, step(0.58, ogRoom2));
+            float ogOccupancy = mix(0.76, 1.10, ogRoom);
+            vec3 ogCoolInterior = vec3(0.91, 0.96, 1.04);
+            vec3 ogWarmInterior = vec3(1.08, 0.96, 0.82);
+            vec3 ogInteriorTint = mix(ogCoolInterior, ogWarmInterior, smoothstep(0.80, 0.96, ogRoom2));
+            vec3 outgoingLight = (totalDiffuse + totalSpecular + totalEmissiveRadiance)
+              * mix(0.76, 1.0, ogSlabShade) * ogBlind * ogOccupancy * ogInteriorTint;`);
+      };
+      material.customProgramCacheKey = () => `og-interior-v2-${semantic}`;
+      const interior = new THREE.Mesh(geometry, material);
+      interior.position.copy(mesh.position);
+      interior.quaternion.copy(mesh.quaternion);
+      interior.scale.copy(mesh.scale);
+      interior.renderOrder = -1;
+      return interior;
+    }
+
+    function applyRecommendedPlus(root, pane) {
+      root.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(root);
+      const buildingCenter = box.getCenter(new THREE.Vector3());
+      const interiors = [];
+      let enhancedMaterials = 0;
+      let glassMeshes = 0;
+      let reliefMeshes = 0;
+      let reliefVertices = 0;
+      let maxReliefDepth = 0;
+      root.traverse((object) => {
+        if (!object.isMesh || !object.material || Array.isArray(object.material)) return;
+        const semantic = object.material.name || 'unknown';
+        const relief = applySemanticFacadeRelief(object, semantic, buildingCenter);
+        if (relief.movedVertices > 0) {
+          reliefMeshes += 1;
+          reliefVertices += relief.movedVertices;
+          maxReliefDepth = Math.max(maxReliefDepth, Math.abs(relief.depth));
+        }
+        object.receiveShadow = true;
+        object.castShadow = !glassClasses.has(semantic);
+        let material;
+        if (glassClasses.has(semantic)) {
+          const sourceMaterial = object.material;
+          material = new THREE.MeshPhysicalMaterial({
+            color: sourceMaterial.color?.clone() || new THREE.Color(0xffffff),
+            map: sourceMaterial.map || null,
+            emissive: sourceMaterial.emissive?.clone() || new THREE.Color(0x000000),
+            emissiveIntensity: sourceMaterial.emissiveIntensity ?? 1,
+            emissiveMap: sourceMaterial.emissiveMap || null,
+            normalMap: sourceMaterial.normalMap || null,
+            aoMap: sourceMaterial.aoMap || null,
+            aoMapIntensity: sourceMaterial.aoMapIntensity ?? 1,
+            alphaMap: sourceMaterial.alphaMap || null,
+            opacity: sourceMaterial.opacity ?? 1,
+            side: sourceMaterial.side ?? THREE.FrontSide,
+            vertexColors: sourceMaterial.vertexColors === true,
+          });
+          material.roughness = semantic === 'clearGlass' ? 0.18 : semantic === 'darkGlass' ? 0.23 : 0.36;
+          material.metalness = 0.015;
+          material.ior = 1.49;
+          material.transmission = semantic === 'clearGlass' ? 0.18 : semantic === 'darkGlass' ? 0.075 : 0.025;
+          material.thickness = semantic === 'clearGlass' ? 0.15 : 0.10;
+          material.clearcoat = 0.24;
+          material.clearcoatRoughness = 0.16;
+          material.specularIntensity = 0.70;
+          interiors.push({ parent: object.parent, mesh: createInteriorLayer(object, semantic, buildingCenter) });
+          glassMeshes += 1;
+        } else {
+          material = object.material.clone();
+        }
+        material.name = semantic;
+        object.material = enhanceSpatialPbr(material, semantic);
+        enhancedMaterials += 1;
+      });
+      for (const item of interiors) item.parent.add(item.mesh);
+      pane.dataset.sEnhanced = 'true';
+      pane.dataset.sMaterialCount = String(enhancedMaterials);
+      pane.dataset.sGlassMeshCount = String(glassMeshes);
+      pane.dataset.sInteriorMeshCount = String(interiors.length);
+      pane.dataset.outdoorIbl = 'true';
+      pane.dataset.softShadows = 'true';
+      pane.dataset.macroWeathering = 'true';
+      pane.dataset.glassCellVariation = 'true';
+      pane.dataset.structuredEnvironmentReflection = 'true';
+      pane.dataset.glassInteriorVariation = 'true';
+      pane.dataset.glassInteriorParallax = 'true';
+      pane.dataset.glassOpticalWaviness = 'true';
+      pane.dataset.facadeRelief = 'true';
+      pane.dataset.facadeProfileBevel = 'true';
+      pane.dataset.reliefMeshCount = String(reliefMeshes);
+      pane.dataset.reliefVertexCount = String(reliefVertices);
+      pane.dataset.maxReliefDepthMeters = maxReliefDepth.toFixed(3);
+      pane.dataset.glassFresnelVariation = 'true';
+    }
+
+    let synchronizing = false;
+    function syncFrom(source) {
+      if (synchronizing) return;
+      synchronizing = true;
+      for (const entry of entries) {
+        if (entry === source) continue;
+        entry.camera.position.copy(source.camera.position);
+        entry.camera.quaternion.copy(source.camera.quaternion);
+        entry.camera.zoom = source.camera.zoom;
+        entry.camera.updateProjectionMatrix();
+        entry.controls.target.copy(source.controls.target);
+        entry.controls.update();
+      }
+      synchronizing = false;
+    }
+    for (const entry of entries) entry.controls.addEventListener('change', () => syncFrom(entry));
+
+    function resize(entry) {
+      const width = Math.max(1, entry.viewport.clientWidth);
+      const height = Math.max(1, entry.viewport.clientHeight);
+      if (entry.renderer.domElement.width !== Math.floor(width * entry.renderer.getPixelRatio())
+        || entry.renderer.domElement.height !== Math.floor(height * entry.renderer.getPixelRatio())) {
+        entry.renderer.setSize(width, height, false);
+        if (entry.composer) entry.composer.setSize(width, height);
+        entry.camera.aspect = width / height;
+        entry.camera.updateProjectionMatrix();
+      }
+    }
+
+    const loader = new GLTFLoader();
+    loader.setMeshoptDecoder(MeshoptDecoder);
+
+    function modelStats(root) {
+      let meshCount = 0;
+      let triangles = 0;
+      root.traverse((object) => {
+        if (!object.isMesh || !object.geometry) return;
+        meshCount += 1;
+        const geometry = object.geometry;
+        const indexCount = geometry.index?.count ?? 0;
+        const positionCount = geometry.attributes.position?.count ?? 0;
+        triangles += indexCount ? indexCount / 3 : positionCount / 3;
+      });
+      return { meshCount, triangles: Math.round(triangles) };
+    }
+
+    async function loadEntry(entry) {
+      try {
+        const gltf = await loader.loadAsync(entry.url);
+        entry.root = gltf.scene;
+        if (entry.enhanced) {
+          const baseStats = modelStats(entry.root);
+          entry.pane.dataset.baseMeshCount = String(baseStats.meshCount);
+          entry.pane.dataset.baseTriangleCount = String(baseStats.triangles);
+          applyRecommendedPlus(entry.root, entry.pane);
+        }
+        entry.scene.add(entry.root);
+        const stats = modelStats(entry.root);
+        entry.pane.dataset.meshCount = String(stats.meshCount);
+        entry.pane.dataset.triangleCount = String(stats.triangles);
+        entry.status.textContent = `${stats.meshCount} mesh / ${stats.triangles.toLocaleString('en-US')} triangles`;
+        return entry.root;
+      } catch (error) {
+        entry.status.textContent = `load error: ${error?.message || error}`;
+        entry.status.classList.add('error');
+        throw error;
+      }
+    }
+
+    function normalizeSameGeometry() {
+      const neutral = entries[0].root;
+      neutral.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(neutral);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const scale = 3.1 / Math.max(size.x, size.y, size.z);
+      for (const entry of entries) {
+        entry.root.scale.setScalar(scale);
+        entry.root.position.set(-center.x * scale, -center.y * scale, -center.z * scale);
+        entry.root.updateMatrixWorld(true);
+      }
+
+      const baseCamera = entries[0].camera;
+      baseCamera.position.set(2.55, 1.7, 4.25);
+      entries[0].controls.target.set(0, 0.08, 0);
+      entries[0].controls.update();
+      syncFrom(entries[0]);
+    }
+
+    function frame() {
+      for (const entry of entries) {
+        resize(entry);
+        if (entry.composer) entry.composer.render();
+        else entry.renderer.render(entry.scene, entry.camera);
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    try {
+      await Promise.all(entries.map(loadEntry));
+      normalizeSameGeometry();
+      for (const entry of entries) entry.pane.dataset.loaded = 'true';
+      await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      document.querySelector('#overall').textContent = '4モデル表示済み / 視点同期';
+      document.documentElement.dataset.comparisonReady = 'true';
+    } catch (error) {
+      document.querySelector('#overall').textContent = `読み込み失敗: ${error?.message || error}`;
+      document.querySelector('#overall').classList.add('error');
+      document.documentElement.dataset.comparisonReady = 'error';
+    }
+  </script>
+</body>
+</html>

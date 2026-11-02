@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "buildings": 126,
+  "checks": 12690,
+  "maxUnconstrainedContactError": 9.424317083321512,
+  "beforeCurvature": 0.3852243287797114,
+  "afterCurvature": 0.11835214997188054,
+  "maxContactError": 0.1199951171875,
+  "maxConstraintError": 0.00034277610127730895,
+  "nativeJointSamples": 10,
+  "cracks": 0,
+  "renderMatchesCollision": true,
+  "preservedElevatedStructure": "bldg_5da56097-5f78-481b-bcb6-a50a2d6aaad1",
+  "raisedClearance": 14.41349784755809,
+  "failures": []
+}

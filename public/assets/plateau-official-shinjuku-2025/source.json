@@ -1,0 +1,12 @@
+{
+  "downloadedAt": "2026-10-18T23:21:59.8180433+09:00",
+  "catalog": "https://www.geospatial.jp/ckan/dataset/plateau-13104-shinjuku-ku-2025",
+  "downloadUrl": "https://assets.cms.plateau.reearth.io/assets/2f/422bdf-d9a5-439a-8c2c-acc9c5f23f3d/13104_shinjuku-ku_pref_2025_3dtiles_mvt_1_op.zip",
+  "archive": "official-3dtiles.zip",
+  "bytes": 562982622,
+  "nativeModelDirectory": "model",
+  "viewer": "http://127.0.0.1:3110/tocho-official-plateau-review-20261018.html",
+  "geometry": "Native B3DM geometry, UV, transforms and geographic placement retained",
+  "materials": "Existing artwork transferred into native UV atlases for 83 buildings; unmatched pixels retain source texture",
+  "rendering": "Keep spatially split native tile contents visible together; do not layer the no_texture variant over textured buildings"
+}

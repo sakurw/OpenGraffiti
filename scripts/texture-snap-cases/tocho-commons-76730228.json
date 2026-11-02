@@ -1,0 +1,207 @@
+{
+  "provider": "commons",
+  "sourceId": "76730228",
+  "areaId": "tocho",
+  "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId": "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize": [
+    1200,
+    901
+  ],
+  "cameraPrior": [
+    100,
+    40,
+    0
+  ],
+  "cameraPriorSource": "unverified-initialization",
+  "positionValidation": "independent-geometry",
+  "cameraModel": "simple-radial",
+  "groundPhotoVerified": true,
+  "groundPhotoVerification": "Frontal upward ground view from Citizens Plaza. Same-camera photo burst, but camera position is not assumed identical to other frames. GPS absent.",
+  "annotationNote": "Raw-source manual observations in a fixed 1200x901 reference image; not transferred from another image by a fitted homography. Preliminary diagnostic controls, not approved registration.",
+  "lineControls": [],
+  "controls": [
+    {
+      "name": "north-east-roof-near",
+      "world": [
+        16.509,
+        277.68,
+        -27.912
+      ],
+      "pixel": [
+        703,
+        109
+      ],
+      "role": "train"
+    },
+    {
+      "name": "north-east-roof-far",
+      "world": [
+        -6.062,
+        277.68,
+        -43.75
+      ],
+      "pixel": [
+        770,
+        181
+      ],
+      "role": "train"
+    },
+    {
+      "name": "north-west-roof-near",
+      "world": [
+        17.768,
+        277.68,
+        -21.057
+      ],
+      "pixel": [
+        678,
+        109
+      ],
+      "role": "train"
+    },
+    {
+      "name": "north-west-roof-far",
+      "world": [
+        2.391,
+        277.68,
+        0.351
+      ],
+      "pixel": [
+        586,
+        178
+      ],
+      "role": "train"
+    },
+    {
+      "name": "south-east-roof-near",
+      "world": [
+        28.834,
+        277.68,
+        34.738
+      ],
+      "pixel": [
+        449,
+        111
+      ],
+      "role": "train"
+    },
+    {
+      "name": "south-east-roof-far",
+      "world": [
+        6.228,
+        277.68,
+        19.655
+      ],
+      "pixel": [
+        527,
+        180
+      ],
+      "role": "train"
+    },
+    {
+      "name": "south-west-roof-near",
+      "world": [
+        29.993,
+        277.68,
+        41.528
+      ],
+      "pixel": [
+        423,
+        111
+      ],
+      "role": "train"
+    },
+    {
+      "name": "south-west-roof-far",
+      "world": [
+        14.539,
+        277.68,
+        62.715
+      ],
+      "pixel": [
+        358,
+        187
+      ],
+      "role": "train"
+    },
+    {
+      "name": "bridge-north-front",
+      "world": [
+        14.247,
+        186.37,
+        -7.753
+      ],
+      "pixel": [
+        670,
+        346
+      ],
+      "role": "train"
+    },
+    {
+      "name": "bridge-south-front",
+      "world": [
+        19.992,
+        186.37,
+        23.335
+      ],
+      "pixel": [
+        486,
+        348
+      ],
+      "role": "train"
+    },
+    {
+      "name": "north-inset-near",
+      "world": [
+        13.912,
+        249.36,
+        -7.695
+      ],
+      "pixel": [
+        632,
+        186
+      ],
+      "role": "held-out"
+    },
+    {
+      "name": "north-inset-side",
+      "world": [
+        12.812,
+        249.36,
+        -13.825
+      ],
+      "pixel": [
+        668,
+        185
+      ],
+      "role": "held-out"
+    },
+    {
+      "name": "south-setback-apex",
+      "world": [
+        19.992,
+        249.27,
+        23.335
+      ],
+      "pixel": [
+        498,
+        190
+      ],
+      "role": "held-out"
+    },
+    {
+      "name": "south-setback-side",
+      "world": [
+        21.302,
+        249.27,
+        29.545
+      ],
+      "pixel": [
+        468,
+        190
+      ],
+      "role": "held-out"
+    }
+  ]
+}

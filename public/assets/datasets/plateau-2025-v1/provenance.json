@@ -1,0 +1,8 @@
+{
+  "processedBy": "OpenGraffiti",
+  "source": "東京都 3D都市モデル（Project PLATEAU）2025年度 港区・新宿区",
+  "license": "PLATEAU site policy / CC BY 4.0 compatible",
+  "licenseUrl": "https://www.mlit.go.jp/plateau/site-policy/",
+  "processing": "CityGML WallSurface extraction, EPSG:6677 reprojection, triangulation, texture baking, mask generation, GLB Meshopt lossless compression; source LOD3 roads with neutral display material",
+  "limitations": "Not official PLATEAU output. Tocho and Tokyo Tower landmark are LOD2 context, not LOD3 paint targets."
+}

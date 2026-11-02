@@ -1,0 +1,8 @@
+{
+  "vertices": 99680,
+  "triangles": 198090,
+  "maxPositionErrorMetres": 0,
+  "positionMismatches": 0,
+  "indexMismatches": 0,
+  "renderingAndWalkingShareTriangles": true
+}

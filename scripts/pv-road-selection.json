@@ -1,0 +1,38 @@
+[
+  {
+    "id": "road-0",
+    "sourceRoadId": "tran_e8a8ac91-052e-421a-a549-b105eb5c763f"
+  },
+  {
+    "id": "road-1",
+    "sourceRoadId": "tran_cbdeddef-e644-498a-be95-c4487370cb23"
+  },
+  {
+    "id": "road-2",
+    "sourceRoadId": "tran_f4f20c81-0e00-46b6-8a15-853786b28ccd"
+  },
+  {
+    "id": "road-3",
+    "sourceRoadId": "tran_c664546e-8300-4ed1-9805-26e1ad06a2fc"
+  },
+  {
+    "id": "road-4",
+    "sourceRoadId": "tran_e32d1451-1512-4c5b-93ff-f837d38d4be7"
+  },
+  {
+    "id": "road-5",
+    "sourceRoadId": "tran_59a02779-1467-4782-b9b9-420572c4604b"
+  },
+  {
+    "id": "road-6",
+    "sourceRoadId": "tran_27acaa4b-b6e7-4a33-a410-55e0716258ca"
+  },
+  {
+    "id": "road-7",
+    "sourceRoadId": "tran_beee363d-b351-4050-a705-878b80d76f73"
+  },
+  {
+    "id": "road-8",
+    "sourceRoadId": "tran_4dba9e94-f0ee-4e72-bb1a-407835bef0dc"
+  }
+]

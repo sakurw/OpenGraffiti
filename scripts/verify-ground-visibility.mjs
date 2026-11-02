@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {area,partition,sceneBvh,visible,samples} from './texture-ground-visibility.mjs';
+const triangle=[[0,0,0],[0,10,0],[10,0,0]];
+const cells=[...partition(triangle,2)];
+assert.ok(Math.abs(cells.reduce((s,c)=>s+area(c),0)-50)<1e-10);
+assert.ok(cells.every(c=>c.every((p,i)=>Math.hypot(...p.map((v,j)=>v-c[(i+1)%3][j]))<=2)));
+assert.equal(samples(triangle).length,7);
+const poly=(id,z)=>({id,rings:[{points:[[-10,-10,z],[10,-10,z],[10,10,z],[-10,10,z]]}]});
+const target={polygons:[poly('target',0)]},blocker={polygons:[poly('blocker',5)]};
+const self=sceneBvh([target]),city=sceneBvh([target,blocker]);
+assert.equal(visible([0,0,10],[0,0,0],[0,0,1],self.bvh),true,'target endpoint must not self-occlude');
+assert.equal(visible([0,0,10],[0,0,0],[0,0,1],city.bvh),false,'foreground blocker');
+assert.equal(visible([0,0,-10],[0,0,0],[0,0,1],self.bvh),false,'backface');
+assert.equal(visible([100,0,1],[0,0,0],[0,0,1],self.bvh),false,'grazing angle');
+self.geometry.dispose();city.geometry.dispose();console.log('Visibility planning: area, subdivision, seven samples, occlusion, endpoint, facing passed');

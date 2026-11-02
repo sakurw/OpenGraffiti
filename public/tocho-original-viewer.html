@@ -1,0 +1,26 @@
+<!doctype html>
+<html><body style="margin:0;background:#222">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'https://unpkg.com/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'https://unpkg.com/three@0.180.0/examples/jsm/libs/meshopt_decoder.module.js';
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(innerWidth,innerHeight); document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x222222);
+scene.add(new THREE.HemisphereLight(0xffffff,0xffffff,3));
+scene.add(new THREE.DirectionalLight(0xffffff,3));
+const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100000);
+const loader=new GLTFLoader(); loader.setMeshoptDecoder(MeshoptDecoder);
+loader.load('/public/assets/datasets/plateau-2025-v4/models/tocho.glb',g=>{
+ scene.add(g.scene);
+ const box=new THREE.Box3().setFromObject(g.scene);
+ const center=box.getCenter(new THREE.Vector3());
+ const size=box.getSize(new THREE.Vector3());
+ const r=Math.max(size.x,size.y,size.z);
+ camera.position.copy(center.clone().add(new THREE.Vector3(r*0.65,r*0.45,r*0.65)));
+ camera.lookAt(center); camera.far=r*20; camera.updateProjectionMatrix();
+ console.log('loaded',size);
+});
+function loop(){requestAnimationFrame(loop);renderer.render(scene,camera)} loop();
+</script></body></html>

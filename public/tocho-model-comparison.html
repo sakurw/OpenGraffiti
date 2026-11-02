@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>都庁モデル比較 — OpenGraffiti</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;height:100vh;display:flex;flex-direction:column;background:#10171c;color:#eef3f5;font:14px/1.5 system-ui,"Yu Gothic UI",sans-serif}
+    header{padding:14px 20px;border-bottom:1px solid #334149;display:flex;gap:18px;align-items:center}
+    h1{font-size:19px;margin:0}.sub{color:#b9c5cb;margin-top:2px}.status{margin-left:auto;color:#c9d7dd;white-space:nowrap}
+    nav{padding:9px 20px;display:flex;gap:8px;align-items:center;border-bottom:1px solid #2a353c}
+    button,a.button{font:inherit;color:#edf4f7;background:#243640;border:1px solid #4a616d;border-radius:5px;padding:6px 14px;cursor:pointer;text-decoration:none}
+    main{display:grid;grid-template-columns:1fr 1fr;gap:1px;flex:1;min-height:0;background:#566169}
+    section{display:flex;flex-direction:column;min-width:0;min-height:0;background:#1a242b}
+    .head{padding:9px 14px}.head h2{margin:0;font-size:15px}.head p{margin:2px 0 0;color:#b9c5cb;font-size:12px}
+    .view{flex:1;min-height:0;background:#e8ecef;position:relative}.view canvas{display:block;width:100%;height:100%;touch-action:none}
+    .meta{padding:7px 12px;color:#c7d2d7;font-size:11px;border-top:1px solid #334149}
+    #error{display:none;padding:12px 20px;background:#8b2d2d;color:white;white-space:pre-wrap}
+    footer{padding:8px 20px;color:#aebcc3;font-size:11px}
+    @media(max-width:850px){main{grid-template-columns:1fr;grid-template-rows:1fr 1fr}header{padding:10px 12px}nav{padding:8px 12px}}
+  </style>
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/"}}</script>
+</head>
+<body>
+  <header>
+    <div><h1>東京都庁第一本庁舎 — モデル比較</h1><div class="sub">PLATEAUの既存テクスチャ付きモデルと、建物全体を意味属性ベースで着色したモデルを同じ方向から比較します。</div></div>
+    <div class="status" id="status">モデル読込中 0/2</div>
+  </header>
+  <nav>
+    <button data-view="southwest">南西</button><button data-view="northwest">北西</button><button data-view="east">東</button><button data-view="upper">上層</button>
+    <a class="button" href="/review-hub.html">閲覧メニューへ</a>
+  </nav>
+  <div id="error" role="alert"></div>
+  <main>
+    <section>
+      <div class="head"><h2>左: 現行 PLATEAU テクスチャ付きモデル</h2><p>plateau-2025-v4 / models/tocho.glb。PLATEAU由来の既存テクスチャをそのまま比較基準にします。</p></div>
+      <div class="view" id="plateau"></div><div class="meta" id="meta-plateau">読込中</div>
+    </section>
+    <section>
+      <div class="head"><h2>右: 都庁全体の着色モデル</h2><p>同じ都庁形状を対象に、外装部位・窓等を含め建物全体へ色を付けた比較モデルです。</p></div>
+      <div class="view" id="colored"></div><div class="meta" id="meta-colored">読込中</div>
+    </section>
+  </main>
+  <footer>回転: 左ドラッグ / 移動: 右ドラッグ / 拡大縮小: ホイール。上の視点ボタンは両モデルへ同じ方向を適用します。</footer>
+  <script type="module">
+    import * as THREE from 'three';
+    import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+    import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+    import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+
+    const specs=[
+      {key:'plateau',url:'/assets/datasets/plateau-2025-v4/models/tocho.glb'},
+      {key:'colored',url:'/assets/level3-demo/tocho-one-building-level3-color.glb'}
+    ];
+    const panes=[];
+    const state=window.__TOCHO_MODEL_COMPARISON__={ready:false,loaded:0,panes:{},error:null};
+    const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+    function fail(error){state.error=String(error);const box=document.querySelector('#error');box.style.display='block';box.textContent='表示に失敗しました: '+error;document.querySelector('#status').textContent='読込失敗';}
+    window.addEventListener('error',e=>fail(e.message));window.addEventListener('unhandledrejection',e=>fail(e.reason));
+
+    function applyView(pane,name){
+      const focus=panes.find(item=>item.key==='colored')||pane;
+      const center=focus.center,radius=focus.radius,{camera,controls}=pane;
+      const vectors={southwest:new THREE.Vector3(-1,.55,1),northwest:new THREE.Vector3(-1,.55,-1),east:new THREE.Vector3(1.25,.5,.12),upper:new THREE.Vector3(-.7,.22,.7)};
+      const offset=vectors[name].clone().normalize().multiplyScalar(radius*(name==='upper'?1.65:2.3));
+      const target=center.clone();if(name==='upper')target.y+=radius*.32;
+      camera.position.copy(target).add(offset);controls.target.copy(target);camera.near=Math.max(.05,radius/250);camera.far=Math.max(5000,radius*20);camera.updateProjectionMatrix();controls.update();pane.renderer.render(pane.scene,camera);
+    }
+
+    try{
+      for(const spec of specs){
+        const element=document.getElementById(spec.key),renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+        renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setClearColor(0xe8ecef);element.append(renderer.domElement);
+        const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.1,5000),controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;controls.zoomToCursor=true;controls.zoomSpeed=1.8;controls.panSpeed=1.5;
+        scene.add(new THREE.HemisphereLight(0xffffff,0xaeb8bf,2.2));const light=new THREE.DirectionalLight(0xffffff,2.1);light.position.set(-250,500,350);scene.add(light);
+        const gltf=await loader.loadAsync(spec.url);let meshes=0,triangles=0,textured=0;
+        gltf.scene.traverse(o=>{if(o.isMesh){meshes++;const p=o.geometry.index?o.geometry.index.count:o.geometry.attributes.position?.count||0;triangles+=Math.floor(p/3);const mats=Array.isArray(o.material)?o.material:[o.material];if(mats.some(m=>m?.map))textured++;}});
+        if(!meshes)throw Error(spec.key+' の形状が空です');scene.add(gltf.scene);
+        const box=new THREE.Box3().setFromObject(gltf.scene),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),radius=Math.max(size.length()/2,10);
+        controls.minDistance=radius*.12;controls.maxDistance=radius*10;
+        const pane={...spec,element,renderer,scene,camera,controls,center,radius};panes.push(pane);state.panes[spec.key]={meshes,triangles,textured,bounds:{min:box.min.toArray(),max:box.max.toArray()}};
+        document.querySelector('#meta-'+spec.key).textContent=`${meshes.toLocaleString()} meshes / ${triangles.toLocaleString()} triangles / texture map: ${textured.toLocaleString()} meshes`;
+        state.loaded++;document.querySelector('#status').textContent=`モデル表示 ${state.loaded}/2`;
+        const resize=()=>{const r=element.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=Math.max(.1,r.width/Math.max(r.height,1));camera.updateProjectionMatrix();renderer.render(scene,camera);};new ResizeObserver(resize).observe(element);controls.addEventListener('change',()=>renderer.render(scene,camera));
+      }
+      const focus=panes.find(item=>item.key==='colored');
+      if(focus)for(const pane of panes){pane.controls.minDistance=focus.radius*.12;pane.controls.maxDistance=focus.radius*10;}
+      function view(name){for(const pane of panes)applyView(pane,name);state.view=name;}
+      document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));
+      view('southwest');state.ready=true;document.querySelector('#status').textContent='2モデル表示済み';
+    }catch(error){fail(error)}
+  </script>
+</body>
+</html>

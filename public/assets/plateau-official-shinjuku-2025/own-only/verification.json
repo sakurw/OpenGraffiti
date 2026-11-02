@@ -1,0 +1,201 @@
+{
+  "verifiedAt": "2026-11-02T13:05:33.073Z",
+  "images": 21,
+  "buildings": 83,
+  "ownAlphaCoverageVerified": true,
+  "unsampledPrimaryRgbNeutral": true,
+  "paddingPreservesDonorHits": true,
+  "sourcePhotoFallback": false,
+  "allImageAndMaskHashesVerified": true,
+  "results": [
+    {
+      "file": "data639.b3dm",
+      "imageIndex": 0,
+      "width": 4096,
+      "height": 4096,
+      "donorTexels": 3211487,
+      "transparentTexels": 13565729,
+      "passed": true
+    },
+    {
+      "file": "data640.b3dm",
+      "imageIndex": 0,
+      "width": 4096,
+      "height": 4096,
+      "donorTexels": 777481,
+      "transparentTexels": 15999735,
+      "passed": true
+    },
+    {
+      "file": "data647.b3dm",
+      "imageIndex": 0,
+      "width": 4096,
+      "height": 4096,
+      "donorTexels": 8924908,
+      "transparentTexels": 7852308,
+      "passed": true
+    },
+    {
+      "file": "data648.b3dm",
+      "imageIndex": 0,
+      "width": 4096,
+      "height": 4096,
+      "donorTexels": 3281089,
+      "transparentTexels": 13496127,
+      "passed": true
+    },
+    {
+      "file": "data649.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 2489099,
+      "transparentTexels": 1705205,
+      "passed": true
+    },
+    {
+      "file": "data650.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 1699851,
+      "transparentTexels": 2494453,
+      "passed": true
+    },
+    {
+      "file": "data651.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 588867,
+      "transparentTexels": 3605437,
+      "passed": true
+    },
+    {
+      "file": "data652.b3dm",
+      "imageIndex": 0,
+      "width": 1024,
+      "height": 1024,
+      "donorTexels": 47753,
+      "transparentTexels": 1000823,
+      "passed": true
+    },
+    {
+      "file": "data667.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 1662041,
+      "transparentTexels": 2532263,
+      "passed": true
+    },
+    {
+      "file": "data669.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 291736,
+      "transparentTexels": 3902568,
+      "passed": true
+    },
+    {
+      "file": "data674.b3dm",
+      "imageIndex": 0,
+      "width": 512,
+      "height": 512,
+      "donorTexels": 57757,
+      "transparentTexels": 204387,
+      "passed": true
+    },
+    {
+      "file": "data675.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 603603,
+      "transparentTexels": 3590701,
+      "passed": true
+    },
+    {
+      "file": "data676.b3dm",
+      "imageIndex": 0,
+      "width": 512,
+      "height": 512,
+      "donorTexels": 122025,
+      "transparentTexels": 140119,
+      "passed": true
+    },
+    {
+      "file": "data678.b3dm",
+      "imageIndex": 0,
+      "width": 1024,
+      "height": 1024,
+      "donorTexels": 41464,
+      "transparentTexels": 1007112,
+      "passed": true
+    },
+    {
+      "file": "data684.b3dm",
+      "imageIndex": 0,
+      "width": 1024,
+      "height": 1024,
+      "donorTexels": 80861,
+      "transparentTexels": 967715,
+      "passed": true
+    },
+    {
+      "file": "data685.b3dm",
+      "imageIndex": 0,
+      "width": 512,
+      "height": 512,
+      "donorTexels": 1996,
+      "transparentTexels": 260148,
+      "passed": true
+    },
+    {
+      "file": "data687.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 5062,
+      "transparentTexels": 4189242,
+      "passed": true
+    },
+    {
+      "file": "data688.b3dm",
+      "imageIndex": 0,
+      "width": 4096,
+      "height": 4096,
+      "donorTexels": 11879,
+      "transparentTexels": 16765337,
+      "passed": true
+    },
+    {
+      "file": "data693.b3dm",
+      "imageIndex": 0,
+      "width": 2048,
+      "height": 2048,
+      "donorTexels": 14259,
+      "transparentTexels": 4180045,
+      "passed": true
+    },
+    {
+      "file": "data707.b3dm",
+      "imageIndex": 0,
+      "width": 512,
+      "height": 512,
+      "donorTexels": 2963,
+      "transparentTexels": 259181,
+      "passed": true
+    },
+    {
+      "file": "data708.b3dm",
+      "imageIndex": 0,
+      "width": 128,
+      "height": 128,
+      "donorTexels": 580,
+      "transparentTexels": 15804,
+      "passed": true
+    }
+  ]
+}

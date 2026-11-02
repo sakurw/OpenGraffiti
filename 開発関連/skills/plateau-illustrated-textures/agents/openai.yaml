@@ -1,0 +1,3 @@
+interface:
+  display_name: "PLATEAU 建物モデル・イラストテクスチャ"
+  short_description: "正式採用モデルの座標とUVを保ち建物別テクスチャを生成・監査する"

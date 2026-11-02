@@ -1,0 +1,95 @@
+{
+  "id": "b6ca67b5-ebdd-58b4-9522-edd831316d7e",
+  "number": 2,
+  "name": "神谷町の壁 02",
+  "street": "東京タワー北側・神谷町",
+  "areaId": "tokyo-tower",
+  "sectionId": "tower-walk",
+  "width": 4.574107234981573,
+  "height": 5.557999999163493,
+  "canvasWidth": 1685,
+  "canvasHeight": 2048,
+  "position": [
+    244.6390433759989,
+    8.612000003217805,
+    -875.1195999449944
+  ],
+  "normal": [
+    -0.39812125391475156,
+    -0.00002953421771480531,
+    0.9173328001925342
+  ],
+  "baseImage": "/assets/datasets/plateau-2025-v1/canvases/b6ca67b5-ebdd-58b4-9522-edd831316d7e.base.png",
+  "maskImage": "/assets/datasets/plateau-2025-v1/canvases/b6ca67b5-ebdd-58b4-9522-edd831316d7e.mask.png",
+  "baseHash": "9605ab2d4652c4571adef2d1f606889b999cbb8b0be9ca24e7cb7bb5d76121e1",
+  "maskHash": "8f8fc802c93dbf4c05ed6e9aade6a19a2d133b279b634fc026f3259d02e2773e",
+  "source": {
+    "dataset": "plateau-13103-minato-ku-2025",
+    "mesh": "53393599",
+    "buildingId": "bldg_dc1809af-79e5-46bc-aaf6-e8c604a9ed43",
+    "surfaceId": "gml_2955f410-f3fa-4e07-bb9a-67b53f62696f",
+    "polygonIds": [
+      "Poly_8d620392-4c2a-44ad-9569-d482842d0740",
+      "Poly_e87316ca-c4ae-4e31-bc6a-0009166fdb05",
+      "Poly_0ee7e135-e8fd-41db-8326-3bca63f042ca",
+      "Poly_a57bcc78-a105-4bf2-b30a-787fa1aff990",
+      "Poly_1750ad96-f46a-4e91-9823-f1adbec0780e",
+      "Poly_83d2b4c9-8655-43fa-9b2e-25834e618289",
+      "Poly_ec71eb56-3d3d-4f73-92f2-2cc6dea0a3d5",
+      "Poly_ff64a0da-e3fe-4b37-9306-54ab3f1b0dc7",
+      "Poly_f244ddd4-a3f0-480a-8c09-c0004fd9d776",
+      "Poly_529b680f-45b0-45ff-a0d0-f42646edf774",
+      "Poly_8729c660-c923-400d-b31a-95f6909bc242",
+      "Poly_a23782c0-dacb-4ba0-b72a-f9a6a57a214c",
+      "Poly_d3edd0af-56db-4204-a058-eecca9c07a95",
+      "Poly_66751711-9cf7-45c5-b729-966a821bae1d",
+      "Poly_58fbe4cc-a076-427a-bfef-227c02d16af6",
+      "Poly_7b0a333a-892c-421f-b1c0-6ebfc885e2f1",
+      "Poly_1ccd5fca-3f6e-4c4c-8679-b532afb419ab",
+      "Poly_21816052-bcf0-4d7c-a8f8-dab1a937ed49",
+      "Poly_33d0d802-987a-4923-a057-1bdf53d11a1f",
+      "Poly_1e48e78e-25dd-4374-9799-b1b4ac5b7589"
+    ],
+    "lod": 3,
+    "appearance": [
+      "53393599_bldg_6697_appearance/TMmnt0171_lod3.jpg"
+    ]
+  },
+  "validation": {
+    "rms": 0.00009714830456636011,
+    "maxDeviation": 0.00021790345774896913,
+    "area": 23.67259340381434,
+    "clearance": 16.363060616658974,
+    "openingCount": 1,
+    "holeCount": 0,
+    "maskPixels": 3213226,
+    "visual": "pending"
+  },
+  "mock": false,
+  "projection": {
+    "origin": [
+      246.691,
+      10.271,
+      -874.229
+    ],
+    "u": [
+      0.9173328005926151,
+      0,
+      0.39812125408838617
+    ],
+    "v": [
+      -0.000011758199795137725,
+      0.9999999995638651,
+      0.000027092706649634388
+    ],
+    "lo": [
+      -4.523947501072514,
+      -4.437999997087491
+    ],
+    "hi": [
+      0.05015973390905895,
+      1.120000002076002
+    ]
+  },
+  "overlayOffset": 0.002
+}

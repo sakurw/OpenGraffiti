@@ -1,0 +1,48 @@
+{
+  "provider":"commons","sourceId":"76730224","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1199],"cameraPrior":[100,40,0],
+  "cameraPriorSource":"unverified-initialization",
+  "positionValidation":"independent-geometry",
+  "rejectedLensCalibrationPath":"data/texture-city/commons/lens-calibration/76730224-76730229-76730228.json",
+  "rejectedLensPairCalibrationPaths":[
+    "data/texture-city/commons/lens-calibration/76730224-76730229.json",
+    "data/texture-city/commons/lens-calibration/76730224-76730228.json"
+  ],
+  "cameraModel":"simple-radial",
+  "groundPhotoVerified":true,
+  "groundPhotoVerification":"Upward frontal view from Citizens Plaza, foreground entrance visible. GPS absent: approximate camera is initialization only, not verified geographical evidence.",
+  "annotationNote":"The first inset annotations landed inside the flat stone roof edge. Corrected to the visible endpoints of that edge after checking the source crop and mesh topology; this remains a rejected diagnostic until independent position validation.",
+  "lineControls":[
+    {"name":"east-bridge-north","world":[[14.247,82.31,-7.753],[14.247,186.37,-7.753]],"pixels":[[513,420],[549,810]],"role":"train"},
+    {"name":"east-bridge-south","world":[[19.992,82.31,23.335],[19.992,186.37,23.335]],"pixels":[[331,420],[294,810]],"role":"train"},
+    {"name":"east-south-silhouette","world":[[21.572,34.63,62.545],[21.572,186.37,62.545]],"pixels":[[117,450],[70,600],[24,750]],"role":"train"},
+    {"name":"east-north-silhouette","world":[[1.342,34.63,-45.095],[1.342,185.85,-45.095]],"pixels":[[724,450],[773,600],[820,750]],"role":"train"}
+  ],
+  "controls":[
+    {"name":"north-east-roof-near","world":[16.509,277.68,-27.912],"pixel":[567,128],"role":"train"},
+    {"name":"north-east-roof-far","world":[-6.062,277.68,-43.75],"pixel":[632,207],"role":"train"},
+    {"name":"north-west-roof-near","world":[17.768,277.68,-21.057],"pixel":[541,126],"role":"train"},
+    {"name":"north-west-roof-far","world":[2.391,277.68,0.351],"pixel":[462,200],"role":"train"},
+    {"name":"south-east-roof-near","world":[28.834,277.68,34.738],"pixel":[302,127],"role":"train"},
+    {"name":"south-east-roof-far","world":[6.228,277.68,19.655],"pixel":[383,199],"role":"train"},
+    {"name":"south-west-roof-near","world":[29.993,277.68,41.528],"pixel":[274,125],"role":"train"},
+    {"name":"south-west-roof-far","world":[14.539,277.68,62.715],"pixel":[206,202],"role":"train"},
+    {"name":"bridge-north-front","world":[14.247,186.37,-7.753],"pixel":[512,376],"role":"train"},
+    {"name":"bridge-south-front","world":[19.992,186.37,23.335],"pixel":[335,378],"role":"train"},
+    {"name":"north-neck-east","world":[16.509,225.9,-27.912],"pixel":[593,236],"role":"train"},
+    {"name":"north-neck-west","world":[17.768,225.9,-21.057],"pixel":[559,236],"role":"train"},
+    {"name":"south-neck-east","world":[28.834,225.579,34.738],"pixel":[280,234],"role":"train"},
+    {"name":"south-neck-west","world":[29.993,225.579,41.528],"pixel":[246,234],"role":"train"},
+    {"name":"north-inset-near","world":[13.912,249.36,-7.695],"pixel":[489,207],"role":"held-out"},
+    {"name":"north-inset-side","world":[12.812,249.36,-13.825],"pixel":[521,207],"role":"held-out"},
+    {"name":"south-setback-apex","world":[19.992,249.27,23.335],"pixel":[353,205],"role":"held-out"},
+    {"name":"south-setback-side","world":[21.302,249.27,29.545],"pixel":[322,205],"role":"held-out"},
+    {"name":"south-outer-shoulder","world":[21.572,186.37,62.545],"pixel":[129,405],"role":"held-out"},
+    {"name":"south-inner-shoulder","world":[21.082,186.37,59.738],"pixel":[143,405],"role":"held-out"},
+    {"name":"north-outer-shoulder","world":[1.342,185.85,-45.095],"pixel":[719,403],"role":"held-out"},
+    {"name":"north-inner-shoulder","world":[1.886,185.85,-42.321],"pixel":[704,403],"role":"held-out"},
+    {"name":"south-intermediate-shoulder","world":[18.192,225.579,63.275],"pixel":[167,303],"role":"held-out"}
+  ]
+}

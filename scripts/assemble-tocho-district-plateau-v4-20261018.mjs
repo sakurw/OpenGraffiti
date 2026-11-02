@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+const old='public/assets/tocho-district-photo-v3-20261018',out='public/assets/tocho-district-plateau-v4-20261018';
+const source=JSON.parse(await fs.readFile(old+'/photo-profiles.json','utf8'));
+const centralPath=out+'/central-plateau.glb';
+await fs.mkdir(out,{recursive:true});
+await fs.cp(old+'/artwork',out+'/artwork',{recursive:true});
+for(const file of ['scope-map.png','artwork-provenance.json'])await fs.copyFile(old+'/'+file,out+'/'+file);
+source.centralAsset={path:centralPath,sha256:crypto.createHash('sha256').update(await fs.readFile(centralPath)).digest('hex')};
+source.version='20261018-native-plateau-v4';
+const central=source.buildings.find(p=>p.buildingId==='bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7');
+central.observed='都庁第一の原典PLATEAU LOD2形状を変更せず、既存の建物別意匠と部材画像を適用。';
+central.inferred='窓割りの展開は推測を含む。写真投影のための追加形状・浮いた装飾面は使用しない。';
+await fs.writeFile(out+'/photo-profiles.json',JSON.stringify(source,null,2));
+console.log(JSON.stringify({profiles:source.buildings.length,centralAsset:source.centralAsset}));

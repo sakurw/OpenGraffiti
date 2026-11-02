@@ -1,0 +1,4 @@
+# Additive to the existing texture-cuda environment (Python 3.10).
+# OpenCV, NumPy, Pillow and semantic models use the existing pinned pipeline.
+scipy==1.15.3
+pycolmap==4.2.0

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>都庁全体｜従来v32と新イラスト調GLBの比較</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e9ece8; color: #273b40; font: 14px/1.65 system-ui, 'Yu Gothic', sans-serif; }
+    header { padding: 18px 24px 15px; background: #fafbf7; border-bottom: 1px solid #becac3; }
+    .eyebrow { font-size: 11px; letter-spacing: .12em; color: #617670; }
+    h1 { margin: 2px 0 7px; font-size: clamp(20px, 2.3vw, 26px); line-height: 1.4; }
+    header p { margin: 4px 0; color: #536568; font-size: 13px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 13px; }
+    button, .download { border: 1px solid #aabdb4; border-radius: 5px; background: #fffefa; color: #294c4b; padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+    button[aria-pressed="true"] { background: #305d55; border-color: #305d55; color: #fff; }
+    button:disabled { opacity: .55; cursor: wait; }
+    button:focus-visible, a:focus-visible, summary:focus-visible, canvas:focus-visible { outline: 3px solid #b97623; outline-offset: 3px; }
+    .inspection { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 10px; font-size: 12px; color: #526768; }
+    .legend { display: inline-flex; flex-wrap: wrap; gap: 13px; }
+    .legend span { display: inline-flex; align-items: center; gap: 5px; }
+    .swatch { display: inline-block; width: 12px; height: 12px; border: 1px solid #637476; border-radius: 2px; }
+    .roof { background: #297bd1; } .equipment { background: #e58b24; } .wall { background: #bd5d91; }
+    [hidden] { display: none !important; }
+    .panes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; padding: 14px 20px; }
+    article { min-width: 0; border: 1px solid #b9c7bf; border-radius: 7px; background: #fafbf7; overflow: hidden; }
+    article.new { border-color: #5b8272; }
+    .caption { padding: 10px 14px; min-height: 74px; border-bottom: 1px solid #ced8d0; }
+    .new .caption { background: #e1ece4; }
+    .caption small { font-size: 11px; letter-spacing: .08em; color: #637773; }
+    h2 { margin: 1px 0 0; font-size: 16px; }
+    .viewport { position: relative; height: clamp(380px, 59dvh, 950px); background: #e8ede8; }
+    .viewport canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    .load-message { position: absolute; inset: 12px 12px auto; padding: 9px 12px; border: 1px solid #b8c8bd; border-radius: 4px; background: #fafbf7ed; font-size: 13px; overflow-wrap: anywhere; pointer-events: none; }
+    .load-message.failed { background: #fff2ef; border-color: #c27763; color: #8e2a22; }
+    .pane-status { min-height: 32px; padding: 6px 12px; border-top: 1px solid #d2dcd4; color: #526768; font-size: 12px; }
+    .summary { margin: 0 20px 12px; padding: 10px 14px; border: 1px solid #c6d2c9; border-radius: 5px; background: #f7f9f4; font-size: 13px; }
+    #status { margin: 0; }
+    #errors { margin: 7px 0 0; padding-left: 20px; color: #942f25; overflow-wrap: anywhere; }
+    details { margin: 14px 24px 24px; border-top: 1px solid #bccac0; padding-top: 12px; font-size: 13px; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { max-width: 1100px; color: #526568; }
+    a { color: #285b61; } .download { display: inline-block; margin: 0 8px 7px 0; text-decoration: none; }
+    code { overflow-wrap: anywhere; }
+    @media (max-width: 760px) {
+      header { padding: 15px; } .panes { padding: 12px; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+      .viewport { height: 52dvh; min-height: 320px; } .caption { min-height: auto; }
+      .summary { margin-inline: 12px; } details { margin-inline: 16px; }
+    }
+    header { padding: 10px 14px; }
+    header .eyebrow, header > p, .inspection > #classification-status { display: none; }
+    h1 { font-size: 19px; }
+    .toolbar { margin-top: 8px; gap: 5px; }
+    .toolbar button { padding: 5px 9px; }
+    .inspection { margin-top: 6px; }
+    .panes { grid-template-columns: minmax(0,1fr); padding: 10px; }
+    .panes > article:first-child { display: none; }
+    .viewport { height: max(480px, calc(100dvh - 285px)); }
+    .caption { min-height: auto; padding: 6px 12px; }
+    .caption small { display: none; }
+    body.compare .panes > article:first-child { display: block; }
+    @media (min-width: 761px) { body.compare .panes { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"/vendor/three.module.js","three/addons/loaders/GLTFLoader.js":"/vendor/GLTFLoader.js","three/addons/controls/OrbitControls.js":"/vendor/OrbitControls.js"}}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">TOKYO METROPOLITAN GOVERNMENT · WHOLE BUILDING REVIEW</div>
+    <h1>都庁全体・イラスト調</h1>
+    <p>左は従来v32、右は新しい全体版GLBです。同じ座標・同じ視点で、壁面・塔上部・屋上設備の表現を確認できます。</p>
+    <p id="scope">新全体版は外観を確認するための比較候補です。「今回承認された区画」は指定の1区画を指し、建物全体の外観の完成・承認を示すものではありません。</p>
+    <div class="toolbar" role="group" aria-label="左右共通の視点">
+      <button type="button" data-view="overall" aria-pressed="true" disabled>全体</button>
+      <button type="button" data-view="northeast" aria-pressed="false" disabled>北東</button>
+      <button type="button" data-view="southwest" aria-pressed="false" disabled>南西</button>
+      <button type="button" data-view="northwest" aria-pressed="false" disabled>北西</button>
+      <button type="button" data-view="southeast" aria-pressed="false" disabled>南東</button>
+      <button type="button" data-view="upper" aria-pressed="false" disabled>塔上部</button>
+      <button type="button" data-view="roof" aria-pressed="false" disabled>屋上設備</button>
+      <button type="button" data-view="wall" aria-pressed="false" disabled>壁面拡大</button>
+      <button type="button" data-view="approved" aria-pressed="false" disabled>今回承認された区画</button>
+      <button type="button" id="comparison" aria-pressed="false">従来版と比較</button>
+    </div>
+    <div class="inspection">
+      <button type="button" id="classification" aria-pressed="false" aria-controls="legend classification-status" disabled>材質分類確認：オフ（右のみ）</button>
+      <span id="legend" class="legend" hidden><span><i class="swatch roof" aria-hidden="true"></i>屋根 roof</span><span><i class="swatch equipment" aria-hidden="true"></i>設備 equipment</span><span><i class="swatch wall" aria-hidden="true"></i>壁 wall</span><span>未設定・その他：元の材質</span></span>
+      <span id="classification-status" role="status">新GLBの分類情報を読み込みます。</span>
+    </div>
+    <p>左右どちらでもドラッグで同期回転、ホイール・ピンチで同期ズーム、右ドラッグで同期移動。視点ボタンで元の構図へ戻せます。</p>
+  </header>
+  <main class="panes" aria-label="都庁全体の同期3D比較">
+    <article>
+      <div class="caption"><small>LEFT · PREVIOUS v32</small><h2>左：従来v32</h2></div>
+      <div id="left" class="viewport"><div id="left-message" class="load-message" role="status">従来v32を読み込んでいます…</div></div>
+      <div id="left-status" class="pane-status">元の材質・テクスチャで表示</div>
+    </article>
+    <article class="new">
+      <div class="caption"><small>RIGHT · NEW WHOLE ILLUSTRATED v1</small><h2>右：新イラスト調・全体版 v1（比較候補）</h2></div>
+      <div id="right" class="viewport"><div id="right-message" class="load-message" role="status">新全体版を読み込んでいます…</div></div>
+      <div id="right-status" class="pane-status">元の材質・テクスチャで表示</div>
+    </article>
+  </main>
+  <section class="summary" aria-label="表示状態">
+    <p id="status" role="status" aria-live="polite">左右の3Dモデルを読み込んでいます…</p>
+    <ul id="errors" role="alert" hidden></ul>
+  </section>
+  <details>
+    <summary>表示条件・確認範囲・GLBダウンロード</summary>
+    <p>両側ともsRGB出力・トーンマッピングなし。GLB本来の材質を読み込み、KHR_materials_unlitを含む非照明材質もそのまま扱います。照明のある材質には左右同じ照明を当てます。材質分類確認をオフにすると、右側も元の材質へ戻ります。</p>
+    <p>材質分類確認は新GLBの <code>userData.surfaceRole</code> を持つ材質・メッシュ・親ノードを参照します。屋根・設備・壁を診断用の単色で表示し、未設定・その他の面は保持します。色は分類タグの確認用で、分類の正しさや外観の完成を保証しません。</p>
+    <p>今回承認された区画の注視点：<code>(-16.44, 157, 46.79)</code>、外向き：<code>(-0.982, 0, 0.188)</code>。全体表示と各方位は既存比較ページと同じモデル座標系を使い、左右を個別に中央へ移動・拡縮しません。</p>
+    <p id="report-scope">制作範囲の補足：任意のbuild-report.jsonを確認中です。補足情報がなくても3D比較を利用できます。</p>
+    <p><a class="download" href="/assets/tocho-landmark/tocho-stylized-full-pixel-v32-20261018.glb" download>左：従来v32 .glb</a><a class="download" href="/assets/tocho-landmark/whole-illustrated-20261018/tocho-whole-illustrated-v1.glb" download>右：新全体版 v1 .glb</a></p>
+    <p><a href="/tocho-wall-hour-review-20261018.html">壁面1区画の比較</a> ／ <a href="/tocho-stylized-full-compare-v32-20261018.html">従来の全体比較</a></p>
+  </details>
+  <noscript><p class="summary">3D比較にはJavaScriptが必要です。上のリンクからGLBをダウンロードできます。</p></noscript>
+  <script>
+    window.__TOCHO_WHOLE_ILLUSTRATED__ = {
+      ready: false, errors: [], view: 'overall', models: {
+        left: { url: '/assets/tocho-landmark/tocho-stylized-full-pixel-v32-20261018.glb', loaded: false },
+        right: { url: '/assets/tocho-landmark/whole-illustrated-20261018/tocho-whole-illustrated-v1.glb', loaded: false }
+      }, renderCount: 0, classification: false
+    };
+  </script>
+  <script type="module">
+    const state = window.__TOCHO_WHOLE_ILLUSTRATED__;
+    const status = document.getElementById('status');
+    const classificationButton = document.getElementById('classification');
+    const viewButtons = [...document.querySelectorAll('[data-view]')];
+    const panes = [];
+    let syncing = false;
+    let framingBounds;
+    let lastAspect = 1;
+    let manualView = false;
+
+    function showError(label, error) {
+      const message = `${label}：${error instanceof Error ? error.message : String(error)}`;
+      state.errors.push(message);
+      const list = document.getElementById('errors');
+      const item = document.createElement('li');
+      item.textContent = message;
+      list.appendChild(item);
+      list.hidden = false;
+      return message;
+    }
+
+    // Optional prose only: never gate model loading or viewer readiness on this report.
+    async function loadScopeReport() {
+      const element = document.getElementById('report-scope');
+      const url = '/assets/tocho-landmark/whole-illustrated-20261018/build-report.json';
+      try {
+        const response = await fetch(url, { signal: AbortSignal.timeout(6000) });
+        if (!response.ok) throw new Error(String(response.status));
+        const report = await response.json();
+        const scope = typeof report.scope === 'string' ? report.scope : report.scope?.description;
+        element.textContent = typeof scope === 'string' && scope.trim()
+          ? `制作レポートの範囲記述（作成側の記録）：${scope.slice(0, 1500)}。この記述は全体外観の完成・承認を示しません。`
+          : '制作レポートを取得しました。範囲の補足文はないため、上記の比較範囲を参照してください。';
+        const link = document.createElement('a');
+        link.href = url;
+        link.textContent = ' build-report.jsonを見る';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        element.appendChild(link);
+      } catch {
+        element.textContent = '制作範囲の補足：任意のbuild-report.jsonは未取得です。3D比較はこの情報に依存しません。';
+      }
+    }
+    void loadScopeReport();
+
+    try {
+      // Dynamic imports keep dependency failures visible in the page and public state.
+      const [THREE, { GLTFLoader }, { OrbitControls }] = await Promise.all([
+        import('three'), import('three/addons/loaders/GLTFLoader.js'), import('three/addons/controls/OrbitControls.js')
+      ]);
+      const loader = new GLTFLoader();
+      const patchCenter = new THREE.Vector3(-16.44, 157, 46.79);
+      const outward = new THREE.Vector3(-.982, 0, .188).normalize();
+      const tangent = new THREE.Vector3(outward.z, 0, -outward.x);
+      const directions = {
+        overall: [-1, .35, 1], northeast: [1, .28, -1], southwest: [-1, .28, 1],
+        northwest: [-1, .28, -1], southeast: [1, .28, 1], upper: [-.4, .35, 1], roof: [-1, 1.15, 1]
+      };
+
+      function draw() {
+        let rendered = false;
+        for (const p of panes) {
+          if (p.failed) continue;
+          try {
+            p.renderer.render(p.scene, p.camera);
+            rendered = true;
+          } catch (error) {
+            failPane(p, error);
+          }
+        }
+        if (rendered) state.renderCount++;
+      }
+
+      function syncCamera(source) {
+        if (syncing) return;
+        syncing = true;
+        try {
+          for (const p of panes) {
+            if (p === source || p.failed) continue;
+            p.camera.position.copy(source.camera.position);
+            p.camera.up.copy(source.camera.up);
+            p.camera.quaternion.copy(source.camera.quaternion);
+            p.camera.fov = source.camera.fov;
+            p.camera.zoom = source.camera.zoom;
+            p.camera.updateProjectionMatrix();
+            p.controls.target.copy(source.controls.target);
+            p.controls.update();
+          }
+        } finally { syncing = false; }
+        draw();
+      }
+
+      function applyView(name) {
+        if (!framingBounds || (!directions[name] && name !== 'wall' && name !== 'approved')) return;
+        const active = panes.filter(p => !p.failed);
+        if (!active.length) return;
+        const p = active[0];
+        const size = framingBounds.getSize(new THREE.Vector3());
+        const target = framingBounds.getCenter(new THREE.Vector3());
+        const direction = new THREE.Vector3(...(directions[name] || [0, 0, 1])).normalize();
+        let radius = framingBounds.getBoundingSphere(new THREE.Sphere()).radius;
+        if (name === 'upper') { target.y = framingBounds.max.y - size.y * .17; radius = Math.max(32, size.y * .25); }
+        if (name === 'roof') { target.set(0, 273, 12); radius = 58; }
+        if (name === 'approved' || name === 'wall') {
+          target.copy(patchCenter);
+          direction.copy(outward);
+          radius = Math.hypot(18.6, 34) / 2;
+          if (name === 'wall') { direction.addScaledVector(tangent, .38).add(new THREE.Vector3(0, .14, 0)).normalize(); radius *= 1.3; }
+        }
+        const aspect = Math.min(...active.filter(q => q.host.clientWidth > 1).map(q => q.camera.aspect));
+        lastAspect = aspect;
+        const halfFov = THREE.MathUtils.degToRad(35 / 2);
+        const limitingHalfFov = Math.min(halfFov, Math.atan(Math.tan(halfFov) * aspect));
+        const distance = Math.max(2, radius * 1.10 / Math.sin(limitingHalfFov));
+        syncing = true;
+        try {
+          for (const q of active) {
+            q.camera.fov = 35;
+            q.camera.zoom = 1;
+            q.camera.updateProjectionMatrix();
+            q.camera.position.copy(target).addScaledVector(direction, distance);
+            q.controls.target.copy(target);
+            q.controls.update();
+          }
+        } finally { syncing = false; }
+        state.view = name;
+        manualView = false;
+        viewButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === name)));
+        draw();
+      }
+
+      function failPane(p, error) {
+        if (p.failed) return;
+        p.failed = true;
+        p.controls.enabled = false;
+        state.ready = false;
+        const model = state.models[p.key];
+        model.error = showError(p.label, error);
+        const message = document.getElementById(`${p.key}-message`);
+        message.textContent = `表示失敗：${model.error}。対象GLB：${model.url}。配置・通信を確認し、このページを再読み込みしてください。`;
+        message.classList.add('failed');
+        message.hidden = false;
+        document.getElementById(`${p.key}-status`).textContent = '読み込みまたは描画に失敗しました';
+        status.textContent = '左右比較は未完了です。読み込めた側は引き続き操作できます。';
+        if (p.key === 'right') {
+          classificationButton.disabled = true;
+          document.getElementById('classification-status').textContent = '新GLBを表示できないため分類確認を利用できません。';
+        }
+      }
+
+      function makePane(key) {
+        const host = document.getElementById(key);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.outputColorSpace = THREE.SRGBColorSpace;
+        renderer.toneMapping = THREE.NoToneMapping;
+        renderer.setClearColor(0xe8ede8);
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(35, 1, .1, 10000);
+        camera.position.set(350, 280, 350);
+        renderer.domElement.tabIndex = 0;
+        renderer.domElement.setAttribute('role', 'img');
+        renderer.domElement.setAttribute('aria-label', `${key === 'left' ? '左：従来v32' : '右：新全体版'}の3D表示。ドラッグで回転、ホイールでズーム。左右同期。`);
+        host.appendChild(renderer.domElement);
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = false;
+        controls.enabled = false;
+        controls.minDistance = 1;
+        controls.maxDistance = 4000;
+        controls.maxPolarAngle = Math.PI - .01;
+        // Equal illumination, without changing any imported material or texture.
+        scene.add(new THREE.HemisphereLight(0xffffff, 0x91a5b1, 1.15));
+        const light = new THREE.DirectionalLight(0xffffff, .8);
+        light.position.set(-200, 400, 200);
+        scene.add(light);
+        const p = { key, label: key === 'left' ? '左・従来v32' : '右・新全体版', host, renderer, scene, camera, controls, failed: false, originals: [] };
+        panes.push(p);
+        controls.addEventListener('start', () => {
+          manualView = true;
+          viewButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+        });
+        controls.addEventListener('change', () => syncCamera(p));
+        renderer.domElement.addEventListener('webglcontextlost', event => {
+          event.preventDefault();
+          failPane(p, new Error('WebGLの描画コンテキストが失われました'));
+        });
+        const resize = () => {
+          const width = Math.max(1, host.clientWidth), height = Math.max(1, host.clientHeight);
+          renderer.setSize(width, height, false);
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+          const visible = panes.filter(q => !q.failed && q.host.clientWidth > 1);
+          const aspect = visible.length ? Math.min(...visible.map(q => q.camera.aspect)) : 1;
+          if (framingBounds && !manualView && Math.abs(aspect - lastAspect) > .001) applyView(state.view);
+          else draw();
+        };
+        p.observer = new ResizeObserver(resize);
+        p.observer.observe(host);
+        resize();
+        return p;
+      }
+
+      // Explicit unknown tags stop inheritance, preserving unclassified surfaces.
+      function surfaceRole(mesh, material) {
+        if (material?.userData?.surfaceRole != null) return material.userData.surfaceRole;
+        for (let node = mesh; node; node = node.parent) {
+          if (node.userData?.surfaceRole != null) return node.userData.surfaceRole;
+        }
+        return null;
+      }
+
+      function prepareClassification(p) {
+        const colors = { roof: 0x297bd1, equipment: 0xe58b24, wall: 0xbd5d91 };
+        const counts = { roof: 0, equipment: 0, wall: 0, other: 0 };
+        p.model.traverse(mesh => {
+          if (!mesh.isMesh) return;
+          const original = mesh.material;
+          const materials = Array.isArray(original) ? original : [original];
+          const replacements = materials.map(material => {
+            const role = surfaceRole(mesh, material);
+            if (!Object.hasOwn(colors, role)) { counts.other++; return material; }
+            counts[role]++;
+            // Independent diagnostics avoid recoloring shared materials or textures.
+            return new THREE.MeshBasicMaterial({
+              color: colors[role], side: material.side, transparent: material.transparent,
+              opacity: material.opacity, depthTest: material.depthTest, depthWrite: material.depthWrite,
+              polygonOffset: material.polygonOffset, polygonOffsetFactor: material.polygonOffsetFactor,
+              polygonOffsetUnits: material.polygonOffsetUnits
+            });
+          });
+          p.originals.push({ mesh, original, diagnostic: Array.isArray(original) ? replacements : replacements[0] });
+        });
+        state.models.right.surfaceRoles = counts;
+        const classified = counts.roof + counts.equipment + counts.wall;
+        classificationButton.disabled = false;
+        document.getElementById('classification-status').textContent = `新GLBの材質スロット：屋根 ${counts.roof}／設備 ${counts.equipment}／壁 ${counts.wall}／未設定・その他 ${counts.other}。${classified ? '確認色は右側だけに適用します。' : '対象タグがないため、切り替えても元の表示を保持します。'}`;
+      }
+
+      classificationButton.addEventListener('click', () => {
+        const p = panes.find(q => q.key === 'right' && !q.failed && q.model);
+        if (!p) return;
+        state.classification = !state.classification;
+        for (const entry of p.originals) entry.mesh.material = state.classification ? entry.diagnostic : entry.original;
+        classificationButton.setAttribute('aria-pressed', String(state.classification));
+        classificationButton.textContent = `材質分類確認：${state.classification ? 'オン' : 'オフ'}（右のみ）`;
+        document.getElementById('legend').hidden = !state.classification;
+        document.getElementById('right-status').textContent = state.classification ? '分類確認色を表示中（未設定・その他は元の材質）' : '元の材質・テクスチャで表示';
+        draw();
+      });
+      viewButtons.forEach(button => button.addEventListener('click', () => applyView(button.dataset.view)));
+      document.getElementById('comparison').addEventListener('click', event => {
+        const enabled = document.body.classList.toggle('compare');
+        event.currentTarget.setAttribute('aria-pressed', String(enabled));
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      async function loadPane(key) {
+        let p;
+        try {
+          p = makePane(key);
+          const gltf = await loader.loadAsync(state.models[key].url);
+          if (p.failed) return;
+          p.model = gltf.scene;
+          p.bounds = new THREE.Box3().setFromObject(p.model);
+          if (p.bounds.isEmpty() || ![...p.bounds.min.toArray(), ...p.bounds.max.toArray()].every(Number.isFinite)) throw new Error('GLBの表示範囲が空、または不正です');
+          let meshes = 0, triangles = 0;
+          p.model.traverse(mesh => {
+            if (!mesh.isMesh) return;
+            meshes++;
+            triangles += (mesh.geometry.index?.count ?? mesh.geometry.attributes.position?.count ?? 0) / 3;
+          });
+          if (!meshes) throw new Error('GLBに表示できるメッシュがありません');
+          p.scene.add(p.model);
+          Object.assign(state.models[key], { loaded: true, meshes, triangles, bounds: { min: p.bounds.min.toArray(), max: p.bounds.max.toArray() } });
+          if (key === 'right') prepareClassification(p);
+          if (p.failed) return;
+          document.getElementById(`${key}-message`).hidden = true;
+          document.getElementById(`${key}-status`).textContent = `元の材質で表示 ／ ${meshes.toLocaleString()}メッシュ・${Math.round(triangles).toLocaleString()}三角形`;
+        } catch (error) {
+          if (p) failPane(p, error);
+          else {
+            const model = state.models[key];
+            model.error = showError(key === 'left' ? '左・従来v32' : '右・新全体版', error);
+            const message = document.getElementById(`${key}-message`);
+            message.textContent = `3D初期化失敗：${model.error}。WebGLが利用できる環境で再読み込みしてください。`;
+            message.classList.add('failed');
+            document.getElementById(`${key}-status`).textContent = '3D表示を開始できませんでした';
+            if (key === 'right') document.getElementById('classification-status').textContent = '新GLBの3D表示を開始できないため分類確認を利用できません。';
+          }
+        }
+      }
+
+      await Promise.allSettled(['left', 'right'].map(loadPane));
+      const loaded = panes.filter(p => p.model && !p.failed);
+      if (loaded.length) {
+        framingBounds = new THREE.Box3();
+        for (const p of loaded) framingBounds.union(p.bounds);
+        viewButtons.forEach(button => { button.disabled = false; });
+        for (const p of loaded) p.controls.enabled = true;
+        applyView(state.view);
+      }
+      state.ready = loaded.length === 2 && panes.every(p => !p.failed) && state.renderCount > 0;
+      status.textContent = state.ready
+        ? '左右のモデルを読み込みました。同じ視点で外観をご確認ください。全体外観は確認候補です。'
+        : loaded.length ? '左右比較は未完了です。読み込めた側は視点ボタン・回転・ズームを利用できます。'
+          : '3Dモデルを表示できませんでした。下のエラーとGLBの配置をご確認ください。';
+    } catch (error) {
+      state.ready = false;
+      const message = showError('3D比較の初期化失敗', error);
+      status.textContent = '3D比較を開始できませんでした。ライブラリの配置とWebGL対応をご確認ください。';
+      for (const key of ['left', 'right']) {
+        const element = document.getElementById(`${key}-message`);
+        element.textContent = message;
+        element.classList.add('failed');
+        element.hidden = false;
+      }
+      document.getElementById('classification-status').textContent = '3D比較の初期化に失敗したため分類確認を利用できません。';
+    }
+  </script>
+</body>
+</html>

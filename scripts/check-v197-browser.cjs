@@ -1,0 +1,2 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:1280,height:720}});p.on('console',m=>console.log(m.type(),m.text()));p.on('pageerror',e=>console.log('pageerror',e.message));const r=await p.goto('http://127.0.0.1:3100/tocho-photo-only-debug-v197-viewer.html');console.log('status',r.status());await p.waitForTimeout(5000);await p.screenshot({path:'data/texture-city/tocho-v197-browser-check.png'});await b.close()})();

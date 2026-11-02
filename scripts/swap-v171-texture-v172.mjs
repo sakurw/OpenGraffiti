@@ -1,0 +1,10 @@
+import {NodeIO} from '@gltf-transform/core';
+import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
+import {MeshoptDecoder,MeshoptEncoder} from 'meshoptimizer';
+import {readFile} from 'node:fs/promises';
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({'meshopt.decoder':MeshoptDecoder,'meshopt.encoder':MeshoptEncoder});
+const doc=await io.read('data/texture-city/tocho-photoreal-v171-preserve-material.glb');
+const tex=doc.createTexture('tocho-photo-v172-v155').setImage(await readFile('data/texture-city/tocho-v155-wall-atlas.png')).setMimeType('image/png');
+for(const m of doc.getRoot().listMaterials()) if(m.getName()==='tocho-photo-v171') m.setName('tocho-photo-v172').setBaseColorTexture(tex);
+await io.write('data/texture-city/tocho-photoreal-v172-v155-texture.glb',doc);
+console.log('done');

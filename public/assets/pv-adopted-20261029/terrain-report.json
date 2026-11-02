@@ -1,0 +1,45 @@
+{
+  "version": 4,
+  "method": "Original official CityGML DEM TIN triangles in the adopted native ENU frame; no smoothing, no building base fitting, no inferred supports.",
+  "source": {
+    "path": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/dem/533945_dem_6697_op.gml",
+    "sha256": "32b328d61fe1e9727774e30ab39ea09079b074607b47fbcc360995b4c8b64f0b",
+    "frame": {
+      "origin": [
+        139.6917,
+        35.6896,
+        0
+      ],
+      "axes": [
+        "east",
+        "up",
+        "south"
+      ],
+      "ellipsoid": "WGS84",
+      "sourceCRS": "EPSG:6697",
+      "sourceHeightToNativeEllipsoidMeters": 37,
+      "note": "37m matches this official native 3D Tiles conversion; not a universal geoid model."
+    },
+    "scannedTriangles": 2863578,
+    "keptTriangles": 130518,
+    "selectionBounds": [
+      -608,
+      -572,
+      508,
+      848
+    ]
+  },
+  "roadPolygons": 184,
+  "nonRectangularPolygons": 171,
+  "terrainTriangles": 130518,
+  "terrainVertices": 65796,
+  "roadVerticalSeparation": 0,
+  "layerOrder": [
+    "official DEM terrain",
+    "road coverage on same surface",
+    "unchanged adopted buildings"
+  ],
+  "originalBuildingGeometryUnchanged": true,
+  "citySha256": "f3bd19f84518800965cb7f333b050914ab312217f638ade3b372651ef9176f2b",
+  "limitations": "DEM is the official source terrain, not ground forced to every building base. Original underpasses, raised structures and differences between source building bottoms and DEM remain unchanged. Road color coverage follows DEM; it is not a replacement for the separate LOD3 elevated-road geometry."
+}

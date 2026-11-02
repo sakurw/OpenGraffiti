@@ -1,0 +1,9 @@
+<!doctype html><html><body style="margin:0;background:#111"><script type="module">
+import * as THREE from '/public/vendor/three.module.js';
+import {GLTFLoader} from '/public/vendor/GLTFLoader.js';
+import {OrbitControls} from '/public/vendor/OrbitControls.js';
+import {MeshoptDecoder} from '/public/vendor/meshopt_decoder.module.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x111111);const cam=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,10000);const ren=new THREE.WebGLRenderer({antialias:true});ren.outputColorSpace=THREE.SRGBColorSpace;ren.toneMapping=THREE.ACESFilmicToneMapping;ren.toneMappingExposure=1.5;ren.setSize(innerWidth,innerHeight);document.body.appendChild(ren.domElement);const light=new THREE.DirectionalLight(0xffffff,5);light.position.set(100,200,100);scene.add(light);scene.add(new THREE.HemisphereLight(0xffffff,0x444444,3));scene.add(new THREE.AmbientLight(0xffffff,2));const c=new OrbitControls(cam,ren.domElement);
+new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load('/data/texture-city/tocho-6697-photo-final.glb',g=>{scene.add(g.scene);let b=new THREE.Box3().setFromObject(g.scene);let s=b.getSize(new THREE.Vector3()).length();let m=b.getCenter(new THREE.Vector3());cam.position.copy(m).add(new THREE.Vector3(s*.35,s*.25,s*.35));c.target.copy(m);c.update();window.loaded=true;},undefined,e=>console.error(e));
+function a(){requestAnimationFrame(a);ren.render(scene,cam)}a();
+</script></body></html>

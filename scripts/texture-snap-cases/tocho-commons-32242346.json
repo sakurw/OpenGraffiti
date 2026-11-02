@@ -1,0 +1,24 @@
+{
+  "provider":"commons","sourceId":"32242346","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1200],"cameraPrior":[-51.411,40,-185.237],
+  "groundPhotoVerified":true,
+  "groundPhotoVerification":"Photo visually inspected: upward view from road, foreground street trees and assembly arcade; metadata category identifies Shinjuku Subcenter Route 10. Page geotag is an unverified camera prior, not surveyed control.",
+  "controls":[
+    {"name":"north-front-left","world":[16.509,277.68,-27.912],"pixel":[511,45],"role":"train"},
+    {"name":"north-front-right","world":[-6.062,277.68,-43.75],"pixel":[616,58],"role":"train"},
+    {"name":"north-left-wing","world":[17.768,277.68,-21.057],"pixel":[494,60],"role":"train"},
+    {"name":"north-right-wing","world":[-12.947,277.68,-42.504],"pixel":[629,75],"role":"train"},
+    {"name":"south-front-left","world":[28.834,277.68,34.738],"pixel":[331,168],"role":"train"},
+    {"name":"south-front-right","world":[6.228,277.68,19.655],"pixel":[424,178],"role":"train"},
+    {"name":"south-left-wing","world":[29.993,277.68,41.528],"pixel":[315,180],"role":"train"},
+    {"name":"south-right-wing","world":[-1.336,277.68,20.273],"pixel":[437,190],"role":"train"},
+    {"name":"bridge-north-front","world":[14.247,186.37,-7.753],"pixel":[461,382],"role":"train"},
+    {"name":"bridge-south-front","world":[19.992,186.37,23.335],"pixel":[355,429],"role":"train"},
+    {"name":"north-setback-apex","world":[7.902,249.36,-39.965],"pixel":[572,112],"role":"held-out"},
+    {"name":"north-setback-back","world":[13.912,249.36,-7.695],"pixel":[464,179],"role":"held-out"},
+    {"name":"south-setback-apex","world":[19.992,249.27,23.335],"pixel":[372,232],"role":"held-out"},
+    {"name":"south-setback-back","world":[25.362,249.27,50.455],"pixel":[291,279],"role":"held-out"}
+  ]
+}

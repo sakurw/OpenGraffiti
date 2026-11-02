@@ -1,0 +1,30 @@
+{
+  "batchId": "tocho-ordinary-buildings-10-v1",
+  "methodVersion": "universal-building-color-v1",
+  "areaId": "tocho",
+  "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "cityGmlPath": "data/plateau/plateau-13104-shinjuku-ku-2025/udx/bldg/53394525_bldg_6697_op.gml",
+  "kartaviewDiscoveryPath": "data/texture-city/kartaview/discovery-wide.json",
+  "criteria": {
+    "referenceBuilding": "東京都庁第一本庁舎",
+    "referenceBuildingId": "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+    "distanceMetres": [250, 350],
+    "heightMetres": [10, 45],
+    "lod": 2,
+    "minimumAppearanceCoverage": 0.8,
+    "namePolicy": "Select only buildings whose PLATEAU name is empty.",
+    "landmarkPolicy": "Exclude all named buildings and the curated landmark IDs used by the Tocho landmark pipeline."
+  },
+  "buildings": [
+    {"ordinal": 1, "label": "一般建物 01", "buildingId": "bldg_056fbe4d-bce5-44f3-a4ba-c786b23de5e6"},
+    {"ordinal": 2, "label": "一般建物 02", "buildingId": "bldg_87434b30-0653-4b85-8b2e-c4b771c475a7"},
+    {"ordinal": 3, "label": "一般建物 03", "buildingId": "bldg_76b1851f-7f4b-473f-8b12-19633221d922"},
+    {"ordinal": 4, "label": "一般建物 04", "buildingId": "bldg_81497526-1f90-459f-8da8-4c1abe108739"},
+    {"ordinal": 5, "label": "一般建物 05", "buildingId": "bldg_9539786f-8be5-4799-8847-a36b83ed4659"},
+    {"ordinal": 6, "label": "一般建物 06", "buildingId": "bldg_071b0e01-cc56-4e31-b0f4-e567e5b0a3df"},
+    {"ordinal": 7, "label": "一般建物 07", "buildingId": "bldg_43b9edcb-f263-43e0-9dce-6e3b224926c5"},
+    {"ordinal": 8, "label": "一般建物 08", "buildingId": "bldg_7e9c0c6b-e707-43eb-8ead-ba50333f188b"},
+    {"ordinal": 9, "label": "一般建物 09", "buildingId": "bldg_0cc0cc78-85fe-4db4-af00-ba6d82c60529"},
+    {"ordinal": 10, "label": "一般建物 10", "buildingId": "bldg_c73f11de-4e76-43aa-a59c-cd3f880f8fcd"}
+  ]
+}

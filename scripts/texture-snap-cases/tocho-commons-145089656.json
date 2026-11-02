@@ -1,0 +1,30 @@
+{
+  "provider":"commons","sourceId":"145089656","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1195],"cameraPrior":[-166.792,40,-70.247],
+  "cameraModel":"simple-radial",
+  "groundPhotoVerified":true,"groundPhotoVerification":"Image inspected: street and pedestrian viewpoint in Shinjuku Chuo Park, upward view of target west and north sides.",
+  "lineControls":[
+    {"name":"north-stone-apex","world":[[-24.088,34.63,-33.775],[-24.088,249.36,-33.775]],"pixels":[[438,235],[423,925]],"role":"train"},
+    {"name":"south-stone-apex","world":[[-12.008,34.63,29.095],[-12.008,186.37,29.095]],"pixels":[[655,450],[690,700]],"role":"train"},
+    {"name":"north-bridge-west-edge","world":[[-19.061,34.63,-1.526],[-19.061,186.37,-1.526]],"pixels":[[560,500],[566,600],[574,710]],"role":"held-out"},
+    {"name":"north-inset-west-edge","world":[[-19.128,34.63,-7.805],[-19.128,225.9,-7.805]],"pixels":[[538,500],[542,600],[546,710]],"role":"held-out"}
+  ],
+  "controls":[
+    {"name":"north-front-left","world":[-12.947,277.68,-42.504],"pixel":[410,122],"role":"train"},
+    {"name":"north-front-right","world":[-27.446,277.68,-19.147],"pixel":[497,96],"role":"train"},
+    {"name":"north-left-wing","world":[-6.062,277.68,-43.75],"pixel":[400,142],"role":"train"},
+    {"name":"north-right-wing","world":[-26.325,277.68,-12.918],"pixel":[515,108],"role":"train"},
+    {"name":"south-front-left","world":[-1.336,277.68,20.273],"pixel":[586,215],"role":"train"},
+    {"name":"south-front-right","world":[-15.025,277.68,42.905],"pixel":[671,194],"role":"train"},
+    {"name":"south-left-wing","world":[6.228,277.68,19.655],"pixel":[573,230],"role":"train"},
+    {"name":"south-right-wing","world":[-12.85,277.68,49.582],"pixel":[686,204],"role":"train"},
+    {"name":"bridge-north-front","world":[-19.061,186.37,-1.526],"pixel":[555,381],"role":"train"},
+    {"name":"bridge-south-front","world":[-13.161,186.37,29.254],"pixel":[650,416],"role":"train"},
+    {"name":"north-setback-apex","world":[-24.088,249.36,-33.775],"pixel":[440,157],"role":"held-out"},
+    {"name":"north-setback-right","world":[-17.833,249.36,-1.068],"pixel":[546,206],"role":"held-out"},
+    {"name":"south-setback-apex","world":[-12.008,249.27,29.095],"pixel":[631,253],"role":"held-out"},
+    {"name":"south-setback-left","world":[19.992,249.27,23.335],"pixel":[570,325],"role":"held-out"}
+  ]
+}

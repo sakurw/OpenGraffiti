@@ -1,0 +1,81 @@
+{
+  "id": "82d038c8-3200-5c95-897c-b134d19a7b3f",
+  "number": 5,
+  "name": "神谷町の壁 05",
+  "street": "東京タワー北側・神谷町",
+  "areaId": "tokyo-tower",
+  "sectionId": "tower-walk",
+  "width": 15.056173444035187,
+  "height": 6.962000000000001,
+  "canvasWidth": 2048,
+  "canvasHeight": 947,
+  "position": [
+    263.98350557494757,
+    9.021,
+    -858.080775998286
+  ],
+  "normal": [
+    -0.9142795842342933,
+    0,
+    -0.4050837467146364
+  ],
+  "baseImage": "/assets/datasets/plateau-2025-v1/canvases/82d038c8-3200-5c95-897c-b134d19a7b3f.base.png",
+  "maskImage": "/assets/datasets/plateau-2025-v1/canvases/82d038c8-3200-5c95-897c-b134d19a7b3f.mask.png",
+  "baseHash": "33c367e3b636b239a8c15e34771342694f179c7a8c6cac7cbd3f3d7c2046374d",
+  "maskHash": "0e9975ffd7f91d230c3c9cee22fd50c4c8c23b1dc2077bf4fe1a9a88b13fed87",
+  "source": {
+    "dataset": "plateau-13103-minato-ku-2025",
+    "mesh": "53393599",
+    "buildingId": "bldg_70d240ff-cce9-408b-99c4-51c90077e09f",
+    "surfaceId": "gml_de80a722-d415-48b0-be41-39f4a3a1fee2",
+    "polygonIds": [
+      "Poly_53361aa5-12a6-4834-902d-071ed2e8ca23",
+      "Poly_dbce356d-f293-4be4-8b8d-37817113e04b",
+      "Poly_a643bc40-869b-40dd-a3df-c1fca822e534",
+      "Poly_22d47326-2ae6-492c-9bd8-800adf61f2d7",
+      "Poly_b701ab7b-4541-4bb7-8b00-7111d40ca07a",
+      "Poly_97430974-9355-422f-9faa-e6b7e443cc5c"
+    ],
+    "lod": 3,
+    "appearance": [
+      "53393599_bldg_6697_appearance/TMmnt0153_lod3.jpg"
+    ]
+  },
+  "validation": {
+    "rms": 0.0006020062440852549,
+    "maxDeviation": 0.0011059526130141606,
+    "area": 101.47192465850233,
+    "clearance": 64.93347963700712,
+    "openingCount": 1,
+    "holeCount": 0,
+    "maskPixels": 1877506,
+    "visual": "pending"
+  },
+  "mock": false,
+  "projection": {
+    "origin": [
+      266.245,
+      9.402,
+      -863.185
+    ],
+    "u": [
+      -0.4050837467146364,
+      0,
+      0.9142795842342933
+    ],
+    "v": [
+      0,
+      1,
+      0
+    ],
+    "lo": [
+      -1.9453042890173182,
+      -3.861999999999999
+    ],
+    "hi": [
+      13.110869155017868,
+      3.1000000000000014
+    ]
+  },
+  "overlayOffset": 0.002
+}

@@ -1,0 +1,2212 @@
+{
+  "downloads": [
+    {
+      "id": "plateau-13103-minato-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/ea/d75459-6d62-4a1f-8081-317603bd5f8d/13103_minato-ku_pref_2025_citygml_1_op.zip",
+      "filter": "udx/bldg/53393599_bldg_6697_op.gml",
+      "downloadedAt": "2026-09-08T09:13:19.938Z",
+      "files": [
+        {
+          "path": "udx/bldg/53393599_bldg_6697_op.gml",
+          "bytes": 109746782,
+          "sha256": "95059a52aee0e34ca0185b52e7888233df4b8094c2f011ee0bafbaddd6888ace"
+        }
+      ]
+    },
+    {
+      "id": "plateau-13103-minato-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/ea/d75459-6d62-4a1f-8081-317603bd5f8d/13103_minato-ku_pref_2025_citygml_1_op.zip",
+      "filter": "@data/plateau/plateau-13103-minato-ku-2025/53393599-texture-paths.json",
+      "downloadedAt": "2026-09-08T09:27:55.381Z",
+      "files": [
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1030Texture_00028664_00028664.jpg",
+          "bytes": 416,
+          "sha256": "3e26a3e7919e9ec1ff6295bc1d7abaccd3d01cd2dd88453f33dd495e339d8001"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1030Texture_00029874_00029874.jpg",
+          "bytes": 719,
+          "sha256": "b006d9b1b756cb5e8624bb83833216de471ef19307ccabbdefc5b6ec7e0ac060"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028015_00028015.jpg",
+          "bytes": 683,
+          "sha256": "a179f1df5c9b4500c1c9ce1b6ecbf0ce4b13790620f8e7ad1ddf9b4ac45641c4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028488_00028488.jpg",
+          "bytes": 458,
+          "sha256": "ac9491f66ead2461f27599952b8b68b054bf35efb8be4a8ca37a2eb9958c44ba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028502_00028502.jpg",
+          "bytes": 926,
+          "sha256": "c07cdef546d4784cdd52ed86e0dca7c8f265beb0e9f58e01dfb3219381007416"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028597_00028597.jpg",
+          "bytes": 696,
+          "sha256": "fe12702e2d6701fb950d1a3101b9abec1c89a546cf10ad9bb5eb41c47861d29f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028633_00028633.jpg",
+          "bytes": 1850,
+          "sha256": "111bdf39e77fbe4e8b09443b1e3352f5aa86cdc05ed10d19cdd397a074b83f27"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028640_00028640.jpg",
+          "bytes": 6180,
+          "sha256": "9e21d54e2e16a2fadc1139fd4c95a7a138d2b1a96fb37fa04554531d6157ff73"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028664_00028664.jpg",
+          "bytes": 11147,
+          "sha256": "da3ea97b7149836e3aa41f885432e53bb35a71c077c4a7558165d0c712f602f5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00028816_00028816.jpg",
+          "bytes": 7072,
+          "sha256": "de700f30639dd2536326a31986d9a6b5203e793da60fb0681687ea8adfeae886"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1031Texture_00029874_00029874.jpg",
+          "bytes": 1592,
+          "sha256": "4d57864b31ad687cbd0dee5f8830517ee8a4d3b6d49c2fdac06c478e7ef59f78"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00020561_00020561.jpg",
+          "bytes": 429,
+          "sha256": "cb6560b08f2d6c5453184476a76860543d825cddd531e549ca179343876f208f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028480_00028480.jpg",
+          "bytes": 433,
+          "sha256": "b77c29130e9e931f2769c1e0e0f1cf68c9274dbe8448916daf95bf42f326e774"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028487_00028487.jpg",
+          "bytes": 526,
+          "sha256": "e5b6c91933174e6a5e5fb4b5565f9fda89d6e2c0bbbc85a4977bdeeb310ec68f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028488_00028488.jpg",
+          "bytes": 796,
+          "sha256": "3429e6257c9932a88f0290a4d0178eae8fef8c37089645074af6ce2bb91a9d2c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028490_00028490.jpg",
+          "bytes": 579,
+          "sha256": "98a2a442b1f283ec29b14265fe3d726ea0f29b347756c455f61501609135c682"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028491_00028491.jpg",
+          "bytes": 494,
+          "sha256": "146448f677f9e0dddd40e701e281aab7e916d66a617730dd21421ef1a4505ecb"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028494_00028494.jpg",
+          "bytes": 455,
+          "sha256": "2650c738d105f3d07a8da7f85d6162bd542a776ed6c74b23cbef82a20f4d4577"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028597_00028597.jpg",
+          "bytes": 2032,
+          "sha256": "faef06d945bef1ed5e56128ce722878bbc55308b6343ce875ff03641df9f63fb"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028609_00028609.jpg",
+          "bytes": 460,
+          "sha256": "95a3d8822ee754eaab859d1be53866eb12739ad65797a5e122b4ebf5a2b6059c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028625_00028625.jpg",
+          "bytes": 484,
+          "sha256": "bf08112a5a309d4565a37a1bd7ec12797c0fc162d9df37e03ee59cc2b6b6d464"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028633_00028633.jpg",
+          "bytes": 2442,
+          "sha256": "d8673103704a3ee53fd5e76b9b6a7e7e09b992991094062fabe20c922e7ec973"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028807_00028807.jpg",
+          "bytes": 1339,
+          "sha256": "9b76668a0de6e54e2452f0841cd1e88c23f54c1b4014b1a6300f3122cb8d64ce"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00028816_00028816.jpg",
+          "bytes": 14425,
+          "sha256": "2f41e6dbba2a4c2dfed752e76cafd1b0843d146afdb4fea7a5baf006715bc3ba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1041Texture_00029874_00029874.jpg",
+          "bytes": 530,
+          "sha256": "028dec8f8ae1ec0220f78f0d2ae9a580e877f40d2c351890e8d2f9aec2c9a6eb"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028015_00028015.jpg",
+          "bytes": 704,
+          "sha256": "d039c095dc34b8d274c5b131c0e288e5e54ee30d3977b6afff52a1b2bb737da8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028487_00028487.jpg",
+          "bytes": 2389,
+          "sha256": "b3bebda32fa89e90edf8897b7453e8c6acc1598f977f050d2d6a008e631feff9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028489_00028489.jpg",
+          "bytes": 478,
+          "sha256": "ec84a814181b3d09a19697aad8942828229c4e5fd6a64b5d407a4b361ef85023"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028490_00028490.jpg",
+          "bytes": 3156,
+          "sha256": "11a086935b9dbdeef46d554e2c335b9af6941576f99152ffd7190604304186ef"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028494_00028494.jpg",
+          "bytes": 1287,
+          "sha256": "f72ab0445e5984b803cd6997a6efc4d39fe5d075559c02519198acd41c7a5dba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028609_00028609.jpg",
+          "bytes": 459,
+          "sha256": "c87faf820d852d1f2f6eead3548da5ff86a4de32cc1b009ea4e3313090a414ae"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028625_00028625.jpg",
+          "bytes": 1849,
+          "sha256": "531cf0396dfdfaad983ea7358f3ca4e5a5019c32e4a480e218f7a88258503474"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028639_00028639.jpg",
+          "bytes": 1129,
+          "sha256": "1f86782015a9674ff1bb80baa0267eb41dd355c89e2e94be409e66ea53b0f0c9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1060Texture_00028816_00028816.jpg",
+          "bytes": 3879,
+          "sha256": "fc274bea73910d26eb0bf3351f23261fa4e84a33bca52f2212d92c9e8bccafa4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1061Texture_00028502_00028502.jpg",
+          "bytes": 2490,
+          "sha256": "715397f2fdaecd667beca579e80e2f13fc0a04b5076eea35075c265d45536418"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1061Texture_00028609_00028609.jpg",
+          "bytes": 558,
+          "sha256": "6ed5cadd7e117924ba92862d8e060360e5ec45c506462179db22a6ac7a51423c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1061Texture_00028807_00028807.jpg",
+          "bytes": 1323,
+          "sha256": "555bbe8a025ba29485d70c7956f67eea438b0893dde4b52d91b7c5bc94a1e7dd"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1061Texture_00029874_00029874.jpg",
+          "bytes": 20659,
+          "sha256": "9f398ec951f26fc683c08cbbe6563c0aefbba1fb428167350f1243c8b0e7dcd9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00020272_00020272.jpg",
+          "bytes": 391,
+          "sha256": "503dc003a98f7def2fc0332e5bf9ddf6f55e45a98a6b70f8493856bb8479cb32"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00020574_00020574.jpg",
+          "bytes": 394,
+          "sha256": "8c180d29b681e48e68691e02c8e3d829b02025058945e5dfc6beeed6498a98fb"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00020577_00020577.jpg",
+          "bytes": 372,
+          "sha256": "60df1481e2fb0a55e7d0da0293947dec232e216073f792987b675aa86cdd11fa"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00020696_00020696.jpg",
+          "bytes": 545,
+          "sha256": "950ca21d3cec647012cdce32098ac50079c51e6851ca1238b1a66f078cfbd845"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028015_00028015.jpg",
+          "bytes": 2682,
+          "sha256": "e1312f48a01a7f744f8181a4e480cef6b380615fa3968d6d0f01b4d17b8e2d5e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028487_00028487.jpg",
+          "bytes": 358,
+          "sha256": "0480ea5cce669390570cc55da683ee225014a7dd0b8f774776de0cce04015800"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028488_00028488.jpg",
+          "bytes": 535,
+          "sha256": "96d0c4545cdb128441ab20e8d30a67299a2a3b65ddcb68096ea5d8e54dfc0923"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028489_00028489.jpg",
+          "bytes": 15566,
+          "sha256": "55223c5dae6a824d0c8843cb0028dd9e24c03c42ea02bf0076fd0351e0c5a27b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028490_00028490.jpg",
+          "bytes": 517,
+          "sha256": "19c8b0316144877b58074fc044a37479afed98dfc94adda2420f03a16ce9b65d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028492_00028492.jpg",
+          "bytes": 376,
+          "sha256": "c047f316e80a280e2ebbbf022c4d8f5d57ff7efffef3b2059ff16ac2e8807049"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028494_00028494.jpg",
+          "bytes": 384,
+          "sha256": "43ac293400c89bd4dd40aa112ce4c1c7c62be10681f517055bb67037594cbed5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028502_00028502.jpg",
+          "bytes": 1863,
+          "sha256": "df158b948c7dbfd71357ab2e5525d9449b49032c9d2ca309bc7fd4b98e94da0c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028597_00028597.jpg",
+          "bytes": 4035,
+          "sha256": "5bf13822ca0d98bf74ff4ea4a82cc106934e1fb3e6ab9dda36ec6f83c9ae77cc"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028609_00028609.jpg",
+          "bytes": 541,
+          "sha256": "122832e59038e643bc18bcfdae7e5b798759b0f95f010742cf9450b1da0f9009"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028625_00028625.jpg",
+          "bytes": 421,
+          "sha256": "08806dd06ca2c26c704e6f3d9d0df4ced6e985fdc86c3d3c4815ddc37c47935c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028633_00028633.jpg",
+          "bytes": 4266,
+          "sha256": "acb80ee2c6c40905b0ac35ce2d1fea3d469b6ffdf8ebcee101a6fce11ec737b2"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028639_00028639.jpg",
+          "bytes": 3464,
+          "sha256": "e3d530568fd40d8df1f6654dcfcbd2b9d793a4f1ac06fa5812ae98630f96608e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028640_00028640.jpg",
+          "bytes": 3609,
+          "sha256": "ebbaa92ec7161268b6a6db091c9bda72fb2e7f69cc7622e2d84e3b516d8ebb51"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028664_00028664.jpg",
+          "bytes": 16730,
+          "sha256": "adb19c964122ad14ad809aad80486e41ffea3c6153bb2016b91f0b0deb2daaee"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028807_00028807.jpg",
+          "bytes": 968,
+          "sha256": "7c6d53781d79e68f9517d517d2c76175309f132d7c5d577819b0e1a66769e9b5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00028816_00028816.jpg",
+          "bytes": 7518,
+          "sha256": "2b20682296479378bc91459e70886de5ad4296916ddbf1c980485a61bec7ed2a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/BuildingInstallation_1070Texture_00029874_00029874.jpg",
+          "bytes": 7175,
+          "sha256": "f7aa72fd01632ba3a273a25e925c5f8aa2291a7dc8b0a18d6af3fc0f45aeff80"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020255_00020255.jpg",
+          "bytes": 1071,
+          "sha256": "f8823749cbc1b6ccbecb041316328789301f8c512c04085c2d8c46a4fa656703"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020269_00020269.jpg",
+          "bytes": 382,
+          "sha256": "8e305bc1fe5a9b3b55a0cb59188ee066abb75c2d985e289715606dfb21b791fe"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020272_00020272.jpg",
+          "bytes": 1461,
+          "sha256": "de6ac11cddc3f6c0c199865b18ca58af05e4e78e950b1f548933d7d07d5cdbfe"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020352_00020352.jpg",
+          "bytes": 569,
+          "sha256": "4d54ba6bdcce7211132691659b353a15fa32e7cdfa7b82a086612ecf0215c6ba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020399_00020399.jpg",
+          "bytes": 388,
+          "sha256": "ad6eafa3133d71c76cb5387408375e1e8605f4b8a7567321f68435d1a678250a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020400_00020400.jpg",
+          "bytes": 319,
+          "sha256": "49fcbef5250f88cbf1d08edf89a1f9ece93607415997757e92c973e027d5f3f9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020401_00020401.jpg",
+          "bytes": 1374,
+          "sha256": "4a2d154cf7761dbdafe6295e27ed328829481b264aea78442124946a2643e9bf"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020407_00020407.jpg",
+          "bytes": 1634,
+          "sha256": "a00acf43c63800c67509c8a64d234feedaffa46f1c527e1eaea0aaabf755b007"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020409_00020409.jpg",
+          "bytes": 379,
+          "sha256": "2a86913aeb481ccffc9b3d9f6addd87a7240e98e9ea9b6439056cee41a2db237"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020411_00020411.jpg",
+          "bytes": 428,
+          "sha256": "89aab7e4757e767d6c3c75574d828595f61d3a405625ae33b39b645723f70975"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020412_00020412.jpg",
+          "bytes": 794,
+          "sha256": "b1c5f0eac90b396f7ae8b9a17aa04f387fd7129e46101ea5deb3ee96dbd0ce10"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020413_00020413.jpg",
+          "bytes": 424,
+          "sha256": "df4b99781b0fbeae70a63bd5f9c4c5aa586a878268a32c7882fe0ce9d0f247bd"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020414_00020414.jpg",
+          "bytes": 473,
+          "sha256": "2a859b63a51eb1ef284fdbc78ebb89e9b425c7d7c5bac4e6c35d2c8becba3240"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020415_00020415.jpg",
+          "bytes": 725,
+          "sha256": "2b2bc7dd63377cc235a600a08d45ac43cfb4dbb205dfd015f2eb8bc4f477d42b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020416_00020416.jpg",
+          "bytes": 4481,
+          "sha256": "81474d9bcd99a926b61f1dd420d39a86e8ead6287cc948c57784fccb0f7d60a0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020421_00020421.jpg",
+          "bytes": 347,
+          "sha256": "1f17a6d2599699d1e9d5bd0194190deec75fbbd63540485248604430c27dabab"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020422_00020422.jpg",
+          "bytes": 329,
+          "sha256": "909d608f2b463fd1df37e39b07f1482d5d8b7dee048448c9b894fc3061d2af7b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020425_00020425.jpg",
+          "bytes": 382,
+          "sha256": "1f24767b95c9139005ea562539892ceabc0da536bcd2cd880c7704a70c9f8e59"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020427_00020427.jpg",
+          "bytes": 750,
+          "sha256": "b24e9f0a83abba1dce7ab08d14ccf700d7f5c083db4242ff62c39f912f2e1ad9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020428_00020428.jpg",
+          "bytes": 309,
+          "sha256": "c3b0ebe5c34246912af4f87aa890fd441bf7b63f71c2b4a18c81def20b7c25f4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020429_00020429.jpg",
+          "bytes": 649,
+          "sha256": "6f20c72f787d5240c05f4a9c3655ca51ba65347316bd96b7eec2f965d089cdd1"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020475_00020475.jpg",
+          "bytes": 397,
+          "sha256": "33a951504fa49d826c3a4eeebe8ef9604ea1ccad5c4c6fd48a458ab612f10ec6"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020476_00020476.jpg",
+          "bytes": 358,
+          "sha256": "c071d35006679b8d2f15b0371327b73eaf2b5284c64f1ee95b1d5046ce3cc665"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020477_00020477.jpg",
+          "bytes": 8383,
+          "sha256": "d8b2703dc1876567f8c398f7af705ec7484b591fee63b49584c8234d0032f11c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020478_00020478.jpg",
+          "bytes": 1093,
+          "sha256": "9f4e4a542b148ec367a2efc1320acaef650c5eb6e7bcc1fc35f1107f83a62d50"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020479_00020479.jpg",
+          "bytes": 591,
+          "sha256": "35cc4c27fd69653925cbb363d5a34e497a4e4f19c52b92ff9e44984ac122549d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020480_00020480.jpg",
+          "bytes": 625,
+          "sha256": "8e923fa0ed9209e2353edcef764c3c41ce2bb880da0f30aa310bba951a0c01c6"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020481_00020481.jpg",
+          "bytes": 349,
+          "sha256": "366a63314957b5b23524b10b43648880db740742b7310ab112de0258cdcaa5b5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020482_00020482.jpg",
+          "bytes": 344,
+          "sha256": "1290f551376eb3304701ec1dbbf9dd242dc0ced4713c5ddf7b85a59f08f017e0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020483_00020483.jpg",
+          "bytes": 411,
+          "sha256": "a06452e5b3dd9b91f71f4650d42d4450a178c340f88515a8592b88a044bcc96e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020484_00020484.jpg",
+          "bytes": 306,
+          "sha256": "2132020605884b48689065004c5532685b42241ac62d3fef354f8816cd4db485"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020547_00020547.jpg",
+          "bytes": 464,
+          "sha256": "0a4838ee03143d56475cfec5886f8b0ec355e9d1c6794856525056f15d0c3c6b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020548_00020548.jpg",
+          "bytes": 449,
+          "sha256": "d914e42ff5f2913cf007583ee7dbdb9436d847aae8d2c55ffbff94c6e135b16b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020549_00020549.jpg",
+          "bytes": 1246,
+          "sha256": "982a6d1af3acddf9f23dab2e916598bfb97663090c76f3648fb08379694345ff"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020554_00020554.jpg",
+          "bytes": 1063,
+          "sha256": "05a93c7cc156bd219a4d9c14b37f8761bbc2df2d5a642fa3f902f264b5956c7c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020555_00020555.jpg",
+          "bytes": 516,
+          "sha256": "839fbdd732048d8e17dda0fb64b1f8b62be91448cbe5226b9e7fd8e4a678c1a0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020556_00020556.jpg",
+          "bytes": 859,
+          "sha256": "3ce0368fed8d64d0e43dc778cc2562e63cf053a155ae4d5d36b4379c6c036915"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020560_00020560.jpg",
+          "bytes": 747,
+          "sha256": "6ab0e465176613b3dbc318b13e6afcc4b967ac5f346e997fdc634b758911c43f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020561_00020561.jpg",
+          "bytes": 2123,
+          "sha256": "32cc1df5f819530975d4c0d299f1e5b00ac27808b3abb5b8592ecbcb85d1a3fc"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020565_00020565.jpg",
+          "bytes": 369,
+          "sha256": "5122ddf5ae7c564c1261c093398fc6f1f3b34b1a2798a9caebfc20a10a82d75e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020566_00020566.jpg",
+          "bytes": 472,
+          "sha256": "edea916ef3e9d6542e50d4d93627adce1704f8ecb937d96270b3567fa1241bb9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020567_00020567.jpg",
+          "bytes": 368,
+          "sha256": "702657e13feec3d0b6151479c5205766ff9e589f0cc18c2a6d6b565db64ae27b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020568_00020568.jpg",
+          "bytes": 433,
+          "sha256": "baf8a67d5fa058cf07223da2cd5286e92e40c149119a8c9e09e6da2d23b65084"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020569_00020569.jpg",
+          "bytes": 479,
+          "sha256": "7cea21c441069122e82564c27b1e95c197981ea85d2a4bf9bd5e21503858e892"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020570_00020570.jpg",
+          "bytes": 387,
+          "sha256": "2da8de15de1a04556ee2d77c7da72a9a8eae61d92e46487cec80c294f2cc7f16"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020571_00020571.jpg",
+          "bytes": 734,
+          "sha256": "bd34107da0ae41930f55e422c07d0db6325eca18a18ca95e6350718339e51810"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020572_00020572.jpg",
+          "bytes": 562,
+          "sha256": "bd28ee53881a40c9db831074168758df83acb1d0dc66298d66659a2d4387d344"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020573_00020573.jpg",
+          "bytes": 326,
+          "sha256": "fd7c4194d90c91ef12d66b21718b0fcd237a9dd6aae8f3b8886a3323e81047b6"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020574_00020574.jpg",
+          "bytes": 1623,
+          "sha256": "5f6f0e7887a0e0c36dff1b741f52047be6524dc9ebabfc2f71a3126b2b553662"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020575_00020575.jpg",
+          "bytes": 1483,
+          "sha256": "b9ef4e59268577e317738abcba4e273733dba320b73bf9f4bfe13e93bcf57fba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020576_00020576.jpg",
+          "bytes": 759,
+          "sha256": "aeaf660faadf3c68e50ee3081799f4b069484ccee060f877a0dd1ad768e184f6"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020577_00020577.jpg",
+          "bytes": 824,
+          "sha256": "7200980c507a38a353ba80077746ed4fd49ef2b2c8d8c0b417a119874474ac8a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020578_00020578.jpg",
+          "bytes": 719,
+          "sha256": "94901e6a7fbfcd76c1b3c4c3e29acef7903831102edef6ae358d44f94d6622e0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020579_00020579.jpg",
+          "bytes": 556,
+          "sha256": "1e799ff0b9b659c8a31cfa658b9a6680e2d2df922f8473fa3e593e396963d502"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020580_00020580.jpg",
+          "bytes": 851,
+          "sha256": "65f5aa54d6f3d238972b23c3b6dc6b63986607d9124102fd2fc079c02a5d3aab"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020581_00020581.jpg",
+          "bytes": 451,
+          "sha256": "3fa9c50f99da91f0b4f38316fcb7ef7a87768f6ab020e673686ee7980ead4c23"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020582_00020582.jpg",
+          "bytes": 2613,
+          "sha256": "68ed67fff2ebf6a72275a3b10ff6e018ac7d8605cee99e48ba34fab31a1e8793"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020583_00020583.jpg",
+          "bytes": 4907,
+          "sha256": "8006cc3b6d0b40081a72df79c3727d45a964fb5fd2ba7a9240b9528abd4b508b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020584_00020584.jpg",
+          "bytes": 831,
+          "sha256": "f47afa5d59659cc6cf18b121fcb64eafdd0e33a6e8acdce62f3e67152c0ac3c8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020585_00020585.jpg",
+          "bytes": 2247,
+          "sha256": "9bef2306d82e00ef53c8af692cb846c72af1552cb35a31795b7dbea75974535b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020587_00020587.jpg",
+          "bytes": 365,
+          "sha256": "2ff59bef36a32a3f563568fdab220502127e5af1ab39e3cc20639995e7ea7ee8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020588_00020588.jpg",
+          "bytes": 399,
+          "sha256": "4a9d218417963219b2ac797ca234cf0abef94e37b84c7c86a3039c6d8d697fe0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020589_00020589.jpg",
+          "bytes": 378,
+          "sha256": "3c415055d0ce48ff3c9cffb82545823733c00fa4b3982f9ce89f7601d499ca3f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020592_00020592.jpg",
+          "bytes": 1173,
+          "sha256": "c44a5b48631f0a58f544c735f7b6b69b197973990792953a9d5cb93ab90f7625"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020593_00020593.jpg",
+          "bytes": 1951,
+          "sha256": "3b2fb1f39c4f9132e5dd4f3043ee81770117d8ed5ed519c918bea4df70e3aefb"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020691_00020691.jpg",
+          "bytes": 398,
+          "sha256": "c3577045523c85c7b4ae741bc0a146bf95ce1c1d0a513d9806a5ec527a6197e3"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020692_00020692.jpg",
+          "bytes": 838,
+          "sha256": "a2f00e900d2467b8522dc080937d0ea7bb6a24e39edd69816ed9fe7362fcc109"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020695_00020695.jpg",
+          "bytes": 594,
+          "sha256": "17fb195732ca9de8526f0eb47759bc0540d736be85ad01fab466c9278685e6aa"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020696_00020696.jpg",
+          "bytes": 2346,
+          "sha256": "7afe327d625baccfc31e6fa6b5cc5b79ba43188746f94422ab4748463f117bd8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020698_00020698.jpg",
+          "bytes": 313,
+          "sha256": "5a6b13b0afd6e7ed6a3f70ec42d734ce47abdd13a00a98676403b3ca37c49adc"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020699_00020699.jpg",
+          "bytes": 332,
+          "sha256": "d22b2c7107aa1a0b4bba7401300bf043649d0fd964e5d32fe8170e71858c331e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020700_00020700.jpg",
+          "bytes": 346,
+          "sha256": "83815047b71e94c15f60d3c146cb49f036f0aa3312fd802121a988404a9f762b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00020701_00020701.jpg",
+          "bytes": 362,
+          "sha256": "46972606f1d4dc76c4386f06468039811860bb981517e7cc3effe0e359f71516"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028015_00028015.jpg",
+          "bytes": 4950,
+          "sha256": "32aee3a62fc11b985380631731a07e2a03e5055bb30c79eb3cba5771f6871805"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028480_00028480.jpg",
+          "bytes": 1672,
+          "sha256": "d304e8d5e6b90a0dada28d563222488343137d9ba257b9d516600b5b640044fe"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028481_00028481.jpg",
+          "bytes": 752,
+          "sha256": "5b7a97936dc69232b4a1edd21dd49f803c79a62487c6b5d65024783475e361f8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028487_00028487.jpg",
+          "bytes": 1901,
+          "sha256": "818656f64ce2c16708b951f738bfb39a3dfc77842f6bdd87f868bc2a4307fc4b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028488_00028488.jpg",
+          "bytes": 6197,
+          "sha256": "81dad2a1912ccb2a5dea3d04cd35238dda5865d08758e90660b7faeef5781e19"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028489_00028489.jpg",
+          "bytes": 25637,
+          "sha256": "74d82576a63512cfc7ff3c7a0fb32843a29b59634c52ca16cee255443be6f1d0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028490_00028490.jpg",
+          "bytes": 1919,
+          "sha256": "86bd4ef4cb4db96e0de3d69f3de7184abb19743924aa3ed785d45f1b43d9f8fc"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028491_00028491.jpg",
+          "bytes": 1233,
+          "sha256": "50247dbaf200e00cf382c00c6c58cfa67847c868565c095345be2f190f00a314"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028492_00028492.jpg",
+          "bytes": 669,
+          "sha256": "e7fee0ba38cd750bd801afa38681f64260b0b4e1e4502f3ce61f693df2f44fd9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028493_00028493.jpg",
+          "bytes": 370,
+          "sha256": "03ab257ffa1f208f27ca6d40a675128ad27f6066c8f10be38268a5f1dffc9647"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028494_00028494.jpg",
+          "bytes": 2327,
+          "sha256": "9e42bc3a2990cb75e36e2a821628a0eb64b54ebf56c8ce2ed96c8e57c00e2c79"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028500_00028500.jpg",
+          "bytes": 1049,
+          "sha256": "ae9fd53a8cd067ed1d374226d2486118a9ae4748cdd482b3dd66a8c1fc09d54f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028502_00028502.jpg",
+          "bytes": 14186,
+          "sha256": "46d8859afaadb4128024d0631339475ed651269b1a5f4debad4c012a82c257ef"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028597_00028597.jpg",
+          "bytes": 12682,
+          "sha256": "01cb82407689f7e63964fe98013db42359982fda7ae504c0e9a12bb93f589f24"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028602_00028602.jpg",
+          "bytes": 1363,
+          "sha256": "8fe32c1bbd3c77cc387536890b1a616ddf4f72e90462916949a90f8edbcc0a31"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028609_00028609.jpg",
+          "bytes": 2371,
+          "sha256": "39a8073aacd1a691d42956f87bc8dccfbbbda1c2a02b178b28a56d7d2e7c4a8e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028624_00028624.jpg",
+          "bytes": 690,
+          "sha256": "3cd5684f7e4381494a3c1d1ab1264647b007bf12d28f4e7d77c5a45c8550455c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028625_00028625.jpg",
+          "bytes": 1395,
+          "sha256": "babc2329f12618c2cc457d6efa3868be8e0dcc41c8b2950d6be8a8b1e0d2598d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028633_00028633.jpg",
+          "bytes": 56904,
+          "sha256": "5a209e073cdd01f9e6984f6ded82f5d47d310a093458743d0829a66f25db51ab"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028639_00028639.jpg",
+          "bytes": 6123,
+          "sha256": "80e12a256389f2d63f6abcc4392e72cae8f1ced429bc2ca020e02d6af249bdb9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028640_00028640.jpg",
+          "bytes": 13009,
+          "sha256": "fd8fa9366d999128426161714bc660556f1c51b39c0abd466590b11ad568629c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028664_00028664.jpg",
+          "bytes": 38035,
+          "sha256": "dd76bb584221a147069a38dcad63d41150c3a2ef05edfb6c10fc490d173e2ecf"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028807_00028807.jpg",
+          "bytes": 5958,
+          "sha256": "6cb42ef124830d2e0b39b141080d15db706cd5b1dc346d8c655cf333a6e4576e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00028816_00028816.jpg",
+          "bytes": 10091,
+          "sha256": "f3ae6da2f22e6385c90ce997d9ac4dc26a9b51c72f73a0dcd5fcf92c09d8e4af"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00029874_00029874.jpg",
+          "bytes": 39597,
+          "sha256": "79fe11032ebfa61ed8784780f14e8e102e461a0e52e2c244f02bcf2a0533871a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041145_00041145.jpg",
+          "bytes": 345,
+          "sha256": "526425cc03899eecde17c7b889f81d754ce0db1a2ec6994b347a376b7c6ff079"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041288_00041288.jpg",
+          "bytes": 565,
+          "sha256": "59f7004dc8a1a6e094528ed886be244033c098427c25850be8140c4650309549"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041321_00041321.jpg",
+          "bytes": 388,
+          "sha256": "0fdff43a7602b01b1343ea596914d73142559fb78d2f85a492a0f1c3708b6b16"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041477_00041477.jpg",
+          "bytes": 341,
+          "sha256": "10766f1fd8bb3102434f6e5bcccce09551954ffff38856afe3328c732556de90"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041506_00041506.jpg",
+          "bytes": 2481,
+          "sha256": "38de187435f2b45fdeac01559306ab53ec706a1883ad9760bb792305ef089e66"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/RoofSurfaceTexture_00041541_00041541.jpg",
+          "bytes": 399,
+          "sha256": "11ae8c0e42d4d98b9a200b254da45fbe3ef84d30d4d68992f15f7399406508db"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/Texture_00028641_RoofSurface_jpg.jpg",
+          "bytes": 9955,
+          "sha256": "ecfb7186b80db22d09589898507b91daefcd4c7e6366347c2d1b0790d33d9d0c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/Texture_00028641_WallSurface_jpg.jpg",
+          "bytes": 79636,
+          "sha256": "7ae87c3bdbccc7d51c914e0db11b968c9aafd6622ebcc19e15b5beab681360cf"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0153_lod3.jpg",
+          "bytes": 94909,
+          "sha256": "74fc4b6b249059ceaba941fc9d71a068c82ef5a17a7095eb036d044fff50c487"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0168_lod3.jpg",
+          "bytes": 90338,
+          "sha256": "579f2528654fea9b41b97b33ae7d84ac6543e69799b19020e4863eee6b609af3"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0170_lod3.jpg",
+          "bytes": 66321,
+          "sha256": "b8a6c096532ec960b18028f1096e455567394c663ee67c1fc4d92544229ce33b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0171_lod3.jpg",
+          "bytes": 72857,
+          "sha256": "d46fa8560125523f23ee4d68d9df2a8d3372ec5b753fa76a1fd177c125e0f5af"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0172_lod3.jpg",
+          "bytes": 52291,
+          "sha256": "2038c170dadf5c8a6287f1622b42d34210360bd2e6486f779430f502b28f4dd2"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0173_lod3.jpg",
+          "bytes": 49425,
+          "sha256": "2e2f87d6e7617d69f174e1afb203521a966fc9718b473744c085f3e24862cdc7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0174_lod3.jpg",
+          "bytes": 122962,
+          "sha256": "e7b8c8e70fbb20d99d9a8b614b0a73ddf098cf86446e66f155ef0c6ebf6ff26d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0175_lod3.jpg",
+          "bytes": 62373,
+          "sha256": "5d89849bbe54f10f2cd360d363531cc28dbbfd31883f28be908837947e557366"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0176_lod3.jpg",
+          "bytes": 91322,
+          "sha256": "070dd38c6af65b60bfa8514e82e13b12faf5355b4ed8a84fbc0628e9fc54a733"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0177_lod3.jpg",
+          "bytes": 27706,
+          "sha256": "123fb3ef98f130138cf6ef908ff74cba5cc9f93f94ffa083d288652c88b6e536"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/TMmnt0178_lod3.jpg",
+          "bytes": 43502,
+          "sha256": "39c6859332434a5191484a8ff39298902ae0e79bb1a416f8391492e061921916"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020255_00020255.jpg",
+          "bytes": 1926,
+          "sha256": "ab08c062b5df993187583adabe2060511757b2284d2a90ffb148622b376b2c05"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020269_00020269.jpg",
+          "bytes": 730,
+          "sha256": "be9f758c74e1da4e11d3698774a4ad4f956fd2492be6baa170370f016514db7f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020272_00020272.jpg",
+          "bytes": 1863,
+          "sha256": "d84c74c6b9bba4d11c0b0a98fd286fcc2cd37a394d1ad1271d8efab2195f45bd"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020352_00020352.jpg",
+          "bytes": 831,
+          "sha256": "6e394d05a6e7735412a23a1faacf56e5ac854b489f56b6d35fd989b9bda16d93"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020399_00020399.jpg",
+          "bytes": 549,
+          "sha256": "6ec7c4a11d43937410f57978e37e53fe63f4d1307f8f8b271df21a2bc21f92c4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020400_00020400.jpg",
+          "bytes": 427,
+          "sha256": "ee1fe82b6527e0afa3b75f49ebd95d1646084b90b4c7a00266891347fc64aad1"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020401_00020401.jpg",
+          "bytes": 1178,
+          "sha256": "715f8f0e7ad5265281f42ddb91a22a82e320b5962b982324a8c5bd2f61a57827"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020407_00020407.jpg",
+          "bytes": 1864,
+          "sha256": "20322bc1d352c02cacf7ed0785b449de265a245e95fe9055f34bfb05bd4ccda8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020409_00020409.jpg",
+          "bytes": 428,
+          "sha256": "af555316c5593d3552154bbd3aa14104af15e831c1278ac856ce4896889e7edd"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020411_00020411.jpg",
+          "bytes": 523,
+          "sha256": "26ad31a73d859e4c57fb4f3a760ac5744d2ca429c7236b64428698b3f995a309"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020412_00020412.jpg",
+          "bytes": 1253,
+          "sha256": "bc560d891a1bc7584ddda0823b9ed2a9c1ece3636182d45e000f1352177a3465"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020413_00020413.jpg",
+          "bytes": 823,
+          "sha256": "2a4405c7e2420e28b438080d80720d99809a1b248ffe6de86fec9d82fb3b7e33"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020414_00020414.jpg",
+          "bytes": 553,
+          "sha256": "84cf7faa039da122636d1b1fa4f95104bc5ce94a38b09d51b79ff386b3b4d5c1"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020415_00020415.jpg",
+          "bytes": 846,
+          "sha256": "59298e31441c2fd21d074cbf93b48560f64275675e4e13d7036756505bda645f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020416_00020416.jpg",
+          "bytes": 3671,
+          "sha256": "9125345317cd37822643d31e1cdafecdf139a220b5d3b217830e0c7eb97de855"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020421_00020421.jpg",
+          "bytes": 521,
+          "sha256": "fc5fbbd091a6ff2e7318cbf57a1e58cb903cf3fabcb4445427f22bd38525db8f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020422_00020422.jpg",
+          "bytes": 399,
+          "sha256": "f77c2bd3c3dcd0f1893c152dfa283a9345f206465b29e53aba7c2f8a57999511"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020425_00020425.jpg",
+          "bytes": 529,
+          "sha256": "f0642733b45fe84038329311608d2a0e8709547d7a262754b0eae25ec271e252"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020427_00020427.jpg",
+          "bytes": 804,
+          "sha256": "18c31e01818e206fdc26e3cdaee8b52731207736e7ff380fe31d8e59230b392e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020428_00020428.jpg",
+          "bytes": 356,
+          "sha256": "3c357c977fb331e55a309e2515485e43a20a602931bb3846f974dcf4cfb4a38a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020429_00020429.jpg",
+          "bytes": 904,
+          "sha256": "36a5e39dc21f07fefb26aafb0988ada5d215a1ad7af50bfd40101eccd07f432c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020475_00020475.jpg",
+          "bytes": 422,
+          "sha256": "3182af90f18b70e165196d4dccc7381443321ab971d11f4a68eb8e88ed62e69c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020476_00020476.jpg",
+          "bytes": 451,
+          "sha256": "9e38c2707fa041da581119bc4577e05786c0b986d003fcb3e8ac0d91aefa3795"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020477_00020477.jpg",
+          "bytes": 8014,
+          "sha256": "959be2179d70ec134032c5a3ad92c13568bb190c40d8bb99441bff180270f630"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020478_00020478.jpg",
+          "bytes": 1078,
+          "sha256": "0628413b5433f2f2b8be2b67a1deb9ff93fabc3cd00c8a073ffb41a89e39384d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020479_00020479.jpg",
+          "bytes": 1178,
+          "sha256": "baaa8c50b805ac1835ebf45fcc780dd1971fee9aaff4125b15056b432fdb1e38"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020480_00020480.jpg",
+          "bytes": 597,
+          "sha256": "9eb3462432745da6f6dcfef53fe6e320a4ed49a3606b3404d015a7581cf51441"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020481_00020481.jpg",
+          "bytes": 486,
+          "sha256": "52bdad53ec54fce95cb82c0a228a9f0f1d261fc0c8aefc83f2a0a5223ad6fd33"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020482_00020482.jpg",
+          "bytes": 463,
+          "sha256": "bb7caa3f7a208c7ade3224a30ee51e0e58c541f10af070b5536a62301b6952f8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020483_00020483.jpg",
+          "bytes": 556,
+          "sha256": "fe0250a3e1fb7584f841dcdbf456c147d996d2843e052831849e44ff3c6df6d0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020484_00020484.jpg",
+          "bytes": 371,
+          "sha256": "acc2d6ea53df94bb64533919f6614c42092bb7843b00f9e63ae1f8dfa8f30fd5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020547_00020547.jpg",
+          "bytes": 513,
+          "sha256": "b2a748fba321faa128f221f8f433ec6c5e27c6e4e95afd4686d7800b4e1aa055"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020548_00020548.jpg",
+          "bytes": 412,
+          "sha256": "d366214895c8f19aa4022cc330e70b8ccde85cdfd2b9c6dfe792c9ad88ab2406"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020549_00020549.jpg",
+          "bytes": 1124,
+          "sha256": "df35e19ec839675110a3323546a7a3e4b088d3b3a4bce23bbb67cd76a6f427f9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020554_00020554.jpg",
+          "bytes": 2112,
+          "sha256": "6e2eb82577a505bb1d9dc630ce630d2d4c54e14452eb934236fc43fa34ca09fd"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020555_00020555.jpg",
+          "bytes": 753,
+          "sha256": "7d362066ba7b37057c4c13d922573205042b22be0e0bb7fa9fea893093a8f9d5"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020556_00020556.jpg",
+          "bytes": 1708,
+          "sha256": "9870322bf8f5dfff108c7f5c4c4a5b60469c4d6781d5b789d282d291e1d3008a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020560_00020560.jpg",
+          "bytes": 1272,
+          "sha256": "47fcb1d7048651cd7706b1720366e53a8a6b3d95013cfe63e49320cf57c65a5b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020561_00020561.jpg",
+          "bytes": 1691,
+          "sha256": "89a9d1c6b388cb182b34681d52f61cadd8497c62ceecf80a0a204265ccc1e0c3"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020565_00020565.jpg",
+          "bytes": 397,
+          "sha256": "ecfcc9925bc5e1d2b44bd66797a2c76e045c03b4f5d209f5e0254a1c3dab6bac"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020566_00020566.jpg",
+          "bytes": 539,
+          "sha256": "04f4ba52134c6e3a0b48b2b7f1495dbf9b280baa8044473ea67578c1679e86e0"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020567_00020567.jpg",
+          "bytes": 699,
+          "sha256": "7ed3d1cb2432abfc1bc6d8ae9778b5d20adab236653cb8c316649f0de605307f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020568_00020568.jpg",
+          "bytes": 1154,
+          "sha256": "1fa57b2839d77d80779e28bec2e7520946eca8f10afa52bb08c587e11e6e3924"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020569_00020569.jpg",
+          "bytes": 1059,
+          "sha256": "ab81b1da55aa85978376f80d0b074e6d877714b68a47675152c7ede3160249ee"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020570_00020570.jpg",
+          "bytes": 488,
+          "sha256": "1070e0e1fc23019c280efcf5466fe2a9dd2422b879c58d023dcc3b5bbb7caabf"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020571_00020571.jpg",
+          "bytes": 859,
+          "sha256": "93ae5c940b47d5c8fb9bbfd33578a709f053302d28f5fd56002096e1a019c475"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020572_00020572.jpg",
+          "bytes": 975,
+          "sha256": "3f2072fad65af112d1400a9dd7dc2844fb2bf3a1e1babbba34d28dd04789c1d9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020573_00020573.jpg",
+          "bytes": 384,
+          "sha256": "2266aeacbbf54a57b7caf2a3fc1d196d9cc9634f275745261e8051f73562e0cf"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020574_00020574.jpg",
+          "bytes": 2887,
+          "sha256": "40f370e5406ec4f29c8e9b140a2d93363b65beeefd7dec667662cb122bad93c4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020575_00020575.jpg",
+          "bytes": 801,
+          "sha256": "03c729d88e6872ee37917f481259cf0e5ef1239c3899e4d3454100a16033df1a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020576_00020576.jpg",
+          "bytes": 972,
+          "sha256": "72210ff522390e8d81e4b462bdc2332af0d7a99e722d1d1bab799aa5a972b9ac"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020577_00020577.jpg",
+          "bytes": 1444,
+          "sha256": "95e0e0638b28d7c11b805c396106f62667c2f79aab4709c2f876385c3abc75a8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020578_00020578.jpg",
+          "bytes": 1309,
+          "sha256": "537050e94590e421cf4a8eb8fe9c2b6d420afb53b91629c983e61560ddc42d82"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020579_00020579.jpg",
+          "bytes": 1154,
+          "sha256": "7f1521c6dabb339705318e9f89bc49bc1356ed062f424704697abf031a4c1d39"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020580_00020580.jpg",
+          "bytes": 1088,
+          "sha256": "8d5ea4555b7581101c839c24a21d881036405459b877a3b136b4e85becfe4ba7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020581_00020581.jpg",
+          "bytes": 1164,
+          "sha256": "0e1f5d56a29762659c91242352b5b01e0445e6c4583f6ccb4b2dceec19be567c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020582_00020582.jpg",
+          "bytes": 1659,
+          "sha256": "de12303a3e0489a47b05c319faf8a18fd34a9e2e682d04cecd014419a718ea9c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020583_00020583.jpg",
+          "bytes": 7357,
+          "sha256": "35ce7044fa378b5c4a4529a2aeed9a00cb6491f48405d5e1b3bd911fe442ed4f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020584_00020584.jpg",
+          "bytes": 1197,
+          "sha256": "43aac246e8ef6728eb476c9dcdb751c61404523847321dbdc8978ac1893bdcc2"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020585_00020585.jpg",
+          "bytes": 1423,
+          "sha256": "6f8dc8a8b195bc2c77635bee7ab18ba08d9b4a7e2847398bc55a8b7f74495ee9"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020587_00020587.jpg",
+          "bytes": 488,
+          "sha256": "57ffbd23b288fab909bebb31c57ce1800dd90644f1972d18bdeac601905c3267"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020588_00020588.jpg",
+          "bytes": 406,
+          "sha256": "bca02e45dd8aa8b6624ae7a5b52dcfcb8bdd4d33f5c50fc4130d6b8b913533c8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020589_00020589.jpg",
+          "bytes": 378,
+          "sha256": "09fa2a4eb25156a839d610f9a087dcf213339822b805044cef03158a6b920307"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020592_00020592.jpg",
+          "bytes": 1690,
+          "sha256": "e2e14762ab76e8566761f66da88c886844b8a6a6fed9d267be4192c9e906a1a8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020593_00020593.jpg",
+          "bytes": 1997,
+          "sha256": "028c4da74438d6fb5cd8cc4ea4d5c2d8f87b8fa2e4df591168fa27e71d5ec992"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020691_00020691.jpg",
+          "bytes": 666,
+          "sha256": "481ad8fa34b0166bd9e71f5287ac25269a333b9417c6dc0fe26db2610d86ccac"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020692_00020692.jpg",
+          "bytes": 1850,
+          "sha256": "0c07a70ab4f5ceb297acf31430dd09eb9c46d5215f7a50edc5032b788a57e25d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020695_00020695.jpg",
+          "bytes": 786,
+          "sha256": "34042a9b6b96bc9ec1520dbc2c17a2ca3be575d8e4d2ca96b9bb33496242cf2c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020696_00020696.jpg",
+          "bytes": 1668,
+          "sha256": "920c3cb2cb93c43bb7b35e0ec861d1a170a31216f3ac735bef8bd68b79902a94"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020698_00020698.jpg",
+          "bytes": 345,
+          "sha256": "e5d6d248efd7f795628da8a47c1dcdc11a928a93bda8f8b73454d4aa7e9f548b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020699_00020699.jpg",
+          "bytes": 353,
+          "sha256": "35e6b88216945ede0edb72833456a3eedcc0b77f77dca0dc3f40c63509c70ef4"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020700_00020700.jpg",
+          "bytes": 417,
+          "sha256": "965a0a8762e60df4b2a451194726d58a2c396fb9eb14e6a5af3dc87413518542"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00020701_00020701.jpg",
+          "bytes": 618,
+          "sha256": "3c6afc4679d1a62b390fe1aace69e0ed4d0608d8e184551bf6658d38ac4a657a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028015_00028015.jpg",
+          "bytes": 13192,
+          "sha256": "89b4a76392cd6abebd7f6a09db9a5ae00195a6cf240943a1e728aa0b7237b34b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028480_00028480.jpg",
+          "bytes": 2591,
+          "sha256": "77367d3ee7b8a1a78987180b3846d87a71f48bf9a393364ad0fa5d6d69f76f04"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028481_00028481.jpg",
+          "bytes": 1284,
+          "sha256": "55998fe57bd554ae814aef2d1b1b39877a6bedd2ba20afb0100b6038fa4bf30d"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028487_00028487.jpg",
+          "bytes": 8457,
+          "sha256": "0748b2e188d8f116451495c68a2f51cdbb596e9d095d8bb71994ce0fd74a58b7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028488_00028488.jpg",
+          "bytes": 9826,
+          "sha256": "850a34312ee80c7ca79ac8d277bdf86c73b02e592735199073fa341b169090ab"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028489_00028489.jpg",
+          "bytes": 23127,
+          "sha256": "608a2baafa7b7ca53e5ecdc3aec361a5acf612bce6815e21d51678f4fb7a1d3a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028490_00028490.jpg",
+          "bytes": 6764,
+          "sha256": "ec7247048fa1d802926e865fb03d6fd1fb25791a2f6951530a383135e997358f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028491_00028491.jpg",
+          "bytes": 3479,
+          "sha256": "5832aad967753b980952cd156a66bd0cbbbdf5a324e020889f256087fb86ae12"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028492_00028492.jpg",
+          "bytes": 1677,
+          "sha256": "9179152b14ff05be6d6093654051b961354ea82fbe38c96bea0d28914c825d29"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028493_00028493.jpg",
+          "bytes": 690,
+          "sha256": "9ba041cda094b8fd2a6e69c7f246e03f2480a785def1742713ac998364d46c3f"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028494_00028494.jpg",
+          "bytes": 5488,
+          "sha256": "fbabd14ee4723c6e67c5b8a194faa82296df7d7a64bcdb252189da0f690de39e"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028500_00028500.jpg",
+          "bytes": 3454,
+          "sha256": "496ad7fb06f656ff784be4538ae80cb89def8eb003110c8043b0af41262cc7b1"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028502_00028502.jpg",
+          "bytes": 8559,
+          "sha256": "84e42d8a566bd97d760c50f850cde6504dc2025637bfdde663387c982b9efb21"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028597_00028597.jpg",
+          "bytes": 7223,
+          "sha256": "d49465be8a886aaadf04b7c09e5a6b3aced197b268e400be3d25b6493c387ba8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028602_00028602.jpg",
+          "bytes": 1883,
+          "sha256": "6f0f5a684a6c0daafe9e244fe44437e9a222038a76f082e56973c1059349fe73"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028609_00028609.jpg",
+          "bytes": 4470,
+          "sha256": "4839cd5393b3b5ec09a6ecd674d8fe0b55e109f044ce3b941d210803632745a7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028624_00028624.jpg",
+          "bytes": 1493,
+          "sha256": "364e6e6a60ddbf1b77d05745f1c63ea6495423ec613ca2178d638305b232b1da"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028625_00028625.jpg",
+          "bytes": 7468,
+          "sha256": "ea13c269bf142426ed80f47c893d94d68356793b57f7e4723fb1e252f1e242a7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028633_00028633.jpg",
+          "bytes": 35142,
+          "sha256": "953c1acb9856e8bbdb5a47385ea8d3e77c279c71366f07f205b8d86071bd92d7"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028639_00028639.jpg",
+          "bytes": 5673,
+          "sha256": "240dce4f7d29b556f75034756e6fc8b1ab1862c6d3c05055ebc54978aa2998b8"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028640_00028640.jpg",
+          "bytes": 9599,
+          "sha256": "3d51e6f1b850926253b25333ec121642b7026898eb54b0704a9740f2c2e8a76c"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028664_00028664.jpg",
+          "bytes": 18148,
+          "sha256": "dc6dcc6d5059246b5bd52158c4c794c622b647959f794d7d274f2eb8f6f4e5a1"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028807_00028807.jpg",
+          "bytes": 5702,
+          "sha256": "2951c611d7492f8bedcf0ea8a5551515ce11c3b7ffd498ef2d258e8874e7b851"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00028816_00028816.jpg",
+          "bytes": 17441,
+          "sha256": "0e1a91d6f7aa31b3d4a9409c3ae12b98a0acce5ad11242e379d4655b7f5eba54"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00029874_00029874.jpg",
+          "bytes": 19153,
+          "sha256": "57283754706cb4c64d847db57203f6504aa5bfd61cc5c8aa63a8e725a5a946ba"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041145_00041145.jpg",
+          "bytes": 439,
+          "sha256": "2ea77242a32ac323c643ffbe886b14e26b489660df67fba63dc2245959bd126a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041288_00041288.jpg",
+          "bytes": 444,
+          "sha256": "7ee2874ac04295ccdec03317d169fbd24cb172720aff8315601cc46140c1282b"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041321_00041321.jpg",
+          "bytes": 406,
+          "sha256": "948ae0426fecc2c09ed4e5f74fa43fb7c08a0f7b2d12b65e7020eb9ae0755b31"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041477_00041477.jpg",
+          "bytes": 414,
+          "sha256": "3ef5dd1a141c0c769679b5decd8c4124b7fddf73ea42b2d3de7a299824cd7d06"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041506_00041506.jpg",
+          "bytes": 2414,
+          "sha256": "ca7e5532b4df7fe8856b90f3ef512de414af9e8a8cac22438701d7f970f7389a"
+        },
+        {
+          "path": "udx/bldg/53393599_bldg_6697_appearance/WallSurfaceTexture_00041541_00041541.jpg",
+          "bytes": 646,
+          "sha256": "245abb13288028eba4283508c69b7cfd9c2b4be6342b38975ed3929cbc33bfde"
+        }
+      ]
+    },
+    {
+      "id": "plateau-13103-minato-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/ea/d75459-6d62-4a1f-8081-317603bd5f8d/13103_minato-ku_pref_2025_citygml_1_op.zip",
+      "filter": "udx/tran/53393599_tran_6697_op.gml",
+      "downloadedAt": "2026-09-08T09:53:15.836Z",
+      "files": [
+        {
+          "path": "udx/tran/53393599_tran_6697_op.gml",
+          "bytes": 32024615,
+          "sha256": "b417f8e87f94d08ae51b8b77747bb7bc05120632466e73c17d2669a40f0c25f0"
+        }
+      ]
+    },
+    {
+      "id": "plateau-13104-shinjuku-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/db/2866b9-e3c2-4bc4-83d3-b7b42e9b85a1/13104_shinjuku-ku_pref_2025_citygml_1_op.zip",
+      "filter": "udx/tran/53394525_tran_6697_op.gml",
+      "downloadedAt": "2026-09-08T09:53:16.370Z",
+      "files": [
+        {
+          "path": "udx/tran/53394525_tran_6697_op.gml",
+          "bytes": 34370375,
+          "sha256": "5b6e432a857c3241766abcda3c3c596b5ff8f298e1ae95051619fbb191c4c195"
+        }
+      ]
+    },
+    {
+      "id": "plateau-13104-shinjuku-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/db/2866b9-e3c2-4bc4-83d3-b7b42e9b85a1/13104_shinjuku-ku_pref_2025_citygml_1_op.zip",
+      "filter": "@data/plateau/plateau-13104-shinjuku-ku-2025/53394525-texture-paths.json",
+      "downloadedAt": "2026-09-08T09:28:01.610Z",
+      "files": [
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1003Texture_00008333_00008333_13104.jpg",
+          "bytes": 1987,
+          "sha256": "ebfb8dbfdb8b7111f21994f179184bfffc5b7d73c80d058d61689917451acddf"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1031Texture_00008334_00008334_13104.jpg",
+          "bytes": 4962,
+          "sha256": "6a7b7cc272461422b0297f041aec12e969f01246398a7e8fad3557d1778647a9"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1031Texture_00008458_00008458_13104.jpg",
+          "bytes": 6885,
+          "sha256": "9026ef3a81b7522f024a29a2a298ab29be41714178f72f6554a5914405cd6283"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1033Texture_00008333_00008333_13104.jpg",
+          "bytes": 416,
+          "sha256": "4fe10bc43f286378946898937f262904392abaa0d2434b68002de33e55fbe4b0"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1033Texture_00008458_00008458_13104.jpg",
+          "bytes": 2157,
+          "sha256": "9ddbcdcc035c008b8f6e1036baebceafcd41b3f9b7d82dc0c5325768a963dc39"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00002773_00002773_13104.jpg",
+          "bytes": 800,
+          "sha256": "c37e3c9f1ef0c1ef13fcd640b9ef588c9b1b1b80196e69e0935dfc97f3d7d417"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00002916_00002916_13104.jpg",
+          "bytes": 1012,
+          "sha256": "cde2f20d7517fb0b40db254de0d307d91ca3c5abf78aa36329c885c311c33c41"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008310_00008310_13104.jpg",
+          "bytes": 16477,
+          "sha256": "b069175c6e499c93e0cc6652f9a2af7d43314bd1d6316101be120d45796fa813"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008311_00008311_13104.jpg",
+          "bytes": 11149,
+          "sha256": "8c6c50b94b522406097aa375d5e386a61ef208224e630d87b077c64fb60f85d8"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008313_00008313_13104.jpg",
+          "bytes": 12873,
+          "sha256": "0c86a7c6b89d66b6b68eda0bf23c961a98a614bba8ee11959326731fb60afac7"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008331_00008331_13104.jpg",
+          "bytes": 51642,
+          "sha256": "670fb6fedf9ff9e7450bcbd69ee1713bc5aee7841e1532fc92b5271832284792"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008333_00008333_13104.jpg",
+          "bytes": 11477,
+          "sha256": "407899972ae8e17b0f31f82f342e06fbc2e424408acbdb3b6a5b21f56bfc9bdf"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008334_00008334_13104.jpg",
+          "bytes": 20360,
+          "sha256": "d3cb1a7fdc67335fcbed5ad708492010df7e82cb8c4592730653d2d2de6d0fcb"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008365_00008365_13104.jpg",
+          "bytes": 18115,
+          "sha256": "f8a3c696699b57ee27594e6bc6274f80893d3cb677fbb7c311e310b777d3004e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008454_00008454_13104.jpg",
+          "bytes": 8521,
+          "sha256": "bbc43ab412aaae5532aad8f9eeb572cf3b32767abf846dd4c1e3ceaa33c81895"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008458_00008458_13104.jpg",
+          "bytes": 10578,
+          "sha256": "508a805152e9399048f29bf2a1c7ea63b63fb3ad9c015715ee5dff5d2cf56551"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00008904_00008904_13104.jpg",
+          "bytes": 6912,
+          "sha256": "8c7bb3edcbfbd52f01026b68a68f5cd832b22195f0a87b773f535460d4bd5877"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00009077_00009077_13104.jpg",
+          "bytes": 1732,
+          "sha256": "93a3209c7a7bd96740089ea78bb499649a42da679bcf5787c0395f26478ff83d"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00009079_00009079_13104.jpg",
+          "bytes": 651,
+          "sha256": "057cedf7b0943b5a10593d2056b902b698a6e82d6a748dadedc1570d86ab7b4a"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1041Texture_00009080_00009080_13104.jpg",
+          "bytes": 5136,
+          "sha256": "0ac1817a66b21d35e85aaa46df3386ad28e1cffd39653ecf79947682850c95fc"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1053Texture_00002215_00002215_13104.jpg",
+          "bytes": 381,
+          "sha256": "3dbabedfa2f968f7381d7bc6ec8afbcf4c57d5057577a75e80252beb3c4d5c40"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1060Texture_00002916_00002916_13104.jpg",
+          "bytes": 799,
+          "sha256": "4114598f75783b3ac9cf58c61510fae5f41e7c70011046dca690b45b49d79a1b"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1060Texture_00008331_00008331_13104.jpg",
+          "bytes": 21895,
+          "sha256": "6c62fde32972ff25222bad7e1f0295d4b12af84674cd0390a3c764da2329dd88"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1060Texture_00008334_00008334_13104.jpg",
+          "bytes": 2215,
+          "sha256": "ea70fbac295a6b24d3e912ba0cab65bc3376b6ba7ff28a6a674c135b4bc40c78"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1060Texture_00008365_00008365_13104.jpg",
+          "bytes": 3160,
+          "sha256": "1b61dfb2d7d1dd3b9edaa8c94e42ca3f2b7aa58d74860c9a3db53c5781b5da2e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1060Texture_00008976_00008976_13104.jpg",
+          "bytes": 1236,
+          "sha256": "1177ab7cf4ef3f63a5754a10a160ff904cd81fc4c267fd8bab73cfae5c9dc22f"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00002916_00002916_13104.jpg",
+          "bytes": 4716,
+          "sha256": "3aebe2dab7083f1864d4b51fb2aa9dc34ed8eb7fb6d6df27310fa2d204bf465c"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008331_00008331_13104.jpg",
+          "bytes": 45847,
+          "sha256": "b1899a1379585d09e8712c33519ed1a9e5b4e5e5d6d327ecf75b0cab5476d28d"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008334_00008334_13104.jpg",
+          "bytes": 27204,
+          "sha256": "75c50d0da6bfc0b26b0a5536ac7d9eeed8117f049e7daeebf908ca43b91893f5"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008365_00008365_13104.jpg",
+          "bytes": 2122,
+          "sha256": "a58556633557b3fd098f1b6f3bdc1b9b2a9df5e5ea2fcfd1160f046881d3251e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008454_00008454_13104.jpg",
+          "bytes": 100554,
+          "sha256": "0a57fdf2fd2d9e95d8ad91fc117c93da15510761913ddb89ba382aefe93829a0"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008458_00008458_13104.jpg",
+          "bytes": 24713,
+          "sha256": "04dbaa236898045ba022e73e28f7969ad6f5ee5f719ef93d0a1765374815a784"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008904_00008904_13104.jpg",
+          "bytes": 3578,
+          "sha256": "f491a30ec26f92217affca14301636efe8dc7689bbd4d00d220a96821b1d7a73"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1070Texture_00008976_00008976_13104.jpg",
+          "bytes": 989,
+          "sha256": "a2ab3d454c2b30e06b0df8c911df5d0e1e5f83369c80613b5f15404d1ce46856"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/BuildingInstallation_1071Texture_00002916_00002916_13104.jpg",
+          "bytes": 1671,
+          "sha256": "d9ff2a6dac2fa0381290648dd1dccc4a67db08fdff111bff8936822f67ffd7f7"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001500_00001500_13104.jpg",
+          "bytes": 416,
+          "sha256": "15308cd4ffee4488eb69dd23fa8a9dcef2523177d1a1b6d9e472d7430e3a0828"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001501_00001501_13104.jpg",
+          "bytes": 6720,
+          "sha256": "328cb451db072d5b4ca7c5656cedd61495b2fe5feb0707e028ac6b023d191245"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001502_00001502_13104.jpg",
+          "bytes": 19627,
+          "sha256": "eda8044aa8502253d96f4cbeb4af1279e274de1f7b0afa29218d91f852b4eefd"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001503_00001503_13104.jpg",
+          "bytes": 3328,
+          "sha256": "7b09486fffbee268fc9ea6a560bb665fd60f08c4e05cd0cf11f1a1d32aec113c"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001526_00001526_13104.jpg",
+          "bytes": 1009,
+          "sha256": "8bda133f00a06b3bbcbfba3a3bb0a72b9c100934442892abd474fd2d70d09e1d"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001559_00001559_13104.jpg",
+          "bytes": 400,
+          "sha256": "8435a39e91ba9e184b5d35190ce5090d6c176524fa1766b7adb501ce30ca5644"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001572_00001572_13104.jpg",
+          "bytes": 704,
+          "sha256": "6fa9736233e34464f0ac31c7460dee744db8bc509408c70c79684f7564f53d5b"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001573_00001573_13104.jpg",
+          "bytes": 475,
+          "sha256": "9d115bccbf36cb76022dfa4e1bb51b90d45d1550317a47e823a03387dcce0cb2"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001583_00001583_13104.jpg",
+          "bytes": 568,
+          "sha256": "7ba4d68f8e1dc4e3b1ca42cdfff25fa2c9ddda5d523f868c9a2dccee546d2376"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00001625_00001625_13104.jpg",
+          "bytes": 1222,
+          "sha256": "827ecd39589248140e1711e2dc4beac38d58a57e2c68a1e0b7fc664bd8df7389"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002009_00002009_13104.jpg",
+          "bytes": 1962,
+          "sha256": "8cb4c23560a6669b4380f1829f193d2b482e9ceb4a37d216d15def4920b3779e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002011_00002011_13104.jpg",
+          "bytes": 897,
+          "sha256": "12ef8d4c839a7309484404b05019f808948f975a7874f871ac9f657e0bb3b527"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002012_00002012_13104.jpg",
+          "bytes": 774,
+          "sha256": "35661304ba4d5373adb1de9d47f874229a545ba838bbee3e0d1e379c242a9eb9"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002032_00002032_13104.jpg",
+          "bytes": 2236,
+          "sha256": "2e012cafec54060e2519337f4db24df71551db104f6bb4a470c964a211f611e0"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002033_00002033_13104.jpg",
+          "bytes": 1106,
+          "sha256": "6aea093671131e54b6a23cc6371c60cffd336d836eb0f562667fcc585e238228"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002034_00002034_13104.jpg",
+          "bytes": 1605,
+          "sha256": "b1e5f4a23e9ec20b87cc423f3152402aeac725133e96b6be68cca48c7f32b2d4"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002215_00002215_13104.jpg",
+          "bytes": 1096,
+          "sha256": "181be3f469bc55c38dd7631bb03f0b36586c8d2f24fd3c0cae62edaa1b2368f9"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002221_00002221_13104.jpg",
+          "bytes": 595,
+          "sha256": "59529033f14e45642da97257d47c2c81c836d420f289f2ae09cbe39874d88c6a"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002238_00002238_13104.jpg",
+          "bytes": 658,
+          "sha256": "6ac4f3d76ae5c0e74a295f126a2d9b91ffba1a8d30a9902d7e3ef28a9bc17789"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002281_00002281_13104.jpg",
+          "bytes": 5603,
+          "sha256": "064650ae78122ba811c61a732db3ed443dfc45167c24961dcaec31d0cdebfb0a"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002294_00002294_13104.jpg",
+          "bytes": 13541,
+          "sha256": "ee3670b64794811de5e422786440ec0cb0020ac2b1c5d87f1a71b3d4f442993f"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002295_00002295_13104.jpg",
+          "bytes": 7430,
+          "sha256": "3851cc85c1c09fdf1140128398d961cd8d17baedfbd7e3467928ec6540223a28"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002307_00002307_13104.jpg",
+          "bytes": 906,
+          "sha256": "5808e9760ed1bfb18ee3f57a409bc6160f68393e1ce4e4508d599b107504dee3"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002314_00002314_13104.jpg",
+          "bytes": 457,
+          "sha256": "d6a68cc26f417573a69704032bc776a80c38dfc838f422726950b40676c1fdc1"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002318_00002318_13104.jpg",
+          "bytes": 18867,
+          "sha256": "45c5efc11bce351815ec8624d0a7597a3fb376d090478bc6dafa97ca3d445cef"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002319_00002319_13104.jpg",
+          "bytes": 1257,
+          "sha256": "9d61a2de16d2cb7ed6284282b8d84e87bacefd1d8e4476f900f597fa816c89bb"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002321_00002321_13104.jpg",
+          "bytes": 1030,
+          "sha256": "4bf1d16ae6e09a80e26c83215b6bc7218865869455505648fe82a280a9043d32"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002340_00002340_13104.jpg",
+          "bytes": 1198,
+          "sha256": "67e31aa2c4ef08737c3afd65945c11a4c612c59f8224f4065e5ecb59261c4b04"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002350_00002350_13104.jpg",
+          "bytes": 1074,
+          "sha256": "4a26dcb259ccfbf3b8aa005ea3efb044cc491b3c10580f9cfb8549735a0cb668"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002362_00002362_13104.jpg",
+          "bytes": 2838,
+          "sha256": "c2d81373f188f1c695331d4123e4b362c6ccda62136ff7d8a6939c0ed0085ef8"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002699_00002699_13104.jpg",
+          "bytes": 690,
+          "sha256": "125e4eec4a3539d0398139eb44debe24b72593d08117c9483d7493989a34c2c7"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002773_00002773_13104.jpg",
+          "bytes": 1566,
+          "sha256": "c6f3e261b6cb00c2af27d9249e40239b0d532b74c6ae5c5459ebaa2cbb4c0153"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002894_00002894_13104.jpg",
+          "bytes": 3813,
+          "sha256": "77f02ec53631d6e8eea7f756c0a9bad5705b5711fb6434f032b62615d7c7a784"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002916_00002916_13104.jpg",
+          "bytes": 35313,
+          "sha256": "c373a096e431642be0063760258184af2c19c6393803a2b61ff263e56e0a7a40"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00002917_00002917_13104.jpg",
+          "bytes": 651,
+          "sha256": "cda4a10cc5f38dae821842396f8123517c18c81d2a74e55bfa3e8e560e7496f5"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008310_00008310_13104.jpg",
+          "bytes": 28312,
+          "sha256": "5e18be88c428dd895ec128c863500639a41484d3ebdf1bb5e1efcfb53c711230"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008311_00008311_13104.jpg",
+          "bytes": 27485,
+          "sha256": "e64c27fa53ceb9ed7237a13ff7140e56a23dfe4aa0f40f1554819fe2c08a57d3"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008313_00008313_13104.jpg",
+          "bytes": 49924,
+          "sha256": "edbf1e8085a3cda7a4bac32a3a7450804446135343a51635d546f6f24af60d08"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008331_00008331_13104.jpg",
+          "bytes": 164974,
+          "sha256": "3625b8b86361613eba4c0dcab4b462d8688fcde9a3356e5264b08c9bf3294067"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008333_00008333_13104.jpg",
+          "bytes": 100966,
+          "sha256": "8e8b4ce4e829944412428546d523eb4ff39a141da896e92f569232a1dee89267"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008334_00008334_13104.jpg",
+          "bytes": 138601,
+          "sha256": "9f982219b335707b067c2ac0f4065b94b363675acfa19083f70e69913c8d25fb"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008365_00008365_13104.jpg",
+          "bytes": 88186,
+          "sha256": "cdf31a1582f2d7d7167fd55f471aa668bf4284fe79bb39bdf8c040616e7836de"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008454_00008454_13104.jpg",
+          "bytes": 105342,
+          "sha256": "8e9f3c7ae078f2e818a2ed9878645618bc167d812911265c8a26bba85f1a5a23"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008458_00008458_13104.jpg",
+          "bytes": 159488,
+          "sha256": "3c3e1c188a598d6a83914ba2d87d295939a34635e8c06235459fb44ed0f22575"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008903_00008903_13104.jpg",
+          "bytes": 1762,
+          "sha256": "2e38aae0e6094f56cb3c7f93a3de3452c0e6d18d1005f6dd16eb0a6c43c8c32e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008904_00008904_13104.jpg",
+          "bytes": 437155,
+          "sha256": "a0ff1233df8c555f07cb1a7ae159fc122a15c0152d32344fb9bb4b05d35796d7"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00008976_00008976_13104.jpg",
+          "bytes": 11848,
+          "sha256": "80445b2847e16f4a6d5d78fdd19bbf873e0fa6a7e2298f1f14916e854d380ece"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009014_00009014_13104.jpg",
+          "bytes": 493,
+          "sha256": "0606a045c43215ba2980ef326431d135e11501965f72d95684b2a927d747c52a"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009020_00009020_13104.jpg",
+          "bytes": 1168,
+          "sha256": "958161d7ae7a7e768f9c0aa3df71aa5583b98351ab72664baeb25a38d1421b39"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009023_00009023_13104.jpg",
+          "bytes": 1250,
+          "sha256": "eb383bbadb7ee665b667f586475268106566aa74c9dddfa950b6bf0a7d0dacd5"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009026_00009026_13104.jpg",
+          "bytes": 804,
+          "sha256": "23198811f259a3dd1609584885b2ab17c9dcc853077378420d26e726cb9caca5"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009077_00009077_13104.jpg",
+          "bytes": 75206,
+          "sha256": "6aa7ae348ad20edc222ed35cc177ab3bcbdd963b70981eb078855776e057ea48"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009079_00009079_13104.jpg",
+          "bytes": 84216,
+          "sha256": "5ee6687d0c4492bdeedb9199264cc83881eb19bec6e95e66a615ebd7ca446da4"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009080_00009080_13104.jpg",
+          "bytes": 45257,
+          "sha256": "603bb9bd3b679a4fe552027f9c01b8beb6c3ef2ed89c0bea4ea29ec4f8a11c97"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009099_00009099_13104.jpg",
+          "bytes": 1933,
+          "sha256": "df9ea98e36bc62e717629861d1385b2c4ce9438b5771660ebf9ff8c33be468fd"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/RoofSurfaceTexture_00009118_00009118_13104.jpg",
+          "bytes": 1403,
+          "sha256": "2cd06cfb27ce82268fc0a936876b4981272445dbd2da988ee71ace4bdb3f44f4"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001500_00001500_13104.jpg",
+          "bytes": 1554,
+          "sha256": "594e259428699ce813ee26b6ba0cf958f88b9fe82c59b2edd98037d23c035383"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001501_00001501_13104.jpg",
+          "bytes": 7706,
+          "sha256": "b225a9a2a1f63cc6c3846bfbd4a0369928691f1bc6419aacdeee54c57e220a26"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001502_00001502_13104.jpg",
+          "bytes": 13001,
+          "sha256": "d99f408b472c93a31dbe7c8185944e6fd64f1930a42d2c1aca7437415a85dc62"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001503_00001503_13104.jpg",
+          "bytes": 4912,
+          "sha256": "2446f946f342adb6ccebc2212f459fa82d4adc78340fc19b92fbc4b35b251ebe"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001526_00001526_13104.jpg",
+          "bytes": 887,
+          "sha256": "bd5bb68d6c2621cb66242d8901f2ee9c3c04d2bd511a385e8c7ffc9cd1fa8690"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001559_00001559_13104.jpg",
+          "bytes": 1271,
+          "sha256": "682a66de0884ff00b5e72cd57ad9ecc1210862ebcfc3a30535469211f6597c95"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001572_00001572_13104.jpg",
+          "bytes": 983,
+          "sha256": "d76feb70e47bb637ff72ae7201b95e69e54bb20118dc06a2217e1d546064be41"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001573_00001573_13104.jpg",
+          "bytes": 732,
+          "sha256": "7182364fea200451b50d5e911706c70850e4076c4c9610c1209190c837e40e71"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001583_00001583_13104.jpg",
+          "bytes": 898,
+          "sha256": "27c8628474cfaff8c500c809f450cb76d79dd44260e13e3d56d7302e7533a448"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00001625_00001625_13104.jpg",
+          "bytes": 1077,
+          "sha256": "0530278b64c072ec26cd90c39a1cbd517ab84242bfa41b332cf2b821faeaa471"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002009_00002009_13104.jpg",
+          "bytes": 1298,
+          "sha256": "b4924437610c7a119f892b444845795e8b6a02b4c5ecc5cbd12e0603c19a3b82"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002011_00002011_13104.jpg",
+          "bytes": 697,
+          "sha256": "90494946a4a6b89dbc290e4b32c969d2258803b3121b866cd1140671df1e1260"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002012_00002012_13104.jpg",
+          "bytes": 1218,
+          "sha256": "42086845bbe72724d590c0bfcec5e8faab147e13736e09f34660fb392c1920c0"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002032_00002032_13104.jpg",
+          "bytes": 2030,
+          "sha256": "ef3627551e020e4f6b6b6dee9f1c86e209faecdaa41477d3125c4c84f501fbc4"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002033_00002033_13104.jpg",
+          "bytes": 1359,
+          "sha256": "5651576d42b0cea146a60b7be9bcf39fba2334ddfb15b26c1b576fc279f8fbec"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002034_00002034_13104.jpg",
+          "bytes": 2716,
+          "sha256": "1a31ce6591b5a025ad5018a3e43acbc11728e7a1d3b106e621b8565106844fde"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002215_00002215_13104.jpg",
+          "bytes": 2127,
+          "sha256": "9acf025b9cbd126a70ffc3868f7b0be83abfd514a34361421def866ecb570737"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002221_00002221_13104.jpg",
+          "bytes": 1701,
+          "sha256": "5d0879d3f802752eec361c29091a96ae809e8edeba7477327a01d5fd2d9217ed"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002238_00002238_13104.jpg",
+          "bytes": 1765,
+          "sha256": "9de98884d821c5f0e0edd63fca08fcd8d6b816386a692ccc1859325bb7522886"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002281_00002281_13104.jpg",
+          "bytes": 1717,
+          "sha256": "91c25df234521cb9ce77c9c368cdacfebf2b82a926ffa7f0d59dd548d22ee1d1"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002294_00002294_13104.jpg",
+          "bytes": 5936,
+          "sha256": "e6c44907b0499e60d687899a3f9437a2ccdd811e37382e7c80e3df86a821a19b"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002295_00002295_13104.jpg",
+          "bytes": 1697,
+          "sha256": "416446f0feb16d2a4573267eba59cca9a8340fffeb39572fc4481cf4abbdbd8d"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002307_00002307_13104.jpg",
+          "bytes": 1087,
+          "sha256": "dff9dd5594a06cae25694f14b40a3eab5fb277b316ea2ddabff6c4a7df324f46"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002314_00002314_13104.jpg",
+          "bytes": 1014,
+          "sha256": "05218b2307e7737ff23df20aa508d65ae58d6afbf42837b826b0c4953b8426e2"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002318_00002318_13104.jpg",
+          "bytes": 12083,
+          "sha256": "bbe0505c31eebf99a6a9225b055725673e52ce916dd841d79f826f947cd67d2e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002319_00002319_13104.jpg",
+          "bytes": 1918,
+          "sha256": "e097bbdb27f60900294834da8f586c87b81b5c04ac88023d415233f9d182c0e7"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002321_00002321_13104.jpg",
+          "bytes": 782,
+          "sha256": "d25bf778df5c9848e76c516e761933dd5bf1c91e24ce9a1830c49331d7130423"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002340_00002340_13104.jpg",
+          "bytes": 1182,
+          "sha256": "5985a860d8db839a62445d4211459e7c9be9ad132095a8ee98aa50f5820acebb"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002350_00002350_13104.jpg",
+          "bytes": 1343,
+          "sha256": "727746a7f6bc1191e8140398a6f5503580665d7cfb1d736efaf33704adea00de"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002362_00002362_13104.jpg",
+          "bytes": 3837,
+          "sha256": "d12b03605e35128355cae228fd21f07585968469f7110267b8a5071fbd7fdfe3"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002699_00002699_13104.jpg",
+          "bytes": 672,
+          "sha256": "e3259cd26f92f9d9fca39b1281be51a4a8f3ff32302d46b0114112af7bccac71"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002773_00002773_13104.jpg",
+          "bytes": 2678,
+          "sha256": "2a135eb0273a3cd4a3948dae75da7ec9fb766e30b78bb32ece8d3bcfd2d74786"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002894_00002894_13104.jpg",
+          "bytes": 4053,
+          "sha256": "c7d0554f12911e1eadf5a5626dddf4cd37f9191df5ce73525db4334f766bc182"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002916_00002916_13104.jpg",
+          "bytes": 22546,
+          "sha256": "44eea26416ed474976f5653c698c0cdc2968d534caa11ff28b2c882a5e1a7587"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00002917_00002917_13104.jpg",
+          "bytes": 4925,
+          "sha256": "b84285c289a4c42c9764f305e2165c354be72f68d954a1ef0ddb55d1ae504ad6"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008310_00008310_13104.jpg",
+          "bytes": 57954,
+          "sha256": "404faa6f7b57eb78dfa8bae79b2ff4cc228ebdb35cea23e16997b5d98b4b4123"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008311_00008311_13104.jpg",
+          "bytes": 69994,
+          "sha256": "f61a02f26f94c353f7a794e7598288e346faccef3c1d8fdb0af2e0b5f64e7f20"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008313_00008313_13104.jpg",
+          "bytes": 61176,
+          "sha256": "56efb6bf3707691f6f903b2a7e0a9bb83d50f607229dd275e803c8a811c031fa"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008331_00008331_13104.jpg",
+          "bytes": 628401,
+          "sha256": "bc8bc63f0c35fc72a9989dbc316408eca5cf80dde1b145ac0254494e7660441e"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008333_00008333_13104.jpg",
+          "bytes": 201119,
+          "sha256": "f9d90d367591643d107b148cf19fe2d2be6c2b3730bf99b273c8a55f6988c41c"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008334_00008334_13104.jpg",
+          "bytes": 887736,
+          "sha256": "6c7853016147f1a341a02827be1f7d86c5374f66398a81cd4faa797d99c95885"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008365_00008365_13104.jpg",
+          "bytes": 222758,
+          "sha256": "6caa9460425f974710b062342c73717115bc2a2f4ac953103cbf7cba3545bdbc"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008454_00008454_13104.jpg",
+          "bytes": 507380,
+          "sha256": "7307ca6354f8ced7d4b5b41cf4017f7b03fae2b43232da6de2d281a33868b4c2"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008458_00008458_13104.jpg",
+          "bytes": 518713,
+          "sha256": "36721ec165713562f86b693f948229b544709d9174bcc2c2136fb6fd0ab58307"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008903_00008903_13104.jpg",
+          "bytes": 4522,
+          "sha256": "f53f0b4aac4e609efb896a38ef184af0ae882b2277422f76ff229ccea8a90270"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008904_00008904_13104.jpg",
+          "bytes": 366866,
+          "sha256": "56cc7504dc4529525c8170968ec4d23d677c3a5546fbf46e945f0e6cdbc3dd68"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00008976_00008976_13104.jpg",
+          "bytes": 10304,
+          "sha256": "7b9a1a90db9ee4ec15a5b065af4f59ee863e140910564c0358378bb906d90327"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009014_00009014_13104.jpg",
+          "bytes": 626,
+          "sha256": "41d841b9937e76b742097a33c661e136ed1a7bf325da742f3f85254e37ff994a"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009020_00009020_13104.jpg",
+          "bytes": 1418,
+          "sha256": "1d3d3abe2e47f19e1c052d604841f63de4f1ef2b50b95d227a49907a25366e27"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009023_00009023_13104.jpg",
+          "bytes": 1565,
+          "sha256": "d91490743ff7e4b832eb45a78190c28fcb3948b19ba3723a18bdcafb4d4586ce"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009026_00009026_13104.jpg",
+          "bytes": 832,
+          "sha256": "a4c482fb8efc3af66af7707bbeeadda603f20e2059b8a94662f591367c9113bc"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009077_00009077_13104.jpg",
+          "bytes": 74323,
+          "sha256": "4322313df30c0b15e98c1707616126d49ceb1d1f6b12f85729200ecf55a9400c"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009079_00009079_13104.jpg",
+          "bytes": 113558,
+          "sha256": "1b908a0a33f2dcc00fc7601529aca9e7f6dc91931ee8deb93b30f37b7bce14fb"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009080_00009080_13104.jpg",
+          "bytes": 15740,
+          "sha256": "392e30e1c6eebd76eedf50795cd7ef7bc88788b5bcf099d22b5d9f758cbd5304"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009099_00009099_13104.jpg",
+          "bytes": 2155,
+          "sha256": "9378d5ff1dab0996a3fc4695f7da9d318da23d35a753d71d0abb4a486723b3e9"
+        },
+        {
+          "path": "udx/bldg/53394525_bldg_6697_appearance/WallSurfaceTexture_00009118_00009118_13104.jpg",
+          "bytes": 1906,
+          "sha256": "38be62cc0d0111f4c7e3667e8f286a9b4b15e1aeca5b58a4a22e37932d2cadb1"
+        }
+      ]
+    },
+    {
+      "id": "plateau-13104-shinjuku-ku-2025",
+      "url": "https://assets.cms.plateau.reearth.io/assets/db/2866b9-e3c2-4bc4-83d3-b7b42e9b85a1/13104_shinjuku-ku_pref_2025_citygml_1_op.zip",
+      "filter": "udx/bldg/53394525_bldg_6697_op.gml",
+      "downloadedAt": "2026-09-08T09:13:39.008Z",
+      "files": [
+        {
+          "path": "udx/bldg/53394525_bldg_6697_op.gml",
+          "bytes": 94275150,
+          "sha256": "6ee3ab2254dd634b437ebc2afbb5dbb430acb9cc5c2f7cfe687ca637f403d327"
+        }
+      ]
+    }
+  ]
+}

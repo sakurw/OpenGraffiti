@@ -1,0 +1,8 @@
+<!doctype html><html><body style="margin:0"><script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+const r=new THREE.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);r.outputColorSpace=THREE.SRGBColorSpace;document.body.appendChild(r.domElement);
+const s=new THREE.Scene();s.background=new THREE.Color(0x555555);const c=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.1,10000);s.add(new THREE.HemisphereLight(0xffffff,0x777777,3));const l=new THREE.DirectionalLight(0xffffff,4);l.position.set(200,300,200);s.add(l);
+const ctrl=new OrbitControls(c,r.domElement);const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.load('/tocho-6697-current-photoreal.glb',g=>{s.add(g.scene);const b=new THREE.Box3().setFromObject(g.scene),center=b.getCenter(new THREE.Vector3()),size=b.getSize(new THREE.Vector3());c.position.copy(center).addScalar(Math.max(size.x,size.y,size.z)*1.5);c.lookAt(center);ctrl.target.copy(center);ctrl.update();window.loaded=true},undefined,e=>console.error(e));function f(){requestAnimationFrame(f);r.render(s,c)}f();</script></body></html>

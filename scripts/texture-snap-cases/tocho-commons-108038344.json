@@ -1,0 +1,22 @@
+{
+  "provider":"commons","sourceId":"108038344","areaId":"tocho",
+  "geometryPath":"data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "buildingId":"bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "referenceSize":[900,1200],"cameraPrior":[90.765,40,9.228],
+  "cameraModel":"simple-radial",
+  "groundPhotoVerified":true,"groundPhotoVerification":"Image inspected: Citizens Plaza floor and stairs in foreground, upward ground view of east facade.",
+  "controls":[
+    {"name":"north-front-left","world":[16.509,277.68,-27.912],"pixel":[581,47],"role":"train"},
+    {"name":"north-front-right","world":[-6.062,277.68,-43.75],"pixel":[647,98],"role":"train"},
+    {"name":"north-left-wing","world":[17.768,277.68,-21.057],"pixel":[559,56],"role":"train"},
+    {"name":"south-front-left","world":[28.834,277.68,34.738],"pixel":[399,125],"role":"train"},
+    {"name":"south-front-right","world":[6.228,277.68,19.655],"pixel":[461,164],"role":"train"},
+    {"name":"south-left-wing","world":[29.993,277.68,41.528],"pixel":[379,132],"role":"train"},
+    {"name":"bridge-north","world":[14.247,186.37,-7.753],"pixel":[514,251],"role":"train"},
+    {"name":"bridge-south","world":[19.992,186.37,23.335],"pixel":[401,282],"role":"train"},
+    {"name":"north-setback-apex","world":[7.902,249.36,-39.965],"pixel":[633,87],"role":"held-out"},
+    {"name":"north-setback-wing","world":[13.912,249.36,-7.695],"pixel":[516,133],"role":"held-out"},
+    {"name":"south-setback-apex","world":[19.992,249.27,23.335],"pixel":[433,170],"role":"held-out"},
+    {"name":"south-setback-front","world":[21.302,249.27,29.545],"pixel":[410,180],"role":"held-out"}
+  ]
+}

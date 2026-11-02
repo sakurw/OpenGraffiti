@@ -1,0 +1,1783 @@
+{
+  "buildingId": "bldg_94caaf2f-dec2-41a7-8b0f-06ecd0fac6c7",
+  "buildingName": "東京都庁第一本庁舎",
+  "provider": "commons",
+  "geometryPath": "data/plateau/plateau-13104-shinjuku-ku-2025/53394525-geometry.json",
+  "geometrySha256": "b390aec8b70404bc8cfcc14f993163eb395850f2c2135b2ff1b00f8b598210e0",
+  "createdAt": "2026-09-16T05:11:08.073Z",
+  "totalWallSurfaces": 155,
+  "totalWallAreaSquareMetres": 87154.1458364187,
+  "externalEvidenceAreaSquareMetres": 24676.310547543573,
+  "strictExternalAreaCoverage": 0.2831340989086052,
+  "goalThreshold": 0.9,
+  "goalReached": false,
+  "totalTriangles": 296373,
+  "coveredTriangles": 85989,
+  "walls": [
+    {
+      "polygonId": "poly-17c0bb1a-a979-42d9-82e2-6e20e0d73385",
+      "geometryArea": 3833.986472236323,
+      "externalArea": 2405.710870725923,
+      "sources": {
+        "145064071": 2405.7108474056104,
+        "145089656": 0.00002332031250015798
+      }
+    },
+    {
+      "polygonId": "poly-80da2394-5e4f-4123-936f-d15be7c81b1f",
+      "geometryArea": 1340.7901460005064,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-febf1600-f0fc-429d-a41c-db62cac2e231",
+      "geometryArea": 117.84212938439747,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a552f7f7-22e0-4934-8ae3-982ea9be37aa",
+      "geometryArea": 1297.6129956423235,
+      "externalArea": 960.107678204295,
+      "sources": {
+        "145064071": 960.107678204295
+      }
+    },
+    {
+      "polygonId": "poly-bd2ac678-1dcb-4445-a8aa-2d8e3120b4a8",
+      "geometryArea": 99.84475161311678,
+      "externalArea": 95.6032997623643,
+      "sources": {
+        "145064071": 95.6032997623643
+      }
+    },
+    {
+      "polygonId": "poly-b6065913-ecc5-4159-afff-97430e7da8ae",
+      "geometryArea": 894.3426971056742,
+      "externalArea": 566.4727971436607,
+      "sources": {
+        "145064071": 566.4727971436607
+      }
+    },
+    {
+      "polygonId": "poly-f6241fb9-0f38-415b-a36a-e05f54fa4a50",
+      "geometryArea": 1144.2981498097572,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a4c51568-6a8c-41ca-a006-1e54cff26d99",
+      "geometryArea": 1271.2777675897958,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-68e8b462-3b16-4c6c-ad4d-3faa036b88fd",
+      "geometryArea": 152.0205202189827,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-613939c5-9e1e-4829-9279-1b8e3048bace",
+      "geometryArea": 1357.1667462181244,
+      "externalArea": 862.827223084611,
+      "sources": {
+        "145064071": 862.827223084611
+      }
+    },
+    {
+      "polygonId": "poly-47277690-54a8-41ac-b715-2d3f84fe409b",
+      "geometryArea": 931.8311200000289,
+      "externalArea": 496.3718322631948,
+      "sources": {
+        "145064071": 496.3718322631948
+      }
+    },
+    {
+      "polygonId": "poly-025fdd10-1269-4d90-8200-7bf19a59fd8e",
+      "geometryArea": 440.72484855926314,
+      "externalArea": 2.613379941351184,
+      "sources": {
+        "145089656": 2.613379941351184
+      }
+    },
+    {
+      "polygonId": "poly-0782bc14-5c7f-406a-b945-6aacccc2b77d",
+      "geometryArea": 1300.3709216346251,
+      "externalArea": 659.3642456939632,
+      "sources": {
+        "145089656": 659.3642456939632
+      }
+    },
+    {
+      "polygonId": "poly-668629d7-9b44-4973-a64b-99c4c692afef",
+      "geometryArea": 169.14824724494176,
+      "externalArea": 97.7888304384837,
+      "sources": {
+        "145089656": 97.7888304384837
+      }
+    },
+    {
+      "polygonId": "poly-3a622706-c9a8-4b81-aad3-25a0c2764787",
+      "geometryArea": 1279.357237681507,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-b602ce0d-12ae-43eb-bc18-d16986edb297",
+      "geometryArea": 8.635551816831617,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-ea752e94-b9be-4184-a914-58893496b391",
+      "geometryArea": 4.393451548493501,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-aeacc28f-173d-4802-af04-a019ebb74ef6",
+      "geometryArea": 23.562963921576724,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-788ee25c-b9e9-457c-aae4-bc4ac4dbb8a4",
+      "geometryArea": 457.3977382764278,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-8cbc75aa-01e5-48cb-b5d0-412f2b3201d6",
+      "geometryArea": 86.6031181353076,
+      "externalArea": 52.51529198591933,
+      "sources": {
+        "145089656": 52.51529198591933
+      }
+    },
+    {
+      "polygonId": "poly-2a7a29c5-cea7-44ad-bfb7-a30f6d2d5d6b",
+      "geometryArea": 1177.9058311224221,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-6f2f2c05-4642-4da6-aca4-2dd2c64dcc64",
+      "geometryArea": 1289.7839733291153,
+      "externalArea": 769.3828042588929,
+      "sources": {
+        "145089656": 769.3828042588929
+      }
+    },
+    {
+      "polygonId": "poly-8e5366b0-21a1-4b03-88c9-60c878fe0650",
+      "geometryArea": 7.933055421254022,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-31fa1157-9f9b-40db-a77f-a1b5030753f1",
+      "geometryArea": 12.927950991754955,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-d5f6435e-909a-4324-af0c-cab3be8c5c36",
+      "geometryArea": 1239.0730708411286,
+      "externalArea": 725.9920017066114,
+      "sources": {
+        "145089656": 725.9920017066114
+      }
+    },
+    {
+      "polygonId": "poly-5740ef5c-645f-4f93-8dff-596190b020c8",
+      "geometryArea": 8.32775489980872,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a660f5ce-1ab8-423d-a433-52d3a756d5c1",
+      "geometryArea": 157.5178912980781,
+      "externalArea": 141.51998046311695,
+      "sources": {
+        "145064071": 141.51998046311695
+      }
+    },
+    {
+      "polygonId": "poly-4f3fa393-5988-4085-80b4-1ddfe771b1a2",
+      "geometryArea": 164.78467985727139,
+      "externalArea": 153.3591795937301,
+      "sources": {
+        "145064071": 153.3591795937301
+      }
+    },
+    {
+      "polygonId": "poly-6e7b094c-e94b-4651-958b-4f67afc64a10",
+      "geometryArea": 24.84107366143571,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-37a59925-9216-4173-8a45-a0702c0b07bc",
+      "geometryArea": 256.9996151539343,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-ae689536-2226-46f0-b4e9-4313d96c6f66",
+      "geometryArea": 357.5987228906337,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-e6d78f48-33b1-4409-a67c-972333fd6ad8",
+      "geometryArea": 117.27729133355597,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-9b85f88f-6762-4d14-a0fe-0659ab66c8a3",
+      "geometryArea": 80.05975121083586,
+      "externalArea": 42.56305691477354,
+      "sources": {
+        "145089656": 42.56305691477354
+      }
+    },
+    {
+      "polygonId": "poly-9885fc75-8bac-4f93-8914-4f2313c04caa",
+      "geometryArea": 4.765370949875774,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-990641c3-3d59-4ede-bba0-c23c90e7ba16",
+      "geometryArea": 5.534690600095638,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-0a401cdb-0c8e-4cab-9fba-cbf0252e8b66",
+      "geometryArea": 734.1663539018231,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-2abd7c4d-0301-4254-a684-3c3aa037faa2",
+      "geometryArea": 37.43805018780957,
+      "externalArea": 13.655382563619984,
+      "sources": {
+        "145089656": 13.655382563619984
+      }
+    },
+    {
+      "polygonId": "poly-690605bf-c353-46e2-bb74-8e858ca85cc6",
+      "geometryArea": 524.7067395426463,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-e457ca0a-c2ed-4000-8d1e-7c58a712172c",
+      "geometryArea": 1309.6783711953692,
+      "externalArea": 762.889137872101,
+      "sources": {
+        "145064071": 124.97039147711703,
+        "145089656": 637.9187463949825
+      }
+    },
+    {
+      "polygonId": "poly-0be1eed0-699e-4b26-87c8-854cedb19d7f",
+      "geometryArea": 7.749869297026946,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-ccc90da5-7c79-4e21-80e2-4480c2b79d92",
+      "geometryArea": 234.4556437580253,
+      "externalArea": 43.390239583471924,
+      "sources": {
+        "145064071": 43.390239583471924
+      }
+    },
+    {
+      "polygonId": "poly-914f0827-079d-46fb-b85a-18af745ae119",
+      "geometryArea": 274.33756691902164,
+      "externalArea": 47.55363098449814,
+      "sources": {
+        "145064071": 47.55363098449814
+      }
+    },
+    {
+      "polygonId": "poly-c544b9cf-917b-4546-9d07-71b58cfebd4b",
+      "geometryArea": 153.06927580644032,
+      "externalArea": 140.50483861535756,
+      "sources": {
+        "145089656": 140.50483861535756
+      }
+    },
+    {
+      "polygonId": "poly-426cce3b-631b-49b5-a8d9-990550115c02",
+      "geometryArea": 183.5045241736357,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-c15b6a24-c6f6-49c9-9710-3efc3ac01634",
+      "geometryArea": 533.0818431399729,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-7f0526a9-de9b-4cbc-bc6d-978dafb6396a",
+      "geometryArea": 235.64443114717125,
+      "externalArea": 0.4602430295843249,
+      "sources": {
+        "145064071": 0.4602430295843249
+      }
+    },
+    {
+      "polygonId": "poly-fdcc74c0-4cce-446f-9036-14ee773948ce",
+      "geometryArea": 7.991137875461781,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-30126b57-2a16-47b6-b534-93e334f22cad",
+      "geometryArea": 176.6119323246443,
+      "externalArea": 95.67916939169498,
+      "sources": {
+        "145064071": 95.67916939169498
+      }
+    },
+    {
+      "polygonId": "poly-0ed79b42-187b-4d90-9a84-1450d04c58b1",
+      "geometryArea": 8.919249119165123,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-2798d734-13ac-4ab2-8e81-8333c1c7da8c",
+      "geometryArea": 250.52467745125097,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-761fc6b7-8e70-464f-b9f4-c2e696735903",
+      "geometryArea": 3506.711255264268,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-22f1d395-8103-4d46-9956-0a39e74b07ba",
+      "geometryArea": 15.870113320204114,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-06fc4341-06cb-46b4-9ebf-ae1e8601fc53",
+      "geometryArea": 3.8148826758584544,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-fe7e121c-114c-4de0-bf34-20fe2b8c6b6d",
+      "geometryArea": 246.71604823933006,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-9e0533e4-ddbb-4d4b-aa52-767e31d29446",
+      "geometryArea": 133.95732904407993,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-07d5e459-b6ae-41f7-a062-682038e7d654",
+      "geometryArea": 1189.1820990344609,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a1984ba2-bf29-42b4-887c-b8534f92dab2",
+      "geometryArea": 925.0212867042627,
+      "externalArea": 678.2115604574556,
+      "sources": {
+        "145064071": 678.2115604574556
+      }
+    },
+    {
+      "polygonId": "poly-59bc0b7c-f4ff-4716-9a3b-58e6f566d060",
+      "geometryArea": 268.00938026648316,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-11416ac4-7886-4366-9bab-f76751be2311",
+      "geometryArea": 135.58923931535097,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-1480739b-a2a3-46df-879f-25c84094bda0",
+      "geometryArea": 21.39568995170743,
+      "externalArea": 11.366460286844612,
+      "sources": {
+        "145064071": 11.366460286844612
+      }
+    },
+    {
+      "polygonId": "poly-d79be644-0440-4ecd-8797-fcf8dfc896cd",
+      "geometryArea": 172.42380096363334,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-51e0442c-1681-4596-b9f1-007534cc8d0a",
+      "geometryArea": 1367.562242955369,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-661db601-d90d-499b-bec3-10125dd92103",
+      "geometryArea": 41.004330512226716,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-78e33740-a180-466c-baeb-d8b5eef9abbd",
+      "geometryArea": 217.41491974884642,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-99fef09e-e1d2-442f-9040-f67cbd92c051",
+      "geometryArea": 965.2239327409845,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-88782f74-636f-429b-a28a-7dfa4ec3856a",
+      "geometryArea": 464.0375008696117,
+      "externalArea": 102.41452655911722,
+      "sources": {
+        "145064071": 102.41452655911722
+      }
+    },
+    {
+      "polygonId": "poly-bb6edff0-0754-41ee-acc3-5c2cb7caf93c",
+      "geometryArea": 234.17575843176397,
+      "externalArea": 77.75366979179682,
+      "sources": {
+        "145089656": 77.75366979179682
+      }
+    },
+    {
+      "polygonId": "poly-38480cef-fdc4-410a-88e1-21f1abeff7f5",
+      "geometryArea": 136.959352612992,
+      "externalArea": 126.24993305306818,
+      "sources": {
+        "145064071": 34.48105725855117,
+        "145089656": 91.76887579451699
+      }
+    },
+    {
+      "polygonId": "poly-2f53d2fe-d5b3-46a8-850e-6950fb67add6",
+      "geometryArea": 1506.9539132435013,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-b75dd759-5122-44d5-9a8f-1f89676613cc",
+      "geometryArea": 825.0875135337009,
+      "externalArea": 218.68545700195597,
+      "sources": {
+        "145064071": 218.68545700195597
+      }
+    },
+    {
+      "polygonId": "poly-148eb0ca-df39-4fd9-b210-dc80dfbfe79a",
+      "geometryArea": 121.85658309489946,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-c6b8c9fb-4576-4dcb-88e1-9c203cf14d7d",
+      "geometryArea": 23.3994138846247,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a9b32d10-7b37-4670-a0a5-620580c15ca6",
+      "geometryArea": 483.82528914453127,
+      "externalArea": 400.89197705563066,
+      "sources": {
+        "145064071": 400.89197705563066
+      }
+    },
+    {
+      "polygonId": "poly-865f00d1-c807-4af2-91ba-c7d58851f9c3",
+      "geometryArea": 126.35592837831092,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-3ea0d6d7-1d4f-45c8-a58f-bf7d4435bca8",
+      "geometryArea": 111.63408941910883,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-da321a6c-eb43-4065-a56f-a2380d3fd4c2",
+      "geometryArea": 1489.6809630409423,
+      "externalArea": 1044.6634045502003,
+      "sources": {
+        "145089656": 1044.6634045502003
+      }
+    },
+    {
+      "polygonId": "poly-a8bf1b54-5f80-430f-9cc8-5fcc8902aadc",
+      "geometryArea": 1375.1581419344736,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-2b1ee503-9505-40dd-88f9-322d5686aa22",
+      "geometryArea": 4.33864292804446,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-8f1727f2-db89-41a4-a1fd-92d6c18825d9",
+      "geometryArea": 246.5506740669024,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-1bc97d05-ab69-4d55-ab3a-f84614dce493",
+      "geometryArea": 1126.5913907478866,
+      "externalArea": 353.70027462303057,
+      "sources": {
+        "145089656": 353.70027462303057
+      }
+    },
+    {
+      "polygonId": "poly-ad0b431d-407b-416b-a225-839a0b8b12e1",
+      "geometryArea": 1075.2954362142223,
+      "externalArea": 666.816022436936,
+      "sources": {
+        "145089656": 666.816022436936
+      }
+    },
+    {
+      "polygonId": "poly-e5c7c4d4-bf00-4aa6-96a2-4d79cae58bbb",
+      "geometryArea": 27.469922727745924,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-80203bc6-1747-400a-a8c1-39b437c150d2",
+      "geometryArea": 255.9656719756923,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-06c06908-2665-410a-b431-ff7c48df9325",
+      "geometryArea": 4.735137580521179,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-d5bcb7fe-9eef-4853-9d3d-353a6e54d5f4",
+      "geometryArea": 4.370684149012822,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-787da8a1-459e-457d-9463-722a3ba5155c",
+      "geometryArea": 4.98289800306287,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-189016ae-64e8-4fc2-904f-5d537dc165e9",
+      "geometryArea": 182.4669814358993,
+      "externalArea": 166.87821661511126,
+      "sources": {
+        "145089656": 166.87821661511126
+      }
+    },
+    {
+      "polygonId": "poly-c8a2a529-31c7-4d32-8278-95675a0456ba",
+      "geometryArea": 1234.292918061052,
+      "externalArea": 865.5644825477486,
+      "sources": {
+        "145064071": 865.5644825477486
+      }
+    },
+    {
+      "polygonId": "poly-b051e634-70ed-4b85-bbe8-28ba26740045",
+      "geometryArea": 147.14351712937855,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-b2298648-a9dc-4a3c-b389-922c47cce9b0",
+      "geometryArea": 1542.2637504718098,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-dacca619-93f4-417d-a21d-e5d827bdd7f6",
+      "geometryArea": 239.48281749635393,
+      "externalArea": 3.274179145458009,
+      "sources": {
+        "145089656": 3.274179145458009
+      }
+    },
+    {
+      "polygonId": "poly-983b1bb3-7782-451e-8f23-2e5ef08576d8",
+      "geometryArea": 163.28131489772497,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a541aef3-eb5c-4f01-89d4-3bcce400f976",
+      "geometryArea": 20.129898691283223,
+      "externalArea": 9.435890011539005,
+      "sources": {
+        "145089656": 9.435890011539005
+      }
+    },
+    {
+      "polygonId": "poly-af1c788a-36d5-48b1-9016-4ac996754c67",
+      "geometryArea": 239.58771623806192,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-0f954247-691b-492d-89e6-487ab90a6bbc",
+      "geometryArea": 431.6859396889517,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-29f30d37-07b2-426b-bb15-553cc5b9e442",
+      "geometryArea": 3.949955014010415,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-9badefc8-398e-46aa-9e12-66c14c993ae0",
+      "geometryArea": 5.116763533320227,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-4ba12200-c08c-4f89-98e2-21c7a6f84974",
+      "geometryArea": 2584.0980791889624,
+      "externalArea": 83.74976074519299,
+      "sources": {
+        "145064071": 83.74976074519299
+      }
+    },
+    {
+      "polygonId": "poly-ffa092ad-b9e7-495d-9ffd-8dc6824024dd",
+      "geometryArea": 197.8922758909842,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-12528487-ffad-46a3-8279-5389d69790e5",
+      "geometryArea": 83.19381794191015,
+      "externalArea": 46.75787978246547,
+      "sources": {
+        "145089656": 46.75787978246547
+      }
+    },
+    {
+      "polygonId": "poly-95564db2-db88-4c44-8a5f-fcf1dd3f7029",
+      "geometryArea": 4.552295435228247,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-5a6a88ff-628d-4255-a66b-5bd530ba86c9",
+      "geometryArea": 4.467410336969723,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-7cf05a81-0fb1-4332-8548-faa739b01232",
+      "geometryArea": 1419.7151119830196,
+      "externalArea": 828.1075110192461,
+      "sources": {
+        "145089656": 828.1075110192461
+      }
+    },
+    {
+      "polygonId": "poly-f70c934b-d70c-4541-9b73-3692b1d21c79",
+      "geometryArea": 1368.3725597195853,
+      "externalArea": 1005.661485008141,
+      "sources": {
+        "145064071": 952.7476824508974,
+        "145089656": 52.913802557243784
+      }
+    },
+    {
+      "polygonId": "poly-2453409f-6713-4ffc-9a60-58815ca3da5b",
+      "geometryArea": 196.4991762859742,
+      "externalArea": 113.12135197322415,
+      "sources": {
+        "145064071": 113.12135197322415
+      }
+    },
+    {
+      "polygonId": "poly-8bbd428b-b4d9-4ab2-ab6d-4ab9e2ca1148",
+      "geometryArea": 164.30045716245155,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-f8776254-cf1f-4127-9ee9-b1ef247d8e7d",
+      "geometryArea": 23.6077211884879,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-4768b8e0-61eb-407a-b15e-ddedc8c4beae",
+      "geometryArea": 3761.056011930637,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-5a41e384-fac3-4aa2-a52b-45465f5d2228",
+      "geometryArea": 151.10232338995465,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-ba26fda7-6b37-4020-b53c-fabe9cb6f400",
+      "geometryArea": 1170.3100195755328,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-f89d0855-ffe2-49fd-a297-bfb8dc9b7293",
+      "geometryArea": 73.84633084158453,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-f0264c1e-dd9d-4e2b-bc29-8684db79b2bd",
+      "geometryArea": 254.40024628093306,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-28809c84-1332-40bf-b921-99bb845dbbee",
+      "geometryArea": 457.13141835027506,
+      "externalArea": 366.9292391264466,
+      "sources": {
+        "145064071": 366.9292391264466
+      }
+    },
+    {
+      "polygonId": "poly-10ef4ef0-645f-4f4a-87ea-027d2a4c97fc",
+      "geometryArea": 4.207122547419096,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-ae4f26e3-3f7c-47b3-a06f-08679452772d",
+      "geometryArea": 261.2270742194703,
+      "externalArea": 93.24071838595378,
+      "sources": {
+        "145089656": 93.24071838595378
+      }
+    },
+    {
+      "polygonId": "poly-783f6f3c-d0d9-4f69-bc53-d25617b6c1ee",
+      "geometryArea": 135.5375302113722,
+      "externalArea": 122.63923305731778,
+      "sources": {
+        "145089656": 122.63923305731778
+      }
+    },
+    {
+      "polygonId": "poly-f7882c85-d17e-4eb2-b32c-0e295f136bf6",
+      "geometryArea": 563.9911453965202,
+      "externalArea": 217.03882884063478,
+      "sources": {
+        "145089656": 217.03882884063478
+      }
+    },
+    {
+      "polygonId": "poly-4c3cd2da-56c2-4fd0-bc8e-a4cb5bc7c855",
+      "geometryArea": 1337.319752704992,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-b58762cf-264c-4a0e-b743-e59b1940d284",
+      "geometryArea": 175.46079669304964,
+      "externalArea": 22.617993323713456,
+      "sources": {
+        "145089656": 22.617993323713456
+      }
+    },
+    {
+      "polygonId": "poly-daf21df7-3ec3-4310-9151-f29d4e4c6965",
+      "geometryArea": 3463.4308303776593,
+      "externalArea": 2426.1995381762003,
+      "sources": {
+        "145064071": 345.6252465684023,
+        "145089656": 2080.5742916077843
+      }
+    },
+    {
+      "polygonId": "poly-474f61de-94f1-4aa4-8f56-82f66ec1697d",
+      "geometryArea": 1342.0745191528522,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-cb03ac9d-8f9e-4ae2-993e-d5f67fc3de38",
+      "geometryArea": 157.31948142872142,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-8e3a50c6-71f0-4723-bb54-765bd8506c13",
+      "geometryArea": 511.23886785370286,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-5fd7a676-4ff3-42cd-bccf-019d853dfb59",
+      "geometryArea": 91.73730327269944,
+      "externalArea": 57.29513048164086,
+      "sources": {
+        "145089656": 57.29513048164086
+      }
+    },
+    {
+      "polygonId": "poly-4ff65469-705a-47af-9d26-bc856e78e9c3",
+      "geometryArea": 150.34876285606384,
+      "externalArea": 139.55712802215695,
+      "sources": {
+        "145064071": 139.55712802215695
+      }
+    },
+    {
+      "polygonId": "poly-24ec2f71-f127-4adb-9d6d-6c574b362c6c",
+      "geometryArea": 709.8569789532039,
+      "externalArea": 274.5150035795623,
+      "sources": {
+        "145089656": 274.5150035795623
+      }
+    },
+    {
+      "polygonId": "poly-376c8e07-d490-4b03-abd0-6f7c6ddd3220",
+      "geometryArea": 1089.4004992838613,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-63b4c199-da86-4a61-beb5-5f0e5d77be84",
+      "geometryArea": 127.94599814376971,
+      "externalArea": 83.44935525440991,
+      "sources": {
+        "145089656": 83.44935525440991
+      }
+    },
+    {
+      "polygonId": "poly-f459881e-59a5-4886-bbb9-6a1200774807",
+      "geometryArea": 4.523303719624667,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-1f172a12-d490-45b1-ac53-7820f1c28103",
+      "geometryArea": 17.225558713367775,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-4c1b6d83-7464-459c-9d1e-73acdf064800",
+      "geometryArea": 417.6350021400655,
+      "externalArea": 340.0770810820691,
+      "sources": {
+        "145089656": 340.0770810820691
+      }
+    },
+    {
+      "polygonId": "poly-5594a5c8-71c6-4c3d-84a9-a57aac9f49ca",
+      "geometryArea": 98.50365688166106,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-6d457386-3526-4659-8562-ccf3aa9ddf59",
+      "geometryArea": 289.63997250328623,
+      "externalArea": 201.91947694995338,
+      "sources": {
+        "145064071": 201.91947694995338
+      }
+    },
+    {
+      "polygonId": "poly-448d6c18-aa00-4eaa-b0ed-de04cfebcf82",
+      "geometryArea": 3289.791965129007,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-10242976-e242-4685-a6f3-cfd67257fa68",
+      "geometryArea": 243.17036924304648,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-a3339b22-b73a-4365-bbad-2034c02bbad7",
+      "geometryArea": 1362.2489091036134,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-018bc9f9-f417-4877-b34a-bd7c1d3e2f17",
+      "geometryArea": 182.26370319905652,
+      "externalArea": 113.91481449941075,
+      "sources": {
+        "145064071": 113.91481449941075
+      }
+    },
+    {
+      "polygonId": "poly-9234ef61-c01e-4a9b-9db8-33bdd24b3d1a",
+      "geometryArea": 4.408821659603196,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-c1f8aee8-b888-4aa3-9c62-cabf38357bbb",
+      "geometryArea": 119.17736716840396,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-9040098d-1cb3-4547-9b4b-5674c35acc8d",
+      "geometryArea": 185.68764740933156,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-81f1cb8d-79d1-4a51-8e5b-b8ed75f7f500",
+      "geometryArea": 239.90357263158083,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-bbdb421e-30a1-47fe-b728-8830fdf85b0c",
+      "geometryArea": 4.400211870282605,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-8525c431-cc9b-464a-b60b-8cbfbfd413db",
+      "geometryArea": 476.65516954888653,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-2d8ff131-9648-4625-8dd8-49271e3d496b",
+      "geometryArea": 459.6281653273675,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-7d8ef48e-19f6-436e-9ec7-e248a49a50e6",
+      "geometryArea": 4755.586795467526,
+      "externalArea": 3254.5176357533064,
+      "sources": {
+        "145064071": 2560.510798109092,
+        "145089656": 694.006837644264
+      }
+    },
+    {
+      "polygonId": "poly-3bd472cc-efa3-4e49-afb6-6e34a95b106a",
+      "geometryArea": 25.398499127261523,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-717b9d54-cb53-4c9c-992a-27f4e3bd1fb0",
+      "geometryArea": 1370.9114621550673,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-b4bca487-144e-4084-b447-a4ae6432059b",
+      "geometryArea": 0.9348487116645535,
+      "externalArea": 0.841500781227333,
+      "sources": {
+        "145089656": 0.841500781227333
+      }
+    },
+    {
+      "polygonId": "poly-29ef3f17-f760-4a46-9f56-c16376df65c5",
+      "geometryArea": 254.45374223288667,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-38c4138a-009d-4e56-9421-d58e89478c1f",
+      "geometryArea": 507.7277807101665,
+      "externalArea": 47.40112473524525,
+      "sources": {
+        "145089656": 47.40112473524525
+      }
+    },
+    {
+      "polygonId": "poly-0e96837e-381b-4217-8d35-7c10fac22f45",
+      "geometryArea": 154.12265919693192,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-e5af32c8-df4a-43c8-8b13-06209746033f",
+      "geometryArea": 21.395689951707457,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-3b926d61-3da1-402a-a742-5db9267f285d",
+      "geometryArea": 1411.4798454519055,
+      "externalArea": 974.5275886079003,
+      "sources": {
+        "145064071": 974.5275886079003
+      }
+    },
+    {
+      "polygonId": "poly-fe2587a4-eb9d-4dca-9797-14a2f42825d9",
+      "geometryArea": 224.45334538090933,
+      "externalArea": 0,
+      "sources": {}
+    },
+    {
+      "polygonId": "poly-c469c1e6-09e6-402a-b56f-9da4f550542b",
+      "geometryArea": 140.03485979043452,
+      "externalArea": 0,
+      "sources": {}
+    }
+  ],
+  "sources": [
+    {
+      "id": "145064071",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:February_2024_-_Buildings_in_Shinjuku_4.jpg",
+      "author": "Syced",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceSha256": "853f302106702e7d33b5a65e616e6bb3d9aa44a2049a4323f617e00a997040fb",
+      "registrationSha256": "293a2c41012379123a703a43cad0fe8a5bb7d855aeb632e5f8b37ae84d7db220",
+      "maskSha256": "60b668c962a2dec302a7046a990eb3584223a5bb9e04096a1acb6841dc07ecf2",
+      "areaSquareMetres": 14158.245120605368,
+      "trainingRmsPixels": 1.5627359831355405,
+      "heldOutRmsPixels": 3.2868372269875517,
+      "supportedHeightRangeMetres": [
+        78.08342032238258,
+        277.68
+      ],
+      "cameraModel": "pinhole",
+      "distortionCoefficients": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "positionValidation": "gps-consistency",
+      "projectionEnsembleCameras": 0,
+      "requiresPerSurfaceEnsembleValidation": false,
+      "supportPolicy": "Observed point height range; lower extension requires at least two independent held-out real-edge observations, each >=100px and RMS<=4px/max<=6px. Use the conservative common height interval.",
+      "lineControlResults": [
+        {
+          "name": "bridge-south-edge",
+          "world": [
+            [
+              -13.161,
+              34.63,
+              29.254
+            ],
+            [
+              -13.161,
+              186.37,
+              29.254
+            ]
+          ],
+          "pixels": [
+            [
+              418,
+              440
+            ],
+            [
+              414,
+              690
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            -0.328534161176151,
+            -1.3807031598597632
+          ],
+          "rmsPixels": 1.0035626315049928,
+          "segmentFractions": [
+            0.8432073071469374,
+            0.425135332279525
+          ],
+          "observedHeightRangeMetres": [
+            99.14003532009514,
+            162.5782767864763
+          ]
+        },
+        {
+          "name": "south-outer-stone-edge",
+          "world": [
+            [
+              -5.498,
+              34.63,
+              61.085
+            ],
+            [
+              -5.498,
+              225.579,
+              61.085
+            ]
+          ],
+          "pixels": [
+            [
+              546,
+              450
+            ],
+            [
+              558,
+              700
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            0.9412657879579456,
+            -0.44142037492758845
+          ],
+          "rmsPixels": 0.7351303391172564,
+          "segmentFractions": [
+            0.6047946843629869,
+            0.30412483200361573
+          ],
+          "observedHeightRangeMetres": [
+            92.70233254625842,
+            150.11494018442798
+          ]
+        },
+        {
+          "name": "bridge-north-edge",
+          "world": [
+            [
+              -19.061,
+              34.63,
+              -1.526
+            ],
+            [
+              -19.061,
+              186.37,
+              -1.526
+            ]
+          ],
+          "pixels": [
+            [
+              320,
+              470
+            ],
+            [
+              304,
+              720
+            ],
+            [
+              297,
+              800
+            ]
+          ],
+          "role": "held-out",
+          "errorsPixels": [
+            2.060013913450973,
+            1.7577638246670517,
+            -0.21526125939061558
+          ],
+          "rmsPixels": 1.5684098525485581,
+          "segmentFractions": [
+            0.8501762838768863,
+            0.40773006769172176,
+            0.28636760460249483
+          ],
+          "observedHeightRangeMetres": [
+            78.08342032238258,
+            163.63574931547873
+          ]
+        },
+        {
+          "name": "south-front-stone-edge",
+          "world": [
+            [
+              -14.328,
+              34.63,
+              57.835
+            ],
+            [
+              -14.328,
+              186.37,
+              57.835
+            ]
+          ],
+          "pixels": [
+            [
+              505,
+              370
+            ],
+            [
+              515,
+              675
+            ],
+            [
+              520,
+              790
+            ]
+          ],
+          "role": "held-out",
+          "errorsPixels": [
+            -1.9353683976469824,
+            -2.720400624907086,
+            -1.7876562140627357
+          ],
+          "rmsPixels": 2.1864693864982896,
+          "segmentFractions": [
+            0.8817051049925092,
+            0.4080405788122268,
+            0.26227060266868557
+          ],
+          "observedHeightRangeMetres": [
+            74.42694124894635,
+            168.41993263156334
+          ]
+        }
+      ],
+      "referenceSize": [
+        900,
+        1195
+      ],
+      "maskMarginPixels": 22,
+      "maskValidPixelsBeforeMargin": 1190075,
+      "maskValidPixelsAfterMargin": 1004769,
+      "rejectionCounts": {
+        "outside-validated-height": 25893,
+        "facade-mask": 19787,
+        "occlusion": 25490,
+        "backface": 175215
+      }
+    },
+    {
+      "id": "145089656",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:February_2024_-_Buildings_in_Shinjuku_8.jpg",
+      "author": "Syced",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceSha256": "a350a69e1ddc8f31882a2305768dd1719e670a2256c095925812f7a7c70a31e8",
+      "registrationSha256": "1013258c8dfe9e901759fb3e8a2c47a17e4af8d6ae5cb6fc0846646a446770d0",
+      "maskSha256": "d4c80186bc56896e675e1151a441321071ea847fa9b0e562440c3c256bea07fa",
+      "areaSquareMetres": 10518.065426934874,
+      "trainingRmsPixels": 2.5558081630555463,
+      "heldOutRmsPixels": 4.858150779787632,
+      "supportedHeightRangeMetres": [
+        97.67008142926856,
+        277.68
+      ],
+      "cameraModel": "simple-radial",
+      "distortionCoefficients": [
+        0.10368145404175555,
+        0,
+        0,
+        0,
+        0
+      ],
+      "projectionEnsembleCameras": 0,
+      "requiresPerSurfaceEnsembleValidation": false,
+      "supportPolicy": "Observed point height range; lower extension requires at least two independent held-out real-edge observations, each >=100px and RMS<=4px/max<=6px. Use the conservative common height interval.",
+      "lineControlResults": [
+        {
+          "name": "north-stone-apex",
+          "world": [
+            [
+              -24.088,
+              34.63,
+              -33.775
+            ],
+            [
+              -24.088,
+              249.36,
+              -33.775
+            ]
+          ],
+          "pixels": [
+            [
+              438,
+              235
+            ],
+            [
+              423,
+              925
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            -3.7153433561205134,
+            0.2763316449245963
+          ],
+          "rmsPixels": 2.6344008267398844,
+          "segmentFractions": [
+            0.86776477854208,
+            0.09809743201909833
+          ],
+          "observedHeightRangeMetres": [
+            55.694461577460984,
+            220.96513089634084
+          ]
+        },
+        {
+          "name": "south-stone-apex",
+          "world": [
+            [
+              -12.008,
+              34.63,
+              29.095
+            ],
+            [
+              -12.008,
+              186.37,
+              29.095
+            ]
+          ],
+          "pixels": [
+            [
+              655,
+              450
+            ],
+            [
+              690,
+              700
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            0.37712654885785923,
+            2.9541935139019415
+          ],
+          "rmsPixels": 2.105882683274847,
+          "segmentFractions": [
+            0.9321296032147001,
+            0.4695607070818638
+          ],
+          "observedHeightRangeMetres": [
+            105.88114169260203,
+            176.07134599179858
+          ]
+        },
+        {
+          "name": "north-bridge-west-edge",
+          "world": [
+            [
+              -19.061,
+              34.63,
+              -1.526
+            ],
+            [
+              -19.061,
+              186.37,
+              -1.526
+            ]
+          ],
+          "pixels": [
+            [
+              560,
+              500
+            ],
+            [
+              566,
+              600
+            ],
+            [
+              574,
+              710
+            ]
+          ],
+          "role": "held-out",
+          "errorsPixels": [
+            -2.597702479894906,
+            -2.579136934259168,
+            -1.605468293200488
+          ],
+          "rmsPixels": 2.3077791590028722,
+          "segmentFractions": [
+            0.7569591838922215,
+            0.5826337475736212,
+            0.4154480125825
+          ],
+          "observedHeightRangeMetres": [
+            97.67008142926856,
+            149.4909865638057
+          ]
+        },
+        {
+          "name": "north-inset-west-edge",
+          "world": [
+            [
+              -19.128,
+              34.63,
+              -7.805
+            ],
+            [
+              -19.128,
+              225.9,
+              -7.805
+            ]
+          ],
+          "pixels": [
+            [
+              538,
+              500
+            ],
+            [
+              542,
+              600
+            ],
+            [
+              546,
+              710
+            ]
+          ],
+          "role": "held-out",
+          "errorsPixels": [
+            0.10478689878789282,
+            -0.1796254157329713,
+            -1.2328548623704592
+          ],
+          "rmsPixels": 0.7218440957726053,
+          "segmentFractions": [
+            0.5934490737005985,
+            0.45670077721921276,
+            0.3256244754175379
+          ],
+          "observedHeightRangeMetres": [
+            96.91219341311248,
+            148.1390043267135
+          ]
+        }
+      ],
+      "referenceSize": [
+        900,
+        1195
+      ],
+      "maskMarginPixels": 31,
+      "maskValidPixelsBeforeMargin": 1393310,
+      "maskValidPixelsAfterMargin": 1088866,
+      "rejectionCounts": {
+        "facade-mask": 24733,
+        "outside-validated-height": 42725,
+        "backface": 163901,
+        "occlusion": 18165
+      }
+    },
+    {
+      "id": "76730224",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tokyo_Metropolitan_Government_Building_No._1_2.jpg",
+      "author": "Zairon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceSha256": "d4c68361c3b77b99a6958c6d8a9a752b521552ef7726fa02a3b1de71bec3af9f",
+      "registrationSha256": "3111a06d35b591cef86a84aa10dad4730907217e190db6de9ce68a1db0788744",
+      "maskSha256": "ba7a66a96f9cc22787109aa582202c94820852eb51a9b729dfcfb5eecf1d0c60",
+      "areaSquareMetres": 0,
+      "trainingRmsPixels": 2.651494878866563,
+      "heldOutRmsPixels": 3.686731021064311,
+      "supportedHeightRangeMetres": [
+        185.85,
+        277.68
+      ],
+      "cameraModel": "simple-radial",
+      "distortionCoefficients": [
+        -0.057447365414684724,
+        0,
+        0,
+        0,
+        0
+      ],
+      "positionValidation": "projection-ensemble",
+      "projectionEnsembleCameras": 84,
+      "requiresPerSurfaceEnsembleValidation": true,
+      "projectionEnsemblePolicy": "No surveyed camera-position claim. All 64 training-only noise trials plus all near-optimal initializations must pass held-out point RMS<=6px/max<=10px. Each credited surface must remain within the observed control hull, project within 4 reference pixels of nominal, and pass masks, facing, resolution and city occlusion under EVERY camera. This is a finite empirical sensitivity test, not a probabilistic guarantee.",
+      "supportPolicy": "Observed point height range; lower extension requires at least two independent held-out real-edge observations, each >=100px and RMS<=4px/max<=6px. Use the conservative common height interval.",
+      "lineControlResults": [
+        {
+          "name": "east-bridge-north",
+          "world": [
+            [
+              14.247,
+              82.31,
+              -7.753
+            ],
+            [
+              14.247,
+              186.37,
+              -7.753
+            ]
+          ],
+          "pixels": [
+            [
+              513,
+              420
+            ],
+            [
+              549,
+              810
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            0.6918339178407678,
+            -0.8478722557993592
+          ],
+          "rmsPixels": 0.7737963336787014,
+          "segmentFractions": [
+            0.879847056590303,
+            0.14925609447395194
+          ],
+          "observedHeightRangeMetres": [
+            97.84158919095944,
+            173.86688470878693
+          ]
+        },
+        {
+          "name": "east-bridge-south",
+          "world": [
+            [
+              19.992,
+              82.31,
+              23.335
+            ],
+            [
+              19.992,
+              186.37,
+              23.335
+            ]
+          ],
+          "pixels": [
+            [
+              331,
+              420
+            ],
+            [
+              294,
+              810
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            0.07248178945530981,
+            -1.871597350713614
+          ],
+          "rmsPixels": 1.3244112376827792,
+          "segmentFractions": [
+            0.8817230026689418,
+            0.15279152544626473
+          ],
+          "observedHeightRangeMetres": [
+            98.20948613793831,
+            174.06209565773008
+          ]
+        },
+        {
+          "name": "east-south-silhouette",
+          "world": [
+            [
+              21.572,
+              34.63,
+              62.545
+            ],
+            [
+              21.572,
+              186.37,
+              62.545
+            ]
+          ],
+          "pixels": [
+            [
+              117,
+              450
+            ],
+            [
+              70,
+              600
+            ],
+            [
+              24,
+              750
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            2.4185735241478596,
+            1.0990127227426285,
+            -0.35210508816194874
+          ],
+          "rmsPixels": 1.5471807532378254,
+          "segmentFractions": [
+            0.9134290792471531,
+            0.6807672113132683,
+            0.5014225547502653
+          ],
+          "observedHeightRangeMetres": [
+            110.71585845780527,
+            173.23372848496302
+          ]
+        },
+        {
+          "name": "east-north-silhouette",
+          "world": [
+            [
+              1.342,
+              34.63,
+              -45.095
+            ],
+            [
+              1.342,
+              185.85,
+              -45.095
+            ]
+          ],
+          "pixels": [
+            [
+              724,
+              450
+            ],
+            [
+              773,
+              600
+            ],
+            [
+              820,
+              750
+            ]
+          ],
+          "role": "train",
+          "errorsPixels": [
+            -3.0852400456906253,
+            -0.46671370371780085,
+            1.1416996148270755
+          ],
+          "rmsPixels": 1.9183331159513954,
+          "segmentFractions": [
+            0.9149350003772027,
+            0.6778976171593487,
+            0.4956377469403355
+          ],
+          "observedHeightRangeMetres": [
+            109.58034009231753,
+            172.9864707570406
+          ]
+        }
+      ],
+      "referenceSize": [
+        900,
+        1199
+      ],
+      "maskMarginPixels": 39,
+      "maskValidPixelsBeforeMargin": 3325386,
+      "maskValidPixelsAfterMargin": 3034810,
+      "rejectionCounts": {
+        "backface": 219568,
+        "outside-validated-height": 54843,
+        "facade-mask": 9513,
+        "projection-ensemble-spread": 244,
+        "occlusion": 10821,
+        "outside-validated-control-hull": 1384
+      }
+    }
+  ],
+  "rejectedRegistrations": [
+    {
+      "sourceId": "108038344",
+      "reasons": [
+        "horizontal-prior"
+      ]
+    },
+    {
+      "sourceId": "16198277",
+      "reasons": [
+        "projection-provenance-unresolved",
+        "insufficient-held-out-controls",
+        "horizontal-prior",
+        "height-prior"
+      ]
+    },
+    {
+      "sourceId": "32242346",
+      "reasons": [
+        "held-out-rms",
+        "held-out-max",
+        "horizontal-prior",
+        "height-prior"
+      ]
+    },
+    {
+      "sourceId": "45075506",
+      "reasons": [
+        "held-out-rms",
+        "held-out-max",
+        "horizontal-prior",
+        "height-prior"
+      ]
+    },
+    {
+      "sourceId": "76730220",
+      "reasons": [
+        "training-error",
+        "insufficient-independent-geometry-controls",
+        "held-out-height-span",
+        "held-out-geometry-degenerate",
+        "projection-ensemble-held-out-error"
+      ]
+    },
+    {
+      "sourceId": "76730224",
+      "reasons": [
+        "unstable-camera"
+      ]
+    },
+    {
+      "sourceId": "76730228",
+      "reasons": [
+        "training-error",
+        "held-out-rms",
+        "insufficient-independent-geometry-controls",
+        "held-out-height-span",
+        "held-out-geometry-degenerate",
+        "invalid-projection-ensemble-camera"
+      ]
+    },
+    {
+      "sourceId": "79695663",
+      "reasons": [
+        "training-error",
+        "held-out-rms",
+        "held-out-max",
+        "horizontal-prior",
+        "height-prior"
+      ]
+    }
+  ],
+  "policy": "Area-weighted union of disjoint PLATEAU wall subtriangles, max edge 2m; accepted external ground-photo camera controls, held-out checks, validated height range, 7 visibility samples, full urban BVH occlusion, two-model semantic facade agreement, measured-uncertainty margin and >=2 pixels/metre. Neutral surfaces and PLATEAU-native imagery do not contribute."
+}

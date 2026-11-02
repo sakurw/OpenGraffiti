@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>東京都庁第一本庁舎 — 写真モデル</title><link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px system-ui,sans-serif;color:#21353c;background:#e9eef0}header{height:90px;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #ccd6da}h1{font-size:19px;margin:0 0 5px}p{margin:0;color:#536770;font-size:12px}nav{display:flex;gap:7px;flex-wrap:wrap}button,a{font:inherit;color:#244853;background:#fff;border:1px solid #b2c5cc;border-radius:5px;padding:7px 10px;text-decoration:none;cursor:pointer}button[aria-pressed=true]{background:#214f5b;color:white}#view{height:calc(100dvh - 138px)}canvas{display:block;width:100%;height:100%;touch-action:none}footer{height:48px;padding:8px 24px;display:flex;justify-content:space-between;gap:12px;border-top:1px solid #ccd6da;font-size:12px;background:white}#status{font-weight:600}#error{position:absolute;top:110px;left:20px;color:#a52121;background:#fff;padding:18px;display:none;max-width:90%}@media(max-width:780px){header{height:135px;padding:12px;display:block}nav{margin-top:10px}#view{height:calc(100dvh - 195px)}footer{height:60px;padding:8px 12px}}
+</style>
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/","three/addons/loaders/GLTFLoader.js":"/vendor/GLTFLoader.js","three/addons/controls/OrbitControls.js":"/vendor/OrbitControls.js","three/addons/libs/meshopt_decoder.module.js":"/vendor/meshopt_decoder.module.js"}}</script>
+</head><body><header><div><h1>東京都庁第一本庁舎</h1><p id="description">PLATEAUの形状と写真を使用した単体モデル</p></div><nav aria-label="視点"><button data-view="southwest">南西</button><button data-view="northwest">北西</button><button data-view="northeast">北東</button><button data-view="east">東</button><button data-view="eastWall">中央壁</button><button data-view="westWall">西壁境界</button><button data-view="upper">上部</button><button data-view="roof">屋上</button><button data-view="eastupper">東上部</button><button data-view="eastBelow">東見上げ</button><button data-view="northDetail">北塔詳細</button><button data-view="northSwShaft">北塔の南面</button><button data-view="nwShaft">北西の縦壁</button><button data-view="shaftWall">縦壁</button><button data-view="shaftLower">縦壁下部</button><button data-view="southwest">全体に戻す</button><a id="download" download>GLB保存</a></nav></header>
+<main id="view" aria-label="都庁の3Dモデル"></main><div id="error" role="alert"></div><footer><span id="status" role="status">写真モデルを読み込み中…</span><span><a href="/assets/tocho-landmark/sources.html" target="_blank" style="padding:2px 6px">出典・残る制約</a> ドラッグで回転 · ホイールで拡大縮小 · 右ドラッグで移動</span></footer>
+<script>window.__TOCHO_REVIEW__={ready:false,errors:[]};function fail(e){const t=String(e?.message||e);window.__TOCHO_REVIEW__.errors.push(t);document.querySelector('#error').style.display='block';document.querySelector('#error').textContent='読み込みに失敗しました: '+t;document.querySelector('#status').textContent='読み込み失敗'}addEventListener('error',e=>fail(e.message));addEventListener('unhandledrejection',e=>fail(e.reason));if(location.protocol==='file:')location.replace('http://127.0.0.1:3100/tocho-landmark-web-final.html');</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+const params=new URLSearchParams(location.search),mode=params.get('model')||'extraObservedWalls';
+const urls={frameconnected:'/assets/tocho-landmark/tocho-landmark-upper-frames-connected.glb',frameconnectedvisible:'/assets/tocho-landmark/tocho-landmark-upper-frames-connected-visible.glb',frameclip:'/assets/tocho-landmark/tocho-landmark-upper-frames-clipped.glb',frames:'/assets/tocho-landmark/tocho-landmark-upper-frames-candidate.glb',checked:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-improved.glb',colourmatched:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-colour-matched.glb',balanced:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-balanced.glb',zonedv2:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-zoned-v2.glb',glassneutral:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-glass-neutral.glb',glassreflective:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-glass-reflective.glb',plateauupper:'/assets/tocho-landmark/tocho-landmark-reviewed-native-plateau-upper.glb',coherent:'/assets/tocho-landmark/tocho-landmark-coherent.glb',surface:'/assets/tocho-landmark/tocho-landmark-surface-colour.glb',native:'/assets/tocho-landmark/tocho-landmark-native-hybrid.glb',quality:'/assets/tocho-landmark/tocho-landmark-quality.glb',observed:'/assets/tocho-landmark/tocho-landmark-observed-east.glb',reviewed:'/assets/tocho-landmark/tocho-landmark-reviewed.glb',source:'/assets/tocho-landmark/tocho-plateau-original.glb',hybrid:'/assets/tocho-landmark/tocho-landmark-hybrid.glb',neutral:'/assets/tocho-landmark/tocho-landmark-reviewed-neutral.glb',zonedglass:'/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-zoned-glass-v1.glb'};
+urls.observedFrames='/assets/tocho-landmark/tocho-landmark-observed-native-frames.glb';
+urls.obstructionCleanup='/assets/tocho-landmark/tocho-landmark-obstruction-cleanup.glb';
+urls.foregroundCleanup='/assets/tocho-landmark/tocho-landmark-foreground-cleanup.glb';
+urls.colourCoherent='/assets/tocho-landmark/tocho-landmark-colour-coherent.glb';
+urls.heightRefined='/assets/tocho-landmark/tocho-landmark-height-refined-candidate.glb';
+urls.eastBridgeSource='/assets/tocho-landmark/tocho-landmark-east-bridge-source-diagnostic.glb';
+urls.eastBridgeTone='/assets/tocho-landmark/tocho-landmark-east-bridge-tone-diagnostic.glb';
+urls.eastBridgeRefined='/assets/tocho-landmark/tocho-landmark-east-bridge-refined-candidate.glb';
+urls.grayConsistent='/assets/tocho-landmark/tocho-landmark-colour-independent-candidate.glb';
+urls.roofPlane='/assets/tocho-landmark/tocho-landmark-roof-plane-candidate.glb';
+urls.roofBoundary='/assets/tocho-landmark/tocho-landmark-roof-boundary-candidate.glb';
+urls.extraObservedWalls='/assets/tocho-landmark/tocho-landmark-extra-observed-walls-neutral.glb';
+urls.p110Photo='/assets/tocho-landmark/tocho-landmark-sw-p110-candidate.glb';
+urls.p110Expanded='/assets/tocho-landmark/tocho-landmark-sw-p110-expanded-candidate.glb';
+urls.nwShaftObserved='/assets/tocho-landmark/tocho-landmark-nw-shaft-observed.glb';
+urls.nwShaft='/assets/tocho-landmark/tocho-landmark-nw-shaft-candidate.glb';
+urls.shaftObserved='/assets/tocho-landmark/tocho-landmark-shaft-observed-surfaces.glb';
+urls.shaftPhotoPairedSafe='/assets/tocho-landmark/tocho-landmark-shaft-photo-paired-safe-diagnostic.glb';
+urls.shaftPhotoPaired='/assets/tocho-landmark/tocho-landmark-shaft-photo-paired-diagnostic.glb';
+urls.observedSurfaces='/assets/tocho-landmark/tocho-landmark-observed-surfaces-candidate.glb';
+urls.observedCoverage='/assets/tocho-landmark/tocho-landmark-reviewed-native-neutral-zoned-v42.glb';
+urls.sourceScope='/assets/tocho-landmark/tocho-landmark-source-scope-candidate.glb';
+urls.northCeiling='/assets/tocho-landmark/tocho-landmark-north-ceiling-candidate.glb';
+urls.northObserved='/assets/tocho-landmark/tocho-landmark-north-observed-surfaces.glb';
+urls.nativeRoundedCore='/assets/tocho-landmark/tocho-landmark-native-rounded-core.glb';
+urls.upperRecessDiagnostic='/assets/tocho-landmark/tocho-landmark-upper-recess-diagnostic.glb';
+const url=urls[mode]||urls.plateauupper,state=window.__TOCHO_REVIEW__;state.model=url;document.querySelector('#download').href=url;
+if(mode==='eastBridgeRefined')document.querySelector('#description').textContent='最新改善候補 · 東中央壁の確認済み約1,712m²を鮮明化し、同じ壁面の写真で明暗を統一 · グレーは未適用';
+if(mode==='grayConsistent')document.querySelector('#description').textContent='検証候補 · 写真は東中央壁の改善版と同一 · 未適用面のグレーを統一';
+if(mode==='roofPlane')document.querySelector('#description').textContent='改善候補 · 屋上ヘリポート約600m²を元写真と元形状で復元 · 周囲の未適用部分はグレー';
+if(mode==='roofBoundary')document.querySelector('#description').textContent='改善候補 · 屋上ヘリポートを復元し、東中央壁の写真境界を改善 · グレーは未適用';
+if(mode==='shaftPhotoPaired'||mode==='shaftPhotoPairedSafe')document.querySelector('#description').textContent='縦壁2面の実写候補 · 約317m²の灰色面へ写真を追加 · グレーは未適用';
+if(mode==='extraObservedWalls'||!urls[mode])document.querySelector('#description').textContent='灰色だった2面の約346m²に実写を追加 · 灰色は未適用 · 品質確認中';
+if(mode==='p110Photo')document.querySelector('#description').textContent='北塔南面の灰色壁に実写を追加した検証候補 · 灰色は未適用';
+if(mode==='p110Expanded')document.querySelector('#description').textContent='北塔南面の上側約95m²に実写を追加した検証候補 · 灰色は未適用';
+if(mode==='nwShaftObserved')document.querySelector('#description').textContent='北西の灰色の縦壁約251m²にも実写を追加 · 灰色は未適用 · 品質確認中';
+if(mode==='nwShaft')document.querySelector('#description').textContent='北西の縦壁に実写を追加した検証候補 · 灰色は未適用';
+if(mode==='shaftObserved')document.querySelector('#description').textContent='縦壁の実写追加版 · 隣接2面の窓列を同じ写真で統一 · グレーは未適用 · 品質確認中';
+if(mode==='observedSurfaces')document.querySelector('#description').textContent='改善候補 · 角面・細い壁・屋上アンテナに確認済みの写真を追加 · 元の簡略形状を保持 · グレーは未適用';
+if(mode==='observedCoverage')document.querySelector('#description').textContent='改善候補 · 上部の観測写真と屋上通路を復元 · 写真境界を調整 · 元PLATEAUの簡略形状を保持 · グレーは未適用';
+if(mode==='sourceScope')document.querySelector('#description').textContent='改善候補 · 地上写真1面の余分な色補正を除去 · 屋上復元と写真境界の改善を保持 · グレーは未適用';
+if(mode==='northCeiling')document.querySelector('#description').textContent='検証候補 · 北側1面の奥行きは推定 · 観測した天井約38m²に元写真を適用 · グレーは未適用';
+if(mode==='northObserved')document.querySelector('#description').textContent='検証候補 · 実写を天井約20m²・奥壁約15m²に分離 · 形状・奥行き・位置合わせは推定 · グレーは未適用';
+if(mode==='nativeRoundedCore')document.querySelector('#description').textContent='検証候補 · 元写真のルーバー約91m²を丸い奥壁へ移す · 形状は推定 · アンテナなどの除外部分はグレーで未適用';
+if(mode==='upperRecessDiagnostic')document.querySelector('#description').textContent='検証候補 · 上部の奥行きは推定・未確定 · グレーは写真未適用 · 正式採用前';
+if(mode==='heightRefined')document.querySelector('#description').textContent='前回版 · 西側の確認済み平面338m²を鮮明な地上写真へ変更 · 模様のないグレーは未適用';
+if(mode==='eastBridgeSource')document.querySelector('#description').textContent='未採用の検証候補 · 東中央壁の内側だけを新しい写真へ変更 · 色合わせは未合格';
+if(mode==='eastBridgeTone')document.querySelector('#description').textContent='検証候補 · 東中央壁の内側に同じ壁面の明暗と新しい写真の細部を使用 · グレーは未適用';
+if(mode==='colourCoherent')document.querySelector('#description').textContent='前回版 · 青みを軽減 · 平面写真の復元前';
+if(mode==='foregroundCleanup')document.querySelector('#description').textContent='前回版 · 窓列を復元し、屋根・設備・枝の写り込みを除去 · 青み軽減前';
+if(mode==='obstructionCleanup')document.querySelector('#description').textContent='元写真の窓列を復元し、屋根・設備の写り込みを除去した版 · 模様のないグレーは未適用';
+if(mode==='observedFrames')document.querySelector('#description').textContent='最新改善候補 · 元写真の確認済み窓列を復元 · グレーの領域は未適用';
+if(mode==='frames'||mode==='frameclip'||mode==='frameconnected')document.querySelector('#description').textContent='上部の平面外枠だけを戻した検証候補 · 色調は検証中 · 黄土色は未適用';
+if(mode==='checked')document.querySelector('#description').textContent='壁面色調と不適合面を改善 · 黄土色は未適用';
+if(mode==='colourmatched')document.querySelector('#description').textContent='未適用面の中立色調を周囲に合わせて調整 · 写真領域は変更なし';
+if(mode==='balanced')document.querySelector('#description').textContent='未適用面の中立色を再調整した比較候補 · 写真領域とUVは変更なし';
+if(mode==='glassneutral')document.querySelector('#description').textContent='未適用面をガラス外壁寄りの中立色で比較 · 写真領域とUVは変更なし';
+if(mode==='glassreflective')document.querySelector('#description').textContent='未適用面を反射ガラス材質寄りで比較 · 写真領域とUVは変更なし';
+if(mode==='frameconnectedvisible')document.querySelector('#description').textContent='上部フレーム検証候補 · 写真領域変更なし · 未適用面は明示';
+if(mode==='plateauupper')document.querySelector('#description').textContent='PLATEAU原画像を上部にも適用した比較候補 · 写真根拠管理対象';
+if(mode==='coherent')document.querySelector('#description').textContent='壁面ごとの色調と写真選択を改善 · 黄土色は未適用';
+if(mode==='surface')document.querySelector('#description').textContent='原画像復元＋壁面ごとに検証した色調補正 · 黄土色は未適用';
+if(mode==='native')document.querySelector('#description').textContent='地上写真とPLATEAU原画像を使用 · 黄土色は未適用 · 原画像の縮小なし';
+if(mode==='quality')document.querySelector('#description').textContent='色むら・写真切替・上部の不適合投影を修正 · 黄土色は未適用';
+if(mode==='reviewed')document.querySelector('#description').textContent='位置合わせ済みの地上写真 · 黄土色は未適用（写真や推定で補完しません）';
+if(mode==='observed')document.querySelector('#description').textContent='東側上部の写真を追加した候補 · 黄土色は未適用 · 東側の撮影位置は未確定';
+if(mode==='hybrid')document.querySelector('#description').textContent='地上写真を主要面に適用 · その他の面はPLATEAU写真を保持';
+try{
+const host=document.querySelector('#view'),renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setClearColor(0xe9eef0);host.append(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,.1,5000),controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;controls.minPolarAngle=.06;controls.maxPolarAngle=Math.PI*.9;
+scene.add(new THREE.HemisphereLight(0xffffff,0xa5b1bc,1.7));const light=new THREE.DirectionalLight(0xffffff,1.3);light.position.set(-200,400,200);scene.add(light);
+const model=await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(url);model.scene.traverse(o=>{if(o.isMesh)for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m.map)m.map.anisotropy=m.userData.boundedSourceFiltering?1:Math.min(8,renderer.capabilities.getMaxAnisotropy());});scene.add(model.scene);
+const box=new THREE.Box3().setFromObject(model.scene),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());
+if(mode==='upperRecessDiagnostic'||mode==='northCeiling'||mode==='northObserved'||mode==='nativeRoundedCore'){renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;light.castShadow=true;light.target.position.copy(center);scene.add(light.target);light.shadow.mapSize.set(4096,4096);Object.assign(light.shadow.camera,{left:-180,right:180,top:210,bottom:-210,near:100,far:650});light.shadow.camera.updateProjectionMatrix();light.shadow.bias=-.0005;light.shadow.normalBias=.2;model.scene.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});}state.renderShadows=mode==='upperRecessDiagnostic'||mode==='northCeiling'||mode==='northObserved'||mode==='nativeRoundedCore';
+let triangles=0,textured=0,meshes=0;model.scene.traverse(o=>{if(o.isMesh){meshes++;const t=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;triangles+=t;if(o.material.map)textured+=t;}});
+const ground=new THREE.Mesh(new THREE.CircleGeometry(110,80),new THREE.MeshBasicMaterial({color:0xd6dfe3,side:THREE.DoubleSide}));ground.rotation.x=-Math.PI/2;ground.position.set(center.x,box.min.y-.2,center.z);scene.add(ground);
+const draw=()=>renderer.render(scene,camera);function view(name){camera.fov=name==='northDetail'?30:35;camera.updateProjectionMatrix();const vectors={southwest:[-1,.2,1],northwest:[-1,.2,-1],northeast:[1,.2,-1],east:[1,.16,.42],upper:[-1,.23,1],eastupper:[1,.16,.42]},dir=new THREE.Vector3(...(vectors[name]||vectors.southwest));const target=center.clone();if(name==='upper'||name==='eastupper')target.y=box.max.y-size.y*.22;const vertical=size.y/(2*Math.tan(THREE.MathUtils.degToRad(camera.fov/2)));const distance=vertical*((name==='upper'||name==='eastupper')?.50:1.23);camera.position.copy(target).add(dir.normalize().multiplyScalar(distance));if(name==='eastBelow'){target.y=box.max.y-size.y*.16;camera.position.set(center.x+140,box.min.y+30,center.z+35);}if(name==='northDetail'){target.set(10.155,260,-9.947);camera.position.set(54.873,210,30.94);}if(name==='roof'){camera.fov=38;camera.updateProjectionMatrix();target.set(0,273,12);camera.position.set(-105,391,128);}if(name==='eastWall'){camera.fov=38;camera.updateProjectionMatrix();target.set(17,120,8);camera.position.set(135,123,-14);}if(name==='westWall'){camera.fov=28;camera.updateProjectionMatrix();target.set(-18.88,98.5,-38.04);camera.position.set(-40.52,98.5,-34.05);}if(name==='shaftWall'||name==='shaftLower'){camera.fov=38;camera.updateProjectionMatrix();const y=name==='shaftLower'?187:225;target.set(11,y,-7);camera.position.set(60,y+2,65);}if(name==='nwShaft'){camera.fov=38;camera.updateProjectionMatrix();target.set(-9,222,29);camera.position.set(-81,228,-18);}if(name==='northSwShaft'){camera.fov=38;camera.updateProjectionMatrix();target.set(0,213,2);camera.position.set(-40,216,57);}controls.target.copy(target);controls.update();draw();state.view=name;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));}
+function resize(){camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();renderer.setSize(host.clientWidth,host.clientHeight,false);draw();}new ResizeObserver(resize).observe(host);resize();view(params.get('view')||'southwest');controls.addEventListener('change',draw);document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
+Object.assign(state,{ready:true,meshes,triangles,texturedTriangles:textured,bounds:{min:box.min.toArray(),max:box.max.toArray()},webgl:true});
+document.querySelector('#status').textContent='表示完了 · 第一本庁舎のみ';console.info('TOCHO_READY',JSON.stringify(state));
+}catch(e){fail(e);console.error(e);}
+</script></body></html>
+
+
+
+
+
+
+
+

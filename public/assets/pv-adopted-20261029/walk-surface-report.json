@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "method": "Road color layer on unchanged official DEM TIN; union of source road polygons and projected native road coverage with one pixel edge dilation; no independent low road mesh or vertical cut closures.",
+  "width": 6439,
+  "height": 8192,
+  "nativeRoadPixels": 4196682,
+  "priority": "one continuous surface; road material covers terrain at road pixels",
+  "buildingGeometryUnchanged": true
+}

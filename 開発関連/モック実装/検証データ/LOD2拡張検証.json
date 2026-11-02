@@ -1,0 +1,72 @@
+{
+  "datasetVersion": "plateau-2025-v2",
+  "manifestFiles": 6099,
+  "walls": 31542,
+  "pickableWalls": 31542,
+  "roadSections": 195,
+  "areas": [
+    {
+      "id": "tokyo-tower",
+      "buildingCount": 1258,
+      "texturedBuildings": 1258,
+      "wallCount": 18391,
+      "pickTriangles": 45979,
+      "maxPlaneErrorMeters": 0.02835289154513365,
+      "maxSourceUvError": 0
+    },
+    {
+      "id": "tocho",
+      "buildingCount": 1600,
+      "texturedBuildings": 987,
+      "wallCount": 13151,
+      "pickTriangles": 31719,
+      "maxPlaneErrorMeters": 0.029383362581173075,
+      "maxSourceUvError": 0
+    }
+  ],
+  "bakedSamples": [
+    {
+      "wallId": "c55e0fd2-e302-550f-a4c4-cb1820f1e5b0",
+      "lod": 3,
+      "width": 1911,
+      "height": 2048,
+      "outsidePixels": 130368
+    },
+    {
+      "wallId": "bf87ad3c-874b-53e5-b4da-c2c9d0c8e097",
+      "lod": 2,
+      "width": 143,
+      "height": 2048,
+      "outsidePixels": 0
+    },
+    {
+      "wallId": "013856be-16b1-5751-9852-f61bb0f08ed2",
+      "lod": 2,
+      "width": 2048,
+      "height": 487,
+      "outsidePixels": 0
+    },
+    {
+      "wallId": "fcc9a8ee-391b-57e1-88ea-b01edca11a38",
+      "lod": 2,
+      "width": 2048,
+      "height": 723,
+      "outsidePixels": 0
+    },
+    {
+      "wallId": "3299068e-5a87-5499-89e5-350f3e900fbb",
+      "lod": 2,
+      "width": 529,
+      "height": 2048,
+      "outsidePixels": 0
+    },
+    {
+      "wallId": "5a1955d0-8e40-5f98-b183-857d0c354773",
+      "lod": 2,
+      "width": 2048,
+      "height": 342,
+      "outsidePixels": 0
+    }
+  ],
+  "limits": "Full source UV/GLB pick coverage; selected baking samples only. Not full GPU photometric or road visibility acceptance."
+}

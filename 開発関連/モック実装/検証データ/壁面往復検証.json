@@ -1,0 +1,200 @@
+{
+  "datasetVersion": "plateau-2025-v1",
+  "manifestFiles": 44,
+  "overlayCount": 12,
+  "tests": "manifest hashes; image dimensions/hash/binary masks; transparent pixels normalized; GLB source IDs; all vertex UV and plane roundtrip",
+  "results": [
+    {
+      "wallId": "15d83008-61af-5274-9887-bd5ca11e0d25",
+      "number": 1,
+      "canvas": [
+        1953,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_37db2946-0008-4d80-9294-ef271f0b31fc",
+      "polygonCount": 1,
+      "insidePixels": 3744074,
+      "outsidePixels": 255670,
+      "maxUvPixelError": 0.004865598717251986,
+      "maxPlaneErrorMeters": 0.0008866522744301331,
+      "baseHash": "fad2de196c67d13f570b1fb22fc99c1034a3b487f4ac1c43c3450f2ef70c12db"
+    },
+    {
+      "wallId": "b6ca67b5-ebdd-58b4-9522-edd831316d7e",
+      "number": 2,
+      "canvas": [
+        1685,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_2955f410-f3fa-4e07-bb9a-67b53f62696f",
+      "polygonCount": 20,
+      "insidePixels": 3213226,
+      "outsidePixels": 237654,
+      "maxUvPixelError": 0.005630243067628604,
+      "maxPlaneErrorMeters": 0.00024245086841756525,
+      "baseHash": "9605ab2d4652c4571adef2d1f606889b999cbb8b0be9ca24e7cb7bb5d76121e1"
+    },
+    {
+      "wallId": "44623e44-341d-52cd-936c-6b88311df972",
+      "number": 3,
+      "canvas": [
+        2048,
+        1196
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_762e040a-2679-47f6-97fc-a6a36943cf5b",
+      "polygonCount": 2,
+      "insidePixels": 2449408,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0020815006041630113,
+      "maxPlaneErrorMeters": 0.000011114060971983974,
+      "baseHash": "f4938da3c14f1366e3cc03c9d48be4b9d0616f3c1c529595363bdc742fad0eb3"
+    },
+    {
+      "wallId": "41704c93-4a6b-54ff-a296-b643e2344873",
+      "number": 4,
+      "canvas": [
+        2048,
+        949
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_6ac39bb9-e7e5-4cb8-ae67-a99d49293dc1",
+      "polygonCount": 2,
+      "insidePixels": 1943552,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0018314825698215946,
+      "maxPlaneErrorMeters": 0.000013141431436043173,
+      "baseHash": "6def59a75d87b4d0bf5fb2e9c6cc7bc0f7ce9a5afa1ce89ae893962aa3f74806"
+    },
+    {
+      "wallId": "82d038c8-3200-5c95-897c-b134d19a7b3f",
+      "number": 5,
+      "canvas": [
+        2048,
+        947
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_de80a722-d415-48b0-be41-39f4a3a1fee2",
+      "polygonCount": 6,
+      "insidePixels": 1877506,
+      "outsidePixels": 61950,
+      "maxUvPixelError": 0.0029832266072844504,
+      "maxPlaneErrorMeters": 0.0010852833150508667,
+      "baseHash": "33c367e3b636b239a8c15e34771342694f179c7a8c6cac7cbd3f3d7c2046374d"
+    },
+    {
+      "wallId": "498fc17c-5a74-54a6-ad84-6bb62de8ace0",
+      "number": 6,
+      "canvas": [
+        2048,
+        896
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_eaf93e44-e95f-4e45-ba59-42b225967b55",
+      "polygonCount": 2,
+      "insidePixels": 1835008,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.002363484284160222,
+      "maxPlaneErrorMeters": 0.0000247108800888185,
+      "baseHash": "842f860e64b0edf9c18e5552141fc3e864594885db070996304d6011ce2a8a01"
+    },
+    {
+      "wallId": "db3f6637-17b4-5200-b30b-d81473477f5a",
+      "number": 7,
+      "canvas": [
+        2048,
+        1215
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_c4e0e4a8-feb7-4f9f-99c2-da2a042449f4",
+      "polygonCount": 2,
+      "insidePixels": 2488320,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0037231238480104592,
+      "maxPlaneErrorMeters": 9.878991970844228e-7,
+      "baseHash": "8dc4268323cfd311b1ae7a9983f7d31e057dfe610215a7dba47b1f595000beae"
+    },
+    {
+      "wallId": "9d715f5e-9798-5e1e-b04b-20ceb6ae0e70",
+      "number": 8,
+      "canvas": [
+        2048,
+        515
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_ae8606c3-934b-4b80-88dc-3ae91ffc7c17",
+      "polygonCount": 2,
+      "insidePixels": 1054720,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.001649330367854418,
+      "maxPlaneErrorMeters": 0.000017302929201434836,
+      "baseHash": "a0863f4aab5a35d0a4aae4545823a1cff692429ecd558394bddc27248fbbd73d"
+    },
+    {
+      "wallId": "790adf13-2c7d-53f8-8fd0-725bc88d0cc6",
+      "number": 9,
+      "canvas": [
+        1541,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_26a8ef5b-e446-46a9-b801-4c3a127f0862",
+      "polygonCount": 2,
+      "insidePixels": 3155968,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0025422085223645308,
+      "maxPlaneErrorMeters": 0.000012692682085774367,
+      "baseHash": "47705c55830be49778956db037d36a6190cf9573e8bc7cbe7fb034832ca41d85"
+    },
+    {
+      "wallId": "a521bb14-f50a-5201-a059-d0fab76c85f6",
+      "number": 10,
+      "canvas": [
+        1867,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_ffb55efc-d9f3-46b5-a335-8520e38755cd",
+      "polygonCount": 2,
+      "insidePixels": 3823616,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0048547243576793075,
+      "maxPlaneErrorMeters": 0.00001805785401165494,
+      "baseHash": "82b6de24b582d105b17fc5c6e7757f6de8171ae625e950ca6fca3bb586715ad8"
+    },
+    {
+      "wallId": "02efe234-0c09-56d1-9063-a99d03bba179",
+      "number": 11,
+      "canvas": [
+        1867,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_a750cd41-8b68-4457-971f-bbf1357e9ee0",
+      "polygonCount": 2,
+      "insidePixels": 3823616,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.004175355723999595,
+      "maxPlaneErrorMeters": 0.000011147294034174155,
+      "baseHash": "5540c0bdbc69b3ba65fceb0f42d0565f918ec1f9053580f64e6019d1c1b834f8"
+    },
+    {
+      "wallId": "54a5277f-00b3-5de3-a391-a1f4ff07dabf",
+      "number": 12,
+      "canvas": [
+        799,
+        2048
+      ],
+      "sourceLOD": 3,
+      "sourceSurface": "gml_6525daa1-0375-4bbb-8b82-1ee8e4c2bd9a",
+      "polygonCount": 2,
+      "insidePixels": 1636352,
+      "outsidePixels": 0,
+      "maxUvPixelError": 0.0032187758918469644,
+      "maxPlaneErrorMeters": 0.0000020227134611694453,
+      "baseHash": "d86476214cab86b5d56ca8f178ee64219157d5a87ce589f53bf89a0c70640c6d"
+    }
+  ]
+}
