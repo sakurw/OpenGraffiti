@@ -1,0 +1,110 @@
+{
+  "status": "VISUALLY_REVIEWED_BY_CODEX",
+  "note": "光の繭13画像の実画像レビュー。美しさの独立被験者評価ではない。",
+  "views": [
+    {
+      "image": "test-results/bloom-orbit-0.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "紫の花弁と金縁、青緑の葉脈。球状の付属棟にも曲線が続く。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "47df80e6e1e1ffa3fe3bdb8970fa6952539aeaeffae0812675384ab46db651f0"
+    },
+    {
+      "image": "test-results/bloom-orbit-1.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "金色の楕円を持つ羽根のような花弁が正面に現れる。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "56e02c575b9572e28330e25a8d10265358389404187d5f5fc32c8b4e1a3cec60"
+    },
+    {
+      "image": "test-results/bloom-orbit-2.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "細い輪郭に紫と青緑のグラデーションが沿う。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "87be3c0dbfbd77a2c4c4bd4fbfbeeb571ca940616a63a6dff150bd7c90bc2c01"
+    },
+    {
+      "image": "test-results/bloom-orbit-3.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "二枚の花弁の間に藍の余白が見え、先端へ細くなる。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "2b22f7d3e5d1d06903acc5023290a4eb126ad73d4448c0a679162f72538a991d"
+    },
+    {
+      "image": "test-results/bloom-orbit-4.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "斜め方向で青緑の花弁と紫の花弁を同時に読める。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "ee2132a55331615124b2384827344e90d73b495075efb2ba126609d491c6ee14"
+    },
+    {
+      "image": "test-results/bloom-orbit-5.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "孔雀の羽根のような楕円と金色の軸が見える。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "c6d9753513cc4316f9fe1719c3376a54de44a1e47172d075512d4908b0eff3a1"
+    },
+    {
+      "image": "test-results/bloom-orbit-6.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "青緑から薄紫への変化、先端へ上がる葉脈が見える。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "4debb6fe5643b612dddb98a80dd65873e31a791e59d18c1527a436864c5c9d08"
+    },
+    {
+      "image": "test-results/bloom-orbit-7.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "二枚の葉の輪郭と余白が三次元の細まりを強調する。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "418142ba6d8fedac39dbc2cdde7ef8a7984adae477b770787b6ec63e7cb8d09f"
+    },
+    {
+      "image": "test-results/bloom-orbit-8.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "青緑の広い花弁と紫の隣の花弁が稜線を挟む。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "f8e431e7b1a33d03b3851b74174275759eaeeeecf845e484c1a2f123c661cc5b"
+    },
+    {
+      "image": "test-results/bloom-orbit-9.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "紫の先端から青緑の裾へ連続したグラデーション。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "7e1e0da98877f5b80db00a4dcc725a091551b779416845d19780061e2c906a69"
+    },
+    {
+      "image": "test-results/bloom-orbit-10.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "一枚の金縁の羽根状モチーフが正面に見える。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "2b58c70df71baa0542832bf575f4d18e1b15ae73cb87bc2f728ab48fc41c2612"
+    },
+    {
+      "image": "test-results/bloom-orbit-11.png",
+      "question": "画像だけを見て何に見えるか。花弁と金色の葉脈が繭の輪郭に沿って続くか。断片・破綻はどこか。",
+      "verdict": "PASS",
+      "observation": "紫と青緑の花弁が交互に立体を包む。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "22d8ff45e8d2af0aa55f2cd12fac9e4b309c83e2e140c1fa2b4391aecc315262"
+    },
+    {
+      "image": "test-results/bloom-roof.png",
+      "question": "頂部で花弁が収束し、立体のシルエットを生かすか。",
+      "verdict": "PASS",
+      "observation": "三枚の花弁が先端へ収束し、球状部分は別の小さな花芯に見える。",
+      "limitations": "抽象的な花弁・孔雀の羽根としての視覚評価。写実的な花ではない。細い縦線と基壇の区切りは元モデルの分割が見える。",
+      "sha256": "b2cf356c8f374ec9e1b8cc283b540e22081ddd3ac532a71e93a669a14e818fbe"
+    }
+  ]
+}

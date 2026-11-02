@@ -264,3 +264,5 @@ PLATEAUが都市の「形」をデジタル化したのなら、Open Canvasは�
 街は完成されたものではない。
 街は、人々の創造性によって描き続けられる一枚のキャンバスである。
 Open Canvasは、その変化を可視化する「都市美術館」のシミュレーションである。
+
+美しさを軸にしたコクーンタワー作品「LUMINOUS BLOOM · 光の繭」：[起動bat](scripts/launchers/OpenGraffiti-Bloom.bat)。都庁のファンシー作品も保持。

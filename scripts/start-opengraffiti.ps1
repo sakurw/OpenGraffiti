@@ -1,4 +1,4 @@
-﻿param([switch]$NoOpen, [switch]$NoBrowser, [switch]$FadeSample, [switch]$Mural, [ValidateSet('original','expanded')][string]$Scope = 'expanded', [ValidateSet('flat','constrained')][string]$Terrain = 'flat')
+param([switch]$NoOpen, [switch]$NoBrowser, [switch]$FadeSample, [switch]$Mural, [ValidateSet('guardian','bloom')][string]$Art = 'guardian', [ValidateSet('original','expanded')][string]$Scope = 'expanded', [ValidateSet('flat','constrained')][string]$Terrain = 'flat')
 
 # Accept the batch file's conventional --no-open argument as well.
 $skipBrowser = $NoOpen -or $NoBrowser -or ($args -contains '--no-open')
@@ -8,6 +8,7 @@ $baseUrl = 'http://127.0.0.1:3100'
 $pageUrl = if ($Mural) { "$baseUrl/demo-mural" } elseif ($FadeSample) { "$baseUrl/demo-fade" } else { "$baseUrl/areas/tocho/city" }
 
 $pageUrl += "?terrain=$Terrain&scope=$Scope"
+if ($Mural) { $pageUrl += "&art=$Art" }
 
 function Test-OpenGraffiti {
     try {

@@ -15,3 +15,11 @@ PVの冒頭用に、都庁の双塔を巨大な角・耳に見立てるキャラ
 参考はOSGEMEOSのGiants（https://www.vancouverbiennale.com/artworks/giants/）。既存の工業構造物を全周キャラクターへ変える発想を参考にし、都庁の二塔に合わせた独自の顔を設計した。作者の特定キャラクターや図柄の複製ではない。
 
 前作DOUBLE CURRENTは保存済み履歴とsrc/pv-spatial-tide-v7.tsに保持。新作IDはtocho-neon-guardian-v8。生成はワールド座標を評価して通常の描画レイヤーへ焼き込む方式で、手描きポインター再生ではない。大きな色面、丸い目、ステンシル状の牙、点の飛沫は既存描画ツールで近似可能。
+
+## LUMINOUS BLOOM · 光の繭（2026-11-03）
+
+ユーザーがNEON GUARDIANをファンシー作品として採用。都庁版を維持し、美しさを主軸とする別作品をモード学園コクーンタワー（bldg_4e9cedb2-e1b8-48f6-9c04-b862aca365f1）へ追加した。実モデルのふくらみ・先細り・付属する球状棟を確認し、花弁／孔雀の羽根に見える三重の曲面模様を3D座標で構成。青緑・紫・珊瑚のぼかし、金縁、葉脈、スプレー飛沫で立体を包む。モデルは元のままで、発光材質ではなく色の対比による光の表現。
+
+起動: scripts/launchers/OpenGraffiti-Bloom.bat または /demo-mural?art=bloom&scope=expanded&terrain=flat 。従来Mural.batは都庁版のまま。保存IDをcocoon-luminous-bloom-v1と分離し、別建物の既存作品を上書きしない。
+
+検証: TypeScript/Vite成功。都庁の生成・退色・再実行、拡大街区、両作品の全周撮影の4テスト成功（1.2分）。新作13方向を実際に読み、docs/bloom-art-review.jsonへ記録。照合: node scripts/verify-spatial-art-review.mjs docs/bloom-art-review.json 。画像では羽根・花弁として読め、頂部へ収束する。細い縦線や基壇の区切りはモデルの分割が見える。美的評価はCodexによるもので独立被験者評価ではない。
