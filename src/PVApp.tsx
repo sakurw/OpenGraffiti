@@ -9,6 +9,7 @@ import {EditorControls} from './PVEditorControls';
 import type {LayerInfo} from './pv-paint';
 import {seedGallery} from './pv-gallery-demo';
 import {seedMural} from './pv-mural';
+import {TypeWipeLoading} from './TypeWipeLoading';
 
 function GalleryScroller({children}:{children:ReactNode}){const host=useRef<HTMLDivElement>(null);useEffect(()=>{const el=host.current!;const wheel=(e:WheelEvent)=>{if(e.ctrlKey)return;e.preventDefault();e.stopPropagation();el.scrollTop+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?el.clientHeight:1)*3;};el.addEventListener('wheel',wheel,{passive:false});return()=>el.removeEventListener('wheel',wheel);},[]);return <div ref={host} className="pv-gallery-cards">{children}</div>;}
 const CITY='/areas/tocho/city',GALLERY='/areas/tocho/roads',WALK='/areas/tocho/walk';
@@ -27,7 +28,7 @@ function SceneView(p:SceneProps){
   <div className="pv-compass" ref={compass} aria-label="方位" data-heading="0"><span>N<i>↑</i></span></div>
   {p.view==='edit'&&<div className={'pv-brush-cursor '+(p.brush.reveal?'reveal':'')} style={{width:p.brush.size,height:p.brush.size}}/>}
   {ready&&p.view==='street'&&p.road&&!p.road[p.side].length&&<div className="pv-loading">この側には対象範囲の建物がありません</div>}
-  {!ready&&!error&&<div className="pv-loading"><span className="spinner"/>街を準備しています</div>}
+  {!ready&&!error&&<div className="pv-loading pv-loading-type"><TypeWipeLoading label={p.view==='edit'?'キャンバスを準備しています':'街を準備しています'}/></div>}
   {error&&<div className="pv-loading" role="alert"><strong>表示できませんでした</strong><p>{error}</p><button className="button" onClick={()=>{setError('');setReady(false);setRetry(v=>v+1);}}>再試行</button></div>}
  </div>;
 }
@@ -59,7 +60,7 @@ export function PVApp(){
  if(path==='/demo-gallery'||path==='/demo-fade')return <GalleryDemoLoader city={path==='/demo-fade'||params.get('sample')==='fade'}/>;
  if(demo)return <DemoConsole/>;
  if(loadError)return <div className="pv-start-error" role="alert"><h1>街を開けませんでした</h1><p>{loadError}</p><button className="button" onClick={()=>window.location.reload()}>再試行</button></div>;
- if(!m)return <div className="pv-loading"><span className="spinner"/>採用モデルを読み込んでいます</div>;
+ if(!m)return <div className="pv-loading pv-loading-type"><TypeWipeLoading/></div>;
  const building=m.buildings.find(b=>b.id===(selected||lastSelected.current)),buildingRevisions=revs.filter(r=>r.buildingId===(selected||lastSelected.current)).sort(compareRevisions),latest=buildingRevisions.at(-1),chosen=historyId==='base'?undefined:historyId==='latest'?latest:buildingRevisions.find(r=>r.id===historyId),visibleRevisions=revs;
  const sceneProps:SceneProps={m,view,selected,road,side,revs:visibleRevisions,face,brush,engineRef:engine,onSelect:choose,onRoad:chooseRoad,onDraft:draft,onLayers:(items,id)=>{setLayers(items);setSelectedLayer(id);}};
  async function commit(){if(!building)return;setBusy(true);setError('');try{const snapshot=await engine.current!.capture(),revision:Revision={author:'あなた',createdAt:new Date().toISOString(),id:crypto.randomUUID(),buildingId:building.id,at:now(),title:title.trim()||`${name(building,m!)}の作品 ${buildingRevisions.length+1}`,...snapshot};await saveRevision(revision);const epoch=++revisionsEpoch.current,items=await revisions();if(epoch===revisionsEpoch.current)setRevisions(items);setHistoryId('latest');localStorage.setItem('og-pv-latest-at',String(revision.at));setStrokes(0);setPublish(false);setToast('街に作品を反映しました');nav(CITY+'?building='+building.id);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
