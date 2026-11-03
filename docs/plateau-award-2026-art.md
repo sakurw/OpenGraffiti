@@ -13,3 +13,5 @@ Entry: /demo-mural?art=award&scope=expanded&terrain=flat
 The new revision ID preserves older local gallery entries. Paint is baked into the usual editable layer, compatible with fading and overpainting.
 
 Version 5 expands lettering around the tower and vertically, adds cobalt offset depth to the black-outlined title, increases the broad color gestures and inserts five tapered paint blades with speed trails.
+
+Version 6 confines typography to the largest north-facing facade plane, measured from the native triangles. Horizontal mapping follows that plane with inset margins; the opposite face and side faces receive only the continuous paint composition. The recipe has a new ID to preserve prior gallery revisions.

@@ -1,8 +1,15 @@
+import type {SurfaceTriangle} from './pv-paint-surface';
 // A non-periodic, rising gesture in world space; angular distance keeps paint continuous at corners.
-export function awardField(points:{x:number;y:number;z:number}[]){
+export function awardField(points:{x:number;y:number;z:number}[],triangles:SurfaceTriangle[]){
  const lo=Math.min(...points.map(p=>p.y)),hi=Math.max(...points.map(p=>p.y)),cx=(Math.min(...points.map(p=>p.x))+Math.max(...points.map(p=>p.x)))/2,cz=(Math.min(...points.map(p=>p.z))+Math.max(...points.map(p=>p.z)))/2;
+ // Select the largest north-facing plane from the actual building, not an angular sector.
+ const planes=new Map<string,{n:{x:number;y:number;z:number};d:number;area:number;points:typeof points}>();
+ for(const t of triangles){const [a,b,c]=t.world,n=b.clone().sub(a).cross(c.clone().sub(a)),area=n.length()/2;n.normalize();if(Math.abs(n.y)>.15||Math.abs(n.z)<.8||(a.z+b.z+c.z)/3>=cz)continue;if(n.z<0)n.negate();const d=n.dot(a),key=[n.x.toFixed(3),n.y.toFixed(3),n.z.toFixed(3),d.toFixed(1)].join('/'),g=planes.get(key)||{n,d,area:0,points:[]};g.area+=area;g.points.push(a,b,c);planes.set(key,g);}
+ const plane=[...planes.values()].sort((a,b)=>b.area-a.area)[0];
+ if(!plane)throw new Error('Award artwork: the title facade could not be identified');
+ const tangent={x:plane.n.z,z:-plane.n.x},positions=plane.points.map(p=>p.x*tangent.x+p.z*tangent.z),left=Math.min(...positions),right=Math.max(...positions),titleWidth=(right-left)*.9,titleCenter=(left+right)/2;
  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=1024;const ctx=canvas.getContext('2d')!;ctx.textAlign='center';ctx.lineJoin='round';
- const word=(text:string,y:number,size:number,color:string)=>{ctx.save();ctx.translate(512,y);ctx.transform(1,-.19,-.22,1,0,0);ctx.font=`900 ${size}px Impact, Arial Black, sans-serif`;ctx.lineWidth=45;ctx.strokeStyle='#101216';ctx.strokeText(text,22,25,940);ctx.fillStyle='#2488ff';ctx.fillText(text,22,25,940);ctx.lineWidth=23;ctx.strokeText(text,0,0,940);ctx.fillStyle=color;ctx.fillText(text,0,0,940);ctx.restore();};
+ const word=(text:string,y:number,size:number,color:string)=>{ctx.save();ctx.translate(512,y);ctx.transform(1,-.19,-.22,1,0,0);ctx.font=`900 ${size}px Impact, Arial Black, sans-serif`;ctx.lineWidth=45;ctx.strokeStyle='#101216';ctx.strokeText(text,22,25,820);ctx.fillStyle='#2488ff';ctx.fillText(text,22,25,820);ctx.lineWidth=23;ctx.strokeText(text,0,0,820);ctx.fillStyle=color;ctx.fillText(text,0,0,820);ctx.restore();};
  word('PLATEAU',250,210,'#f4f3de');word('AWARD',560,330,'#f4f3de');word('2026',950,410,'#e5ff36');
  const data=ctx.getImageData(0,0,1024,1024).data,fract=(v:number)=>v-Math.floor(v),wrap=(a:number)=>Math.atan2(Math.sin(a),Math.cos(a)),ink=[14,18,26],pink=[255,35,95],acid=[227,255,39],blue=[37,87,253],white=[246,242,219];
  return(x:number,y:number,z:number)=>{const h=(y-lo)/(hi-lo),angle=Math.atan2(z-cz,x-cx),noise=fract(Math.sin(Math.floor(x*3)*127.1+Math.floor(y*3)*311.7+Math.floor(z*3)*74.7)*43758.5453);let c=ink;
@@ -19,9 +26,10 @@ export function awardField(points:{x:number;y:number;z:number}[]){
  const burst=wrap(angle-(-4+h*10));if(h>.08&&h<.9&&Math.abs(burst)<1.3&&noise>.992)c=h>.5?acid:pink;
  // Sharp accelerating paint blades and offset speed trails fill the side faces.
  for(let j=0;j<5;j++){const t=(h-(.06+j*.13))/.36;if(t<=0||t>=1)continue;const d=wrap(angle-(-.4+j*1.73+t*2.9));const w=.16*(1-t);if(Math.abs(d)<w)c=j%2?white:acid;else if(d>w+.08&&d<w+.1&&t<.72)c=blue;}
- // Two staggered title compositions, instead of four identical labels around the tower.
- const front=wrap(angle+Math.PI/2),back=wrap(angle-Math.PI/2),a=Math.abs(front)<Math.abs(back)?front:back,isFront=Math.abs(front)<Math.abs(back),top=isFront?.96:.88,bottom=isFront?.2:.1;
- if(Math.abs(a)<1.18&&h>bottom&&h<top){const u=.5-a/2.36,ty=Math.floor((top-h)/(top-bottom)*1023),tx=Math.floor(u*1023),i=(ty*1024+tx)*4;if(data[i+3]>128)c=[data[i],data[i+1],data[i+2]];}
+ // Typography is confined to this one plane, with a clear margin from every edge.
+ const top=.9,bottom=.2,u=.5-(x*tangent.x+z*tangent.z-titleCenter)/titleWidth;
+ if(Math.abs(plane.n.x*x+plane.n.y*y+plane.n.z*z-plane.d)<.2&&u>=0&&u<=1&&h>bottom&&h<top){const ty=Math.floor((top-h)/(top-bottom)*1023),tx=Math.floor(u*1023),i=(ty*1024+tx)*4;if(data[i+3]>128)c=[data[i],data[i+1],data[i+2]];}
+
  return c;
  };
 }
